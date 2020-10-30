@@ -1,0 +1,1404 @@
+[
+  {
+    "factions": [
+      "Royaume d'Avalon"
+    ],
+    "type": "Personnages",
+    "nom": "Chevalier-Légat Garlan de Brall",
+    "cartes": "['images/Chevalier-Légat Garlan de Brall_1.png', '']",
+    "cout": 50,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_344.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Royaume d'Avalon"
+    ],
+    "type": "Personnages",
+    "nom": "Diacre Leodegarius",
+    "cartes": "['images/Diacre Leodegarius_1.png', '']",
+    "cout": 38,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Prieure Caelina de l'Abbaye des Matines",
+    "cartes": [
+      "images/Prieure Caelina de l'Abbaye des Matines_1.png",
+      "images/Prieure Caelina de l'Abbaye des Matines_2.png"
+    ],
+    "cout": 44,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Avalon - Temple']",
+    "type": "Personnages",
+    "nom": "Connétable Lotharius du Temple des Vêpres",
+    "cartes": "['images/Connétable Lotharius du Temple des Vêpres_1.png', '']",
+    "cout": 40,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Chevalier-Errant Mordren de Klarmen",
+    "cartes": "['images/Chevalier-Errant Mordren de Klarmen_1.png', '']",
+    "cout": 40,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_443.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Avalon - Sanctifiés']",
+    "type": "Personnages",
+    "nom": "Berac'h, le Geôlier",
+    "cartes": "[\"images/Berac'h, le Geôlier_1.png\", '']",
+    "cout": 40,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_0010.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Royaume d'Avalon"
+    ],
+    "type": "Alchimistes",
+    "nom": "Prêtre de Campagne",
+    "cartes": "['images/Prêtre de Campagne_1.png', '']",
+    "cout": 32,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Avalon - Temple']",
+    "type": "Alchimistes",
+    "nom": "Frère-Collecteur du Temple",
+    "cartes": "['images/Frère-Collecteur du Temple_1.png', '']",
+    "cout": 32,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Recrues Avaloniennes",
+    "cartes": "['images/Recrues Avaloniennes_1.png', '']",
+    "cout": 10,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Arbalétriers Avaloniens",
+    "cartes": "['images/Arbalétriers Avaloniens_1.png', '']",
+    "cout": 19,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Avalon - Temple', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Novice du Temple",
+    "cartes": "['images/Novice du Temple_1.png', '']",
+    "cout": 19,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Rabatteurs Avaloniens",
+    "cartes": "['images/Rabatteurs Avaloniens_1.png', '']",
+    "cout": 10,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Avalon - Sanctifiés', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Rétiaire Avalonien",
+    "cartes": "['images/Rétiaire Avalonien_1.png', '']",
+    "cout": 25,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Royaume d'Avalon"
+    ],
+    "type": "Troupes",
+    "nom": "Chevalier Errant",
+    "cartes": "['images/Chevalier Errant_1.png', '']",
+    "cout": 33,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Royaume d'Avalon\", 'Avalon - Temple']",
+    "type": "Troupes",
+    "nom": "Templier Avalonien",
+    "cartes": "['images/Templier Avalonien_1.png', '']",
+    "cout": 33,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Royaume d'Avalon"
+    ],
+    "type": "Troupes",
+    "nom": "Pélerin Avalonien",
+    "cartes": "['images/Pélerin Avalonien_1.png', '']",
+    "cout": 31,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok']",
+    "type": "Personnages",
+    "nom": "Tamel'Seh Oeil Lointain",
+    "cartes": "[\"images/Tamel'Seh Oeil Lointain_1.png\", '']",
+    "cout": 49,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok']",
+    "type": "Personnages",
+    "nom": "Tecum'Seh Sachem Corbeau",
+    "cartes": "[\"images/Tecum'Seh Sachem Corbeau_1.png\", '']",
+    "cout": 44,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Walosi']",
+    "type": "Personnages",
+    "nom": "Tha'pioca Franche Panse",
+    "cartes": "[\"images/Tha'pioca Franche Panse_1.png\", '']",
+    "cout": 40,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_570.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Walosi', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Ca'apiti Yeux Rouges",
+    "cartes": "[\"images/Ca'apiti Yeux Rouges_1.png\", '']",
+    "cout": 39,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok']",
+    "type": "Personnages",
+    "nom": "Wolitse Brise Nocturne",
+    "cartes": "['images/Wolitse Brise Nocturne_1.png', '']",
+    "cout": 45,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Watanka le Vénérable",
+    "cartes": "['images/Watanka le Vénérable_1.png', '']",
+    "cout": 36,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Walosi']",
+    "type": "Personnages",
+    "nom": "Tanka Wanka",
+    "cartes": "['images/Tanka Wanka_1.png', '']",
+    "cout": 38,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_434.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Walosi']",
+    "type": "Alchimistes",
+    "nom": "Chaman-Médecine Crapaud",
+    "cartes": "['images/Chaman-Médecine Crapaud_1.png', '']",
+    "cout": 37,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok']",
+    "type": "Alchimistes",
+    "nom": "Chaman-Nuit Loup",
+    "cartes": "['images/Chaman-Nuit Loup_1.png', '']",
+    "cout": 39,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok']",
+    "type": "Alchimistes",
+    "nom": "Esprit-Héros Aurlok",
+    "cartes": "['images/Esprit-Héros Aurlok_1.png', '']",
+    "cout": 0,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok']",
+    "type": "Alchimistes",
+    "nom": "Esprit-Ancêtre Aurlok",
+    "cartes": "['images/Esprit-Ancêtre Aurlok_1.png', '']",
+    "cout": 0,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Guerrier-Tonnerre Corbeau",
+    "cartes": "['images/Guerrier-Tonnerre Corbeau_1.png', '']",
+    "cout": 18,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Walosi', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Guerrier-Tonnerre Crapaud",
+    "cartes": "['images/Guerrier-Tonnerre Crapaud_1.png', '']",
+    "cout": 18,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_353.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Guerrier-Tonnerre Loup",
+    "cartes": "['images/Guerrier-Tonnerre Loup_1.png', '']",
+    "cout": 21,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Waga']",
+    "type": "Troupes",
+    "nom": "Chasse-Pluie Auroch avec Tambour",
+    "cartes": "['images/Chasse-Pluie Auroch avec Tambour_1.png', '']",
+    "cout": 25,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Waga']",
+    "type": "Troupes",
+    "nom": "Chasse-Pluie Auroch avec Cor",
+    "cartes": "['images/Chasse-Pluie Auroch avec Cor_1.png', '']",
+    "cout": 27,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Waga']",
+    "type": "Troupes",
+    "nom": "Guerrier-Totem Auroch",
+    "cartes": "['images/Guerrier-Totem Auroch_1.png', '']",
+    "cout": 35,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_334.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Waga']",
+    "type": "Troupes",
+    "nom": "Guerrier-Manitou Auroch",
+    "cartes": "['images/Guerrier-Manitou Auroch_1.png', '']",
+    "cout": 48,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Waga']",
+    "type": "Troupes",
+    "nom": "Guerrier-Manitou Auroch Possédé",
+    "cartes": "['images/Guerrier-Manitou Auroch Possédé_1.png', '']",
+    "cout": 0,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_444.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok']",
+    "type": "Troupes",
+    "nom": "Guerrier-Vent Corbeau",
+    "cartes": "['images/Guerrier-Vent Corbeau_1.png', '']",
+    "cout": 27,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Nation Aurlok', 'Aurlok - Clan Walosi']",
+    "type": "Troupes",
+    "nom": "Lance-Ruches Crapaud",
+    "cartes": "['images/Lance-Ruches Crapaud_1.png', '']",
+    "cout": 24,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Personnages",
+    "nom": "Capitaine Lee Ping de la milice de Dong-Yì",
+    "cartes": "['images/Capitaine Lee Ping de la milice de Dong-Yì_1.png', '']",
+    "cout": 41,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Capitaine Fu Nihao de l'Armée Triadique",
+    "cartes": "[\"images/Capitaine Fu Nihao de l'Armée Triadique_1.png\", '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_344.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Xian Ling de l'Ecole du Singe des Brumes",
+    "cartes": "[\"images/Xian Ling de l'Ecole du Singe des Brumes_1.png\", '']",
+    "cout": 41,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Personnages",
+    "nom": "Feng Sao de l'Ecole du Long Soupir",
+    "cartes": "[\"images/Feng Sao de l'Ecole du Long Soupir_1.png\", '']",
+    "cout": 44,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade', 'Triade - Garde Cobra', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Chen Sze",
+    "cartes": "['images/Chen Sze_1.png', '']",
+    "cout": 45,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Alchimistes",
+    "nom": "Alchimiste de l'Ecole du Long Soupir",
+    "cartes": "[\"images/Alchimiste de l'Ecole du Long Soupir_1.png\", '']",
+    "cout": 30,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Alchimistes",
+    "nom": "Alchimiste de l'Ecole du Soleil de Cristal",
+    "cartes": "[\"images/Alchimiste de l'Ecole du Soleil de Cristal_1.png\", '']",
+    "cout": 28,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Alchimistes",
+    "nom": "Disciples de l'Ecole du Soleil de Cristal",
+    "cartes": "[\"images/Disciples de l'Ecole du Soleil de Cristal_1.png\", '']",
+    "cout": 24,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Troupes",
+    "nom": "Chinge",
+    "cartes": "['images/Chinge_1.png', '']",
+    "cout": 12,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_222.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Miliciens-Lanciers",
+    "cartes": "['images/Miliciens-Lanciers _1.png', '']",
+    "cout": 15,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Miliciens-Archers",
+    "cartes": "['images/Miliciens-Archers_1.png', '']",
+    "cout": 17,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_222.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Troupes",
+    "nom": "Garde Triadique",
+    "cartes": "['images/Garde Triadique_1.png', '']",
+    "cout": 19,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Troupes",
+    "nom": "Sergent de la Garde Triadique",
+    "cartes": "['images/Sergent de la Garde Triadique_1.png', '']",
+    "cout": 19,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Troupes",
+    "nom": "Sentinelle du Cœur de Fer",
+    "cartes": "['images/Sentinelle du Cœur de Fer _1.png', '']",
+    "cout": 30,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Troupes",
+    "nom": "Inquisiteur de la Garde Dragon",
+    "cartes": "['images/Inquisiteur de la Garde Dragon_1.png', '']",
+    "cout": 33,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade']",
+    "type": "Troupes",
+    "nom": "Lame de la Garde Tigre",
+    "cartes": "['images/Lame de la Garde Tigre_1.png', '']",
+    "cout": 55,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Empire de la Triade de Jade', 'Triade - Garde Cobra']",
+    "type": "Troupes",
+    "nom": "Murmure",
+    "cartes": "['images/Murmure_1.png', '']",
+    "cout": 28,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Personnages",
+    "nom": "Cheikh Araoui Ibn Khalid",
+    "cartes": "['images/Cheikh Araoui Ibn Khalid_1.png', '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Personnages",
+    "nom": "Kabircheikh Hakim Ibn Khalid",
+    "cartes": "['images/Kabircheikh Hakim Ibn Khalid_1.png', '']",
+    "cout": 38,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Dahlia Ibn Malikh",
+    "cartes": "['images/Dahlia Ibn Malikh_1.png', '']",
+    "cout": 43,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Ibrahim Ibn Suleman",
+    "cartes": "['images/Ibrahim Ibn Suleman_1.png', '']",
+    "cout": 46,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Personnages",
+    "nom": "Iëcha Bint Sorhna",
+    "cartes": "['images/Iëcha Bint Sorhna_1.png', '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Personnages",
+    "nom": "Abdelan Ibn Malikh",
+    "cartes": "['images/Abdelan Ibn Malikh_1.png', '']",
+    "cout": 39,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane', 'Khaliman - Sororité & Fadela']",
+    "type": "Alchimistes",
+    "nom": "Oracle Sorhna",
+    "cartes": "['images/Oracle Sorhna_1.png', '']",
+    "cout": 38,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane', 'Khaliman - Sororité & Fadela']",
+    "type": "Alchimistes",
+    "nom": "Evocatrice Sornha",
+    "cartes": "['images/Evocatrice Sornha_1.png', '']",
+    "cout": 38,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Jaraya Malikh",
+    "cartes": "['images/Jaraya Malikh_1.png', '']",
+    "cout": 20,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Méhariste Malikh",
+    "cartes": "['images/Méhariste Malikh_1.png', '']",
+    "cout": 20,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Troupes",
+    "nom": "Gardien Ermadhi",
+    "cartes": "['images/Gardien Ermadhi_1.png', '']",
+    "cout": 24,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Troupes",
+    "nom": "Tuaregs  Malikh",
+    "cartes": "['images/Tuaregs  Malikh_1.png', '']",
+    "cout": 26,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Troupes",
+    "nom": "Ghulam Suleman",
+    "cartes": "['images/Ghulam Suleman_1.png', '']",
+    "cout": 28,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_434.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Troupes",
+    "nom": "Belluaire Malikh",
+    "cartes": "['images/Belluaire Malikh_1.png', '']",
+    "cout": 25,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane', 'Le Cartel du Sabre']",
+    "type": "Troupes",
+    "nom": "Khergars du désert",
+    "cartes": "['images/Khergars du désert_1.png', '']",
+    "cout": 17,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Troupes",
+    "nom": "Der'wish Khalid",
+    "cartes": "[\"images/Der'wish Khalid_1.png\", '']",
+    "cout": 30,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['République Khalimane']",
+    "type": "Troupes",
+    "nom": "Ifrit'Qaniss Suleman",
+    "cartes": "[\"images/Ifrit'Qaniss Suleman_1.png\", '']",
+    "cout": 35,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_344.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti', 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Dar-Meh'Ki, vigile de Chim~Eth",
+    "cartes": "[\"images/Dar-Meh'Ki, vigile de Chim~Eth_1.png\", '']",
+    "cout": 42,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_443.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Personnages",
+    "nom": "Bey~Saa's, E'Dhu~Egir de Al~Eph",
+    "cartes": "[\"images/Bey~Saa's, E'Dhu~Egir de Al~Eph_1.png\", '']",
+    "cout": 33,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Personnages",
+    "nom": "Ssa~Kar's, compagnon terrassier",
+    "cartes": "[\"images/Ssa~Kar's, compagnon terrassier_1.png\", '']",
+    "cout": 38,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Personnages",
+    "nom": "Nas~Far'k, défenseur de Dal~Eth",
+    "cartes": "[\"images/Nas~Far'k, défenseur de Dal~Eth_1.png\", '']",
+    "cout": 50,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_443.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Personnages",
+    "nom": "Sul~Koor'z, chef-expérimentateur de Bè~Eth",
+    "cartes": "[\"images/Sul~Koor'z, chef-expérimentateur de Bè~Eth_1.png\", '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Alchimistes",
+    "nom": "Aros~Thè",
+    "cartes": "['images/Aros~Thè_1.png', '']",
+    "cout": 22,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Alchimistes",
+    "nom": "Maître de l'eau-foudre",
+    "cartes": "[\"images/Maître de l'eau-foudre_1.png\", '']",
+    "cout": 30,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Klaph~Our'os de Chim~Eth",
+    "cartes": "[\"images/Klaph~Our'os de Chim~Eth_1.png\", '']",
+    "cout": 32,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Sidh~Our'os de Chim~Eth",
+    "cartes": "[\"images/Sidh~Our'os de Chim~Eth_1.png\", '']",
+    "cout": 21,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Waw~Our'os de Chim~Eth",
+    "cartes": "[\"images/Waw~Our'os de Chim~Eth_1.png\", '']",
+    "cout": 26,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Naa Sabreur de Zay~Hin",
+    "cartes": "['images/Naa Sabreur de Zay~Hin_1.png', '']",
+    "cout": 23,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_432.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Naa Réître de Al~Eph",
+    "cartes": "['images/Naa Réître de Al~Eph_1.png', '']",
+    "cout": 26,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Automaton explosif, Yodh~Mez",
+    "cartes": "['images/Automaton explosif, Yodh~Mez_1.png', '']",
+    "cout": 8,
+    "pa": 0,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_222.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Automaton de combat, Aam~Mez",
+    "cartes": "['images/Automaton de combat, Aam~Mez_1.png', '']",
+    "cout": 8,
+    "pa": 0,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Citadelles Naashti']",
+    "type": "Troupes",
+    "nom": "Sentinelle de Mem~Eth",
+    "cartes": "['images/Sentinelle de Mem~Eth_1.png', '']",
+    "cout": 18,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "[\"Utopie d'Irmao\", 'Les compagnons de la Loge']",
+    "type": "Personnages",
+    "nom": "Ch'unqay, homoncule maraudeur",
+    "cartes": "[\"images/Ch'unqay, homoncule maraudeur_1.png\", '']",
+    "cout": 36,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_344.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Personnages",
+    "nom": "Capitaña Evhan",
+    "cartes": "['images/Capitaña Evhan_1.png', '']",
+    "cout": 44,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Personnages",
+    "nom": "Lerofòn, maître des Vagues",
+    "cartes": "['images/Lerofòn, maître des Vagues_1.png', '']",
+    "cout": 46,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_223.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Personnages",
+    "nom": "Foldo Sensamuerto",
+    "cartes": "['images/Foldo Sensamuerto_1.png', 'images/Foldo Sensamuerto_2.png']",
+    "cout": 39,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Personnages",
+    "nom": "Virato Servilano, officier de vaisseau",
+    "cartes": "['images/Virato Servilano, officier de vaisseau_1.png', '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_443.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Alchimistes",
+    "nom": "Apprenti de l'Ecume",
+    "cartes": "[\"images/Apprenti de l'Ecume_1.png\", '']",
+    "cout": 22,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_223.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Alchimistes",
+    "nom": "Sourcelier",
+    "cartes": "['images/Sourcelier_1.png', '']",
+    "cout": 31,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Homoncule",
+    "cartes": "['images/Homoncule_1.png', '']",
+    "cout": 33,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Necromorphe",
+    "cartes": "['images/Necromorphe_1.png', '']",
+    "cout": 23,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Chasseur du Léviathan",
+    "cartes": "['images/Chasseur du Léviathan_1.png', '']",
+    "cout": 39,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Chasseuse de la Méduse",
+    "cartes": "['images/Chasseuse de la Méduse_1.png', '']",
+    "cout": 39,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Gardien de Chora",
+    "cartes": "['images/Gardien de Chora_1.png', '']",
+    "cout": 19,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Matelot",
+    "cartes": "['images/Matelot_1.png', '']",
+    "cout": 16,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Moucheur",
+    "cartes": "['images/Moucheur_1.png', '']",
+    "cout": 28,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Flibustier",
+    "cartes": "['images/Flibustier_1.png', '']",
+    "cout": 25,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": [
+      "Utopie d'Irmao"
+    ],
+    "type": "Troupes",
+    "nom": "Grimpaor",
+    "cartes": "['images/Grimpaor_1.png', '']",
+    "cout": 18,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Cultes de Rados']",
+    "type": "Personnages",
+    "nom": "Radamante",
+    "cartes": "['images/Radamante_1.png', '']",
+    "cout": 46,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_334.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Cultes de Rados']",
+    "type": "Personnages",
+    "nom": "Rigosane",
+    "cartes": "['images/Rigosane_1.png', 'images/Rigosane_2.png']",
+    "cout": 42,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Cultes de Rados']",
+    "type": "Alchimistes",
+    "nom": "Prêtresse de Rados",
+    "cartes": "['images/Prêtresse de Rados_1.png', 'images/Prêtresse de Rados_2.png']",
+    "cout": 32,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Cultes de Rados']",
+    "type": "Troupes",
+    "nom": "Flagelleuse",
+    "cartes": "['images/Flagelleuse_1.png', '']",
+    "cout": 13,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_323_rev.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Cultes de Rados']",
+    "type": "Troupes",
+    "nom": "Cultiste",
+    "cartes": "['images/Cultiste_1.png', '']",
+    "cout": 18,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_334.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Cultes de Rados']",
+    "type": "Troupes",
+    "nom": "Mârtyrs",
+    "cartes": "['images/Mârtyrs_1.png', '']",
+    "cout": 8,
+    "pa": 1,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_080.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Cultes de Rados']",
+    "type": "Troupes",
+    "nom": "Pyro-Mâne",
+    "cartes": "['images/Pyro-Mâne_1.png', '']",
+    "cout": 24,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Evadés du Pénitencier de la Dent']",
+    "type": "Personnages",
+    "nom": "Am'n Ayassarr, Ifrit Pyritin",
+    "cartes": "[\"images/Am'n Ayassarr, Ifrit Pyritin_1.png\", '']",
+    "cout": 53,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_633.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Evadés du Pénitencier de la Dent']",
+    "type": "Personnages",
+    "nom": "Hakan Ibn Suleman, le Borgne",
+    "cartes": "['images/Hakan Ibn Suleman, le Borgne_1.png', '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_434.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Evadés du Pénitencier de la Dent']",
+    "type": "Troupes",
+    "nom": "Bagnards de la Dent",
+    "cartes": "['images/Bagnards de la Dent_1.png', '']",
+    "cout": 20,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Evadés du Pénitencier de la Dent']",
+    "type": "Troupes",
+    "nom": "Ecorcheuse Khalid",
+    "cartes": "['images/Ecorcheuse Khalid_1.png', '']",
+    "cout": 26,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_422.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Evadés du Pénitencier de la Dent']",
+    "type": "Troupes",
+    "nom": "Etrangleur Suleman",
+    "cartes": "['images/Etrangleur Suleman_1.png', '']",
+    "cout": 33,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Evadés du Pénitencier de la Dent']",
+    "type": "Troupes",
+    "nom": "Pillards Malikh",
+    "cartes": "['images/Pillards Malikh_1.png', '']",
+    "cout": 18,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Avalon - Temple']",
+    "type": "Personnages",
+    "nom": "Sénéchal Deicolus du Temple des Complies",
+    "cartes": "['images/Sénéchal Deicolus du Temple des Complies_1.png', '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Avalon - Temple']",
+    "type": "Troupes",
+    "nom": "Hospitalier du Temple des Complies",
+    "cartes": "['images/Hospitalier du Temple des Complies_1.png', '']",
+    "cout": 35,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_522.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Aurlok - Clan Walosi']",
+    "type": "Personnages",
+    "nom": "Pitekica, Chaman-Esprit Crapaud d'Ostiliha",
+    "cartes": [
+      "images/Pitekica, Chaman-Esprit Crapaud d'Ostiliha_1.png",
+      "images/Pitekica, Chaman-Esprit Crapaud d'Ostiliha_2.png"
+    ],
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_353.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Aurlok - Clan Walosi']",
+    "type": "Troupes",
+    "nom": "Sentinelle-Cornue Crapaud",
+    "cartes": "['images/Sentinelle-Cornue Crapaud_1.png', '']",
+    "cout": 33,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_460.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Aurlok - Clan Waga']",
+    "type": "Personnages",
+    "nom": "Woa Wa'yake",
+    "cartes": "[\"images/Woa Wa'yake_1.png\", '']",
+    "cout": 37,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Aurlok - Clan Waga']",
+    "type": "Personnages",
+    "nom": "Toh R'ok",
+    "cartes": "[\"images/Toh R'ok_1.png\", '']",
+    "cout": 50,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_334.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Avalon - Sanctifiés']",
+    "type": "Personnages",
+    "nom": "Gallia, Maitresse des Geôles",
+    "cartes": "['images/Gallia, Maitresse des Geôles_1.png', '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Avalon - Sanctifiés']",
+    "type": "Alchimistes",
+    "nom": "Vicaire de l'épine",
+    "cartes": "[\"images/Vicaire de l'épine_1.png\", '']",
+    "cout": 30,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_334.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Avalon - Sanctifiés']",
+    "type": "Troupes",
+    "nom": "Colosse Avalonien",
+    "cartes": "['images/Colosse Avalonien_1.png', '']",
+    "cout": 55,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_443.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Avalon - Sanctifiés']",
+    "type": "Troupes",
+    "nom": "Geôlier",
+    "cartes": "['images/Geôlier_1.png', '']",
+    "cout": 32,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_433.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Triade - Garde Cobra']",
+    "type": "Personnages",
+    "nom": "Lin Biao",
+    "cartes": "['images/Lin Biao_1.png', '']",
+    "cout": 45,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Triade - Garde Cobra']",
+    "type": "Alchimistes",
+    "nom": "Disciple de l'Ecole du Nuage noir",
+    "cartes": "[\"images/Disciple de l'Ecole du Nuage noir_1.png\", '']",
+    "cout": 23,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Triade - Garde Cobra']",
+    "type": "Troupes",
+    "nom": "Ombre",
+    "cartes": "['images/Ombre _1.png', '']",
+    "cout": 28,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_322.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Triade - Garde Cobra']",
+    "type": "Troupes",
+    "nom": "Silence",
+    "cartes": "['images/Silence_1.png', '']",
+    "cout": 23,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_332.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Khaliman - Sororité & Fadela']",
+    "type": "Personnages",
+    "nom": "Litam bint Sorhna",
+    "cartes": "['images/Litam bint Sorhna_1.png', '']",
+    "cout": 42,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Khaliman - Sororité & Fadela']",
+    "type": "Personnages",
+    "nom": "Ondin",
+    "cartes": "['images/Ondin_1.png', '']",
+    "cout": 0,
+    "pa": 2,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_411.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Khaliman - Sororité & Fadela']",
+    "type": "Troupes",
+    "nom": "Djinn Mahritin",
+    "cartes": "['images/Djinn Mahritin_1.png', '']",
+    "cout": 43,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_533.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Le Cartel du Sabre']",
+    "type": "Personnages",
+    "nom": "Jian Qayan, Le Tigre de Glace",
+    "cartes": "['images/Jian Qayan, Le Tigre de Glace_1.png', 'images/Jian Qayan, Le Tigre de Glace_2.png']",
+    "cout": 50,
+    "pa": 4,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_344.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Le Cartel du Sabre']",
+    "type": "Personnages",
+    "nom": "Bak'Raa, le sphinx noir",
+    "cartes": [
+      "images/Bak'Raa, le sphinx noir_1.png",
+      "images/Bak'Raa, le sphinx noir_2.png"
+    ],
+    "cout": 46,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_333.gif",
+    "nb_max": 1
+  },
+  {
+    "factions": "['Le Cartel du Sabre']",
+    "type": "Personnages",
+    "nom": "Valh'Kyrie",
+    "cartes": [
+      "images/Valh'Kyrie_1.png",
+      "images/Valh'Kyrie_2.png"
+    ],
+    "cout": 45,
+    "pa": 3,
+    "pv": "https://architekt.alkemy-the-game.com/typo3conf/ext/ceno_alk_gen/pi1/ressources/small_343.gif",
+    "nb_max": 1
+  }
+]

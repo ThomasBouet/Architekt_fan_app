@@ -1,0 +1,357 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/test.gd" type="Script" id=1]
+[ext_resource path="res://Spartan.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sprites/UI/menu_white.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/UI/x-mark.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/ImgDisplay.gd" type="Script" id=5]
+[ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Scenes/Menu.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=8]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 576.0
+margin_bottom = 1024.0
+color = Color( 0.109804, 0.105882, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Faction" type="Label" parent="."]
+margin_left = 152.573
+margin_top = 8.0
+margin_right = 414.573
+margin_bottom = 81.0
+custom_fonts/font = ExtResource( 2 )
+text = "Faction"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content Holder" type="VBoxContainer" parent="."]
+margin_left = 24.0
+margin_top = 88.0
+margin_right = 552.0
+margin_bottom = 1020.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Content Holder"]
+visible = false
+margin_right = 528.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+max_value = 180.0
+value = 50.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="Content Holder/ProgressBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -1.0
+custom_fonts/font = ExtResource( 6 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" parent="Content Holder" instance=ExtResource( 8 )]
+visible = false
+
+[node name="Profils" type="ScrollContainer" parent="Content Holder"]
+margin_right = 528.0
+margin_bottom = 770.0
+rect_min_size = Vector2( 528, 770 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DiplayList" type="VBoxContainer" parent="Content Holder/Profils"]
+margin_right = 528.0
+margin_bottom = 770.0
+rect_min_size = Vector2( 0, 770 )
+size_flags_horizontal = 3
+custom_constants/separation = 70
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ImgDisplay" type="Node2D" parent="."]
+position = Vector2( 576, 88 )
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="ImgDisplay"]
+margin_right = 528.0
+margin_bottom = 920.0
+color = Color( 0.317647, 0.192157, 0.0705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ImgDisplay"]
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 520.0
+margin_bottom = 915.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ImgDisplay/ScrollContainer"]
+margin_right = 512.0
+margin_bottom = 904.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Carte_0" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_right = 512.0
+stretch_mode = 6
+
+[node name="Carte_1" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_top = 4.0
+margin_right = 512.0
+margin_bottom = 4.0
+stretch_mode = 6
+
+[node name="Carte_2" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_top = 8.0
+margin_right = 512.0
+margin_bottom = 8.0
+stretch_mode = 6
+
+[node name="TweenImg" type="Tween" parent="ImgDisplay"]
+
+[node name="Close" type="TextureButton" parent="ImgDisplay"]
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 520.0
+margin_bottom = 523.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="ColorRect2" type="ColorRect" parent="Menu"]
+margin_left = -2.0
+margin_right = 94.0
+margin_bottom = 80.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuBtn" type="TextureButton" parent="Menu"]
+margin_left = 8.0
+margin_right = 520.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.15, 0.15 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 3 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+margin_left = -320.0
+margin_right = -1.0
+margin_bottom = 1024.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+margin_left = -312.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = 1016.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accueil" type="Button" parent="Menu/VBoxContainer"]
+margin_right = 304.0
+margin_bottom = 52.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Accueil"
+
+[node name="Mes listes" type="Button" parent="Menu/VBoxContainer"]
+visible = false
+margin_top = 53.0
+margin_right = 304.0
+margin_bottom = 102.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Mes listes"
+
+[node name="Tous" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 56.0
+margin_right = 304.0
+margin_bottom = 108.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Tous les profils"
+
+[node name="Avalon" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 112.0
+margin_right = 304.0
+margin_bottom = 164.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Avalon"
+
+[node name="Sanctifiés" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 168.0
+margin_right = 304.0
+margin_bottom = 220.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Sanctifiés"
+
+[node name="Temple" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 224.0
+margin_right = 304.0
+margin_bottom = 277.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Temple"
+
+[node name="Aurlok" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 281.0
+margin_right = 304.0
+margin_bottom = 333.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Aurlok"
+
+[node name="Waga" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 337.0
+margin_right = 304.0
+margin_bottom = 389.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Waga"
+
+[node name="Walosi" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 393.0
+margin_right = 304.0
+margin_bottom = 445.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Walosi"
+
+[node name="Cartel" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 449.0
+margin_right = 304.0
+margin_bottom = 501.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Cartel"
+
+[node name="Khaliman" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 505.0
+margin_right = 304.0
+margin_bottom = 558.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Khaliman"
+
+[node name="Evadés" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 562.0
+margin_right = 304.0
+margin_bottom = 614.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Evadés"
+
+[node name="Sororité" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 618.0
+margin_right = 304.0
+margin_bottom = 670.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Sororité"
+
+[node name="Loge" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 674.0
+margin_right = 304.0
+margin_bottom = 726.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Loge"
+
+[node name="Naashti" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 730.0
+margin_right = 304.0
+margin_bottom = 783.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Naashti"
+
+[node name="Rados" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 787.0
+margin_right = 304.0
+margin_bottom = 839.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Rados"
+
+[node name="Triade de jade" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 843.0
+margin_right = 304.0
+margin_bottom = 895.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Triade de Jade"
+
+[node name="Garde Cobra" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 899.0
+margin_right = 304.0
+margin_bottom = 951.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Garde Cobra"
+
+[node name="Utopie" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 955.0
+margin_right = 304.0
+margin_bottom = 1008.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Utopi"
+
+[node name="TweenMenu" type="Tween" parent="Menu"]
+[connection signal="value_changed" from="Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
+[connection signal="pressed" from="ImgDisplay/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Tous" to="." method="_on_Tous_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Avalon" to="." method="_change_faction" binds= [ "Avalon" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Sanctifiés" to="." method="_change_faction" binds= [ "Avalon-Sanctifiés" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Temple" to="." method="_change_faction" binds= [ "Avalon-Temple" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Aurlok" to="." method="_change_faction" binds= [ "Aurlok" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Waga" to="." method="_change_faction" binds= [ "Aurlok-Waga" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Walosi" to="." method="_change_faction" binds= [ "Aurlok-Walosi" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Cartel" to="." method="_change_faction" binds= [ "Cartel" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Khaliman" to="." method="_change_faction" binds= [ "Khaliman" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Evadés" to="." method="_change_faction" binds= [ "Evades" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Sororité" to="." method="_change_faction" binds= [ "Khaliman-Sororité" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Loge" to="." method="_change_faction" binds= [ "Loges" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Naashti" to="." method="_change_faction" binds= [ "Naashti" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Rados" to="." method="_change_faction" binds= [ "Rados" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Triade de jade" to="." method="_change_faction" binds= [ "Triade de Jade" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Garde Cobra" to="." method="_change_faction" binds= [ "Triade-Garde Cobra" ]]
+[connection signal="pressed" from="Menu/VBoxContainer/Utopie" to="." method="_change_faction" binds= [ "Utopie" ]]

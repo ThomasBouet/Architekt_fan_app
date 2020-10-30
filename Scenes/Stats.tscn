@@ -1,0 +1,248 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Stats.gd" type="Script" id=2]
+
+[node name="Panel" type="Panel"]
+modulate = Color( 1, 0, 0, 1 )
+margin_right = 528.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 528, 128 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CombatValue" type="Label" parent="."]
+margin_left = 184.0
+margin_top = 67.0
+margin_right = 208.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PAValue" type="Label" parent="."]
+margin_left = 264.0
+margin_top = 104.0
+margin_right = 288.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FigNb" type="Label" parent="."]
+margin_left = 264.0
+margin_top = 32.0
+margin_right = 288.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DefenseValue" type="Label" parent="."]
+margin_left = 104.0
+margin_top = 86.0
+margin_right = 128.0
+margin_bottom = 105.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EspritValue" type="Label" parent="."]
+margin_left = 104.0
+margin_top = 32.0
+margin_right = 128.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RefValue" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 67.0
+margin_right = 56.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DmgValues" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 27.0
+margin_right = 504.0
+margin_bottom = 46.0
+rect_rotation = -0.205741
+custom_fonts/font = ExtResource( 1 )
+text = "-/-/-/-/-/-"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TirValues" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 67.0
+margin_right = 504.0
+margin_bottom = 86.0
+custom_fonts/font = ExtResource( 1 )
+text = "-/-/-/-/-/-"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MvtValues" type="Label" parent="."]
+anchor_left = 0.00189394
+anchor_right = 0.00189394
+margin_left = 360.0
+margin_top = 104.0
+margin_right = 416.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 1 )
+text = "-/-/-"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Combat" type="Label" parent="."]
+margin_left = 152.0
+margin_top = 48.0
+margin_right = 222.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+text = "Combat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Figs" type="Label" parent="."]
+margin_left = 256.0
+margin_top = 8.0
+margin_right = 296.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 1 )
+text = "Figs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dmg" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 8.0
+margin_right = 361.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 1 )
+text = "Dmg"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tir" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 48.0
+margin_right = 344.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+text = "Tir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Défense" type="Label" parent="."]
+anchor_bottom = 0.04
+margin_left = 80.0
+margin_top = 104.0
+margin_right = 149.0
+margin_bottom = 117.88
+custom_fonts/font = ExtResource( 1 )
+text = "Défense"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Esprit" type="Label" parent="."]
+margin_left = 88.0
+margin_top = 8.0
+margin_right = 139.0
+margin_bottom = 27.0
+custom_fonts/font = ExtResource( 1 )
+text = "Esprit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ref" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 48.0
+margin_right = 65.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+text = "Réflexe"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PAs" type="Label" parent="."]
+margin_left = 256.0
+margin_top = 80.0
+margin_right = 288.0
+margin_bottom = 99.0
+custom_fonts/font = ExtResource( 1 )
+text = "PAs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mvt" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 104.0
+margin_right = 360.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 1 )
+text = "Mvt"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PVs" type="Label" parent="."]
+margin_left = 424.0
+margin_top = 104.0
+margin_right = 456.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 1 )
+text = "PVs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PVsValues" type="Label" parent="."]
+margin_left = 464.0
+margin_top = 104.0
+margin_right = 520.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 1 )
+text = "-/-/-"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
