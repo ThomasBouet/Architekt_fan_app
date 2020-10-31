@@ -19,6 +19,15 @@ func _ready():
 	refresh_profils_list(Json.load_all_factions(), true)
 	
 func add_to_team(p, node):
+#	cache le max
+# incrémente le label jusqu'à max atteint -> on affiche la mention max
+#si 0 selc, on affiche rien
+
+#	au moment de l'ajout, il faut:
+#- vérifier que le profil fait parti des profils qui modifient la limite de recrutement
+#-si oui, vérifier l'existence des profils affectés dans l'arbre
+#-modifier les paramètres du Json
+#-maj l'affichage
 	print("adding " + p["Nom"])
 	if p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
 		if hashero:
@@ -57,7 +66,7 @@ func show_cards(p):
 func display_cards(p):
 	var files = []
 	var dir = Directory.new()
-	dir.open("res://Sprites/Profils/" + p["Nom"])
+	dir.open("res://Sprites/Profils/" + p["Imgs"])
 	dir.list_dir_begin()
 
 	while true:
@@ -70,7 +79,7 @@ func display_cards(p):
 	dir.list_dir_end()
 	
 	for f in files:
-		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + f[0]).texture = load("res://Sprites/Profils/" + p["Nom"] + "/" + f[0] + ".png")
+		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + f[0]).texture = load("res://Sprites/Profils/" + p["Imgs"] + "/" + f[0] + ".png")
 
 func _on_Close_pressed():
 	var init_pos = get_node("ImgDisplay").position
@@ -121,6 +130,7 @@ func refresh_profils_list(list, hide=false):
 		profil.get_child(8).connect("pressed", self, "add_to_team", [p, profil])
 		profil.get_child(9).connect("pressed", self, "remove_from_team", [p, profil])
 		profil.get_child(9).visible = false
+		profil.name = p["Imgs"] 
 		if p["Max"] == "0" or hide:
 			profil.get_child(8).visible = false
 		get_node("Content Holder/Profils/DiplayList").add_child(profil)

@@ -23,3 +23,10 @@ func load_all_factions():
 				all_list.append(i)
 				
 	return all_list
+	
+
+# lotharius -> +1 templier
+# rigosane -> +2 martyrs
+# dalia -> +2 ghulam
+# deicolius -> +3 novices
+# pitekica -> +1 chaman medecine
