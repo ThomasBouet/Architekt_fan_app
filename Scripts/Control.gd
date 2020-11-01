@@ -15,3 +15,6 @@ func init(profil):
 	fig_max.text = profil["Max"]
 	
 	return self
+	
+func manage_recruitement():
+	pass

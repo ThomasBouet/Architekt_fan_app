@@ -13,7 +13,8 @@ func _ready():
 	profils_data = JSON.parse(json_file.get_as_text()).result
 	json_file.close()
 	
-#	print([1,2,3,1].count(4))
+	
+	print([1,2,3,1].find(4))
 	
 func load_all_factions():
 	var all_list = []
@@ -24,9 +25,11 @@ func load_all_factions():
 				
 	return all_list
 	
-
-# lotharius -> +1 templier
-# rigosane -> +2 martyrs
-# dalia -> +2 ghulam
-# deicolius -> +3 novices
-# pitekica -> +1 chaman medecine
+const CHANGE_RECRUTEMENT = {
+#	"nom de la fig qui change les règles": ["fig changée": bonus de recrutement]
+	"Lotharius": ["Templier", 1],
+	"Rigosane": ["Martyr", 2],
+	"Dhalia": ["Ghulam", 2],
+	"Deicolius": ["Novice-temple", 3],
+	"Pitekica": ["Chaman-medecine", 1]
+}

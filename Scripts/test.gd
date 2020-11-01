@@ -4,7 +4,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-const Profil = preload("res://Scenes/Control.tscn")
+const Profil = preload("res://Scenes/Profil.tscn")
 var MenuOpen = false
 var hashero = false
 var maxPts = 180
@@ -19,10 +19,6 @@ func _ready():
 	refresh_profils_list(Json.load_all_factions(), true)
 	
 func add_to_team(p, node):
-#	cache le max
-# incrémente le label jusqu'à max atteint -> on affiche la mention max
-#si 0 selc, on affiche rien
-
 #	au moment de l'ajout, il faut:
 #- vérifier que le profil fait parti des profils qui modifient la limite de recrutement
 #-si oui, vérifier l'existence des profils affectés dans l'arbre
@@ -40,9 +36,14 @@ func add_to_team(p, node):
 		currentPTS += int(p["Cout"])
 		get_node("Content Holder/ProgressBar").value = currentPTS
 		get_node("Content Holder/Panel").avg_stats(Team)
+		node.get_child(4).text = str(int(node.get_child(4).text) + 1)
+		
+#		--- Gestion de l'atteinte du max de recrutement ---
+		node.get_child(4).visible =true
 		node.get_child(9).visible = true
 		if int(p["Max"]) == Team.count(p):
 			node.get_child(8).visible = false
+			node.get_child(5).visible = true
 	else:
 		print("seuil dépassé")
 	
@@ -52,9 +53,16 @@ func remove_from_team(p, node):
 	currentPTS -= int(p["Cout"])
 	get_node("Content Holder/ProgressBar").value = currentPTS
 	get_node("Content Holder/Panel").avg_stats(Team)
+	node.get_child(4).text = str(int(node.get_child(4).text) - 1)
+	
+#	--- Gestion de l'atteinte du min de recrutement ---
 	node.get_child(8).visible = true
 	if Team.count(p) == 0:
 		node.get_child(9).visible = false
+		node.get_child(4).visible = false
+	
+	if Team.count(p) != int(p["Max"]):
+		node.get_child(5).visible = false
 	
 # --- Gestion de l'affichage des cartes ---
 func show_cards(p):
@@ -71,15 +79,20 @@ func display_cards(p):
 
 	while true:
 		var file = dir.get_next()
+		print(file.get_basename())
 		if file == "":
 			break
-		elif not file.begins_with(".") and file.ends_with(".png"):
+		elif not file.begins_with(".") and file.ends_with(".import"):
 			files.append(file)
 
 	dir.list_dir_end()
-	
-	for f in files:
-		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + f[0]).texture = load("res://Sprites/Profils/" + p["Imgs"] + "/" + f[0] + ".png")
+	print()
+	print("nombre d'imatges trouvées " + str(len(files)))
+#	get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_0").texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/1.png")
+	for i in range(len(files)):
+		print("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i))
+		print("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".png")
+		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".png")
 
 func _on_Close_pressed():
 	var init_pos = get_node("ImgDisplay").position
@@ -130,7 +143,8 @@ func refresh_profils_list(list, hide=false):
 		profil.get_child(8).connect("pressed", self, "add_to_team", [p, profil])
 		profil.get_child(9).connect("pressed", self, "remove_from_team", [p, profil])
 		profil.get_child(9).visible = false
-		profil.name = p["Imgs"] 
+		profil.name = p["Imgs"]
+		profil.get_child(4).text = "0" 
 		if p["Max"] == "0" or hide:
 			profil.get_child(8).visible = false
 		get_node("Content Holder/Profils/DiplayList").add_child(profil)
