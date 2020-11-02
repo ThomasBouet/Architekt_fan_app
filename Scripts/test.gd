@@ -27,42 +27,47 @@ func add_to_team(p, node):
 	print("adding " + p["Nom"])
 	if p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
 		if hashero:
+#			TODO: Mettre un popup
 			print("Déjà un héro dans la liste")
 			return
 		else:
 			hashero = true
+#	--- On autorise l'ajout que s'il l'on peut encore ajouter sans dépasser le seuil ---
 	if currentPTS + int(p["Cout"]) <= maxPts:
 		Team.append(p)
 		currentPTS += int(p["Cout"])
 		get_node("Content Holder/ProgressBar").value = currentPTS
 		get_node("Content Holder/Panel").avg_stats(Team)
-		node.get_child(4).text = str(int(node.get_child(4).text) + 1)
 		
 #		--- Gestion de l'atteinte du max de recrutement ---
-		node.get_child(4).visible =true
-		node.get_child(9).visible = true
-		if int(p["Max"]) == Team.count(p):
-			node.get_child(8).visible = false
-			node.get_child(5).visible = true
+		node.manage_recruitement(int(p["Max"]), int(node.get_child(4).text) + 1)
+		
+#		--- Gestion des mofications de recutement ---
+		if Json.CHANGE_RECRUTEMENT.has(p["Imgs"]):
+			var node_to_modify = Json.CHANGE_RECRUTEMENT[p["Imgs"]][0]
+			var qty = Json.CHANGE_RECRUTEMENT[p["Imgs"]][1]
+			var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
+			if node_modified != null:
+				var p_name = node_modified.get_child(1).get_child(0).text
+				print(Json.profils_data[get_node("Faction").text].index(0))
+				var p_max = qty + int("0")
+				var p_qty = int(node_modified.get_child(4).text)
+				node_modified.manage_recruitement(p_max, p_qty)
+				
 	else:
+#		TODO: Mettre un popup
 		print("seuil dépassé")
 	
 func remove_from_team(p, node):
 	print("removing " + p["Nom"])
+	if (p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste") and hashero:
+		hashero = false
 	Team.remove(Team.find(p))
 	currentPTS -= int(p["Cout"])
 	get_node("Content Holder/ProgressBar").value = currentPTS
 	get_node("Content Holder/Panel").avg_stats(Team)
-	node.get_child(4).text = str(int(node.get_child(4).text) - 1)
-	
 #	--- Gestion de l'atteinte du min de recrutement ---
-	node.get_child(8).visible = true
-	if Team.count(p) == 0:
-		node.get_child(9).visible = false
-		node.get_child(4).visible = false
-	
-	if Team.count(p) != int(p["Max"]):
-		node.get_child(5).visible = false
+	node.manage_recruitement(int(p["Max"]), int(node.get_child(4).text) - 1)
 	
 # --- Gestion de l'affichage des cartes ---
 func show_cards(p):
@@ -86,9 +91,8 @@ func display_cards(p):
 			files.append(file)
 
 	dir.list_dir_end()
-	print()
 	print("nombre d'imatges trouvées " + str(len(files)))
-#	get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_0").texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/1.png")
+	
 	for i in range(len(files)):
 		print("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i))
 		print("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".png")
@@ -133,17 +137,18 @@ func _change_faction(faction):
 	
 func refresh_profils_list(list, hide=false):
 	var node = get_node("Content Holder/Profils/DiplayList")
+#	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
-		
+#	--- Ajoute tous les noeuds de la faction correspondante ---	
 	for p in list:
 		var profil = Profil.instance().init(p)
+		profil.name = p["Imgs"]
 		profil.get_child(1).connect("pressed", self, "show_cards", [p])
 		profil.get_child(8).connect("pressed", self, "add_to_team", [p, profil])
 		profil.get_child(9).connect("pressed", self, "remove_from_team", [p, profil])
 		profil.get_child(9).visible = false
-		profil.name = p["Imgs"]
 		profil.get_child(4).text = "0" 
 		if p["Max"] == "0" or hide:
 			profil.get_child(8).visible = false
