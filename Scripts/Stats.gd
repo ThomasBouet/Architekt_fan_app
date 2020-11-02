@@ -43,7 +43,7 @@ func avg_stats(team):
 		ref += int(p["Ref"])
 		pa += int(p["PA"])
 		vie.append(p["Vie"].split("/"))
-		mvt.append(p["Vie"].split("/"))
+		mvt.append(p["Mvt"].split("/"))
 		dmg.append(p["Dmg"].split("/"))
 		if p["Tir"] != "-":
 			tir.append(p["Tir"].split(" ")[1].split("/"))
@@ -62,8 +62,8 @@ func avg_stats(team):
 	var mvts = [0,0,0]
 	for mo in mvt:
 		mvts[0] += int(mo[0])
-		mvts[1] += int(mo[0])
-		mvts[2] += int(mo[0])
+		mvts[1] += int(mo[1])
+		mvts[2] += int(mo[2])
 	for i in range(0,3):
 		mvts[i] = mvts[i]/nb_profils
 	mvt = str(mvts[0]) + "/" + str(mvts[1]) + "/" + str(mvts[2])

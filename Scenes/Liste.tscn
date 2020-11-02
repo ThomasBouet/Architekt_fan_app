@@ -1,0 +1,247 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Liste.gd" type="Script" id=1]
+[ext_resource path="res://Spartan.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sprites/UI/menu_white.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/UI/x-mark.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/ImgDisplay.gd" type="Script" id=5]
+[ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=8]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_top = 1.0
+margin_right = 576.0
+margin_bottom = 1025.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.109804, 0.105882, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MesListes" type="Label" parent="."]
+margin_left = 104.0
+margin_top = 32.0
+margin_right = 472.0
+margin_bottom = 105.0
+custom_fonts/font = ExtResource( 2 )
+text = "Mes Listes"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Content" type="VBoxContainer" parent="."]
+margin_left = 24.0
+margin_top = 128.0
+margin_right = 552.0
+margin_bottom = 1020.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Listes" type="VBoxContainer" parent="Content"]
+margin_right = 528.0
+margin_bottom = 19.0
+
+[node name="Label" type="Label" parent="Content/Listes"]
+margin_right = 528.0
+margin_bottom = 19.0
+custom_fonts/font = ExtResource( 6 )
+text = "Listes enregistrées :"
+align = 1
+valign = 1
+
+[node name="Content Holder" type="VBoxContainer" parent="Content"]
+visible = false
+margin_top = 23.0
+margin_right = 528.0
+margin_bottom = 793.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Content/Content Holder"]
+visible = false
+margin_right = 528.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+max_value = 180.0
+value = 50.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="Content/Content Holder/ProgressBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -1.0
+custom_fonts/font = ExtResource( 6 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" parent="Content/Content Holder" instance=ExtResource( 8 )]
+visible = false
+
+[node name="Profils" type="ScrollContainer" parent="Content/Content Holder"]
+margin_right = 528.0
+margin_bottom = 770.0
+rect_min_size = Vector2( 528, 770 )
+follow_focus = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DiplayList" type="VBoxContainer" parent="Content/Content Holder/Profils"]
+margin_right = 528.0
+margin_bottom = 770.0
+rect_min_size = Vector2( 0, 770 )
+size_flags_horizontal = 3
+custom_constants/separation = 70
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ImgDisplay" type="Node2D" parent="."]
+position = Vector2( 576, 88 )
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="ImgDisplay"]
+margin_right = 528.0
+margin_bottom = 920.0
+color = Color( 0.317647, 0.192157, 0.0705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ImgDisplay"]
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 520.0
+margin_bottom = 915.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ImgDisplay/ScrollContainer"]
+margin_right = 512.0
+margin_bottom = 904.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Carte_0" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_right = 512.0
+stretch_mode = 6
+
+[node name="Carte_1" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_top = 4.0
+margin_right = 512.0
+margin_bottom = 4.0
+stretch_mode = 6
+
+[node name="Carte_2" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_top = 8.0
+margin_right = 512.0
+margin_bottom = 8.0
+stretch_mode = 6
+
+[node name="Carte_3" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_top = 12.0
+margin_right = 512.0
+margin_bottom = 12.0
+stretch_mode = 6
+
+[node name="Carte_4" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
+margin_top = 16.0
+margin_right = 512.0
+margin_bottom = 16.0
+stretch_mode = 6
+
+[node name="TweenImg" type="Tween" parent="ImgDisplay"]
+
+[node name="Close" type="TextureButton" parent="ImgDisplay"]
+margin_left = 8.0
+margin_top = 11.0
+margin_right = 520.0
+margin_bottom = 523.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="ColorRect2" type="ColorRect" parent="Menu"]
+margin_left = -2.0
+margin_right = 94.0
+margin_bottom = 80.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuBtn" type="TextureButton" parent="Menu"]
+margin_left = 8.0
+margin_right = 520.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.15, 0.15 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource( 3 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu"]
+margin_left = -320.0
+margin_right = -1.0
+margin_bottom = 1024.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+margin_left = -312.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = 1016.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accueil" type="Button" parent="Menu/VBoxContainer"]
+margin_right = 304.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 6 )
+text = "Accueil"
+
+[node name="Tous" type="Button" parent="Menu/VBoxContainer"]
+margin_top = 29.0
+margin_right = 304.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 6 )
+text = "Tous les profils"
+
+[node name="TweenMenu" type="Tween" parent="Menu"]
+[connection signal="value_changed" from="Content/Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
+[connection signal="pressed" from="ImgDisplay/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Tous" to="." method="_on_Tous_pressed"]

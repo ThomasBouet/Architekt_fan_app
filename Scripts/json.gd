@@ -12,9 +12,7 @@ func _ready():
 	json_file.open("res://profils.json", File.READ)
 	profils_data = JSON.parse(json_file.get_as_text()).result
 	json_file.close()
-	
-	
-	print([1,2,3,1].find(4))
+	get_team_saved()
 	
 func load_all_factions():
 	var all_list = []
@@ -24,6 +22,35 @@ func load_all_factions():
 				all_list.append(i)
 				
 	return all_list
+	
+func has_team_saved():
+	var nb = 0
+	var dir = Directory.new()
+	dir.open("res://Data")
+	dir.list_dir_begin()
+	while true:
+		var file = dir.get_next()
+		if file == "":
+			break
+		elif file.ends_with(".json"):
+			nb += 1
+	dir.list_dir_end()
+	return nb > 0
+	
+func get_team_saved():
+	var teams = []
+	var dir = Directory.new()
+	dir.open("res://Data")
+	dir.list_dir_begin()
+	while true:
+		var file = dir.get_next()
+		if file == "":
+			break
+		elif file.ends_with(".json"):
+			teams.append(file)
+	dir.list_dir_end()
+	print(teams)
+	return teams
 	
 const CHANGE_RECRUTEMENT = {
 #	"nom de la fig qui change les règles": ["fig changée": bonus de recrutement]

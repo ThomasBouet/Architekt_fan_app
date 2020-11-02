@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="architekt"
-run/main_scene="res://Scenes/test.tscn"
+run/main_scene="res://Scenes/Accueil.tscn"
 config/icon="res://icon.png"
 
 [autoload]

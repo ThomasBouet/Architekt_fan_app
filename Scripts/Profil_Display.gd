@@ -13,61 +13,82 @@ var Team = []
 
 func _ready():
 	get_node("Faction").text = "Profils"
+	
 	get_node("Content Holder/Panel").init()
 	get_node("Content Holder/Panel").visible = false
 	get_node("Content Holder/ProgressBar").visible = false
+	
 	refresh_profils_list(Json.load_all_factions(), true)
 	
+	get_node("SaveDialog").add_cancel("Annuler")
+	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
+	
+	if Json.has_team_saved():
+		get_node("Menu/VBoxContainer/Mes listes").visible = true
+	
 func add_to_team(p, node):
-#	au moment de l'ajout, il faut:
-#- vérifier que le profil fait parti des profils qui modifient la limite de recrutement
-#-si oui, vérifier l'existence des profils affectés dans l'arbre
-#-modifier les paramètres du Json
-#-maj l'affichage
-	print("adding " + p["Nom"])
-	if p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
+	print("adding " + node.profil["Nom"])
+	if node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste":
 		if hashero:
 #			TODO: Mettre un popup
-			print("Déjà un héro dans la liste")
+			show_message("Ajout impossible", "Un héros se trouve déjà dans votre liste.\nVous ne pouvez avoir qu'un seul héro par liste.")
 			return
 		else:
 			hashero = true
+			get_node("Save").visible = true
 #	--- On autorise l'ajout que s'il l'on peut encore ajouter sans dépasser le seuil ---
-	if currentPTS + int(p["Cout"]) <= maxPts:
+	if currentPTS + int(node.profil["Cout"]) <= maxPts:
 		Team.append(p)
-		currentPTS += int(p["Cout"])
+		currentPTS += int(node.profil["Cout"])
 		get_node("Content Holder/ProgressBar").value = currentPTS
 		get_node("Content Holder/Panel").avg_stats(Team)
 		
 #		--- Gestion de l'atteinte du max de recrutement ---
-		node.manage_recruitement(int(p["Max"]), int(node.get_child(4).text) + 1)
+		node.manage_recruitement(node.get_recuitement() + 1)
 		
 #		--- Gestion des mofications de recutement ---
-		if Json.CHANGE_RECRUTEMENT.has(p["Imgs"]):
-			var node_to_modify = Json.CHANGE_RECRUTEMENT[p["Imgs"]][0]
-			var qty = Json.CHANGE_RECRUTEMENT[p["Imgs"]][1]
+		if Json.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
+			var node_to_modify = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
+			var qty = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
 			var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
 			if node_modified != null:
-				var p_name = node_modified.get_child(1).get_child(0).text
-				print(Json.profils_data[get_node("Faction").text].index(0))
-				var p_max = qty + int("0")
-				var p_qty = int(node_modified.get_child(4).text)
-				node_modified.manage_recruitement(p_max, p_qty)
-				
+				var new_max = qty + node_modified.get_max()
+				node_modified.set_max(new_max)
+				node_modified.manage_recruitement(node_modified.get_recuitement())
 	else:
 #		TODO: Mettre un popup
-		print("seuil dépassé")
+		show_message("Ajout impossible", "L'ajout de ce profil n'est pas possible.\n La limite de point serait dépassée.")
 	
 func remove_from_team(p, node):
-	print("removing " + p["Nom"])
-	if (p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste") and hashero:
+	print("removing " + node.profil["Nom"])
+	if (node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste") and hashero:
 		hashero = false
+		get_node("Save").visible = false
+		
 	Team.remove(Team.find(p))
-	currentPTS -= int(p["Cout"])
+	currentPTS -= int(node.profil["Cout"])
 	get_node("Content Holder/ProgressBar").value = currentPTS
 	get_node("Content Holder/Panel").avg_stats(Team)
+	
 #	--- Gestion de l'atteinte du min de recrutement ---
-	node.manage_recruitement(int(p["Max"]), int(node.get_child(4).text) - 1)
+	node.manage_recruitement(node.get_recuitement() - 1)
+	
+#		--- Gestion des mofications de recutement ---
+	if Json.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
+		var node_to_modify = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
+		var qty = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
+		var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
+		if node_modified != null:
+			var new_max = node_modified.get_max() - qty 
+			var nb_recuited = node_modified.get_recuitement()
+			node_modified.set_max(new_max)
+			node_modified.manage_recruitement(new_max)
+			if nb_recuited > new_max:
+				for i in range(nb_recuited - new_max):
+					Team.remove(Team.find(node_modified.profil))
+					currentPTS -= int(node_modified.profil["Cout"])
+					get_node("Content Holder/ProgressBar").value = currentPTS
+					get_node("Content Holder/Panel").avg_stats(Team)
 	
 # --- Gestion de l'affichage des cartes ---
 func show_cards(p):
@@ -91,11 +112,8 @@ func display_cards(p):
 			files.append(file)
 
 	dir.list_dir_end()
-	print("nombre d'imatges trouvées " + str(len(files)))
 	
 	for i in range(len(files)):
-		print("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i))
-		print("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".png")
 		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".png")
 
 func _on_Close_pressed():
@@ -149,11 +167,53 @@ func refresh_profils_list(list, hide=false):
 		profil.get_child(8).connect("pressed", self, "add_to_team", [p, profil])
 		profil.get_child(9).connect("pressed", self, "remove_from_team", [p, profil])
 		profil.get_child(9).visible = false
+#		profil.size_flags_horizontal = 3 
+#		profil.size_flags_vertical = 3
+		
+		if p["Type"] == "Troupe":
+			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
+		elif p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
+			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
+		elif p["Type"] == "Alchimiste":
+			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
+		elif p["Type"] == "Special" or p["Type"] == "Spécial":
+			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
+			
 		profil.get_child(4).text = "0" 
 		if p["Max"] == "0" or hide:
 			profil.get_child(8).visible = false
 		get_node("Content Holder/Profils/DiplayList").add_child(profil)
+#	--- solution dégueue mais ça marche ---
+	var c = Control.new()
+	c.rect_min_size = Vector2(0,0)
+	get_node("Content Holder/Profils/DiplayList").add_child(c)
 	
 func _on_ProgressBar_value_changed(value):
 	get_node("Content Holder/ProgressBar/Label").text = str(value) + "/" + str(maxPts)
-	pass # Replace with function body.
+	
+func _on_TextureButton_pressed():
+	get_node("SaveDialog").popup_centered()
+	
+func _on_SaveDialog_confirmed():
+	var path = "res://Data/" + get_node("SaveDialog/LineEdit").text + ".json"
+	var file = File.new()
+	if file.file_exists(path):
+		show_message("Problème d'enregistrement", "Fichier déjà existant")
+	else:
+		file.open(path, File.WRITE)
+		var team_stored = [get_node("Faction").text, Team]
+		file.store_line(to_json(team_stored))
+		file.close()
+		get_node("Menu/VBoxContainer/Mes listes").visible = true
+	
+func show_message(title, msg):
+	get_node("OverWriteDialog").window_title = title
+	get_node("OverWriteDialog").dialog_text = msg
+	get_node("OverWriteDialog").popup_centered()
+	
+func _on_Accueil_pressed():
+	get_tree().change_scene("res://Scenes/Accueil.tscn")
+	
+func _on_Mes_listes_pressed():
+	get_tree().change_scene("res://Scenes/Liste.tscn")
+	

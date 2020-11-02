@@ -4,19 +4,17 @@
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=2]
 
 [node name="Control" type="Control"]
-margin_right = 576.0
+margin_right = 516.0
 margin_bottom = 66.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 576.0
+margin_right = 516.0
 margin_bottom = 67.0
-size_flags_horizontal = 3
+size_flags_horizontal = 4
 size_flags_vertical = 0
 color = Color( 0.333333, 0.101961, 0.101961, 1 )
 __meta__ = {
@@ -25,9 +23,9 @@ __meta__ = {
 
 [node name="Nom" type="LinkButton" parent="."]
 margin_left = 3.0
-margin_top = 9.0
+margin_top = 7.0
 margin_right = 256.0
-margin_bottom = 56.0
+margin_bottom = 64.0
 custom_fonts/font = ExtResource( 2 )
 underline = 2
 __meta__ = {
@@ -35,19 +33,21 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Nom"]
+margin_left = 61.0
 margin_right = 381.0
-margin_bottom = 14.0
+margin_bottom = 19.0
 custom_fonts/font = ExtResource( 2 )
 text = "Connétable Lotharius du Temple des Vêpres"
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PA" type="Label" parent="."]
-margin_left = 81.771
-margin_top = 34.0416
-margin_right = 121.771
-margin_bottom = 48.0416
+margin_left = 136.0
+margin_top = 40.0
+margin_right = 176.0
+margin_bottom = 59.0
 custom_fonts/font = ExtResource( 2 )
 text = "4"
 align = 1
@@ -57,10 +57,10 @@ __meta__ = {
 }
 
 [node name="_pa" type="Label" parent="."]
-margin_left = 112.771
-margin_top = 33.5962
-margin_right = 152.771
-margin_bottom = 52.5962
+margin_left = 168.0
+margin_top = 40.0
+margin_right = 208.0
+margin_bottom = 59.0
 custom_fonts/font = ExtResource( 2 )
 text = ": PA"
 align = 1
@@ -98,10 +98,10 @@ __meta__ = {
 }
 
 [node name="Cout" type="Label" parent="."]
-margin_left = 15.0359
-margin_top = 33.9203
-margin_right = 55.0359
-margin_bottom = 47.9203
+margin_left = 64.0
+margin_top = 40.0
+margin_right = 104.0
+margin_bottom = 59.0
 custom_fonts/font = ExtResource( 2 )
 text = "40"
 align = 1
@@ -111,10 +111,10 @@ __meta__ = {
 }
 
 [node name="_pts" type="Label" parent="."]
-margin_left = 47.4564
-margin_top = 33.9203
-margin_right = 87.4564
-margin_bottom = 47.9203
+margin_left = 104.0
+margin_top = 40.0
+margin_right = 144.0
+margin_bottom = 59.0
 custom_fonts/font = ExtResource( 2 )
 text = ": pts"
 align = 1
@@ -135,9 +135,17 @@ __meta__ = {
 }
 
 [node name="Remove" type="Button" parent="."]
-margin_left = 472.0
+margin_left = 460.0
 margin_top = 8.0
-margin_right = 511.0
+margin_right = 499.0
 margin_bottom = 56.0
 custom_fonts/font = ExtResource( 2 )
 text = "-"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 64.0
+margin_bottom = 64.0
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}

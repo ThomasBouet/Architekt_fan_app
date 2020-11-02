@@ -1,0 +1,108 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Spartan.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/Accueil.gd" type="Script" id=3]
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Background" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 576.0
+margin_bottom = 1024.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.109804, 0.105882, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Faction" type="Label" parent="."]
+margin_left = 128.0
+margin_top = 55.0
+margin_right = 448.0
+margin_bottom = 143.0
+custom_fonts/font = ExtResource( 1 )
+text = "Architekt"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Auteur" type="Label" parent="."]
+margin_left = 184.0
+margin_top = 1000.0
+margin_right = 400.0
+margin_bottom = 1019.0
+custom_fonts/font = ExtResource( 2 )
+text = "Made by Thomas BOUET"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 128.0
+margin_top = 190.0
+margin_right = 448.0
+margin_bottom = 702.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Profils" type="Button" parent="VBoxContainer"]
+margin_right = 320.0
+margin_bottom = 125.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Profils"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Règles" type="Button" parent="VBoxContainer"]
+margin_top = 129.0
+margin_right = 320.0
+margin_bottom = 254.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Règles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mes listes" type="Button" parent="VBoxContainer"]
+margin_top = 258.0
+margin_right = 320.0
+margin_bottom = 383.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Mes listes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scénarios" type="Button" parent="VBoxContainer"]
+margin_top = 387.0
+margin_right = 320.0
+margin_bottom = 512.0
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "Scénarios"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBoxContainer/Profils" to="." method="_on_Profils_pressed"]
+[connection signal="pressed" from="VBoxContainer/Mes listes" to="." method="_on_Mes_listes_pressed"]
