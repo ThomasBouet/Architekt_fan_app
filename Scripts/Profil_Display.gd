@@ -163,25 +163,23 @@ func refresh_profils_list(list, hide=false):
 	for p in list:
 		var profil = Profil.instance().init(p)
 		profil.name = p["Imgs"]
-		profil.get_child(1).connect("pressed", self, "show_cards", [p])
-		profil.get_child(8).connect("pressed", self, "add_to_team", [p, profil])
-		profil.get_child(9).connect("pressed", self, "remove_from_team", [p, profil])
-		profil.get_child(9).visible = false
-#		profil.size_flags_horizontal = 3 
-#		profil.size_flags_vertical = 3
+		profil.get_child(2).connect("pressed", self, "show_cards", [p])
+		profil.get_child(9).connect("pressed", self, "add_to_team", [p, profil])
+		profil.get_child(10).connect("pressed", self, "remove_from_team", [p, profil])
+		profil.get_child(10).visible = false
 		
 		if p["Type"] == "Troupe":
-			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
+			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
 		elif p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
-			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
+			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
 		elif p["Type"] == "Alchimiste":
-			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
+			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
 		elif p["Type"] == "Special" or p["Type"] == "Spécial":
-			profil.get_child(10).texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
+			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
 			
-		profil.get_child(4).text = "0" 
+		profil.get_child(5).text = "0" 
 		if p["Max"] == "0" or hide:
-			profil.get_child(8).visible = false
+			profil.get_child(9).visible = false
 		get_node("Content Holder/Profils/DiplayList").add_child(profil)
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
@@ -205,6 +203,7 @@ func _on_SaveDialog_confirmed():
 		file.store_line(to_json(team_stored))
 		file.close()
 		get_node("Menu/VBoxContainer/Mes listes").visible = true
+		get_node("SaveDialog/LineEdit").text = ""
 	
 func show_message(title, msg):
 	get_node("OverWriteDialog").window_title = title

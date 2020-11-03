@@ -4,7 +4,7 @@
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=2]
 
 [node name="Control" type="Control"]
-margin_right = 516.0
+margin_right = 576.0
 margin_bottom = 66.0
 script = ExtResource( 1 )
 __meta__ = {
@@ -12,11 +12,19 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 516.0
+margin_right = 576.0
 margin_bottom = 67.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 color = Color( 0.333333, 0.101961, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 64.0
+margin_bottom = 64.0
+stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -124,10 +132,10 @@ __meta__ = {
 }
 
 [node name="Add" type="Button" parent="."]
-margin_left = 400.0
-margin_top = 7.29291
-margin_right = 440.0
-margin_bottom = 55.2929
+margin_left = 416.0
+margin_top = 8.0
+margin_right = 456.0
+margin_bottom = 56.0
 custom_fonts/font = ExtResource( 2 )
 text = "+"
 __meta__ = {
@@ -135,17 +143,12 @@ __meta__ = {
 }
 
 [node name="Remove" type="Button" parent="."]
-margin_left = 460.0
-margin_top = 8.0
-margin_right = 499.0
-margin_bottom = 56.0
+margin_left = 504.0
+margin_top = 7.0
+margin_right = 543.0
+margin_bottom = 55.0
 custom_fonts/font = ExtResource( 2 )
 text = "-"
-
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 64.0
-margin_bottom = 64.0
-stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }

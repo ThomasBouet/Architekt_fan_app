@@ -54,12 +54,10 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="Content Holder"]
-visible = false
 margin_right = 528.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
 max_value = 180.0
-value = 50.0
 percent_visible = false
 
 [node name="Label" type="Label" parent="Content Holder/ProgressBar"]
@@ -73,11 +71,14 @@ __meta__ = {
 }
 
 [node name="Panel" parent="Content Holder" instance=ExtResource( 1 )]
-visible = false
+margin_top = 24.0
+margin_right = 528.0
+margin_bottom = 152.0
 
 [node name="Profils" type="ScrollContainer" parent="Content Holder"]
+margin_top = 156.0
 margin_right = 528.0
-margin_bottom = 770.0
+margin_bottom = 926.0
 rect_min_size = Vector2( 528, 770 )
 follow_focus = true
 __meta__ = {
@@ -91,7 +92,6 @@ rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 70
-alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }

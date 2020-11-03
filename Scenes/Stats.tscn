@@ -5,7 +5,7 @@
 
 [node name="Panel" type="Panel"]
 modulate = Color( 1, 0, 0, 1 )
-margin_right = 528.0
+margin_right = 544.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 528, 128 )
 script = ExtResource( 2 )
@@ -113,9 +113,9 @@ __meta__ = {
 [node name="MvtValues" type="Label" parent="."]
 anchor_left = 0.00189394
 anchor_right = 0.00189394
-margin_left = 360.0
+margin_left = 359.97
 margin_top = 104.0
-margin_right = 423.0
+margin_right = 430.97
 margin_bottom = 123.0
 custom_fonts/font = ExtResource( 1 )
 text = "-/-/-"
@@ -238,7 +238,7 @@ __meta__ = {
 [node name="PVsValues" type="Label" parent="."]
 margin_left = 464.0
 margin_top = 104.0
-margin_right = 520.0
+margin_right = 536.0
 margin_bottom = 123.0
 custom_fonts/font = ExtResource( 1 )
 text = "-/-/-"

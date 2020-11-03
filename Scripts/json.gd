@@ -12,7 +12,6 @@ func _ready():
 	json_file.open("res://profils.json", File.READ)
 	profils_data = JSON.parse(json_file.get_as_text()).result
 	json_file.close()
-	get_team_saved()
 	
 func load_all_factions():
 	var all_list = []
@@ -49,8 +48,14 @@ func get_team_saved():
 		elif file.ends_with(".json"):
 			teams.append(file)
 	dir.list_dir_end()
-	print(teams)
 	return teams
+	
+func get_team(nom):
+	var json_file = File.new()
+	json_file.open("res://Data/" + nom, File.READ)
+	var team_data = JSON.parse(json_file.get_as_text()).result
+	json_file.close()
+	return team_data
 	
 const CHANGE_RECRUTEMENT = {
 #	"nom de la fig qui change les règles": ["fig changée": bonus de recrutement]

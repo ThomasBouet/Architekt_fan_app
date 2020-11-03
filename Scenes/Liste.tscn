@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Liste.gd" type="Script" id=1]
 [ext_resource path="res://Spartan.tres" type="DynamicFont" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprites/UI/delete.png" type="Texture" id=9]
 
 [node name="Root" type="Node2D"]
 script = ExtResource( 1 )
@@ -54,17 +55,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Listes" type="VBoxContainer" parent="Content"]
+[node name="MenuButton" type="MenuButton" parent="Content"]
 margin_right = 528.0
-margin_bottom = 19.0
-
-[node name="Label" type="Label" parent="Content/Listes"]
-margin_right = 528.0
-margin_bottom = 19.0
+margin_bottom = 25.0
 custom_fonts/font = ExtResource( 6 )
-text = "Listes enregistrées :"
+text = "Sélectionner la liste à afficher"
+
+[node name="Faction" type="Label" parent="Content"]
+visible = false
+margin_top = 29.0
+margin_right = 528.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 6 )
+text = "Faction"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Content Holder" type="VBoxContainer" parent="Content"]
 visible = false
@@ -81,7 +89,6 @@ margin_right = 528.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
 max_value = 180.0
-value = 50.0
 percent_visible = false
 
 [node name="Label" type="Label" parent="Content/Content Holder/ProgressBar"]
@@ -241,7 +248,53 @@ custom_fonts/font = ExtResource( 6 )
 text = "Tous les profils"
 
 [node name="TweenMenu" type="Tween" parent="Menu"]
+
+[node name="Delete" type="Control" parent="."]
+visible = false
+margin_left = 512.0
+margin_top = 64.0
+margin_right = 563.0
+margin_bottom = 115.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Delete"]
+show_behind_parent = true
+light_mask = -2147483647
+margin_right = 51.0
+margin_bottom = 51.0
+color = Color( 0.847059, 0.054902, 0.054902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DeleteButton" type="TextureButton" parent="Delete"]
+margin_right = 512.0
+margin_bottom = 512.0
+rect_scale = Vector2( 0.1, 0.1 )
+action_mode = 0
+texture_normal = ExtResource( 9 )
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+visible = true
+margin_left = 232.0
+margin_top = -72.0
+margin_right = 358.0
+margin_bottom = -14.0
+popup_exclusive = true
+window_title = "Suppression"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="value_changed" from="Content/Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
 [connection signal="pressed" from="ImgDisplay/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
+[connection signal="pressed" from="Menu/VBoxContainer/Accueil" to="." method="_on_Accueil_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Tous" to="." method="_on_Tous_pressed"]
