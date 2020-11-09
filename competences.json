@@ -1,0 +1,630 @@
+{
+    "Abeilles": {
+        "Description": "Les abeilles sont liées à un marqueur ruche.\nAu moment du placement d'une ruche, toutes les figurines à 2 pouces ou moins de la ruche subissent un jet de Combat de valeur 4. Cette attaque se joue sans CC et sans réaction possible.\nPar la suite, toute figurine effectuant un mouvement, une action ou réaction dans l'aire d'effet d'une ruche subit une attaque des abeilles, limité à un jet par ruche et par tour.\nune figurine dans la portée de plusieurs ruche subira autant d'attaque que de ruches.\nReitrez immédiatement le marqueur ruche si les abeilles infligent 3 DOM lors d'une attaque.\nLe lance-ruches est immunisé aux effets des abeilles.",
+        "Nom": "Abeilles"
+    },
+    "Abordage": {
+        "Description": "Lorsqu'elle charge, la figurine gagne un dé de bonus au jet de réflexe. Lors d'un combat où la figurine ne charge pas, si elle obtient un dé bonus sur le jet de COM grâce à son choix de CC, elle obtient également un dé bonus sur le jet de REF.",
+        "Nom": "Abordage"
+    },
+    "Acrobate": {
+        "Description": "Lorsque Xian Ling subit des DOM en combat, il peut choisir d'effectuer un jet de REF d'une difficulté égale au résultat du jet de COM obtenu par son adversaire. Si c'est une réussite, il ne subit aucun DOM. De plus, tant que Xian Ling est en état Indemne (blanc) ou Grave (jaune), il obtient un dé bonus à son jet de REF.",
+        "Nom": "Acrobate"
+    },
+    "Alchimie des Ombres": {
+        "Description": "Lorsqu'elle est au contact d'un décor, si la figurine utilise 1 PA pour se concentrer, elle augmente de 2 niveaux au lieu d'un seul.",
+        "Nom": "Alchimie des Ombres"
+    },
+    "Alchimiste du Cercle Extérieur (Eau/Air/Feu/Terre)": {
+        "Description": "A la fin d'une action, lorsque l'alchimiste puise dans un décor contenant un pion de son élément, il en récolte 4. Pour un pion composant d'un autre élément, il en récolte 2. Un alchimiste ne peut récolter qu'un seul piont composant par tour.",
+        "Nom": "Alchimiste du Cercle Extérieur (Eau/Air/Feu/Terre)"
+    },
+    "Alchimiste du Cercle intérieur (Eau/Air/Terre/Feu) ": {
+        "Description": "A la fin d'une action, lorsque l'alchimiste puise dans un décor contenant un pion de son élément, il en récolte 6. Pour un pion composant d'un autre élément, il en récolte 2. Un alchimiste ne peut récolter qu'un seul piont composant par tour. un alchimiste du cercle intérieur bénéficie d'un dé bonus pour ses jets d'alchimie.",
+        "Nom": "Alchimiste du Cercle intérieur (Eau/Air/Terre/Feu) "
+    },
+    "Allonge": {
+        "Description": "Les figurines dotées de cette compétence n'ont pas besoin d'être en contact pour combattre. Elles peuvent initier un combat jusqu'à 1 pouce tout autour d'elles. Un joueur peut choisir de mesurer à tout moment la portée d'Allonge de sa figurine. Il ne peut mesurée la portée D'allonge d'une figurine adverse. Lors d'un désengagement,  une figurine avec Allonge qui perd le jet de REF en opposition ne peut pas être blessée par des figurines sans Allonge. une figurine avec Allong ayant été chargée par une figurine avec Allong, mais sans être en contact, peut l'engager lors de son activation.",
+        "Nom": "Allonge"
+    },
+    "Animal Sauvage": {
+        "Description": "Un animal sauvage ne peut pas être recruté dans une troupe que s'il est associé à un \"Dresseur\". Un animal sauvage n'est pas considéré comme un membre du peuple dans lequel il est recuté (exemple : ce n'est pas un Khaliman) et n'est pas affecté par la compétence \"Chef\". Un animal sauvage ne peut pas remplir les conditions de scénario. Un animal sauvage ne peut pas utiliser la CC \"Parade\".",
+        "Nom": "Animal Sauvage"
+    },
+    "Arme Alchimique": {
+        "Description": "Lors d'un combat contre un alchimiste, un Inquisteur de la Garde Dragon lit les DOM qu'il inflige sur la deuxième ligne de son tableau de DOM.",
+        "Nom": "Arme Alchimique"
+    },
+    "Armes empoisonnées": {
+        "Description": "Lorsqu'une figurine dotée de cette capacité inflige des DOM en combat ou au tir, sa cible devient empoisonnée jusqu'à la fin du tour. Une figurine empoisonnée subit 1 dé malus à tous ses jets.",
+        "Nom": "Armes empoisonnées"
+    },
+    "Automaton": {
+        "Description": "Un automaton n'est pas considéré comme une figurine en jeu pour les conditions de victoire et ne fait pas parti de la troupe. Hormis s'il possède la compétence autonomie, il ne peut pas remplir les conditions de scénario. Il ne peut être la cible de formules et ne peut pas effectuer de jet ou d'action s'il ne possède pas la carctéristique associée. Lorsqu'une carte automaton est activée, au moins un automaton doit effectuer une action. Les autres automatonsassociés à la carte ne sont pas tenus de le faire, mais si aucun automaton ne peut effectuer l'action, l'activation de la carte est annulée et c'est au même joueur d'activer une carte.\nJsuqu'à 2 fois au cours de son activation, un automaton peut piocher 1 PA dans la réserve d'un contrôleur se trouvant à 8 pouces ou moins de lui. Des PA piochés peuvent aussi être gardés pour effectuer des réactions. Une carte automaton ne peut pas être réactivée.",
+        "Nom": "Automaton"
+    },
+    "Autorité religieuse": {
+        "Description": "Une fois par tour, à n'importe quel moment pendant son activation, le prêtre peut désigner une figurine amie non héros et non alchimiste à portée d'Esprit. Cette figurine peut effectuer immédiatement une action qui nécessite normalement1 PA.",
+        "Nom": "Autorité religieuse"
+    },
+    "Avarie": {
+        "Description": "Si Evhan obtient un double 1 sur un jet de tir, elle perd immédiatement la compétence Maître (Kunturi)",
+        "Nom": "Avarie"
+    },
+    "Batraciens Toxiques": {
+        "Description": "Au début de son activation, Ca'aptit lèche un batracien et choisit l'un des effets suivants, qui dur jusqu'à ce qu'il lèche un autre batracien :\nCrapaud Buffle : Ca'apiti asquiert Coriace/+1\nRainette Jaune : Ca'apiti asquiert Pisteur et REF+2\nRainette Noir : Ca'apiti asquiert COM+1 et DOM+1 ",
+        "Nom": "Batraciens Toxiques"
+    },
+    "Bombe Fumigène": {
+        "Description": "Durant son activation, Lin Biao peut dépenser 1 PA et placer le ou les pions suivants: \n-1 pion à 8 pouces ou moins de lui\n-2 pions à 6 pouces ou moins de lui\n-3 pions à 4 pouces ou moins de lui\nLes pions font 1 pouce de diamètre et comptent comme des décors de taille 4. Les figurines alliées disposant de la compétence Furtivité au contact avec ce décor ne peuvent être chargées à moins de 2 pouces. Une figurine adverse au contact avec ce décor peut le retirer du terrain pour 1 PA. Ala fin du tour, les pions sont retirés du jeu.",
+        "Nom": "Bombe Fumigène"
+    },
+    "Bombe Paralysante": {
+        "Description": "Une fois par tour pendant son activation, Lin Biao peut dépenser 1 PA et désigner un point à 6 pouces ou moins de lui dans saligne de vue.Les figurines à 2 pouces ou moins de ce point souffrent immédiatement d'un malus de mouvement 2/2/3 jusqu'à la fin du tour.",
+        "Nom": "Bombe Paralysante"
+    },
+    "Bond": {
+        "Description": "Le Bond peut^tre utilisé pendant une marche, une charge ou une course pour sauter au-dessus de figurines ou d'obstacles de taille 3 ou moins. Ce n'est pas un mouvement supplméntaire. La longueur du bond ne peut pas être plus grande que la valeur de marche de la figurine. De plus, une figurine dotée de Bond peut charger des figurines qu'elles ne voient pas au début de son mouvement. Elle ne peut pas finir son mouvement sur un élément de décor innaccessible.",
+        "Nom": "Bond"
+    },
+    "Borgne": {
+        "Description": "Si Hakan obtient 1 dé bonus de viése, ce dé est 1 dé rouge.",
+        "Nom": "Borgne"
+    },
+    "Borné": {
+        "Description": "Le Colosse Avalonien ne peut pas être la cible de capacités spéciales et de formules amies.",
+        "Nom": "Borné"
+    },
+    "Botte (Attaque Rageuse)": {
+        "Description": "Bonus : 1D Bonus contre Attaque Brutale\nSpécial : Les DOM infligés par la CC adverse sont lu une colonne à droite. Si la Sentinnelle est en Etat Grave (jaune), elle lit les DOM qu'elle inflige sur la 2ème ligne de son tableau de DOM.",
+        "Nom": "Botte (Attaque Rageuse)"
+    },
+    "Botte (Contre-Attaque)": {
+        "Description": "Combat : 1 dé bonus contre Rapide, Normale et Brutale\nSpécial :  La figurine obtient le dé bonus habituel de la CC Parade et également +1 en COM sur les jets de Parade et d'attaque gratuite. Si le jet de Parade est réussi de 3 ou 4 points, le défenseur gagne une attaque Rapide gratuite. Si le jet de Parade est réussi et supérieur de 5 points ou plus au jet d'attaque, le défenseur gagne une attaque Brutale gratuite à la plce d'une attaque Rapide.",
+        "Nom": "Botte (Contre-Attaque)"
+    },
+    "Botte (Frappe de Léviathan)": {
+        "Description": "Réflexes : 1D Malus\nCombat : 1D Bonus contre Attaque Rapide\nDOM : une colonne à droite\nSpécial : La figurine effectue son jet de combat avec un dé malus. Si son jet est réussite, elle lit les DOM infligés normalement dans le tableau de DOM et elle fait perdre 1 PA à la figurine adverse.",
+        "Nom": "Botte (Frappe de Léviathan)"
+    },
+    "Botte (Robuste)": {
+        "Description": "Bonus : 1D Bonus contre Attaque Brutale\nSpécial : les Dom infligés par la figurine qui utilise cette CC sont lus deux colonnes à gauche. En contrepartie, elle acquiert pour le prochain jet de COM de son adversaire la compétence Coriace/1 ou Coriace/+1.",
+        "Nom": "Botte (Robuste)"
+    },
+    "Botte (Ruse de Walosi)": {
+        "Description": "Réflexe : 2D Bonus\nSpécial : La figurine n'effectue pas de jet de COM. Elle effectue immédiatement une marche, même si elle a chargé ou couru lors de ce tour. Elle bénéficie d'1 dé bonus pour son jet de REF lors du désengagement. Les règles de désengagement sont appliquées normalement. Cette Botte peut être jouée si l'adversaire n'est pas à portée de combat.",
+        "Nom": "Botte (Ruse de Walosi)"
+    },
+    "Cavalerie": {
+        "Description": "Lors d'une charge, une figurine dotée de cette compétence obtient 2 dés Bonus à son jet de COM au lieu d'un seul et lit les résultatsdnas le tableau des DOM une colonne à droite. Cumulable avec la CC Brutale.",
+        "Nom": "Cavalerie"
+    },
+    "Charge Précise": {
+        "Description": "Une fois par tour, lorsqu'une figurine dotée de cette compétence effectue une Charge ou est la cible initaile d'une Charge, elle peut, avant tout déplacement, estimer la distance entre elle et le socle de la figurine adverse, comme lors d'un tir. Si l'estimation est correcte, elle bénéficei de +2 en COM pendant la résolution de la première CC du combat. Si l'estimation est fausse, elle obtient -1 en COM à la place.",
+        "Nom": "Charge Précise"
+    },
+    "Charges alchimiques X": {
+        "Description": "Les kunturis sont des armes de tir qui peuvent être utilisées normalement une fois par tour. Vous pouvez dépenser une charge alchimique par tour pour faire un tir supplémentaire normalement, dnas ce cas la charge alchimique est détruite et le porteur subit 1 DOM après le tir. La figurine ne peut pas dépenser de charge alchimique s'il lui reste qu'un seul point de vie.",
+        "Nom": "Charges alchimiques X"
+    },
+    "Charme des Der~Ash": {
+        "Description": "Toute figurine qui annonce une charge contre Bey~Saa'sn doit d'abord remporter un jet d'ESP en opposition avec lui. En cas d'échec de ce jet, la figurine doit charger la figurine amie à portée de charge la plus proche. S'il n'y a aucune figurine amie à portée de charge, aucun PA n'est dépensé, la charge est annulée et ne pourra plus être tentée contre Bey~Saa'sn jusqu'à la fin du tour. la figurine active peut effectuer d'autres actions à la place.",
+        "Nom": "Charme des Der~Ash"
+    },
+    "Chasseur d'Ifrit": {
+        "Description": "Un Ifrit'Qaniss obitent la compétence Perce-Armure (Combat) et 1 dé Bonus supplémentaire pour tout jet de COM ciblant un adversaire de Taille 3.",
+        "Nom": "Chasseur d'Ifrit"
+    },
+    "Chasseur de Légendes": {
+        "Description": "Tant qu'elle se trouve en état critique, une figurine possédant la compétence Chasseur de Légendes est considérée comme ayant la compétence Sans Peur et peut, pour chacun de ses jets de dés, choisir de remplacer l'un de ses dés rouge par un dé jaune.",
+        "Nom": "Chasseur de Légendes"
+    },
+    "Chaînes": {
+        "Description": "Une fois par tour pendant son activation, l'étrangleur peut gratuitement capturer une figurine ennemie de taille 1 ou 2 jusqu'à 4 pouces de lui. Il effectue un jet de combat. S'il réussit, la figurine capturée est déplacée de 4 pouces maximum par le plus court chemin en contournant les obstacles pour être placée au contact de l'étrangleur et elle eprd 1 PA. Elle n'entre pas au contact d'autres figurines et n'effectue pas de test de désengagement si elle était en combat. Les deux figurines sont désormais en combat. Si le jet est un échec ou si la figurine ne peut pas être amenée au contact de l'étrangleur par un mouvement de 4pouces, la capture échoue.",
+        "Nom": "Chaînes"
+    },
+    "Chef": {
+        "Description": "Une figurine dotée de cette compétence possède une aura dont le rayon est égal à sa caractéristique Esprit. Toute figurine amie située dans cette aura peut subsitituer son Esprit par celui du Chef pour tout jet associé à cette caractéristique. De plus, un Chef ne subit pas les effets de son état de santé en cequi concerne le jet d'initiative, il utilise toujours des dés blancs.",
+        "Nom": "Chef"
+    },
+    "Chef des Ouroboros": {
+        "Description": "Une figurine dotée de cette compétence possède une aura dont le rayon est égal à son Esprit. Toute figruine amie ouroboros (~Our'os) située dans cette aura peut remplacer son Esprit par celui du Chaef des ouroboros pour tout jet associé à cette caractéristique. De plus, un Chef des ouroboros utilise toujours les dés blancs pour le jet d'initiative.",
+        "Nom": "Chef des Ouroboros"
+    },
+    "Choc Tellurique": {
+        "Description": "Une fois par tour, lors de son activation, le Guerrier-Manitou peut gratuitement activer Choc Tellurique. Toute autre figurine se trouvant à 4 pouces ou moins du Guerrier-Manitou Possédé perd immédiatement 1 PA.",
+        "Nom": "Choc Tellurique"
+    },
+    "Clairvoyante": {
+        "Description": "Les compétences Maître, Expert, Sans Faille, Feinte de toute figurine ennemie en combat avec Iëcha sont sans effet.",
+        "Nom": "Clairvoyante"
+    },
+    "Commandement": {
+        "Description": "Virato peut utiliser cette compétence plusieurs fois par tour dans la limite de ses PA disponibles. Lors de son activation, il peut transmettre 1 PA à une figurine amie non héros et non pulianr (homoncule et nécromorphe) à portée d'esprit. La figurine ciblée dispose de ce PA pour effectuer immédiatement un tir ou une charge. Cette compétence suit les règles normales de tir ou de charge et ne donne pas droit à un tir ou une charge supplémentaire.",
+        "Nom": "Commandement"
+    },
+    "Commanditaire": {
+        "Description": "Lors du déploiement, le joueur contrôlalnt Lin Biao peut déployer toutes ses figurines comme si elles possédaient la compétence Furtivité. De plus, au début de chaque tour, Lin Biao peut désigner une figurine alliée à 4 pouces ou moins de lui. Cette figurine réalise un déplacement de 4 pouces. Elle n'effectue pas de tests de désengagement si elle était en combat.",
+        "Nom": "Commanditaire"
+    },
+    "Confusion": {
+        "Description": "Tant qu'elles se trouvent à 4 pouces ou moins d'Aros, les figurines ennemies ont -1 en Esprit pour tout jet associé à cette caractéristique.",
+        "Nom": "Confusion"
+    },
+    "Connétable Templier": {
+        "Description": "Quand Lotahrius est recrutée dans une troupe Avalonienne, les Templiers voient leur limitation de recrutement passer à 2. Tant que Lotharius est en jeu, tous les Novices du Temple acquièrent la compéttence Expert (Brutale).",
+        "Nom": "Connétable Templier"
+    },
+    "Controleur des automatons X PA": {
+        "Description": "Le contrôleur possède une réserve de X PA par tour disponible uniquement pour les automatons. Chaque automaton se trouvant à moins de 8 pouces d'un contrôleur au cours de son activation peut piocher jusqu'à 2 PA dans cette réserve.Les PA peuvent être utilisés pour effectuer des actions et/ou gardés pour bénéficier de la règle aux aguets.",
+        "Nom": "Controleur des automatons X PA"
+    },
+    "Contrôle alchimique": {
+        "Description": "Un alchimiste de l'Ecole du Soleil de Cristal ne perd un niveau de concentration lorsqu'il subit des DOM que si le nombre de DOM infligés est strictement supérieur à son niveau de concentration actuel.",
+        "Nom": "Contrôle alchimique"
+    },
+    "Contrôle des sources": {
+        "Description": "Au début de la partie, après l'étape de déploiement des figurines, vous pouvez intervertir la position d'un composant alchimique d'eau avec la position d'un composant alchimiste d'un autre élément.",
+        "Nom": "Contrôle des sources"
+    },
+    "Cor de Guerre": {
+        "Description": "L'effet dure tant que l'Aurlok porteur du Cor de Guerre est en état Indemne (blanc) ou Grave (jaune). Toutes les figurines ennemies en combat et à une portée de 6 pouces ou moins du Cor de Guerre appliquent les effets suivants : en Etat indemne (blanc), elles jettent les dés jaunes durant le combat. En Etat Grave (jaune), elles jettent des dés rouges.",
+        "Nom": "Cor de Guerre"
+    },
+    "Coriace/X": {
+        "Description": "Dès qu'elle subit des DOM lors d'un jet de COM ou de TIR, une figurine dotée de cette compétence réduit de X la valeur des DOM infligés jusqu'à un minimum de 1. Cette compétence est sans effet sur les DOM infligés directement sans jet de dés. Les effets de Coriace provenant de plusieurs formulent ne se cumulent pas.",
+        "Nom": "Coriace/X"
+    },
+    "Coup Brutal": {
+        "Description": "Une fois par tour, pendant une Attaque Brutale, lorsqu'Ibrahim résussit son jet de Combat, il peut choisir de repousser la figurine adverse d'1 pouce complet. La figurine est repoussée dans la direction opposée au socle d'Ibrahim. Si la figurine quitte un combat, elle n'effectue pas de jet de désengaement. Si la figurine rentre en contact avec un obstacle, elle s'arrête. Si cet obstacle est une figurine adverse, elle est placée au plus proche sans être en contact. Non cumulable avec la compétence enchainement.",
+        "Nom": "Coup Brutal"
+    },
+    "Coupe Tendon": {
+        "Description": "Lorsque l'Ecorcheuse combat, si elle bénéficie de dés bonus sur son jet de COM, elle en bénéficie aussi lors de la compétence Enchaînement.",
+        "Nom": "Coupe Tendon"
+    },
+    "Danse Mortelle": {
+        "Description": "Lorsqu'un Der'wish obtient une attaque supplémentaire grâce à la compétence Enchaînement, les DOM ne sont pas décalés dans la table de DOM.",
+        "Nom": "Danse Mortelle"
+    },
+    "Dissimulation": {
+        "Description": "Tant qu'elle est située au contact d'un élément de décor, la figurine dotée de cette compétence dispose de la compétence Furtivité.",
+        "Nom": "Dissimulation"
+    },
+    "Double attaque": {
+        "Description": "Chaque fois que la figurine dotée de cette compétence joue une CC autre que \"inactif\", elle peut utiliser cette compétence pour gagner une CC gratuite aurte que \"inactif\" contre une autre figurine avec qui elle est aussi en combat. L'utilisation de cette compétence s'annonce juste avant de dévoiler sa CC. Les combats s'effectuent l'un après l'autre. La figurine réduit sa valeur de COM de 1 pour les deux combats.",
+        "Nom": "Double attaque"
+    },
+    "Double greffon": {
+        "Description": "Au début d'un tour, Mordren peut choisir l'un des effets suivants. Chacun ne peut être choisi qu'une fois par partie.\n-Excès de sève : durant le tour, les figurines ayant perdu au moins 2 cases de vie suite à une attaque de Mordren voient leur combat tomber à deux jussqu'à la fin du tour.\n-Greffon ancré : Mordren devient Coriace/1 pour la durée du tour.\n-Greffon mouvant : la prochaine figurine à laquelle Mordren inflige des DOM en combat ne pourra plus se déplacer jusque la fin du tour.\n-Bourgeonnement : les valeurs de déplacement de Mordren deviennent 5/7/12 jusqu'à la fin du tour.",
+        "Nom": "Double greffon"
+    },
+    "Drain d'énergie": {
+        "Description": "Lorsque Ch'unqay inflige des DOM, il peut choisir de réduire de 1 une caractéristique de la figurine touchée (RSP, REF, COM ou DEF) pour augmenter la sienne jusque la fin du tour. Si les DOM mettent la figurine hors combat, le gain de caractéristique est permanent pour l'Homoncule maraudeur.\nUne caractéristique ne peut pas être augmentée de plus de 2 points et le gain permanent dans une caractéristique est maximum de 1 point.",
+        "Nom": "Drain d'énergie"
+    },
+    "Dresseur": {
+        "Description": "Lors du recrutement, une figurine avec la compétence \"Dresseur\" peut se voir associer autant de figurines dotées de la compétence \"Animal sauvage\" que son nombre de point d'action. Une fois par tour, la carte des figurines associées au \"Dresseur\" peut être activée ou réactivée juste après l'activation de celui-ci. cette activation a lieu avant que l'adversaire ne reprenne la main et suit les règles normales d'activation. Tant qu'un animal sauvage est à portée d'esprit du \"Dresseur\", l'animal peut substituer son esprit par celui du \"Dresseur\" pour tout jet associé à cette caractéristique.",
+        "Nom": "Dresseur"
+    },
+    "Déclin alchimique": {
+        "Description": "A la fin de chaque tour, l'Ifrit subit 1 DOM. Lors de son activation, s'il est en contact d'un alchimiste, il peut dépenser 1 PA afin de supprimer 2 Pierres Alchimiques de la réserve de l'alchimiste et il se soigne de 2 cases de blessures. Tout alchimiste présent sur la table doit dépenser 1 composant supplémentaires pour préparer ses Formules.",
+        "Nom": "Déclin alchimique"
+    },
+    "Dévotion mystique": {
+        "Description": "L'Apprenti de l'Ecume peut utiliser la compétence Garde sur les figurines alliées dotées de la compétence Chasseur de Légendes.",
+        "Nom": "Dévotion mystique"
+    },
+    "Effrayant (X)": {
+        "Description": "Une figurine chargée ou engagée par la figurine dotée de cette compétence ou qui tente de le charger ou l'engager doit effectuer un jet d'Esprit d'une difficulté de X. Si c'est un échec, tant qu'elle sera en combat avec  la figurine dotée de cette compétence, elles subira un dé malus à tous ses jets. Le test est à effectuer à chaque fois qu'une figurine se trouve dans le cas décrit précédemment. Les effets de cette compétence sont cumulatifs.",
+        "Nom": "Effrayant (X)"
+    },
+    "Emblème totémique": {
+        "Description": "Tant que Woa Wa'yake est en jeu, les Aurochs amis bénificient des effets suivants :\n- pour les Guerriers-Totem de l'Auroch, un Esprit de 8 et une réactivation gratuite par tour\n- pour les Chasses-Pluie Auroch, l'effet de l'instrument de guerre dure quel que soit l'état de santé du porteur\n- pour le Guerrier-Manitou Auroch, chaque fois que Woa Wa'yake subit un ou plusieurs DOM, on peut cocher une case supplémentaire sur sa ligne de possession.",
+        "Nom": "Emblème totémique"
+    },
+    "Empathie": {
+        "Description": "Lorsqu'un Aurlok ami est blessé et qu'il se trouve à 6 pouces ou moin du Chaman-Médecine, le Chaman-Médecine peut subir 1 DOM à sa place. Le Chaman-Médecine ne peut pas utiliser cette capacité s'il lui reste qu'1 point de vie. Il ne perd pas de niveau de concentration quand il utilise cette capacité.",
+        "Nom": "Empathie"
+    },
+    "Encensoir ignée": {
+        "Description": "Lorsqu'une figurine dotée de cette compétence inflige des DOM lors d'un TIR, la cible obtient 1 pion Combustion, A la fin de sa prochaine activation, chaque figurine possédant des pions Combustions subit autant de DOM que de pions Combustions qu'elle possède puis défausse 1 pion Combustion. Durant son activation, la figurine peut dépenser 1 PA pour défausser 2 pions Combustions. Une figurine ne peut jamais subir plus de 3 DOM chaque tour à cause des pions Combustions.",
+        "Nom": "Encensoir ignée"
+    },
+    "Encensoirs sacrés": {
+        "Description": "A chaque fois qu'un auxiliaire du temple ou qu'une figurine amie se trouvant à 6 pouces ou moins de lui subit des DOM, 1 DOM est automatiquement ignoré. Contrairement à la compétence Coriace, cet effet permet d'ignorer 1 DOM infligé par une formule ou un effet nécessitant aucun jet. Les effets des encensoirs sacrés ne sont pas cumulables. ",
+        "Nom": "Encensoirs sacrés"
+    },
+    "Enchaînement": {
+        "Description": "Chaque fois qu'une figurine possédant cette compétence réussit une attaque, qu'elle ait infligé de DOM ou pas, elle peut immédiatement tenter gratuitement une seconde attaque contre le même adversaire. Pour le second jet de combat, la figurine lira le résultat de DOM décalé d'une colonne à gauche dans le tableau. Son adversaire ne peut pas dépenser de PA pour obtenir une CC. Une figurine dotée de cette compétence ne peut obtenir qu'une seule attaque supplémentaire par attaque réussie.",
+        "Nom": "Enchaînement"
+    },
+    "Enchevêtrement": {
+        "Description": "Dès qu'une figurine dotée de cette compétence initie un combat ou qu'un combat est inité contre elle, elle effectue au préalable un jet de COM gratuitement et san réaction adverse. Si le jet de COM est réussi, les DOM ne sont pas infligés mais la figurine adverse est considéré comme enchevêtrée. Tant qu'elle est en combat avec la figurine dotée de cette compétence, la figurine enchevêtrée a un dé malus pour tous ses jets de COM ainsi que -2 à la DEF. Si elle veut se désengager du combat elle doit dépenser 1 PA avant d'effectuer son action de mouvement.",
+        "Nom": "Enchevêtrement"
+    },
+    "Encombvrant": {
+        "Description": "Hakan ne peut dépenser 2 PA de suite durant son activation pour utiliser son Scorpion.",
+        "Nom": "Encombvrant"
+    },
+    "Escalves des Cultes": {
+        "Description": "Un Martyr ne peut pas remplir les conditions de scénario.",
+        "Nom": "Escalves des Cultes"
+    },
+    "Espionnage": {
+        "Description": "Une fois par tour, lorsqu'une figurine adverse termine une des actions suivantes à portée d'Esprit du Collecteur de Savoir :\n- Une cation de mouvement à 1 pouce ou moins d'un objectif ou d'une zone d'objectif.\n- Dépense 1 ou plusieurs PA pour réaliser une action rendue possible par le scénario.\nCe dernier peut immédiatement effectuer gratuitement une action de Marche qui suit les restrictions habituelles. Si le Collecteur de Savoir est en combat, aucun jet de désengagement n'est nécessaire. ",
+        "Nom": "Espionnage"
+    },
+    "Esprit": {
+        "Description": "Un Esprit est considéré comme ayant la capacité Sans Peur. De plus, il ne peut ni être la cible, ni être affecté par les aires d'effets et les gabarits de formules alchimiques. Un Esprit peut se désengager sans effectuer de jet de REF en opposition.",
+        "Nom": "Esprit"
+    },
+    "Esprit de meute": {
+        "Description": "Quant un Khergar attaque une figurine ennemie qui est en contact avec un autre Khergar, il acquiert la compétence \"Enchaînement\".",
+        "Nom": "Esprit de meute"
+    },
+    "Etouffement": {
+        "Description": "Lorsque l'étouffeur réussit un jet d'attaque contre une figurine adverse au contact, il peut l'étouffer gratuitement. Tant qu'elle est étouffée, la figurine ne peut effectuer ni action, ni mouvement, ni attaque, ni bénéficier de la règle aux aguets. Pendant son activation, la figurine étouffée peut effectuer des jets de COM en opposition avec l'étouffeur en dépensant 1 PA pour chaque jet (l'étouffeur ne dépense pas de PA pour effectuer le jet de COM en opposition).\nL'étouffement prend fin dès que l'étouffeur perd un de ces jets, si une des deux figurines est déplacée ou s'il étouffe une autre figurine à la place. Une figurine amie qui finit une action au contact de la figurine étouffée peut gratuitement mettre fin à l'étouffement.",
+        "Nom": "Etouffement"
+    },
+    "Etranglement": {
+        "Description": "Lorsuqe le gadrien de Chora réussit un jet de COM lors d'une CC d'attaque sans être au contact de la figurine ennemie, il peut choisir de l'étrangler à la place de lui infliger des DOM. Tant qu'elle est étranglée, la figurine ne peut pas se déplacer. Pendant son activation, la figurine ennemie peut effectuer des jet de REF en opposition avec le gardien en dépensant 1 PA pour chaque jet (le gardien ne dépense pas de PA pour effectuer le jet de REF en opposition). L'étranglement prend fin dès que le gardien perd un de ces jets, ou s'il joue une CC autre qu'Inactif ou si une des deux figurines est déplacée.",
+        "Nom": "Etranglement"
+    },
+    "Evadés": {
+        "Description": "Les évadés ignorent la compétence \"Immunité Diplomatique\"",
+        "Nom": "Evadés"
+    },
+    "Expert (Brutale)": {
+        "Description": "Une figurine qui possède cette compétence gagne 1 dé de bonus à son jet de Combat lorsqu'elle choisit la CC Brutale.",
+        "Nom": "Expert (Brutale)"
+    },
+    "Expert (Normal)": {
+        "Description": "Une figurine dotée de cette compétence gagne 1 dé bonus à son jet de COM lorsqu'elle choisit la CC (Normal).",
+        "Nom": "Expert (Normal)"
+    },
+    "Expert (Parade)": {
+        "Description": "Une figurine dotée de cette compétence gagne 1 dé bonus à son jet de COM lorsqu'elle choisit la CC (Parade).",
+        "Nom": "Expert (Parade)"
+    },
+    "Expert (Rapide)": {
+        "Description": "Une figurine dotée de cette compétence gagne 1 dé bonus à son jet de COM lorsqu'elle choisit la CC (Rapide).",
+        "Nom": "Expert (Rapide)"
+    },
+    "Expert (Rapide, Normale)": {
+        "Description": "Une figurine dotée de cette compétence gagne 1 dé bonus à son jet de COM lorsqu'elle choisit la CC Rapide ou Normale.",
+        "Nom": "Expert (Rapide, Normale)"
+    },
+    "Explosion alchimiques *": {
+        "Description": "L'Ifrit inflige 2 DOM à toutes les figurines jusqu'à 2 pouces de lui et 1 DOM à toutes les figurinesde 2 à 4 pouces de lui. Il doit posséder une ligne de vue sur les figurines à portée. Cette capacité n'annule pas les effets de la compétences Coriace.",
+        "Nom": "Explosion alchimiques *"
+    },
+    "Exubérant": {
+        "Description": "Lorsqu'une figurine adverse effectue un tir lors de son activation et qu'elle possède une ligne de vue sur Sul-Koor'z, celui-ci est automatiquement pris pour cible, et ce même si il est hors de portée.",
+        "Nom": "Exubérant"
+    },
+    "Feinte": {
+        "Description": "Une figurine dotée de cette compétence peut après que les deux adversaires aient révélés leur CC, échanger sa CC par \"Inactif\". Impossible d'utiliser cette compténce lors d'une charge.",
+        "Nom": "Feinte"
+    },
+    "Feu de Rados": {
+        "Description": "Lorsqu'une figurine adverse inflige des DOM au combat socle à socle à une figurine dotée de cette compétence, alors elle obtient 1 pion Combustion. A la fin de sa prochaine activation, chaque figurine possédant des pions Combustions subit autant de DOM que de pions Combustions qu'elle possède puis défausse 1 pion Combustion. Durant son activation, la figurine peut dépenser 1 PA pour défausser 2 pions Combustions. Une figurine ne peut jamais subir plus de 3 DOM chaque tour à cause des pions Combustions.",
+        "Nom": "Feu de Rados"
+    },
+    "Frappe de la Méduse": {
+        "Description": "Lorsqu'une figurine est blessée par la Chasseuse de la Méduse, elle est empoisonnée. Au début, du tour suivant juste avant l'initiative, on lance 2 dés blancs et la figurine subit les DOM indiqués sur la 2ème table de DOM. La figurine reste empoisonnée si les DOM indiquent un *.",
+        "Nom": "Frappe de la Méduse"
+    },
+    "Frappe préventive": {
+        "Description": "Dès qu'une figurine charge un Gardien, celui-ci peut effectuer gratuitement un jet de REF en opposition avec elle. Si le Gardien remporte le jet, il inflige immédiatement et automatiquement une attaque dont les DOM sont indiqués par sont jet de REF. De plus, tant qu'il n'est pas au contact, un Gardien peut toujours utiliser la compétence Garde.",
+        "Nom": "Frappe préventive"
+    },
+    "Fuite": {
+        "Description": "Une fois par tour, lorsqu'une action de Charge ou de Tir est déclarée contre elle, zr avant sa résolution, la figurine possédant cette compétence peut réaliser un déplacement gratuit de 2 pouces. Si elle était en combat, elle effectue un jet de désengagement.",
+        "Nom": "Fuite"
+    },
+    "Furtivité": {
+        "Description": "Une figurine dotée de cette compétence peut être déployée après toutes les autres figurines. elle est toujours considérée comme étant à couvert pour les tirs et peut réagir pour faire perdre le bonus d'un tireur qui la cible même si cette réaction ne l'amène pas derrière un couvert réel (décor, etc). Deplus elle ne peut être chargée ou engagée par une figurine adverse se trouvant à plus de 4 pouces d'elle. Si une figurine déclare une charge contre elle et qu'elle se trouve à plus de 4 pouces, la charge est ratée, elle effectue une marche sans se placer au contact de la figurine Furtive.",
+        "Nom": "Furtivité"
+    },
+    "Fusion Environnementale": {
+        "Description": "Une fois par tour, si le Silence est au contact d'un décor au début ou à la fin d'une action de déplacement, il peut se placer immédiatement ailleurs au contact de ce même décor. Il ne peut pas être placé en contact avec une figurine adverse. Il peut ensuiteeffectuer son mouvement normalement. S'il était en combat, il effectue un désengagement.",
+        "Nom": "Fusion Environnementale"
+    },
+    "Fustigation": {
+        "Description": "Lorsqu'une figurine Rados amie de Taille 1 ou 2 à portée d'ESP du Martyr subit des DOM infligés par une figurine adverse, celle-ci peut choisir de subir une partie ou tous les DOM à la place de la figurine amie. L'utilisation de cette compétence ne peut pas amener le Martyr à perdre sa dernière case de vie. Il n'est pas possible de répartir des DOM entre plusieurs Martyrs. Tout éventuel effet supplémentaires sur les DOM infligés (perte de concentration, marqueurs, etc) ne sont pas infligés au Martyr mais à la cible initiale, même si le Martyr absorbe la totalité des DOM.",
+        "Nom": "Fustigation"
+    },
+    "Garde": {
+        "Description": "Une figurine dotée de cette compétence protège toute figurine amie qui se trouve à 2 pouces ou moins d'elle. Lorsqu'une figurine gardée est la cible d'un tir, d'une formule, d'une charge ou d'un engagement, le Garde peut prendre sa place gratuitement. L'emplacement des deux figurines est échangé et acun mouvement de réaction ou tir ne peut être joué par le Garde. Cette compétence est sans effet si le Garde est déjà en combat ou s'il est lui-même ciblé par la même action que la figurine qu'il garde. Son utilisation se déclare après que tous les effets d'une action ont été annoncés (par exemple, les améliorations d'une formule).",
+        "Nom": "Garde"
+    },
+    "Garde (Naashti)": {
+        "Description": "Cette compétence est inutilisable si la figurine ciblée est un Ouroboros (~Our'os) ou un automaton (~Mez). une figurine dotée de cette compétence protège toute figurine amie qui se trouve à 2 pouces ou moins d'elle. Lorsqu'une figurine gardée est la cible d'un tir, d'une formule, d'une charge ou d'un engagement, le Garde peut prendre sa place gratuitement. L'emplacement des deux figurines est échangé et aucun mouvement de réaction ou tir ne peut être joué par le Garde. Cette compétence est sans effet si le Garde est déjà en combat ou s'il est lui-même ciblé par la même action que la figurine qu'il garde. Son utilisation se déclare après que tous les effets d'une action ont été annoncés (par exemple les améliorations d'une formule).",
+        "Nom": "Garde (Naashti)"
+    },
+    "Haut Dignitaire": {
+        "Description": "Lorsque Dahlia Ibn Malikh est recrutée dans une troupe, elle peut être recrutée avec 1 ou 2 Hulams. Ces Ghulams ne tiennent pas compte des limitations de recrutement. De plus, tous les ghulams acquièrent la compétence Expert (Parade) tant que Dahlia Ibn Malikh est vivante.",
+        "Nom": "Haut Dignitaire"
+    },
+    "Hémotoxique": {
+        "Description": "Tant que la figurine est en état grave (jaune) ou critique (rouge), lorsqu'un adversaire en combat socle à socle lui inflige des DOM, elle lui inflige 1 DOM en retour.",
+        "Nom": "Hémotoxique"
+    },
+    "Icone": {
+        "Description": "Une fois par tour, un ami à 2 pouces de Caelina peut la garder comme s'il possédait la compétence Garde.",
+        "Nom": "Icone"
+    },
+    "Ignifuge": {
+        "Description": "La figurine dotée de cette compétence ne subit pas les DOM de la lave.",
+        "Nom": "Ignifuge"
+    },
+    "Immunité Diplomatique": {
+        "Description": "Tant que le Cheikh n'effectue pas de jet pour toucher dans une partie, toute figurine vivante qui veut entrer en combat avec lui doit d'abord remporter un jet d'Esprit en opposition avec lui.",
+        "Nom": "Immunité Diplomatique"
+    },
+    "Impassible": {
+        "Description": "Tant qu'ils se trouvent à 4 pouces ou moins du Frère-Collecteur, les figurines amies non-Héros et le Frère-Collecteur lui-même ne peuvent pas obtenir de dé malus à leurs jets de dés.",
+        "Nom": "Impassible"
+    },
+    "Imposition des mains": {
+        "Description": "L'hospitalier peut soigner une figurine amie au contact socle à socle. L'hospitalier soigne la figurine amie par tranche de 2 PV pour 1 PV perdu en retour. Il peut soigner tnat qu'il est en état indemne (blanc). Il peut utiliser cette capacité gratuitement 1 fois par tour.",
+        "Nom": "Imposition des mains"
+    },
+    "Inspiration Chaotique": {
+        "Description": "Une fois par Tour lorsqu'Abdelan effectue un jet en opposition avec une figurine ennemie, il peut choisir d'intervertir l'un des dés de son jet avec l'un des dés du jet de son adversaire. Non utilisable sur le jet d'initiative.",
+        "Nom": "Inspiration Chaotique"
+    },
+    "K'arbalète": {
+        "Description": "Pour chacun des 4 éléments, la Foldo possède une réserve de marqueurs K'unti.\n4 Eaux / 4 Airs / 4 Feux / 4 Terres\nLes réserves sont vides en début de partie. Au début de chaque tour, Foldo choisit 2 éléments et reçoit des marqueurs K'unti pour compléter la réserves correspondante au maximum. Les K'unti peuvent être utilisés lorsque Foldo réussit un jet de TIR avec sa K'arbalète.\nDe plus, lorsque Foldo utilise 1 PA pour tirer, il peut effectuer 2 jets de tirs simultanés sur la même cible. Si ce'st nécessaire, la cible effectue 2 jets de couverts distincts. ",
+        "Nom": "K'arbalète"
+    },
+    "K'grapin": {
+        "Description": "Pour chacun des 4 éléments, le K'grappin possède une réserve de marqueurs K'unti.\n4 Eaux / 3 Airs / 2 Feux / 1 Terres\nLes réserves sont vides en début de partie. Au début de chaque tour, le porteur choisit 1 élément et reçoit des marqueurs K'unti pour compléter la réserves correspondante au maximum. Les K'unti peuvent être utilisés lorsque la figurine lors réussit un jet de COM lors d'une attaque ou un jet TIR avec son K'grappin.",
+        "Nom": "K'grapin"
+    },
+    "K'masse": {
+        "Description": "Pour chacun des 4 éléments, la K'masse possède une réserve de marqueurs K'unti.\n4 Eaux / 3 Airs / 2 Feux / 2 Terres\nLes réserves sont vides en début de partie. Au début de chaque tour, le porteur choisit 1 élément et reçoit des marqueurs K'unti pour compléter la réserves correspondante au maximum. Les K'unti peuvent être utilisés lorsque la figurine réussit un jet de COM lors d'une attaque. ",
+        "Nom": "K'masse"
+    },
+    "K'unti": {
+        "Description": "Lorsque la figurine réussit un jet pour toucher avec une arme à K'unti, elle peut déposer un ou plusieurs marqueurs K'unti de ses réserves sur la cible. Lorsqu'un jet de dé est associé à une caractéristique de la cible, si elle possede des marqueurs K'unti de l'element correspondant, elle subit un malus par marqueur pour ce jet. Elle ne peut pas subir plus de 4 malus par jet et ses caractéristiques ne peuvent descendre en dessous de 0. Pour chaque malus subit, un\\nmarqueur K'unti correspondant est défaussé.\nAir : moins I en ESP\nEau : moins I en REF\nFeu : moins I en COM ou TIR\nTerre : moins I en DEF",
+        "Nom": "K'unti"
+    },
+    "Lancer des ruches": {
+        "Description": "Un lance-ruches possède 3 ruches pour toute la partie. Une fois par tour, le lance-ruches peut lancer une ruche gratuitement. Il peut lancer des ruches supplémentaires pour 1 PA par ruche. Il place alors un ou plusieurs marqueurs dans sa ligne de vue, jusqu'à 10 pouces de lui pour représenter chaque ruche lancée. Les marqueurs ruche font 1 pouce de diamètre et sont de taille 0.",
+        "Nom": "Lancer des ruches"
+    },
+    "Larbin": {
+        "Description": "Un Chinge peut extraire des composants alchimiques comme un alchimiste. Il ne peut en récupérer que 2 par extraction. il ne peut transporter que 2 composants à la fois et peut les transmettre gratuitement à un alchimiste au contact lors de son activation.",
+        "Nom": "Larbin"
+    },
+    "Leader du loup": {
+        "Description": "Tant que Wolitse est en jeu, tous les guerriers-tonnerres du loup acquièrent la compétence Furtivité.",
+        "Nom": "Leader du loup"
+    },
+    "Longue queue": {
+        "Description": "Une figurine avec cette compétence possède la compétence allonge, mais sa portée de combat est de 2 pouces et non 1 pouce.",
+        "Nom": "Longue queue"
+    },
+    "Maître (Corps à corps)": {
+        "Description": "Une fois par tour, au cours de son activation ou en réaction, la figurine dotée de cette compétence peut effectuer gratuitement une action de combat.",
+        "Nom": "Maître (Corps à corps)"
+    },
+    "Maître (Kunturi)": {
+        "Description": "Une fois par tour, au cours de son activation ou en réaction, Evhan peut effectuergratuitement une action de tir avec un Kunturi. En totalité, elle peut effectuer deux tirs par tour sans utiliser de charge alchimique et elle peut utiliser deux charges alchimiques par tour au lieu d'une seule.",
+        "Nom": "Maître (Kunturi)"
+    },
+    "Maître (Tir)": {
+        "Description": "Une fois par tour, au cours de son activation ou en réaction, la figurine dotée de cette compétence peut effectuer gratuitement une action de Tir.",
+        "Nom": "Maître (Tir)"
+    },
+    "Maîtrise alchimique": {
+        "Description": "Une fois que la Formule d'un alchimiste du long Soupir est consumée, si le résultat est un échec, l'alchimiste peut dépenser des pierres alchimiques afin d'augmenter son résultat final. Il peut dépenser 1 pierre alchimique pour augmenter le résultat final de 1. Le nombre de pierres ainsi dépensées est limité par son niveau de concentration +1.",
+        "Nom": "Maîtrise alchimique"
+    },
+    "Minage": {
+        "Description": "Pendant son activation, l'automaton explosif peut dépenser 1 PA pour s'enterrer. Il ne peut plus être affecté par les effets du jeu. A n'importe quel moment, l'automaton explosif enterré peut exploser. Il jette 2 dés de son état de santé et inflige automatiquement les DOM correspondants à toutes les figurines à moins de 2 pouces. L'automaton explosif est retiré du jeu.",
+        "Nom": "Minage"
+    },
+    "Métabolisme Mutagène": {
+        "Description": "Lorsque Pitekica est recruté dans une troupe, la limitation des Chamans-Médecine Crapaud passe à 2. Tant que Pitekica est en jeu, ils gagnent la compétence Hémotoxiques et les lances-rcuhes de la troupe gagnent la compétence Bond.\nLorsque le dernier point de vie d'une figurine Walosi amie est coché, elle n'est pas retirée du jeu tant qu'elle est à portée d'ESP de Pitekica. Elle peut être jouée normalement comme si son dernier point de vie n'aétait pas cochée. A la fin du tour, si la figurine n'a pas été soignée, elle est retirée du jeu.",
+        "Nom": "Métabolisme Mutagène"
+    },
+    "Nuée de Corbeaux": {
+        "Description": "Une fois par tour, Tamel'Seh peut mesurer une distance avant de déclarer une action. Toute figurine ennemie en contact avec Tamel'Seh a un dé de Malus à tous ses jets de Combat.",
+        "Nom": "Nuée de Corbeaux"
+    },
+    "Nécrose alchimique": {
+        "Description": "A la fin de chaque tour, l'Ifrit subit 1 DOM. Lors de son activation, s'il est en contact d'un alchimiste, il peut dépenser 1 PA afin de supprimer 2 Pierres Alchimiques de la réserve de l'alchimiste et il se soigne de 2 cases de blessures. Tout alchimiste présent sur la table doit dépenser 1 composant supplémentaires pour préparer ses Formules.",
+        "Nom": "Nécrose alchimique"
+    },
+    "Onde Rugissante": {
+        "Description": "Une fois par tour durant son activation, la figurine dotée de cette compétence peut dépenser 1 PA afin d'effectuer une attaque normale contre toutes les figurines ennemies qui se trouvent jusqu'à 1 pouce de lui. On résoud chaque attaque séparémment dans l'ordre choisi par  la figurine dotée de cette compétence. Il n'est pas possible de jouer de réaction lorsque  la figurine dotée de cette compétence utilise cette capacité.",
+        "Nom": "Onde Rugissante"
+    },
+    "Ondin": {
+        "Description": "Litam Bint Sorhna débute la partie avec 1 ondin. Il est déployé en même temps qu'elle.",
+        "Nom": "Ondin"
+    },
+    "Opportuniste": {
+        "Description": "Une fois par tour , Chen Sze peut choisir de s'activer ou se réactiver juste après qu'une figurine Ombre ou murmure ait été activée durant le tour. Son activation a lieu avant que l'adversaire ne reprenne la main.",
+        "Nom": "Opportuniste"
+    },
+    "Pacifiste": {
+        "Description": "Tant qu'une figurine amie (y compris le Kabircheikh) ou ennemie se trouve à 5 pouces ou moins du Kabircheikh Hakim, toute action ou réaction de combat, de tir ou d'alchimie qui cible une figurine ennemie, nécessite 1 PA de plus pour être accomplie.",
+        "Nom": "Pacifiste"
+    },
+    "Pacifiste Solennel": {
+        "Description": "Une figurine possédant cette compétence ne peut pas charger et elle ne peut jouer que Inactif ou Parade en combat.",
+        "Nom": "Pacifiste Solennel"
+    },
+    "Perce-Armure (Combat)": {
+        "Description": "Lorsqu'une figurine dotée de cette compétence effectue des DOM en combat, elle ne tient pas compte des effets de la compétence Coriace.",
+        "Nom": "Perce-Armure (Combat)"
+    },
+    "Perce-Armure (Tir)": {
+        "Description": "Lorsqu'une figurine dotée de cette compétence effectue des DOM au TIR, elle ne tient pas compte des effets de la compétence Coriace.",
+        "Nom": "Perce-Armure (Tir)"
+    },
+    "Pisteur": {
+        "Description": "Une fois par tour, au cours de son activation, la figurine dotée de cette compétence peut effectuer gratuitement un mouvement de marche. Ce mouvement suit les règles normales de mouvement mais n'est pas considéré comme une action.",
+        "Nom": "Pisteur"
+    },
+    "Plaque dorsales X": {
+        "Description": "Dès qu'une figurine dotée de cette compétence subit des DOM lors dun jet de COM ou de TIR, elle réduit les DOM du nombre de plaque dorsales actuel sans minimum. La figurine perd 1 plaque dorsale. Cette compétence est sans effets sur les DOM infligés directement sans jet de dés. Les figurines possédnat au moins 1 plaque dorsales ne peuvent pas effectuer de courses.",
+        "Nom": "Plaque dorsales X"
+    },
+    "Plaque immuable": {
+        "Description": "La figurine possédant cette compétence ne peut pas perdre sa dernière plaque dorsale.",
+        "Nom": "Plaque immuable"
+    },
+    "Poigne de fer": {
+        "Description": "Pour tous ses jets de COM, quel que soit son état de santé, Tanka Wanka peut remplacer un dé de couleur par un dé blanc.",
+        "Nom": "Poigne de fer"
+    },
+    "Ponction Vitale": {
+        "Description": "Lorsqu'un Homoncule inglue un ou plusieurs DOM à une figurine ennemie par une attaque, il se soigne automatiquement d'un point de vie. Si une figurine ennemie est retirée du plateau immédiatement suite aux DOM infligés par l'homoncule, il se soigne automatiquement de trois points de vie.",
+        "Nom": "Ponction Vitale"
+    },
+    "Possesion de Waga": {
+        "Description": "Dès que le Guerrier-Manitou ou une autre figurine aurlok amie à 6 pouces de lui subit 1 point de DOM infligé par une figurine ou un effet ennemi, cochez une case sur la ligne de possession de celui-ci (il en possède 10). Les DOM subis par la compétence Empathie n'ont pas d'effet. Lorsque toutes les cases sont cochées, remplacez la figurine du Guerrier-Manitou auroch par celle du Guerrier-Manitou Possédé. Celui-ci conserve les effets de jeu, le nombre de PA dépensé ainsi que les DOM subit par le Guerrier-Manitou précédemment.",
+        "Nom": "Possesion de Waga"
+    },
+    "Prescience": {
+        "Description": "Les Orcales Khalimanes n'ont aucune restriction de lignde de vue. Elles sont considérées comme ayant une ligne de vue dégagée tout le temps. En outre, en combat toute figurine adverse doit révéler sa carte de combat avant que l'oracle ne choisisse la sienne.",
+        "Nom": "Prescience"
+    },
+    "Projection": {
+        "Description": "Une fois par tour au cours de son activation, Nas~Far'k peut dépenser 1 PA pour effectuer un jet de COM en opposition avec une figurine adverse en contact. En cas de réussite, la figurine adverse est repoussée à une distance en pouces équivalente à la différence entre les 2 résultats, avec un minimum de 1 et un maximum de 4. De plus, elle perd autant de point de vie que la différence entre les 2 résultats, avec un minimum de 1 et un maximum de 4. La figurine est repoussée dans la direction opposée au socle de Nas~Far'k. La figurine n'effectue pas de jet de désengagement. Si la figurine entre en contact avec un obstacle elle s'arrête. Si cet obstacle est une figurine adverse, elle est placé au plus proche sans être en contact.",
+        "Nom": "Projection"
+    },
+    "Prostré": {
+        "Description": "La figurine dotée de cette compétence compte toujours comme étant à couvert.",
+        "Nom": "Prostré"
+    },
+    "Protecteur": {
+        "Description": "En dépensant 1 PA, la figurine possédant cette compétence peut uitiliser la compétence Garde (Naashti) même si elle est en combat. Le protecteur effectue un jet de désengagement. Son socle et celui des figurines adverses sont déplacés au minimum pour ne plus être en contact. La compétence Garde (Naashti) est ensuite résolue.",
+        "Nom": "Protecteur"
+    },
+    "Provocation": {
+        "Description": "Une fois par tour au cours de son activation, Nas~Far'k peut gratuitement désigner jusqu'à 2 figurines ennemies sur lesquelles il a une ligne de vue, qui se trouvent à 3 pouces ou moins de lui. Chaque figurine désignée ne peut plus effectuer de déplacement hormis une charge contre Nas~Far'k ou une marche pour se rapprocher de lui par le plus court chemin si elle n'est pas en mesure de charger. L'effet prend fin si Nas~Far'k n'est plus dans les 3 pouces de la figurine ou s'il provoque d'autres figurines. Les figurines dotées de la compétence Sans Peur sont immunisées contre cette compétence.",
+        "Nom": "Provocation"
+    },
+    "Prêtresse Sanguinaire": {
+        "Description": "La limitation de recrutement des cartes Martyrs passe à 2. Tant que Rigosane est en vie, les Martyrs remplacent leur Esprit par celui de cette dernière.",
+        "Nom": "Prêtresse Sanguinaire"
+    },
+    "Rage": {
+        "Description": "Tant que la figurine dotée de cette compétence est en état Critique (rouge), elle est considérée comme ayant la compétence Expert Brutale.",
+        "Nom": "Rage"
+    },
+    "Rapide comme l'Eclair": {
+        "Description": "Lorsqu'une figurine quitte son contact, Feng Sao peut lui porter une attaque rapide sans effectuer le jet de Réflexes en opposition. Il peut effectuer cette attaque même si la situation ne le permet pas normalement.",
+        "Nom": "Rapide comme l'Eclair"
+    },
+    "Ravage": {
+        "Description": "Ravage peut attaquer une fois par tour une figurine ennemie en corps à corps. Celle-ci perd alors immédiatement 1 PA. cette action est gratuite et peut être effectuée n'importe quand durant le tour. Valh'Kyrie n'a pas besoin de s'activer pour utiliser cette capacité.",
+        "Nom": "Ravage"
+    },
+    "Regard d'Acier": {
+        "Description": "Une fois par tour lors de son activation, Jian peut cibler une figurine ennemie à portée d'Esprit et sur laquelle il a une ligne de vue. Jusqu'à la fin dut tour, cette figurine ne pourra pas charger ni jouer de CC de combat autre que \"inactif\". Cette capacité est sans effet sur les figurines dotées de la compétence Sans Peur.",
+        "Nom": "Regard d'Acier"
+    },
+    "Renfort des Marines": {
+        "Description": "Au début de son activation, si le Genii Mahritin se trouve à 5 pouces ou moins de'une Orcale ou d'une Evocatrice de la Lignée Sorhna, il peut choisir de bénéficier de l'une des compétences jsuqu'à la fin du tour :\n-Expert(Rapide, Normale ou Brutale)\n-Effrayant (14). Lorsque cette compétence s'active, toutes les figurines en combat contre le genii Mahritin font le jet d'Effrayant. Lorsque la compétence prend fin, les figurines affectées ne sont plus effrayées.\nDe plus, dès qu'une Alchimiste non héros utilise une formule alchimique à 5 pouces ou moins du Genii Mahritin, ce dernier peut jouer une CC gartuite immédiatement contre un ennemi en combat contre lui.",
+        "Nom": "Renfort des Marines"
+    },
+    "Rite de Sang": {
+        "Description": "Juste avant chacun de ses jets de COM, une figurine dotée de cette compétence peut s'infliger 1 DOM pour obtenir un dé bonus pour son prochain jet de COM. Cette compétence n'est utilisablequ'une fois par jet de COM. Il n'est pas possible de perdre son dernier point de vie avec cette compétence.",
+        "Nom": "Rite de Sang"
+    },
+    "Sadique": {
+        "Description": "Une fois par tour au cours de son activation, et uniquement lorsque la cible est enchevêtrée, la figurine dotée de cette compétence peut effectuer gratuitement une action de combat.",
+        "Nom": "Sadique"
+    },
+    "Sang de Sève": {
+        "Description": "Lorsque l'alchimiste lance une formule, il peut choisir de faire une amélioration avec 1 point de vie au lieu de 2 pierres. Il ne peut pas utiliser son dernier point de vie pour utiliser cette compétence.",
+        "Nom": "Sang de Sève"
+    },
+    "Sans Faille": {
+        "Description": "Lorsque  la figurine dotée de cette compétence utilise la CC \"Parade\", il peut forcer son adversaire à relancer son jet de combat avant d'effectuer le sien. Le second jet doit être conservé et ne peut être relancé.",
+        "Nom": "Sans Faille"
+    },
+    "Sans Peur": {
+        "Description": "Une figurine dotée de cette compétence n'a pas besoin d'effectuer de jet d'ESP contre les figurines effrayantes. Elle réussit automatiquement le jet.",
+        "Nom": "Sans Peur"
+    },
+    "Sergent": {
+        "Description": "Le Sergent ne peut être recruté que si les 3 Gardes Triadiques sont recrutés. Tant que le sergent de la garde triadique est en vie, tous les gardes triadiques amis acquièrent la compétence Expert (Parade).",
+        "Nom": "Sergent"
+    },
+    "Serviteur alchimique": {
+        "Description": "Lorsqu'une Evocatrice est recutée dans une troupe, la limitation de recrutement du Djinn Mahritin passe à 2.",
+        "Nom": "Serviteur alchimique"
+    },
+    "Sournois": {
+        "Description": "Une figurine possédant cette compétence peut choisir 2 CC lors d'un combat. Après révélations des CC, le joueur choisit la CC qu'il veut parmis les 2. Si l'adversaire joue inactif ou parade, le sournois peut choisir sa carte d'attque après avoir fait son jet de combat.",
+        "Nom": "Sournois"
+    },
+    "Soutien alchimique": {
+        "Description": "Une fois par tour durant son activation, un disciple peut transmettre gratuitement tout ou une partie de ses composants alchimiques à un alchimiste ami en contact socle à socle.",
+        "Nom": "Soutien alchimique"
+    },
+    "Stratège": {
+        "Description": "Lorsque Fu Nihao est présent dans la troupe d'un joueur, son adversaire doit obligatoirement déployer toutes ces troupes en premier sauf celles disposant de la compétence Furtivité. Le joueur ayant recruté Fu Nihao déploie ses troupes ensuite. Puis les troupes possédant la compétence Furtivité sont déployées, en commençant par le joueur qui s'est déployé en premier. Les autres règles concernant le déploiement sont appliquées. Si les deux joueurs ont recruté Fu Nihao, cette capacité est sans effet et les règles normales de déploiement sont appliquées.",
+        "Nom": "Stratège"
+    },
+    "Surchauffe": {
+        "Description": "Si le jet de tir est égal ou supérieur à 14, le porteur subit 1 DOM.",
+        "Nom": "Surchauffe"
+    },
+    "Surveillant implacable": {
+        "Description": "Une fois par tour, lorsqu'une figurine ennemie termine un mouvement (marche, course, engagement, charge). Dar-Meh'Ki peut utiliser cette compétence pour effectuer gratuitement une charge contre elle. Si la figurine est hors de portée de charge, la compétence n'a pas d'effet et ne pourra pas être réutilisée ce tour. Cette compétence peut être utilisée même si Dar-Meh'Ki est en combat, et/ou s'il a couru ou chargé lors de ce tour. Elle ne met pas fin aux déplacements et autorise Dar-Meh'Ki à charger deux fois lors de ce tour. S'il quitte un combat, il effectue un jet de désengagement normalement. Si la figurine ennemie effectuait une charge, le combat contre Dar-Meh'Ki est résolu en premier. Cette compétence ne peut pas être utilisée lorsque Dar-Meh'Ki est la cible d'une charge.",
+        "Nom": "Surveillant implacable"
+    },
+    "Tacticien": {
+        "Description": "Une figurine dotée de cette compétence effectue ses jets d'initaitive avce un dé de bonus.",
+        "Nom": "Tacticien"
+    },
+    "Tambour de Guerre": {
+        "Description": "L'effet dure tant que l'Aurlok porteur du Tambour de Guerre est en état Indemne (blanc) ou Grave (jaune). Lui et  tous les Aurlok amis au combat et  à une portée de 6 pouces ou moins bénéficient d'un dé bonus sur leur jet de combat lorsqu'ils jouent une CC d'attaque. Ce dé de bonus n'est pas cumulable avec le dé de bonus de charge. Par contre, ils ne peuvent pas jouer les CC \"Parade\" ou \"Inactif\" pendant leur activation.",
+        "Nom": "Tambour de Guerre"
+    },
+    "Tireur Emerite X": {
+        "Description": "Une figurine dotée de cette compétence ignore les effets des couverts quel que soit l'origine de ce dernier (furtivité, décor, figurine, combat socle à socle). Elle peut utiliser cette compétence une à X fois par tour, suivant le chiffre indiqué. L'utilisation de cette compétence est à annoncer juste avnt le jet de tir.",
+        "Nom": "Tireur Emerite X"
+    },
+    "Toucher Fielleux": {
+        "Description": "Lorsqu'un nécromorphe inflige des DOM à une figurine adverse au combat, celle-ci doit cocher tous les points de vie de la même couleur que la dernière qu'elle a coché.",
+        "Nom": "Toucher Fielleux"
+    },
+    "Transfert Vital": {
+        "Description": "Une fois lors de son activation, le Diacre Leodegarius peut transférer 1 DOM qu'il a subit à chaque Avalonien ami à 4 pouces ou moins de lui. Il ne peut transférer qu'un seul DOM à la fois sur une figurine donnée par activation. Il peut le faire autant de fois qu'il a des figurines amies à portée.",
+        "Nom": "Transfert Vital"
+    },
+    "Trombe de feu": {
+        "Description": "Lorsque la figurine dotée de cette compétence effectue un tir, elle peut décider de réaliser deux jets de tir au lieu d'un en utilisant les dés de l'etat de santé inferieur à son niveau de santé actuel. Deux jets de tir en état grave (jaune) au lieu d'un jet de tir indemne (blanc) ou deux jets de tir en état critique (rouge) au lieu d'un jet de tir en état grave (jaune). Cette compétence est sans effet si la figurine est en état critique (rouge). Les deux jets sont traités comme deux tirs simultanés sur la même cible. Fonctionne en réaction.",
+        "Nom": "Trombe de feu"
+    },
+    "Vision de l'esprit": {
+        "Description": "Une fois par tour au cours de son activation, Watanka peut désigner une figurine à portée d'Esprit. Les effets de la Vision durent jusqu'à la fin dut tour.\n-Si la figurine désignée est une figurine ennemie, celle-ci ne peut plus bénéficier des effets de couvert ni de la compétence Furitvité.\n-Si la figurine désignée est une figurine amie, cette figurine acquiert la compétence Furtivité. Si elle l'avait déjà, elle ne peut plus être la cible de tirs.",
+        "Nom": "Vision de l'esprit"
+    },
+    "Vive Eau": {
+        "Description": "Avant de lancer une formule, l'alchimiste peut dépenser un composant d'eau pour augmenterr son niveau de concentration de 1.",
+        "Nom": "Vive Eau"
+    },
+    "Volonté Supérieure": {
+        "Description": "Une fois apr tour au crous de son activation, Dahlia peut désigner une figurine ennemie sur laquelle elle a une ligne de vue. Dahlia effectue un jet d'Esprit d'une diffculté de 15. Si Dahlia réussit son jet, la carte de la figurine ennemie devra obligatoirement être la prochaine à être activée par le joueur adverse ce tour. Si la figurine ennemie ne peut plus se réactiver, il n'y a pas d'effet.",
+        "Nom": "Volonté Supérieure"
+    },
+    "Volonté des Anciens": {
+        "Description": "Lorsque le Chaman-nuit subit des DOM, il peut choisir de dépenser deux pierres alchimiques pour éviter d perdre son niveau de concentration actuel.",
+        "Nom": "Volonté des Anciens"
+    },
+    "Vétéran du Temple": {
+        "Description": "Lorsque le Sénéchal Deicolus est recruté dans une troupe, la limitation des Novices du Temple passe à 6. Lorsque le Sénéchal Deicolus joue une CC parade, si son jet de COM est supérieur de 5 à celui de son adversaire, il effectue une contre-attaque normalement mais de plus récupère le PA qu'il avait dépensé pour jouer la CC.",
+        "Nom": "Vétéran du Temple"
+    }
+}
