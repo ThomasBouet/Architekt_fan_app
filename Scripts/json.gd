@@ -12,6 +12,7 @@ func _ready():
 	json_file.open("res://profils.json", File.READ)
 	profils_data = JSON.parse(json_file.get_as_text()).result
 	json_file.close()
+	print(get_team_saved())
 	
 func load_all_factions():
 	var all_list = []
@@ -25,7 +26,7 @@ func load_all_factions():
 func has_team_saved():
 	var nb = 0
 	var dir = Directory.new()
-	dir.open("res://Data")
+	dir.open("user://")
 	dir.list_dir_begin()
 	while true:
 		var file = dir.get_next()
@@ -39,10 +40,11 @@ func has_team_saved():
 func get_team_saved():
 	var teams = []
 	var dir = Directory.new()
-	dir.open("res://Data")
+	dir.open("user://")
 	dir.list_dir_begin()
 	while true:
 		var file = dir.get_next()
+		print(file.get_basename())
 		if file == "":
 			break
 		elif file.ends_with(".json"):
@@ -52,7 +54,7 @@ func get_team_saved():
 	
 func get_team(nom):
 	var json_file = File.new()
-	json_file.open("res://Data/" + nom, File.READ)
+	json_file.open("user://" + nom, File.READ)
 	var team_data = JSON.parse(json_file.get_as_text()).result
 	json_file.close()
 	return team_data
@@ -63,5 +65,6 @@ const CHANGE_RECRUTEMENT = {
 	"Rigosane": ["Martyr", 2],
 	"Dhalia": ["Ghulam", 2],
 	"Deicolius": ["Novice-temple", 3],
-	"Pitekica": ["Chaman-medecine", 1]
+	"Pitekica": ["Chaman-medecine", 1],
+	"Evocatrice-Sornha": ["Djinn", 1]
 }

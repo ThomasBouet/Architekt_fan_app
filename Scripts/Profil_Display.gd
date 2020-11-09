@@ -114,7 +114,7 @@ func display_cards(p):
 	dir.list_dir_end()
 	
 	for i in range(len(files)):
-		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".png")
+		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".jpg")
 
 func _on_Close_pressed():
 	var init_pos = get_node("ImgDisplay").position
@@ -170,12 +170,16 @@ func refresh_profils_list(list, hide=false):
 		
 		if p["Type"] == "Troupe":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
+			profil.get_child(0).color = "#7d653d"
 		elif p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
+			profil.get_child(0).color = "#551a1a"
 		elif p["Type"] == "Alchimiste":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
+			profil.get_child(0).color = "#26621a"
 		elif p["Type"] == "Special" or p["Type"] == "Spécial":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
+			profil.get_child(0).color = "#3d777d"
 			
 		profil.get_child(5).text = "0" 
 		if p["Max"] == "0" or hide:
@@ -193,17 +197,18 @@ func _on_TextureButton_pressed():
 	get_node("SaveDialog").popup_centered()
 	
 func _on_SaveDialog_confirmed():
-	var path = "res://Data/" + get_node("SaveDialog/LineEdit").text + ".json"
+	var path = "user://" + get_node("SaveDialog/LineEdit").text + ".json"
 	var file = File.new()
 	if file.file_exists(path):
 		show_message("Problème d'enregistrement", "Fichier déjà existant")
 	else:
 		file.open(path, File.WRITE)
 		var team_stored = [get_node("Faction").text, Team]
-		file.store_line(to_json(team_stored))
+		file.store_string(to_json(team_stored))
 		file.close()
 		get_node("Menu/VBoxContainer/Mes listes").visible = true
 		get_node("SaveDialog/LineEdit").text = ""
+		print(Json.get_team_saved())
 	
 func show_message(title, msg):
 	get_node("OverWriteDialog").window_title = title

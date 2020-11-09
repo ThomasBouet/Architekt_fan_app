@@ -49,7 +49,7 @@ func _on_AcceptDialog_confirmed(id):
 	get_node("Content/MenuButton").get_popup().clear()
 	clean_list_diplay()
 	var dir = Directory.new()
-	dir.remove("res://Data/" + nom)
+	dir.remove("user://" + nom)
 	
 	fill_list_menu()
 	get_node("Content/Faction").text = ""
@@ -80,7 +80,7 @@ func display_cards(p):
 	dir.list_dir_end()
 	
 	for i in range(len(files)):
-		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".png")
+		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".jpg")
 
 func _on_Close_pressed():
 	var init_pos = get_node("ImgDisplay").position
@@ -134,12 +134,16 @@ func refresh_profils_list(list):
 		
 		if p["Type"] == "Troupe":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
+			profil.get_child(0).color = "#7d653d"
 		elif p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
+			profil.get_child(0).color = "#551a1a"
 		elif p["Type"] == "Alchimiste":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
+			profil.get_child(0).color = "#26621a"
 		elif p["Type"] == "Special" or p["Type"] == "Spécial":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
+			profil.get_child(0).color = "#3d777d"
 			
 		get_node("Content/Content Holder/Profils/DiplayList").add_child(profil)
 		
