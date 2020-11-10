@@ -75,10 +75,18 @@ margin_top = 24.0
 margin_right = 528.0
 margin_bottom = 152.0
 
-[node name="Profils" type="ScrollContainer" parent="Content Holder"]
+[node name="LineEdit" type="LineEdit" parent="Content Holder"]
 margin_top = 156.0
 margin_right = 528.0
-margin_bottom = 926.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Profils" type="ScrollContainer" parent="Content Holder"]
+margin_top = 184.0
+margin_right = 528.0
+margin_bottom = 954.0
 rect_min_size = Vector2( 528, 770 )
 follow_focus = true
 __meta__ = {
@@ -392,10 +400,10 @@ __meta__ = {
 
 [node name="SaveDialog" type="AcceptDialog" parent="."]
 visible = true
-margin_left = 136.0
-margin_top = 107.0
-margin_right = 441.0
-margin_bottom = 236.0
+margin_left = -72.7778
+margin_top = -169.714
+margin_right = 232.222
+margin_bottom = -40.7145
 popup_exclusive = true
 window_title = "Enregistrement"
 dialog_text = "Choisissez un nom pour votre équipe :"
@@ -405,22 +413,26 @@ __meta__ = {
 
 [node name="LineEdit" type="LineEdit" parent="SaveDialog"]
 margin_left = 8.0
-margin_top = 22.0
+margin_top = 19.7551
 margin_right = 297.0
-margin_bottom = 93.0
+margin_bottom = 90.7551
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="OverWriteDialog" type="AcceptDialog" parent="."]
 visible = true
-margin_left = 240.0
-margin_top = 136.0
-margin_right = 335.0
-margin_bottom = 194.0
+margin_left = 356.736
+margin_top = -128.901
+margin_right = 451.736
+margin_bottom = -70.901
 popup_exclusive = true
 window_title = "Alerte !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="value_changed" from="Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
+[connection signal="text_changed" from="Content Holder/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="pressed" from="ImgDisplay/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Accueil" to="." method="_on_Accueil_pressed"]

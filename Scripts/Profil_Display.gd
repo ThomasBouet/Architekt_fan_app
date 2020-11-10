@@ -221,3 +221,11 @@ func _on_Accueil_pressed():
 func _on_Mes_listes_pressed():
 	get_tree().change_scene("res://Scenes/Liste.tscn")
 	
+func _on_LineEdit_text_changed(search_clue):
+	var nodes_profil = get_node("Content Holder/Profils/DiplayList").get_children()
+	nodes_profil.pop_back()
+	
+	for n in nodes_profil:
+		var name = n.get_child(2).get_child(0).text
+		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
+	
