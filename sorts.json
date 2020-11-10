@@ -4,7 +4,7 @@
         "Cible": "Auto",
         "Concentration": "2",
         "Cout": "3",
-        "Description": "La formule cible deux figurines alliées à portée dont au moins une est dotée de la compétence Effrayant. La figurine dotée de la compétence Effrayant subit un nombre de blessure égal ou inférieur à la concentration de Gallia, au choix du joueur. Elle ne peut pas perdre son dernier point de vie de cette manière. La seconde figurine cible est alors soignée du même nombre de point de vie. Gallia peut être soignée de cette manière.",
+        "Description": "La formule cible deux figurines alliées à portée dont au moins une est dotée de la compétence [url={'data'='Effrayant'}]Effrayant[/url]. La figurine dotée de la compétence [url={'data'='Effrayant'}]Effrayant[/url] subit un nombre de blessure égal ou inférieur à la concentration de Gallia, au choix du joueur. Elle ne peut pas perdre son dernier point de vie de cette manière. La seconde figurine cible est alors soignée du même nombre de point de vie. Gallia peut être soignée de cette manière.",
         "Nom": "Agonie Salvatrice",
         "Portée": "8"
     },
@@ -13,7 +13,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible un avalonien non-héros ami ou le Frère-Collecteur lui-même. laprochaine fois que la cible joue une CC autre que Inactif, elle acquiert la compétence Exeprt (Brutal). Si elle possédait déjà cette compétence, elle acquiert la compétence Expert (Normale) à la place.",
+        "Description": "La formule cible un avalonien non-héros ami ou le Frère-Collecteur lui-même. laprochaine fois que la cible joue une CC autre que Inactif, elle acquiert la compétence [url={'data'='Expert (Brutale'}]Expert (Brutale)[/url]. Si elle possédait déjà cette compétence, elle acquiert la compétence [url={'data'='Expert (Normale)'}]Expert (Normale)[/url] à la place.",
         "Nom": "Angelus Vitae",
         "Portée": "6"
     },
@@ -76,7 +76,7 @@
         "Cible": "Auto",
         "Concentration": "3",
         "Cout": "2",
-        "Description": "La formule cible une figurine amie à portée ou Xian Ling lui-même. La cible obtient la compétence acrobate en utilisant une REF 4. La formule dure jusqu'a ce que la cible utilise cette compétence",
+        "Description": "La formule cible une figurine amie à portée ou Xian Ling lui-même. La cible obtient la compétence [url={'data'='Acrobate'}]Acrobate[/url] en utilisant une REF 4. La formule dure jusqu'a ce que la cible utilise cette compétence",
         "Nom": "Cirque Ambulant",
         "Portée": "8"
     },
@@ -130,16 +130,16 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible une figurine alliée non alchimiste et non héros à portée. Lorsque le cible joue une CC contre une figurine adverse jouant la CC Inactif, elle gagne 1 dé bonus au jet de COM. Cette dernière gagne également la Botte (Contre-Attaque). La formule prend fin lorsque la cible utilise la Botte (Contre-Attaque) ou gagne 1 dé bonus grâce à cette formule.",
+        "Description": "La formule cible une figurine alliée non alchimiste et non héros à portée. Lorsque le cible joue une CC contre une figurine adverse jouant la CC Inactif, elle gagne 1 dé bonus au jet de COM. Cette dernière gagne également la [url={'data'='Botte (Contre-Attaque)'}]Botte (Contre-Attaque)[/url]. La formule prend fin lorsque la cible utilise la [url={'data'='Botte (Contre-Attaque)'}]Botte (Contre-Attaque)[/url] ou gagne 1 dé bonus grâce à cette formule.",
         "Nom": "Etincelles de protection",
         "Portée": "8"
     },
     "Explosion de Walosi": {
-        "Améliorations": "3 pour qu'une figurine amie à portée devienne méotoxique jusqu'à la fin du tour\n3 pour 1 pouce supplémentaire de portée autour des figurines hémotoxiques",
+        "Améliorations": "3 pour qu'une figurine amie à portée devienne méotoxique jusqu'à la fin du tour\n3 pour 1 pouce supplémentaire de portée autour des figurines [url={'data'='Hémotoxique'}]Hémotoxiques[/url]",
         "Cible": "Auto",
         "Concentration": "3",
         "Cout": "3",
-        "Description": "Chaque figurine hémotoxique à portée inflige 1 DOM à toutes les figurines situées jusqu'à 1 pouce d'elle. Les figurines hémotoxiques sont immunisées à ces DOM.",
+        "Description": "Chaque figurine [url={'data'='Hémotoxique'}]Hémotoxique[/url] à portée inflige 1 DOM à toutes les figurines situées jusqu'à 1 pouce d'elle. Les figurines [url={'data'='Hémotoxique'}]Hémotoxiques[/url] sont immunisées à ces DOM.",
         "Nom": "Explosion de Walosi",
         "Portée": "8"
     },
@@ -150,7 +150,7 @@
         "Cout": "2",
         "Description": "Jusqu'à la fin du tour, lorsque la cible de cette Formule est en combat, elle doit choisir une CC parmi rapide, brutale et normale aléatoirement.",
         "Nom": "Facéties du Destin",
-        "Portée": "8"
+        "Portée": "8",
     },
     "Feu de Thébus": {
         "Améliorations": "1 pierre pour 1 pouce supplémentaire de portée\n3 pierres pour un 1 Combustion supplémentaire",
@@ -193,7 +193,7 @@
         "Cible": "Cible",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible une figurine ennemie et une figurine amie à portée (ou l'achimiste lui-même). Si la figurine ennemie est dotée d'une compténce de la liste ci-dessous, la formule permet de la copier et de la transmettre à la figurine amie jusque la fin du tour. \nAllonge, Bond, Botte (X), Chef, Coriace (X), Effrayant (X), Enchainement, Expert (X), Feinte, Furtivité, Garde Maître (Combat), Maître (Tir), Perce-armure (Combat), Perce-armuire (Tir), Sans faille, Sans peur, Tireur émérite (X).",
+        "Description": "La formule cible une figurine ennemie et une figurine amie à portée (ou l'achimiste lui-même). Si la figurine ennemie est dotée d'une compténce de la liste ci-dessous, la formule permet de la copier et de la transmettre à la figurine amie jusque la fin du tour. \n[url={'data'='Allonge'}]Allonge[/url], [url={'data'='Bond'}]Bond[/url], Botte (X), [url={'data'='Chef'}]Chef[/url], [url={'data'='Coriace'}]Coriace/(X)[/url], [url={'data'='Effrayant'}]Effrayant (X)[/url], [url={'data'='Enchaînement'}]Enchaînement[/url], Expert (X), [url={'data'='Feinte'}]Feinte[/url], [url={'data'='Furtivité'}]Furtivité[/url], [url={'data'='Garde'}]Garde[/url], [url={'data'='Maître (Combat)'}]Maître (Combat)[/url], [url={'data'='Maître (Tir)'}]Maître (Tir)[/url], [url={'data'='Perce-Armure (Combat)'}]Perce-Armure (Combat)[/url], [url={'data'='Perce-Armure (Tir)'}]Perce-Armure (Tir)[/url], [url={'data'='Sans Faille'}]Sans Faille[/url], [url={'data'='Sans Peur'}]Sans Peur[/url], [url={'data'='Tireur Emerite'}]Tireur émérite (X)[/url].",
         "Nom": "Fusion thermique",
         "Portée": "6"
     },
@@ -211,7 +211,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "3",
-        "Description": "La formule cible une figurine alliée ou l'alchimiste lui-même. La formule dure jusqu'à la fin du tour. La cible obtient la compétence perce-armure (tir et combat) ainsi que la compétence arme de tir suivante : Harpon Alchimique (3/8), et utilise la table de DOM suivante losrqu'elle effectue une action de tir avec Harpon Alchimique : 1 2 3 3 4 4",
+        "Description": "La formule cible une figurine alliée ou l'alchimiste lui-même. La formule dure jusqu'à la fin du tour. La cible obtient la compétence Perce-Armure (tir et combat) ainsi que la compétence arme de tir suivante : Harpon Alchimique (3/8), et utilise la table de DOM suivante losrqu'elle effectue une action de tir avec Harpon Alchimique : 1 2 3 3 4 4",
         "Nom": "Harpon Alchimique",
         "Portée": "8"
     },
@@ -225,11 +225,11 @@
         "Portée": "2"
     },
     "Hurlement Funeste": {
-        "Améliorations": "1 pierre pour 1 pouce de portée supplémentaire\n1 pierre pour augmenter le niveau de la compétence Effrayant",
+        "Améliorations": "1 pierre pour 1 pouce de portée supplémentaire\n1 pierre pour augmenter le niveau de la compétence [url={'data'='Effrayant'}]Effrayant[/url]",
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible le Chaman-Nuit lui-même. Le Chaman-Nuit acquiert la compétence Effrayant (12) jusqu'à la fin du tour. La portée indique une aire d'effet autour de lui. Toutes les figurines ennemies à portée doivent réussir unjet d'ESP ou subir les effets de la compétence jusqu'à la fin du tour.",
+        "Description": "La formule cible le Chaman-Nuit lui-même. Le Chaman-Nuit acquiert la compétence [url={'data'='Effrayant'}]Effrayant (12)[/url] jusqu'à la fin du tour. La portée indique une aire d'effet autour de lui. Toutes les figurines ennemies à portée doivent réussir unjet d'ESP ou subir les effets de la compétence jusqu'à la fin du tour.",
         "Nom": "Hurlement Funeste",
         "Portée": "6"
     },
@@ -247,7 +247,7 @@
         "Cible": "Auto",
         "Concentration": "2",
         "Cout": "2",
-        "Description": "Déployez un ondin dans la portée. Il ne peut pas y avoir plus de ttois ondins en jeu en même temps. Tous les ondins s'activent avec la même carte de profil (si la carte à déjà été activée lorsque la formule est lancée, elle ne pourra pas être réactivée).",
+        "Description": "Déployez un ondin dans la portée. Il ne peut pas y avoir plus de trois ondins en jeu en même temps. Tous les ondins s'activent avec la même carte de profil (si la carte à déjà été activée lorsque la formule est lancée, elle ne pourra pas être réactivée).",
         "Nom": "Invocation d'ondin",
         "Portée": "2"
     },
@@ -256,7 +256,7 @@
         "Cible": "Auto",
         "Concentration": "3",
         "Cout": "3",
-        "Description": "La Formule cible un aurlok ami non héros à portée. La cible acquiert les compétences Allong et Expert/Brutale jusqu'à la fin du tour. Elle ignore aussi les effets de la compétence Coriace/x en combat.",
+        "Description": "La Formule cible un aurlok ami non héros à portée. La cible acquiert les compétences [url={'data'='Allonge'}]Allonge[/url] et [url={'data'='Expert (Brutale)'}]Expert (Brutale)[/url] jusqu'à la fin du tour. Elle ignore aussi les effets de la compétence Coriace/x en combat.",
         "Nom": "Lance Tellurique",
         "Portée": "10"
     },
@@ -283,7 +283,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible une figurine amie non héro (ou le disciple lui-même) de taille 2 ou 1 à portée.\nLa cible obtient Pisteur (non cumulable) jusqu'à la fin du tour,\nou,\njsuq'à la fin du tour, la cible peut se désengager sans effectuer de jet de Réflexes en opposition.",
+        "Description": "La formule cible une figurine amie non héro (ou le disciple lui-même) de taille 2 ou 1 à portée.\nLa cible obtient [url={'data'='Pisteur'}]Pisteur[/url] (non cumulable) jusqu'à la fin du tour,\nou,\njsuq'à la fin du tour, la cible peut se désengager sans effectuer de jet de Réflexes en opposition.",
         "Nom": "Légèreté du vent",
         "Portée": "8"
     },
@@ -292,7 +292,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible l'achimiste lui-même ou une figurine amie non héros à portée. La cible gagne Effrayant (13) ou Effrayant (+1) si elle est déjà Effrayant, et COM +1. La formule dure jusqu'à la fin du tour.",
+        "Description": "La formule cible l'achimiste lui-même ou une figurine amie non héros à portée. La cible gagne [url={'data'='Effrayant'}]Effrayant (13)[/url] ou [url={'data'='Effrayant'}]Effrayant (+1)[/url] si elle est déjà [url={'data'='Effrayant'}]Effrayant[/url], et COM +1. La formule dure jusqu'à la fin du tour.",
         "Nom": "Montée de Sève",
         "Portée": "2"
     },
@@ -310,7 +310,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "3",
-        "Description": "Toute figurineamie à portée possédant la compétence \"Déclin Alchimique\" peut effectuer gratuitement une \"Onde Rugissante\" même si elle ne posède pas la compétence.",
+        "Description": "Toute figurineamie à portée possédant la compétence [url={'data'='Déclin alchimique'}]Déclin alchimique[/url] peut effectuer gratuitement une [url={'data'='Onde Rugissante'}]Onde Rugissante[/url] même si elle ne posède pas la compétence.",
         "Nom": "Ondes Rugissantes",
         "Portée": "4"
     },
@@ -319,7 +319,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible Caelina elle-même. La portée indique une aire d'effet autour d'elle. Elle et toutes les figurines amies dans l'aire d'effet acquierent les compétences Coriace 1 (ou Coriace +1 si elle possède déjà la compétence Coriace) et Botte (Robuste). La formule prend fin à la fin dut tour lorsque Caelina est blessée.",
+        "Description": "La formule cible Caelina elle-même. La portée indique une aire d'effet autour d'elle. Elle et toutes les figurines amies dans l'aire d'effet acquierent les compétences Coriace 1 (ou Coriace +1 si elle possède déjà la compétence Coriace) et [url={'data'='Botte (Robuste)'}]Botte (Robuste)[/url]. La formule prend fin à la fin dut tour lorsque Caelina est blessée.",
         "Nom": "Oraison de la Roche",
         "Portée": "3"
     },
@@ -400,7 +400,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "2",
-        "Description": "La formule cible une figurine amie ou Pitekica lui-même. La cible acquiert la Botte (Ruse de Walosi) et la compétence Bond. Si elle possédait déjà la compétence Bond, la botte ne coûte pas de PA pour être utilisée. L'effet prend fin lorsque la cible utilise la botte.",
+        "Description": "La formule cible une figurine amie ou Pitekica lui-même. La cible acquiert la [url={'data'='Botte (Ruse de Walosi)'}]Botte (Ruse de Walosi)[/url] et la compétence [url={'data'='Bond'}]Bond[/url]. Si elle possédait déjà la compétence [url={'data'='Bond'}]Bond[/url], la botte ne coûte pas de PA pour être utilisée. L'effet prend fin lorsque la cible utilise la botte.",
         "Nom": "Ruse de Walosi",
         "Portée": "8"
     },
@@ -454,7 +454,7 @@
         "Cible": "Auto",
         "Concentration": "0",
         "Cout": "1",
-        "Description": "La formule cible l'alchimiste lui-même. La portée indique une aire d'effet autour de lui. Toutes les figurines amies à portée gagnent la compétence Furtivité. Toute figurine qui tente d'effectuer un tir sur une figurine aux aguets avec la compétence Furtivité dans l'air d'effet aura un dé malus à son jet. La formule dure jusqu'à la fin du tour.",
+        "Description": "La formule cible l'alchimiste lui-même. La portée indique une aire d'effet autour de lui. Toutes les figurines amies à portée gagnent la compétence [url={'data'='Furtivité'}]Furtivité[/url]. Toute figurine qui tente d'effectuer un tir sur une figurine aux aguets avec la compétence [url={'data'='Furtivité'}]Furtivité[/url] dans l'air d'effet aura un dé malus à son jet. La formule dure jusqu'à la fin du tour.",
         "Nom": "Tourbillon aveuglant",
         "Portée": "4"
     },

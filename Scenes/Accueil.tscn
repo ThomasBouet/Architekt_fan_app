@@ -16,8 +16,9 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="Background"]
+margin_top = -4.76221
 margin_right = 576.0
-margin_bottom = 1024.0
+margin_bottom = 1019.24
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.109804, 0.105882, 0.101961, 1 )
