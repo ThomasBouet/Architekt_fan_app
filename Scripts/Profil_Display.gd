@@ -110,7 +110,7 @@ func display_cards(p):
 			break
 		elif not file.begins_with(".") and file.ends_with(".import"):
 			files.append(file)
-
+	
 	dir.list_dir_end()
 	
 	for i in range(len(files)):

@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Competence.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -96.0
+margin_bottom = -896.0
+rect_min_size = Vector2( 0, 500 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 64.0
+color = Color( 0.282353, 0.266667, 0.282353, 1 )
+
+[node name="LinkButton" type="LinkButton" parent="."]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 472.0
+margin_bottom = 50.0
+underline = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nom" type="Label" parent="LinkButton"]
+margin_top = -8.0
+margin_right = 464.0
+margin_bottom = 40.0
+text = "Nom"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="."]
+visible = false
+margin_top = 64.0
+margin_right = 480.0
+margin_bottom = 79.0
+size_flags_vertical = 3
+bbcode_enabled = true
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]
