@@ -6,9 +6,9 @@ extends Node2D
 # var b = "text"
 const Competence = preload("res://Scenes/Competence.tscn")
 var MenuOpen = false
+var comps_data = []
 
 func _ready():
-	var comps_data = []
 	var json_file = File.new()
 	json_file.open("res://competences.json", File.READ)
 	comps_data = JSON.parse(json_file.get_as_text()).result
@@ -38,10 +38,14 @@ func display_comp(meta):
 	var reg = RegEx.new()
 	reg.compile("='(.*?)'}")
 	var res = reg.search(meta)
-	res = res.get_string()
-	res = res.substr(2, len(res)-4)
-	print(res)
-	
+	if res:
+		res = res.get_string()
+		res = res.substr(2, len(res)-4)
+		get_node("CompDescription").window_title = res
+		get_node("CompDescription/CompDescriptionPopUp").bbcode_text = comps_data[res]["Description"]
+		get_node("CompDescription").rect_min_size = Vector2(get_node("CompDescription/CompDescriptionPopUp").rect_size.x + 10, get_node("CompDescription/CompDescriptionPopUp").rect_size.y + 50)
+		get_node("CompDescription").popup_centered()
+		
 # --- Gestion des boutons du menu --
 func move_menu():
 	var init_pos = get_node("Menu").position
