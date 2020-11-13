@@ -54,7 +54,7 @@ func move_menu():
 	MenuOpen = !MenuOpen
 	
 func _on_MenuBtn_pressed():
-	move_menu()	
+	move_menu()
 	
 func _on_Tous_pressed():
 	get_tree().change_scene("res://Scenes/Profils_Display.tscn")
