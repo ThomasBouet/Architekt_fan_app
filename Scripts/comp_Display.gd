@@ -56,14 +56,8 @@ func move_menu():
 func _on_MenuBtn_pressed():
 	move_menu()
 	
-func _on_Tous_pressed():
-	get_tree().change_scene("res://Scenes/Profils_Display.tscn")
-	
 func _on_Accueil_pressed():
 	get_tree().change_scene("res://Scenes/Accueil.tscn")
-	
-func _on_Mes_listes_pressed():
-	get_tree().change_scene("res://Scenes/Liste.tscn")
 	
 func _on_LineEdit_text_changed(search_clue):
 	var nodes_profil = get_node("Content Holder/Comp/DiplayList").get_children()

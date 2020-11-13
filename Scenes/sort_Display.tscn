@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/regles.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/sort_Display.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
 [ext_resource path="res://Spartan.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=5]
@@ -28,36 +28,50 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Titre" type="Label" parent="."]
-margin_left = 182.0
-margin_top = 3.0
-margin_right = 418.0
-margin_bottom = 76.0
+[node name="Compétences" type="Label" parent="."]
+margin_left = 182.408
+margin_top = 6.0
+margin_right = 359.408
+margin_bottom = 79.0
 custom_fonts/font = ExtResource( 4 )
-text = "Règles"
-align = 1
-valign = 1
+text = "Sorts"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="Content Holder" type="VBoxContainer" parent="."]
 margin_left = 24.0
-margin_top = 103.0
+margin_top = 88.0
 margin_right = 552.0
-margin_bottom = 1000.0
+margin_bottom = 1020.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LineEdit" type="LineEdit" parent="Content Holder"]
+margin_right = 528.0
+margin_bottom = 24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sort" type="ScrollContainer" parent="Content Holder"]
+margin_top = 28.0
+margin_right = 528.0
+margin_bottom = 798.0
+rect_min_size = Vector2( 528, 770 )
 follow_focus = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Content Holder" type="VBoxContainer" parent="ScrollContainer"]
+[node name="DiplayList" type="VBoxContainer" parent="Content Holder/Sort"]
 margin_right = 528.0
-margin_bottom = 897.0
+margin_bottom = 770.0
+rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -107,44 +121,35 @@ __meta__ = {
 
 [node name="Accueil" type="Button" parent="Menu/VBoxContainer"]
 margin_right = 304.0
-margin_bottom = 198.0
+margin_bottom = 1008.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 5 )
 text = "Accueil"
 
-[node name="Mes listes" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 202.0
-margin_right = 304.0
-margin_bottom = 400.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Mes listes"
-
-[node name="Tous" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 404.0
-margin_right = 304.0
-margin_bottom = 603.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Tous les profils"
-
-[node name="Scénarios" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 607.0
-margin_right = 304.0
-margin_bottom = 805.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Tous les profils"
-
-[node name="Règles" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 809.0
-margin_right = 304.0
-margin_bottom = 1008.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Tous les profils"
-
 [node name="TweenMenu" type="Tween" parent="Menu"]
+
+[node name="CompDescription" type="AcceptDialog" parent="."]
+visible = true
+margin_top = -420.0
+margin_right = 520.0
+margin_bottom = -352.0
+popup_exclusive = true
+window_title = "Alerte !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CompDescriptionPopUp" type="RichTextLabel" parent="CompDescription"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 512.0
+margin_bottom = 32.0
+bbcode_enabled = true
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="Content Holder/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Accueil" to="." method="_on_Accueil_pressed"]
-[connection signal="pressed" from="Menu/VBoxContainer/Mes listes" to="." method="_on_Mes_listes_pressed"]
+[connection signal="meta_clicked" from="CompDescription/CompDescriptionPopUp" to="." method="display_comp"]

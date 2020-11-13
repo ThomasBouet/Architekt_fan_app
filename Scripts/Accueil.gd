@@ -16,3 +16,9 @@ func _on_Comptences_pressed():
 	
 func _on_Sorts_pressed():
 	get_tree().change_scene("res://Scenes/sort_Display.tscn")
+	
+func _on_Rgles_pressed():
+	get_tree().change_scene("res://Scenes/regles.tscn")
+	
+func _on_Scnarios_pressed():
+	get_tree().change_scene("res://Scenes/scenar_disp.tscn")

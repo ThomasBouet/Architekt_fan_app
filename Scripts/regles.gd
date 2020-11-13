@@ -26,11 +26,8 @@ func _ready():
 		var text_rect = TextureRect.new()
 		text_rect.name = f
 		text_rect.texture = ResourceLoader.load("res://Sprites/livre-de-regles/" + f.split('.import')[0])
-#		text_rect.expand = true
 		text_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		get_node("ScrollContainer/Content Holder").add_child(text_rect)
-#		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".jpg")
-			
+		get_node("ScrollContainer/DisplayList").add_child(text_rect)
 	dir.list_dir_end()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
