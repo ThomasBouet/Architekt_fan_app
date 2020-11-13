@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/comp_Display.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/sort_Display.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
 [ext_resource path="res://Spartan.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=5]
@@ -29,12 +29,12 @@ __meta__ = {
 }
 
 [node name="Compétences" type="Label" parent="."]
-margin_left = 100.16
-margin_top = 6.11225
-margin_right = 588.16
-margin_bottom = 79.1123
+margin_left = 182.408
+margin_top = 6.0
+margin_right = 359.408
+margin_bottom = 79.0
 custom_fonts/font = ExtResource( 4 )
-text = "Compétences"
+text = "Sorts"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -56,7 +56,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Comp" type="ScrollContainer" parent="Content Holder"]
+[node name="Sort" type="ScrollContainer" parent="Content Holder"]
 margin_top = 28.0
 margin_right = 528.0
 margin_bottom = 798.0
@@ -66,7 +66,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DiplayList" type="VBoxContainer" parent="Content Holder/Comp"]
+[node name="DiplayList" type="VBoxContainer" parent="Content Holder/Sort"]
 margin_right = 528.0
 margin_bottom = 770.0
 rect_min_size = Vector2( 0, 100 )

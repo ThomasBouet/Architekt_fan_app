@@ -413,9 +413,9 @@ __meta__ = {
 
 [node name="LineEdit" type="LineEdit" parent="SaveDialog"]
 margin_left = 8.0
-margin_top = 19.7551
+margin_top = 22.0
 margin_right = 297.0
-margin_bottom = 90.7551
+margin_bottom = 92.9995
 __meta__ = {
 "_edit_use_anchors_": false
 }
