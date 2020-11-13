@@ -117,6 +117,9 @@ func display_team(id):
 	refresh_profils_list(Json.profils_data[team_faction])
 	recreate_list(team_members)
 	
+	get_node("Save/SaveButton").disconnect("pressed", self, "save")
+	get_node("Save/SaveButton").connect("pressed", self, "save", [id])
+	
 func refresh_profils_list(list):
 	var node = get_node("Content/Content Holder/Profils/DiplayList")
 #	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
@@ -157,12 +160,14 @@ func refresh_profils_list(list):
 	
 func recreate_list(list):
 	var hero = null
+
 	for p in list:
 		if p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
 			hero = p
 	get_node("Content/Content Holder/Profils/DiplayList/" + hero["Imgs"]).get_child(9).emit_signal("pressed")
 	list.erase(hero)
 	for p in list:
+		print(p["Nom"])
 		get_node("Content/Content Holder/Profils/DiplayList/" + p["Imgs"]).get_child(9).emit_signal("pressed")
 	
 func _on_ProgressBar_value_changed(value):
@@ -203,6 +208,8 @@ func add_to_team(p, node):
 	else:
 		show_message("Ajout impossible", "L'ajout de ce profil n'est pas possible.\n La limite de point serait dépassée.")
 	
+	must_save()
+	
 func remove_from_team(p, node):
 	print("removing " + node.profil["Nom"])
 	if (node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste") and hashero:
@@ -233,9 +240,30 @@ func remove_from_team(p, node):
 					currentPTS -= int(node_modified.profil["Cout"])
 					get_node("Content/Content Holder/ProgressBar").value = currentPTS
 					get_node("Content/Content Holder/Panel").avg_stats(Team)
+					
+	must_save()
 	
 func show_message(title, msg):
 	get_node("OverWriteDialog").window_title = title
 	get_node("OverWriteDialog").dialog_text = msg
 	get_node("OverWriteDialog").popup_centered()
 	
+func must_save():
+	get_node("Save").visible = Team != Json.get_team(cur_team)[1]
+	
+func save(id):
+	get_node("SaveDialoge").add_cancel("Annuler")
+	get_node("SaveDialoge").dialog_text = "Voulez-vous enregistrer les modifications faites à la liste " + teams[id].split(".json")[0] + " ?"
+	get_node("SaveDialoge").connect("confirmed", self, "save_changes", [id])
+	get_node("SaveDialoge").popup_centered()
+	
+func save_changes(id):
+	var path = "user://" + teams[id]
+	var file = File.new()
+	if file.file_exists(path):
+		file.open(path, File.WRITE)
+		var team_stored = [get_node("Content/Faction").text, Team]
+		file.store_string(to_json(team_stored))
+		file.close()
+	else:
+		show_message("Problème d'enregistrement", "La liste n'existe pas o_O ?")

@@ -14,6 +14,7 @@ func _ready():
 	json_file.close()
 	print(get_viewport().get_visible_rect().size[1])
 	
+	
 func load_all_factions():
 	var all_list = []
 	for l in Json.profils_data.values():

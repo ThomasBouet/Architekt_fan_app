@@ -208,7 +208,6 @@ func _on_SaveDialog_confirmed():
 		file.close()
 		get_node("Menu/VBoxContainer/Mes listes").visible = true
 		get_node("SaveDialog/LineEdit").text = ""
-		print(Json.get_team_saved())
 	
 func show_message(title, msg):
 	get_node("OverWriteDialog").window_title = title
