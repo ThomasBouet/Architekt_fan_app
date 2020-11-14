@@ -6,7 +6,6 @@
 [node name="Control" type="Control"]
 margin_right = 576.0
 margin_bottom = 66.0
-mouse_filter = 1
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,27 +25,25 @@ __meta__ = {
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 64.0
 margin_bottom = 64.0
-mouse_filter = 2
 stretch_mode = 6
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nom" type="TextureButton" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 384.0
-margin_bottom = 63.0
-mouse_filter = 1
+[node name="Nom" type="LinkButton" parent="."]
+margin_top = 7.0
+margin_right = 253.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 2 )
+underline = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Nom"]
 margin_left = 61.0
-margin_top = 4.0
 margin_right = 381.0
-margin_bottom = 23.0
+margin_bottom = 19.0
 custom_fonts/font = ExtResource( 2 )
 text = "Connétable Lotharius du Temple des Vêpres"
 clip_text = true
