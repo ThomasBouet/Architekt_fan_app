@@ -88,6 +88,7 @@ margin_top = 184.0
 margin_right = 528.0
 margin_bottom = 954.0
 rect_min_size = Vector2( 528, 770 )
+mouse_filter = 1
 follow_focus = true
 __meta__ = {
 "_edit_use_anchors_": false

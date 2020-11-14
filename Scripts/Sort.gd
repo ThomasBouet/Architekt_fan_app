@@ -11,7 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func init(sort):
-	get_node("LinkButton/Nom").text = sort["Nom"]
+	get_node("TextureButton/Nom").text = sort["Nom"]
 	get_node("VBoxContainer/Description").bbcode_text = sort["Description"]
 	get_node("VBoxContainer/Cara").text = "Concentration : "+ sort["Concentration"] +", Composants : "+ sort["Cout"] +", Portée : "+ sort["Portée"] +", Cible : " + sort["Cible"]
 	get_node("VBoxContainer/Amélioration").bbcode_text = sort["Améliorations"]
@@ -25,7 +25,7 @@ func resize_self():
 	else:
 		get_node(".").rect_min_size = get_node("ColorRect").rect_size
 		
-func _on_LinkButton_pressed():
+func _on_TextureButton_pressed():
 	Description_visible = !Description_visible
 	get_node("VBoxContainer").visible = Description_visible
 	resize_self()
