@@ -120,6 +120,8 @@ func display_team(id):
 	get_node("Save/SaveButton").disconnect("pressed", self, "save")
 	get_node("Save/SaveButton").connect("pressed", self, "save", [id])
 	
+	get_node("Button").connect("pressed", self, "export_test", [Json.get_team(cur_team)])
+	
 func refresh_profils_list(list):
 	var node = get_node("Content/Content Holder/Profils/DiplayList")
 #	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
@@ -267,3 +269,6 @@ func save_changes(id):
 		file.close()
 	else:
 		show_message("Problème d'enregistrement", "La liste n'existe pas o_O ?")
+		
+func export_test(list):
+	get_node("ExportImport").export_list("Blitz", list)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Liste.gd" type="Script" id=1]
 [ext_resource path="res://Spartan.tres" type="DynamicFont" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/UI/delete.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/UI/save.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/exp_and_imp.gd" type="Script" id=11]
 
 [node name="Root" type="Control"]
 anchor_right = 1.0
@@ -344,6 +345,19 @@ window_title = "Enregistrement"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="."]
+margin_left = 8.0
+margin_top = 991.0
+margin_right = 60.0
+margin_bottom = 1011.0
+text = "Export"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExportImport" type="Node2D" parent="."]
+script = ExtResource( 11 )
 [connection signal="value_changed" from="Content/Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
 [connection signal="pressed" from="ImgDisplay/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]

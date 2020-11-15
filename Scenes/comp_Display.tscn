@@ -52,6 +52,7 @@ __meta__ = {
 [node name="LineEdit" type="LineEdit" parent="Content Holder"]
 margin_right = 528.0
 margin_bottom = 24.0
+placeholder_text = "Searvh"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -12,7 +12,6 @@ func _ready():
 	json_file.open("res://profils.json", File.READ)
 	profils_data = JSON.parse(json_file.get_as_text()).result
 	json_file.close()
-	print(get_viewport().get_visible_rect().size[1])
 	
 	
 func load_all_factions():
