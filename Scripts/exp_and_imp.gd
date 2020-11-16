@@ -57,6 +57,9 @@ func import_list(str_list):
 		return "La liste ne rentrée ne correspond pas au bon format de liste."
 		
 	var mode = str_list[0].to_ascii()[0] - Shift
+	if mode != 0 and mode != 1:
+		return "La liste ne rentrée ne correspond pas au bon format de liste."
+		
 	var faction = faction_decode[str_list[1].to_ascii()[0] - Shift]
 	var nb_fig = str_list[2].to_ascii()[0] - Shift
 	
