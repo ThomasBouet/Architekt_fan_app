@@ -50,12 +50,11 @@ func export_list(mode, list):
 	list_str += "="
 #	print(list_str)
 
-	import_list(list_str)
 	return list_str
 	
 func import_list(str_list):
-	if not str_list.ends_with("="):
-		print("La liste ne rentrée ne correspond pas au bon format de liste.")
+	if not str_list.ends_with("=") or len(str_list) <= 6:
+		return "La liste ne rentrée ne correspond pas au bon format de liste."
 		
 	var mode = str_list[0].to_ascii()[0] - Shift
 	var faction = faction_decode[str_list[1].to_ascii()[0] - Shift]
@@ -66,13 +65,13 @@ func import_list(str_list):
 	for _j in range(nb_fig):
 		ids.append((str_list[i].to_ascii()[0] - Shift)*100 + (str_list[i+1].to_ascii()[0] - Shift)*10 + (str_list[i+2].to_ascii()[0] - Shift))
 		i += 3
-	print(ids)
+		
 	var profils = Json.profils_data[faction]
 	var team = []
 	for id in ids:
 		for p in profils:
 			if p["ID"] == id:
 				team.append(p)
-				
-	print(team)
-	pass
+	
+#	print(team)
+	return [faction, team]

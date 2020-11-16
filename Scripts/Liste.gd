@@ -19,7 +19,7 @@ func _ready():
 	get_node("Content/Content Holder/Panel").visible = false
 	get_node("Content/Content Holder/ProgressBar").visible = false
 	
-	get_node("AcceptDialog").add_cancel("Annuler")
+	get_node("AccepSuppressiontDialog").add_cancel("Annuler")
 	fill_list_menu()
 	
 func fill_list_menu():
@@ -29,9 +29,9 @@ func fill_list_menu():
 	get_node("Content/MenuButton").get_popup().connect("id_pressed", self, "display_team")
 	
 func _on_Delete_pressed(id):
-	get_node("AcceptDialog").dialog_text = "Etes vous sur de vouloir supprimer l'équipe " + teams[id].split(".json")[0] + "?"
-	get_node("AcceptDialog").popup_centered()
-	get_node("AcceptDialog").connect("confirmed", self, "_on_AcceptDialog_confirmed", [id])
+	get_node("AccepSuppressiontDialog").dialog_text = "Etes vous sur de vouloir supprimer l'équipe " + teams[id].split(".json")[0] + "?"
+	get_node("AccepSuppressiontDialog").popup_centered()
+	get_node("AccepSuppressiontDialog").connect("confirmed", self, "_on_AcceptSuppressionDialog_confirmed", [id])
 	
 func clean_list_diplay():
 	var node = get_node("Content/Content Holder/Profils/DiplayList")
@@ -43,7 +43,7 @@ func clean_list_diplay():
 	get_node("Content/Content Holder/Panel").visible = false
 	get_node("Content/Content Holder/ProgressBar").visible = false
 	
-func _on_AcceptDialog_confirmed(id):
+func _on_AcceptSuppressionDialog_confirmed(id):
 	var nom = teams[id]
 	teams.remove(nom)
 	get_node("Content/MenuButton").get_popup().clear()
@@ -120,7 +120,9 @@ func display_team(id):
 	get_node("Save/SaveButton").disconnect("pressed", self, "save")
 	get_node("Save/SaveButton").connect("pressed", self, "save", [id])
 	
-	get_node("Button").connect("pressed", self, "export_test", [Json.get_team(cur_team)])
+	get_node("Content/Content Holder/ExportButton").visible = true
+	get_node("Content/Content Holder/ExportButton").disconnect("pressed", self, "export_test")
+	get_node("Content/Content Holder/ExportButton").connect("pressed", self, "export_list", [Json.get_team(cur_team)])
 	
 func refresh_profils_list(list):
 	var node = get_node("Content/Content Holder/Profils/DiplayList")
@@ -270,5 +272,36 @@ func save_changes(id):
 	else:
 		show_message("Problème d'enregistrement", "La liste n'existe pas o_O ?")
 		
-func export_test(list):
-	get_node("ExportImport").export_list("Blitz", list)
+func export_list(list):
+	var list_to_str = get_node("ExportImport").export_list("Blitz", list)
+	get_node("ExportDialog").popup_centered()
+	get_node("ExportDialog").dialog_text = list_to_str
+	get_node("ExportDialog").connect("confirmed", self, "export_confirmed", [list_to_str])
+	get_node("ExportDialog").get_ok().text = "Copier dans le presse-papier"
+	
+func export_confirmed(list_str):
+	OS.set_clipboard(list_str)
+	get_node("OverWriteDialog").popup_centered()
+	get_node("OverWriteDialog").dialog_text = "La liste à été copiée dans le presse-papier"
+	
+func _on_ImportButton_pressed():
+	get_node("ImportDialog").popup_centered()
+	get_node("ImportDialog").add_cancel()
+	get_node("ImportDialog").connect("confirmed", self, "import_confirmed", [get_node("ImportDialog").get_child(0).get_child(1).text, get_node("ImportDialog").get_child(0).get_child(3).text])
+
+func import_confirmed(nom, list):
+	var res = get_node("ExportImport").import_list(list)
+	
+	if typeof(res) == TYPE_STRING:
+		get_node("OverWriteDialog").popup_centered()
+		get_node("OverWriteDialog").dialog_text = res
+		return
+		
+	var path = "user://" + nom + ".json"
+	var file = File.new()
+	if file.file_exists(path):
+		show_message("Problème d'enregistrement", "Fichier déjà existant")
+	else:
+		file.open(path, File.WRITE)
+		file.store_string(to_json(list))
+		file.close()

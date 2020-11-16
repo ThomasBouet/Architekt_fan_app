@@ -64,9 +64,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuButton" type="MenuButton" parent="Content"]
+[node name="ImportButton" type="Button" parent="Content"]
 margin_right = 528.0
-margin_bottom = 25.0
+margin_bottom = 20.0
+text = "Importer"
+
+[node name="MenuButton" type="MenuButton" parent="Content"]
+margin_top = 24.0
+margin_right = 528.0
+margin_bottom = 49.0
 custom_fonts/font = ExtResource( 6 )
 text = "Sélectionner la liste à afficher"
 
@@ -85,15 +91,14 @@ __meta__ = {
 
 [node name="Content Holder" type="VBoxContainer" parent="Content"]
 visible = false
-margin_top = 23.0
+margin_top = 29.0
 margin_right = 528.0
-margin_bottom = 793.0
+margin_bottom = 785.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="Content/Content Holder"]
-visible = false
 margin_right = 528.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 0, 20 )
@@ -112,11 +117,15 @@ __meta__ = {
 
 [node name="Panel" parent="Content/Content Holder" instance=ExtResource( 8 )]
 visible = false
+margin_top = 24.0
+margin_right = 528.0
+margin_bottom = 152.0
 
 [node name="Profils" type="ScrollContainer" parent="Content/Content Holder"]
+margin_top = 156.0
 margin_right = 528.0
-margin_bottom = 770.0
-rect_min_size = Vector2( 528, 770 )
+margin_bottom = 756.0
+rect_min_size = Vector2( 528, 600 )
 mouse_filter = 1
 follow_focus = true
 __meta__ = {
@@ -129,6 +138,16 @@ margin_bottom = 770.0
 rect_min_size = Vector2( 0, 770 )
 size_flags_horizontal = 3
 custom_constants/separation = 70
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExportButton" type="Button" parent="Content/Content Holder"]
+visible = false
+margin_top = 774.0
+margin_right = 528.0
+margin_bottom = 794.0
+text = "Export"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -316,13 +335,82 @@ __meta__ = {
 
 [node name="OverWriteDialog" type="AcceptDialog" parent="."]
 visible = true
-margin_left = 100.0
+margin_left = 104.0
 margin_top = -72.0
-margin_right = 195.0
+margin_right = 199.0
 margin_bottom = -14.0
 window_title = "Alerte !"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="AcceptDialog" type="AcceptDialog" parent="."]
+[node name="ExportDialog" type="AcceptDialog" parent="."]
+visible = true
+margin_left = 104.0
+margin_top = -160.0
+margin_right = 199.0
+margin_bottom = -102.0
+popup_exclusive = true
+window_title = "Export"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ImportDialog" type="AcceptDialog" parent="."]
+visible = true
+margin_left = 224.0
+margin_top = -232.0
+margin_right = 360.0
+margin_bottom = -100.0
+popup_exclusive = true
+window_title = "Import"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ImportDialog"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 128.0
+margin_bottom = 96.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ImportDialog/VBoxContainer"]
+margin_right = 120.0
+margin_bottom = 14.0
+text = "Liste"
+
+[node name="Liste" type="LineEdit" parent="ImportDialog/VBoxContainer"]
+margin_top = 18.0
+margin_right = 120.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ImportDialog/VBoxContainer"]
+margin_top = 46.0
+margin_right = 120.0
+margin_bottom = 60.0
+text = "Nom de la Liste"
+
+[node name="ListName" type="LineEdit" parent="ImportDialog/VBoxContainer"]
+margin_top = 64.0
+margin_right = 120.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AccepSuppressiontDialog" type="AcceptDialog" parent="."]
 visible = true
 margin_left = 232.0
 margin_top = -72.0
@@ -346,18 +434,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 8.0
-margin_top = 991.0
-margin_right = 60.0
-margin_bottom = 1011.0
-text = "Export"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="ExportImport" type="Node2D" parent="."]
 script = ExtResource( 11 )
+[connection signal="pressed" from="Content/ImportButton" to="." method="_on_ImportButton_pressed"]
 [connection signal="value_changed" from="Content/Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
 [connection signal="pressed" from="ImgDisplay/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
