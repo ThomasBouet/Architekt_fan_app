@@ -4,27 +4,29 @@
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=2]
 
 [node name="Control" type="Control"]
-margin_right = 576.0
-margin_bottom = 66.0
-mouse_filter = 1
+anchor_right = 1.0
+anchor_bottom = 0.273
+margin_bottom = 0.447998
+size_flags_horizontal = 3
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 576.0
-margin_bottom = 67.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -216.0
+rect_min_size = Vector2( 0, 64 )
 mouse_filter = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
 color = Color( 0.333333, 0.101961, 0.101961, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 64.0
+anchor_right = 0.111
+margin_right = 0.0639954
 margin_bottom = 64.0
 mouse_filter = 2
 stretch_mode = 6
@@ -33,20 +35,25 @@ __meta__ = {
 }
 
 [node name="Nom" type="TextureButton" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 384.0
-margin_bottom = 63.0
+anchor_right = 0.778
+margin_right = -0.128021
+margin_bottom = 64.0
 mouse_filter = 1
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Nom"]
-margin_left = 61.0
-margin_top = 4.0
-margin_right = 381.0
-margin_bottom = 23.0
+anchor_left = 0.142714
+anchor_right = 1.0
+anchor_bottom = 1.067
+margin_left = 0.0639954
+margin_top = 8.0
+margin_right = -10.0639
+margin_bottom = -34.02
+size_flags_horizontal = 3
+size_flags_vertical = 1
 custom_fonts/font = ExtResource( 2 )
 text = "Connétable Lotharius du Temple des Vêpres"
 clip_text = true
@@ -54,11 +61,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PA" type="Label" parent="."]
-margin_left = 136.0
-margin_top = 40.0
-margin_right = 176.0
-margin_bottom = 59.0
+[node name="Infos" type="Control" parent="."]
+anchor_left = 0.111
+anchor_right = 0.778
+margin_left = 0.0639954
+margin_top = 34.0
+margin_right = -0.128021
+margin_bottom = 57.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PA" type="Label" parent="Infos"]
+margin_left = 40.0
+margin_top = -2.0
+margin_right = 80.0
+margin_bottom = 22.0
 custom_fonts/font = ExtResource( 2 )
 text = "4"
 align = 1
@@ -67,25 +86,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="_pa" type="Label" parent="."]
-margin_left = 168.0
-margin_top = 40.0
-margin_right = 208.0
-margin_bottom = 59.0
+[node name="_pa" type="Label" parent="Infos"]
+margin_top = -2.0
+margin_right = 40.0
+margin_bottom = 22.0
 custom_fonts/font = ExtResource( 2 )
-text = ": PA"
+text = "PA :"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Max" type="Label" parent="."]
-visible = false
-margin_left = 292.0
-margin_top = 34.0
-margin_right = 340.0
-margin_bottom = 53.0
+[node name="Max" type="Label" parent="Infos"]
+margin_left = 208.0
+margin_top = -2.0
+margin_right = 248.0
+margin_bottom = 22.0
 custom_fonts/font = ExtResource( 2 )
 text = "0"
 align = 1
@@ -94,25 +111,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="_max2" type="Label" parent="."]
-visible = false
-margin_left = 336.0
-margin_top = 34.0
-margin_right = 384.0
-margin_bottom = 53.0
+[node name="_max2" type="Label" parent="Infos"]
+margin_left = 160.0
+margin_top = -2.0
+margin_right = 209.0
+margin_bottom = 22.0
 custom_fonts/font = ExtResource( 2 )
-text = ": max"
+text = "Max :"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cout" type="Label" parent="."]
-margin_left = 64.0
-margin_top = 40.0
-margin_right = 104.0
-margin_bottom = 59.0
+[node name="Cout" type="Label" parent="Infos"]
+margin_left = 120.0
+margin_top = -2.0
+margin_right = 160.0
+margin_bottom = 22.0
 custom_fonts/font = ExtResource( 2 )
 text = "40"
 align = 1
@@ -121,13 +137,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="_pts" type="Label" parent="."]
-margin_left = 104.0
-margin_top = 40.0
-margin_right = 144.0
-margin_bottom = 59.0
+[node name="_pts" type="Label" parent="Infos"]
+margin_left = 80.0
+margin_top = -2.0
+margin_right = 120.0
+margin_bottom = 22.0
 custom_fonts/font = ExtResource( 2 )
-text = ": pts"
+text = "Pts :"
 align = 1
 valign = 1
 __meta__ = {
@@ -135,10 +151,14 @@ __meta__ = {
 }
 
 [node name="Add" type="Button" parent="."]
-margin_left = 416.0
-margin_top = 8.0
-margin_right = 456.0
-margin_bottom = 56.0
+anchor_left = 0.792
+anchor_top = 0.031
+anchor_right = 0.875
+anchor_bottom = 0.031
+margin_left = -0.192017
+margin_top = 0.0639997
+margin_right = -3.05176e-05
+margin_bottom = 48.064
 custom_fonts/font = ExtResource( 2 )
 text = "+"
 __meta__ = {
@@ -146,12 +166,198 @@ __meta__ = {
 }
 
 [node name="Remove" type="Button" parent="."]
-margin_left = 504.0
-margin_top = 7.0
-margin_right = 543.0
-margin_bottom = 55.0
+anchor_left = 0.903
+anchor_top = 0.031
+anchor_right = 0.986
+anchor_bottom = 0.031
+margin_left = -0.128052
+margin_top = 0.0639997
+margin_right = 0.0639648
+margin_bottom = 49.064
+size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
 text = "-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+margin_top = 64.0
+margin_right = 40.0
+margin_bottom = 104.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cara" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 0, 192 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cara" type="Control" parent="VBoxContainer/Cara"]
+margin_bottom = 192.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_vertical = 3
+
+[node name="ESP" type="Label" parent="VBoxContainer/Cara/Cara"]
+margin_left = 48.0
+margin_top = 6.0
+margin_right = 88.0
+margin_bottom = 24.0
+text = "ESP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="COM" type="Label" parent="VBoxContainer/Cara/Cara"]
+margin_left = 88.0
+margin_top = 64.0
+margin_right = 128.0
+margin_bottom = 80.0
+text = "COM"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DEF" type="Label" parent="VBoxContainer/Cara/Cara"]
+margin_left = 48.0
+margin_top = 118.0
+margin_right = 88.0
+margin_bottom = 136.0
+text = "DEF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="REF" type="Label" parent="VBoxContainer/Cara/Cara"]
+margin_left = 8.0
+margin_top = 64.0
+margin_right = 48.0
+margin_bottom = 80.0
+text = "REF"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PA" type="Label" parent="VBoxContainer/Cara/Cara"]
+margin_left = 48.0
+margin_top = 168.0
+margin_right = 88.0
+margin_bottom = 184.0
+text = "PA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PVSATK" type="Control" parent="VBoxContainer/Cara"]
+margin_left = 4.0
+margin_right = 4.0
+margin_bottom = 192.0
+rect_min_size = Vector2( 0, 100 )
+
+[node name="PVS" type="Label" parent="VBoxContainer/Cara/PVSATK"]
+margin_left = 148.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 24.0
+text = "PVS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MVT" type="Label" parent="VBoxContainer/Cara/PVSATK"]
+margin_left = 148.0
+margin_top = 48.0
+margin_right = 188.0
+margin_bottom = 64.0
+text = "MVT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ATK" type="Label" parent="VBoxContainer/Cara/PVSATK"]
+margin_left = 148.0
+margin_top = 104.0
+margin_right = 188.0
+margin_bottom = 120.0
+text = "ATK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TIR" type="Label" parent="VBoxContainer/Cara/PVSATK"]
+margin_left = 148.0
+margin_top = 144.0
+margin_right = 188.0
+margin_bottom = 160.0
+text = "TIR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Cara"]
+margin_left = 8.0
+margin_right = 8.0
+margin_bottom = 192.0
+
+[node name="COMP" type="Control" parent="VBoxContainer/Cara/VBoxContainer"]
+
+[node name="COMP" type="Label" parent="VBoxContainer/Cara/VBoxContainer/COMP"]
+margin_left = 280.0
+margin_top = 8.0
+margin_right = 320.0
+margin_bottom = 24.0
+text = "COMP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/COMP"]
+margin_left = 328.0
+margin_top = 8.0
+margin_right = 559.0
+margin_bottom = 96.0
+bbcode_enabled = true
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SORT" type="Control" parent="VBoxContainer/Cara/VBoxContainer"]
+margin_top = 4.0
+margin_bottom = 4.0
+
+[node name="SORT" type="Label" parent="VBoxContainer/Cara/VBoxContainer/SORT"]
+margin_left = 280.0
+margin_top = 100.0
+margin_right = 320.0
+margin_bottom = 116.0
+text = "SORT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/SORT"]
+margin_left = 328.0
+margin_top = 92.0
+margin_right = 552.0
+margin_bottom = 188.0
+bbcode_enabled = true
+fit_content_height = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 196.0
+margin_right = 40.0
+margin_bottom = 216.0
+size_flags_horizontal = 3
+text = "Voir la carte"
+clip_text = true
+expand_icon = true
+[connection signal="pressed" from="Nom" to="." method="_on_Nom_pressed"]

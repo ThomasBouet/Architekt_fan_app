@@ -4,22 +4,31 @@
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scripts/Accueil.gd" type="Script" id=3]
 
-[node name="Root" type="Node2D"]
+[node name="Root" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource( 3 )
-
-[node name="Control" type="Control" parent="."]
-margin_right = 576.0
-margin_bottom = 1024.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="Control"]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.109804, 0.105882, 0.101961, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -39,10 +48,13 @@ __meta__ = {
 }
 
 [node name="Auteur" type="Label" parent="."]
-margin_left = 184.0
-margin_top = 1000.0
-margin_right = 400.0
-margin_bottom = 1019.0
+anchor_top = 0.937
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 176.0
+margin_top = 24.512
+margin_right = -184.0
+margin_bottom = -21.0
 custom_fonts/font = ExtResource( 2 )
 text = "Made by Thomas BOUET"
 autowrap = true
@@ -51,10 +63,11 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_bottom = 0.937
 margin_left = 128.0
 margin_top = 160.0
 margin_right = 448.0
-margin_bottom = 928.0
+margin_bottom = -15.488
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -63,7 +76,7 @@ __meta__ = {
 
 [node name="Profils" type="Button" parent="VBoxContainer"]
 margin_right = 320.0
-margin_bottom = 124.0
+margin_bottom = 127.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Profils"
@@ -72,9 +85,9 @@ __meta__ = {
 }
 
 [node name="Règles" type="Button" parent="VBoxContainer"]
-margin_top = 128.0
+margin_top = 131.0
 margin_right = 320.0
-margin_bottom = 253.0
+margin_bottom = 258.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Règles"
@@ -83,9 +96,9 @@ __meta__ = {
 }
 
 [node name="Mes listes" type="Button" parent="VBoxContainer"]
-margin_top = 257.0
+margin_top = 262.0
 margin_right = 320.0
-margin_bottom = 381.0
+margin_bottom = 390.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Mes listes"
@@ -94,9 +107,9 @@ __meta__ = {
 }
 
 [node name="Scénarios" type="Button" parent="VBoxContainer"]
-margin_top = 385.0
+margin_top = 394.0
 margin_right = 320.0
-margin_bottom = 510.0
+margin_bottom = 521.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Scénarios"
@@ -105,9 +118,9 @@ __meta__ = {
 }
 
 [node name="Compétences" type="Button" parent="VBoxContainer"]
-margin_top = 514.0
+margin_top = 525.0
 margin_right = 320.0
-margin_bottom = 639.0
+margin_bottom = 652.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Compétences"
@@ -116,9 +129,9 @@ __meta__ = {
 }
 
 [node name="Sorts" type="Button" parent="VBoxContainer"]
-margin_top = 643.0
+margin_top = 656.0
 margin_right = 320.0
-margin_bottom = 768.0
+margin_bottom = 784.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Sorts"

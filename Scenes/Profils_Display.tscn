@@ -1,30 +1,25 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/ImgDisplay.gd" type="Script" id=3]
 [ext_resource path="res://Spartan.tres" type="DynamicFont" id=4]
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Sprites/UI/menu_white.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/UI/x-mark.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/UI/save.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Profil_Display.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Cards_display.tscn" type="PackedScene" id=10]
 
-[node name="Root" type="Node2D"]
-script = ExtResource( 9 )
-
-[node name="Background" type="Control" parent="."]
+[node name="Root" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_vertical = 3
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="Background"]
-margin_top = 1.0
-margin_right = 576.0
-margin_bottom = 1025.0
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.109804, 0.105882, 0.101961, 1 )
@@ -45,10 +40,12 @@ __meta__ = {
 }
 
 [node name="Content Holder" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 24.0
 margin_top = 88.0
-margin_right = 552.0
-margin_bottom = 1020.0
+margin_right = -24.0
+margin_bottom = -20.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -80,6 +77,8 @@ margin_top = 156.0
 margin_right = 528.0
 margin_bottom = 180.0
 placeholder_text = "Search"
+caret_blink = true
+caret_blink_speed = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -87,9 +86,10 @@ __meta__ = {
 [node name="Profils" type="ScrollContainer" parent="Content Holder"]
 margin_top = 184.0
 margin_right = 528.0
-margin_bottom = 954.0
-rect_min_size = Vector2( 528, 770 )
+margin_bottom = 916.0
+rect_min_size = Vector2( 528, 720 )
 mouse_filter = 1
+size_flags_vertical = 3
 follow_focus = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -97,79 +97,10 @@ __meta__ = {
 
 [node name="DiplayList" type="VBoxContainer" parent="Content Holder/Profils"]
 margin_right = 528.0
-margin_bottom = 770.0
+margin_bottom = 732.0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 70
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ImgDisplay" type="Node2D" parent="."]
-position = Vector2( 576, 88 )
-script = ExtResource( 3 )
-
-[node name="ColorRect" type="ColorRect" parent="ImgDisplay"]
-margin_right = 528.0
-margin_bottom = 920.0
-color = Color( 0.317647, 0.192157, 0.0705882, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ScrollContainer" type="ScrollContainer" parent="ImgDisplay"]
-margin_left = 8.0
-margin_top = 11.0
-margin_right = 520.0
-margin_bottom = 915.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ImgDisplay/ScrollContainer"]
-margin_right = 512.0
-margin_bottom = 904.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Carte_0" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
-margin_right = 512.0
-stretch_mode = 6
-
-[node name="Carte_1" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
-margin_top = 4.0
-margin_right = 512.0
-margin_bottom = 4.0
-stretch_mode = 6
-
-[node name="Carte_2" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
-margin_top = 8.0
-margin_right = 512.0
-margin_bottom = 8.0
-stretch_mode = 6
-
-[node name="Carte_3" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
-margin_top = 12.0
-margin_right = 512.0
-margin_bottom = 12.0
-stretch_mode = 6
-
-[node name="Carte_4" type="TextureRect" parent="ImgDisplay/ScrollContainer/VBoxContainer"]
-margin_top = 16.0
-margin_right = 512.0
-margin_bottom = 16.0
-stretch_mode = 6
-
-[node name="TweenImg" type="Tween" parent="ImgDisplay"]
-
-[node name="Close" type="TextureButton" parent="ImgDisplay"]
-margin_left = 8.0
-margin_top = 11.0
-margin_right = 520.0
-margin_bottom = 523.0
-rect_scale = Vector2( 0.1, 0.1 )
-texture_normal = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -401,7 +332,6 @@ __meta__ = {
 }
 
 [node name="SaveDialog" type="AcceptDialog" parent="."]
-visible = true
 margin_left = -72.7778
 margin_top = -169.714
 margin_right = 232.222
@@ -418,12 +348,13 @@ margin_left = 8.0
 margin_top = 22.0
 margin_right = 297.0
 margin_bottom = 92.9995
+caret_blink = true
+caret_blink_speed = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="OverWriteDialog" type="AcceptDialog" parent="."]
-visible = true
 margin_left = 356.736
 margin_top = -128.901
 margin_right = 451.736
@@ -433,9 +364,10 @@ window_title = "Alerte !"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ShowCard" parent="." instance=ExtResource( 10 )]
 [connection signal="value_changed" from="Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
 [connection signal="text_changed" from="Content Holder/LineEdit" to="." method="_on_LineEdit_text_changed"]
-[connection signal="pressed" from="ImgDisplay/Close" to="." method="_on_Close_pressed"]
 [connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Accueil" to="." method="_on_Accueil_pressed"]
 [connection signal="pressed" from="Menu/VBoxContainer/Mes listes" to="." method="_on_Mes_listes_pressed"]
@@ -458,4 +390,3 @@ __meta__ = {
 [connection signal="pressed" from="Menu/VBoxContainer/Utopie" to="." method="_change_faction" binds= [ "Utopie" ]]
 [connection signal="pressed" from="Save/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="confirmed" from="SaveDialog" to="." method="_on_SaveDialog_confirmed"]
-[connection signal="text_entered" from="SaveDialog/LineEdit" to="." method="_on_LineEdit_text_entered"]

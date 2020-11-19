@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-3f43e41b46a85a56d73bd8ca43a84d00.stex"
+path="res://.import/1.jpg-558d736bfb381f00c9fdff0641f9a8f4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Foldo_Sensamuerto/1.jpg"
-dest_files=[ "res://.import/1.jpg-3f43e41b46a85a56d73bd8ca43a84d00.stex" ]
+source_file="res://Sprites/Profils/Foldo/1.jpg"
+dest_files=[ "res://.import/1.jpg-558d736bfb381f00c9fdff0641f9a8f4.stex" ]
 
 [params]
 

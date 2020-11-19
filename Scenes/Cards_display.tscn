@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Cards_display.gd" type="Script" id=4]
+
+[node name="AcceptDialog" type="AcceptDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = 88.0
+margin_right = -64.0
+margin_bottom = -64.0
+popup_exclusive = true
+window_title = "Alerte !"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 448.0
+margin_bottom = 808.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carte0" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_right = 448.0
+margin_bottom = 199.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 6
+
+[node name="Carte1" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 203.0
+margin_right = 448.0
+margin_bottom = 402.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 6
+
+[node name="Carte2" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 406.0
+margin_right = 448.0
+margin_bottom = 605.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 6
+
+[node name="Carte3" type="TextureRect" parent="ScrollContainer/VBoxContainer"]
+margin_top = 609.0
+margin_right = 448.0
+margin_bottom = 808.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 6

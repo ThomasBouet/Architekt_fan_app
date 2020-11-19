@@ -8,6 +8,7 @@ anchor_bottom = 1.0
 margin_right = -96.0
 margin_bottom = -524.0
 rect_min_size = Vector2( 0, 500 )
+mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
@@ -18,6 +19,7 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 480.0
 margin_bottom = 64.0
+mouse_filter = 2
 color = Color( 0.282353, 0.266667, 0.282353, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -49,6 +51,7 @@ visible = false
 margin_top = 64.0
 margin_right = 480.0
 margin_bottom = 304.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -65,12 +68,14 @@ __meta__ = {
 margin_top = 18.0
 margin_right = 480.0
 margin_bottom = 18.0
+mouse_filter = 2
 stretch_mode = 6
 
 [node name="Mise en place" type="RichTextLabel" parent="VBoxContainer"]
 margin_top = 22.0
 margin_right = 480.0
 margin_bottom = 60.0
+mouse_filter = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 fit_content_height = true
@@ -91,6 +96,7 @@ __meta__ = {
 margin_top = 82.0
 margin_right = 480.0
 margin_bottom = 120.0
+mouse_filter = 2
 size_flags_vertical = 3
 bbcode_enabled = true
 fit_content_height = true

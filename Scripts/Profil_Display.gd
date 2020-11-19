@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 # Declare member variables here. Examples:
@@ -84,45 +84,11 @@ func remove_from_team(p, node):
 			node_modified.set_max(new_max)
 			node_modified.manage_recruitement(new_max)
 			if nb_recuited > new_max:
-				for i in range(nb_recuited - new_max):
+				for _i in range(nb_recuited - new_max):
 					Team.remove(Team.find(node_modified.profil))
 					currentPTS -= int(node_modified.profil["Cout"])
 					get_node("Content Holder/ProgressBar").value = currentPTS
 					get_node("Content Holder/Panel").avg_stats(Team)
-	
-# --- Gestion de l'affichage des cartes ---
-func show_cards(p):
-	display_cards(p)
-	var init_pos = get_node("ImgDisplay").position
-	var target = Vector2(init_pos.x - 552, init_pos.y)
-	get_node("ImgDisplay").move(target)
-
-func display_cards(p):
-	var files = []
-	var dir = Directory.new()
-	dir.open("res://Sprites/Profils/" + p["Imgs"])
-	dir.list_dir_begin()
-
-	while true:
-		var file = dir.get_next()
-		print(file.get_basename())
-		if file == "":
-			break
-		elif not file.begins_with(".") and file.ends_with(".import"):
-			files.append(file)
-	
-	dir.list_dir_end()
-	
-	for i in range(len(files)):
-		get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".jpg")
-
-func _on_Close_pressed():
-	var init_pos = get_node("ImgDisplay").position
-	var target = Vector2(init_pos.x + 552, init_pos.y)
-	get_node("ImgDisplay").move(target)
-	get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_0").texture = null
-	get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_1").texture = null
-	get_node("ImgDisplay/ScrollContainer/VBoxContainer/Carte_2").texture = null
 	
 # --- Gestion des boutons du menu --
 func move_menu():
@@ -163,10 +129,10 @@ func refresh_profils_list(list, hide=false):
 	for p in list:
 		var profil = Profil.instance().init(p)
 		profil.name = p["Imgs"]
-		profil.get_child(2).connect("pressed", self, "show_cards", [p])
-		profil.get_child(9).connect("pressed", self, "add_to_team", [p, profil])
-		profil.get_child(10).connect("pressed", self, "remove_from_team", [p, profil])
-		profil.get_child(10).visible = false
+		profil.get_child(6).get_child(1).connect("pressed", $"ShowCard", "display_cards", [p])
+		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
+		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
+		profil.get_child(5).visible = false
 		
 		if p["Type"] == "Troupe":
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
@@ -181,10 +147,11 @@ func refresh_profils_list(list, hide=false):
 			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
 			profil.get_child(0).color = "#3d777d"
 			
-		profil.get_child(5).text = "0" 
+		profil.get_child(3).get_child(2).text = "0" 
 		if p["Max"] == "0" or hide:
-			profil.get_child(9).visible = false
+			profil.get_child(4).visible = false
 		get_node("Content Holder/Profils/DiplayList").add_child(profil)
+		profil.resize_self(get_node("Content Holder/Profils/DiplayList").rect_size)
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
