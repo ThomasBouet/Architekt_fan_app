@@ -16,9 +16,7 @@ func _on_Accueil_Btn_pressed():
 func _on_Regle_Btn_pressed():
 	print("Règles")
 	get_tree().change_scene("res://Scenes/regles.tscn")
-#	get_tree().change_scene("res://Scenes/scenar_disp.tscn")
 	
 func _on_CaF_Btn_pressed():
 	print("CaF")
-	get_tree().change_scene("res://Scenes/comp_Display.tscn")
-#	get_tree().change_scene("res://Scenes/Sort_display.tscn")
+	get_tree().change_scene("res://Scenes/Comp_et_Form_Display.tscn")

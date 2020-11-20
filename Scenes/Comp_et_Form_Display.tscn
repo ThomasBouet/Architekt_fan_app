@@ -13,8 +13,8 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 576.0
-margin_bottom = 1024.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.109804, 0.105882, 0.101961, 1 )
@@ -23,7 +23,8 @@ __meta__ = {
 }
 
 [node name="Compétences" type="Label" parent="."]
-margin_right = 574.0
+anchor_right = 0.997
+margin_right = -0.272034
 margin_bottom = 64.0
 custom_fonts/font = ExtResource( 1 )
 text = "Compétences et Formules"
@@ -35,10 +36,12 @@ __meta__ = {
 }
 
 [node name="Content Holder" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.922
 margin_left = 24.0
 margin_top = 64.0
-margin_right = 552.0
-margin_bottom = 944.0
+margin_right = -24.0
+margin_bottom = -0.128052
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -76,9 +79,10 @@ text = "Formules"
 [node name="Comp" type="ScrollContainer" parent="Content Holder"]
 margin_top = 56.0
 margin_right = 528.0
-margin_bottom = 826.0
+margin_bottom = 880.0
 rect_min_size = Vector2( 528, 770 )
 mouse_filter = 1
+size_flags_vertical = 3
 follow_focus = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -86,7 +90,7 @@ __meta__ = {
 
 [node name="DiplayList" type="VBoxContainer" parent="Content Holder/Comp"]
 margin_right = 528.0
-margin_bottom = 770.0
+margin_bottom = 824.0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3

@@ -5,8 +5,8 @@
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -524.0
+anchor_bottom = 0.488
+margin_bottom = 0.287964
 rect_min_size = Vector2( 0, 500 )
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -26,20 +26,27 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="."]
+anchor_right = 1.0
 margin_left = 8.0
 margin_top = 8.0
-margin_right = 472.0
+margin_right = -10.0
 margin_bottom = 56.0
 mouse_filter = 1
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Nom" type="Label" parent="TextureButton"]
-anchor_right = 1.207
-anchor_bottom = 1.0
-margin_right = -0.0480347
+anchor_left = -0.017
+anchor_top = -0.167
+anchor_right = 1.018
+anchor_bottom = 1.167
+margin_left = 9.486
+margin_top = 8.016
+margin_right = -6.04401
+margin_bottom = -8.016
 text = "Nom"
 align = 1
 valign = 1

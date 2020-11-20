@@ -11,7 +11,7 @@ func _on_Mes_listes_pressed():
 	get_tree().change_scene("res://Scenes/Liste.tscn")
 	
 func _on_Comptences_pressed():
-	get_tree().change_scene("res://Scenes/comp_Display.tscn")
+	get_tree().change_scene("res://Scenes/Comp_et_Form_Display.tscn")
 	
 func _on_Sorts_pressed():
 	get_tree().change_scene("res://Scenes/Sort_display.tscn")
