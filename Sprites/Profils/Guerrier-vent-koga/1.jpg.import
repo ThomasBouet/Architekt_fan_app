@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-b5f5050ae586b4eff3cfe03ae1e636b2.stex"
+path="res://.import/1.jpg-2f9e1e50b5b788888ff1f9e09a201626.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Guerrier-vent-koga/1.jpg"
-dest_files=[ "res://.import/1.jpg-b5f5050ae586b4eff3cfe03ae1e636b2.stex" ]
+source_file="res://Sprites/Profils/Guerrier-Vent-Koga/1.jpg"
+dest_files=[ "res://.import/1.jpg-2f9e1e50b5b788888ff1f9e09a201626.stex" ]
 
 [params]
 

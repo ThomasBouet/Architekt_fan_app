@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-d4b74d4ab3e7d053ef1ff2d4ae96b934.stex"
+path="res://.import/1.jpg-81878daabc21f5ecdbdabb8912c5c105.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Milicien-lancier/1.jpg"
-dest_files=[ "res://.import/1.jpg-d4b74d4ab3e7d053ef1ff2d4ae96b934.stex" ]
+source_file="res://Sprites/Profils/Milicien-Lancier/1.jpg"
+dest_files=[ "res://.import/1.jpg-81878daabc21f5ecdbdabb8912c5c105.stex" ]
 
 [params]
 

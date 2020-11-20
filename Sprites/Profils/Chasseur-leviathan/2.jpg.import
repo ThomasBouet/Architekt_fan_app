@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.jpg-448b5f11a0c6a1687b831db019ec369c.stex"
+path="res://.import/2.jpg-df78eda6ecc14baa363b4bc22187e2b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Chasseur-leviathan/2.jpg"
-dest_files=[ "res://.import/2.jpg-448b5f11a0c6a1687b831db019ec369c.stex" ]
+source_file="res://Sprites/Profils/Chasseur-Leviathan/2.jpg"
+dest_files=[ "res://.import/2.jpg-df78eda6ecc14baa363b4bc22187e2b3.stex" ]
 
 [params]
 

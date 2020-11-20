@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-e315eb90b9510fbc340216dc31d3514d.stex"
+path="res://.import/1.jpg-3a98af528270d4ca71bd1e7fd99026e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Naa-reitre/1.jpg"
-dest_files=[ "res://.import/1.jpg-e315eb90b9510fbc340216dc31d3514d.stex" ]
+source_file="res://Sprites/Profils/Naa-Reitre/1.jpg"
+dest_files=[ "res://.import/1.jpg-3a98af528270d4ca71bd1e7fd99026e2.stex" ]
 
 [params]
 

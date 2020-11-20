@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-51b47c0537eeecf9639f507d11ac174a.stex"
+path="res://.import/1.jpg-bee7639d0e13a4b7ffa8f965560339db.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Pyro-mane/1.jpg"
-dest_files=[ "res://.import/1.jpg-51b47c0537eeecf9639f507d11ac174a.stex" ]
+source_file="res://Sprites/Profils/Pyro-Mane/1.jpg"
+dest_files=[ "res://.import/1.jpg-bee7639d0e13a4b7ffa8f965560339db.stex" ]
 
 [params]
 

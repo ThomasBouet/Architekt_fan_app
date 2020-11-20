@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-925566bfb30a1c3986e74451f0dc09f1.stex"
+path="res://.import/0.jpg-c5e6d43cc15cc7d28da86e91811c8ddc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Esprit-heros/0.jpg"
-dest_files=[ "res://.import/0.jpg-925566bfb30a1c3986e74451f0dc09f1.stex" ]
+source_file="res://Sprites/Profils/Esprit-Heros/0.jpg"
+dest_files=[ "res://.import/0.jpg-c5e6d43cc15cc7d28da86e91811c8ddc.stex" ]
 
 [params]
 

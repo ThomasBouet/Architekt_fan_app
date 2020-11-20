@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.jpg-db3e8440aa65bbd5be154c68d094e738.stex"
+path="res://.import/2.jpg-a65eae50e241537dd37832dc4241b0ec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Litam-bint-Sornha/2.jpg"
-dest_files=[ "res://.import/2.jpg-db3e8440aa65bbd5be154c68d094e738.stex" ]
+source_file="res://Sprites/Profils/Litam-Bint-Sornha/2.jpg"
+dest_files=[ "res://.import/2.jpg-a65eae50e241537dd37832dc4241b0ec.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-1f1e4cc7fa35c7a7e9fe326b4ecf604f.stex"
+path="res://.import/1.jpg-594e842da8d990ba96a2c5278df3fc6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Automaton-combat/1.jpg"
-dest_files=[ "res://.import/1.jpg-1f1e4cc7fa35c7a7e9fe326b4ecf604f.stex" ]
+source_file="res://Sprites/Profils/Automaton-Combat/1.jpg"
+dest_files=[ "res://.import/1.jpg-594e842da8d990ba96a2c5278df3fc6c.stex" ]
 
 [params]
 

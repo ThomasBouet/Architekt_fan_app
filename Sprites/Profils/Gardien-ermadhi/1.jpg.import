@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-2ca3b0e2b256855bf92fc334c5dfc2b2.stex"
+path="res://.import/1.jpg-edc157c9a2ea84cdb402d007dd7a2779.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Gardien-ermadhi/1.jpg"
-dest_files=[ "res://.import/1.jpg-2ca3b0e2b256855bf92fc334c5dfc2b2.stex" ]
+source_file="res://Sprites/Profils/Gardien-Ermadhi/1.jpg"
+dest_files=[ "res://.import/1.jpg-edc157c9a2ea84cdb402d007dd7a2779.stex" ]
 
 [params]
 

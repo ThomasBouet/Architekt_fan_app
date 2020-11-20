@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-3124dbd76b0496bdb0488f8659f24bf5.stex"
+path="res://.import/1.jpg-2e8737f663e58a63d3983e51edd804c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Hospitalier-temple/1.jpg"
-dest_files=[ "res://.import/1.jpg-3124dbd76b0496bdb0488f8659f24bf5.stex" ]
+source_file="res://Sprites/Profils/Hospitalier-Temple/1.jpg"
+dest_files=[ "res://.import/1.jpg-2e8737f663e58a63d3983e51edd804c6.stex" ]
 
 [params]
 

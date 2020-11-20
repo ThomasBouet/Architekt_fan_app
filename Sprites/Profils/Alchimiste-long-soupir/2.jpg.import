@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.jpg-9851a1dfdffffdef5c1fa60c01a7874b.stex"
+path="res://.import/2.jpg-4ffabb930175f60f4a986dc889616052.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Alchimiste-long-soupir/2.jpg"
-dest_files=[ "res://.import/2.jpg-9851a1dfdffffdef5c1fa60c01a7874b.stex" ]
+source_file="res://Sprites/Profils/Alchimiste-Long-Soupir/2.jpg"
+dest_files=[ "res://.import/2.jpg-4ffabb930175f60f4a986dc889616052.stex" ]
 
 [params]
 

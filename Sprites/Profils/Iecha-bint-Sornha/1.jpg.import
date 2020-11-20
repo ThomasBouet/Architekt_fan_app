@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-21c0355426be3789208721927306326d.stex"
+path="res://.import/1.jpg-aa220b8ff031ca701ee96eb09380644c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Iecha-bint-Sornha/1.jpg"
-dest_files=[ "res://.import/1.jpg-21c0355426be3789208721927306326d.stex" ]
+source_file="res://Sprites/Profils/Iecha-Bint-Sornha/1.jpg"
+dest_files=[ "res://.import/1.jpg-aa220b8ff031ca701ee96eb09380644c.stex" ]
 
 [params]
 

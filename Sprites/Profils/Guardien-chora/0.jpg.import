@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-8aef0b2aa0a7d7c5d3dded651af30838.stex"
+path="res://.import/0.jpg-1977ade8541e303e62e5ed7f9e395554.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Guardien-chora/0.jpg"
-dest_files=[ "res://.import/0.jpg-8aef0b2aa0a7d7c5d3dded651af30838.stex" ]
+source_file="res://Sprites/Profils/Guardien-Chora/0.jpg"
+dest_files=[ "res://.import/0.jpg-1977ade8541e303e62e5ed7f9e395554.stex" ]
 
 [params]
 

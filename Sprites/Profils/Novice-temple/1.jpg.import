@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-69a0303bba16c58ef1a5a456abed674e.stex"
+path="res://.import/1.jpg-86b5e6de8ab4a5ee82ca805f83fa286d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Novice-temple/1.jpg"
-dest_files=[ "res://.import/1.jpg-69a0303bba16c58ef1a5a456abed674e.stex" ]
+source_file="res://Sprites/Profils/Novice-Temple/1.jpg"
+dest_files=[ "res://.import/1.jpg-86b5e6de8ab4a5ee82ca805f83fa286d.stex" ]
 
 [params]
 

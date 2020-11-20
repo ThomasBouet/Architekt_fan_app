@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-e112a048d19c1c072699d3f7e8ee3435.stex"
+path="res://.import/0.jpg-0fe8ad41bb03ac3de19d31fb89375ea2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Aros-the/0.jpg"
-dest_files=[ "res://.import/0.jpg-e112a048d19c1c072699d3f7e8ee3435.stex" ]
+source_file="res://Sprites/Profils/Aros-The/0.jpg"
+dest_files=[ "res://.import/0.jpg-0fe8ad41bb03ac3de19d31fb89375ea2.stex" ]
 
 [params]
 

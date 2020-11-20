@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.jpg-1667d6f90173bbbb07fc78d6c6ca71c4.stex"
+path="res://.import/2.jpg-a0dbb7db83aeafa4ad101646bbcc708d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Apprenti-ecume/2.jpg"
-dest_files=[ "res://.import/2.jpg-1667d6f90173bbbb07fc78d6c6ca71c4.stex" ]
+source_file="res://Sprites/Profils/Apprenti-Ecume/2.jpg"
+dest_files=[ "res://.import/2.jpg-a0dbb7db83aeafa4ad101646bbcc708d.stex" ]
 
 [params]
 

@@ -19,12 +19,12 @@ func load_all_factions():
 	var all_name = []
 	for l in profils_data.values():
 		for i in l:
-			print(i["Nom"])
+#			print(i["Nom"])
 			if !all_name.has(i["Nom"]):
 				all_list.append(i)
 				all_name.append(i["Nom"])
 				
-	print(all_name)
+#	print(all_name)
 	return all_list
 	
 func has_team_saved():

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-1648a82d7c15f0c58af7805ed581d15c.stex"
+path="res://.import/0.jpg-943e946398873dbc72c1a214962745be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Guerrier-vent-walosi/0.jpg"
-dest_files=[ "res://.import/0.jpg-1648a82d7c15f0c58af7805ed581d15c.stex" ]
+source_file="res://Sprites/Profils/Guerrier-Vent-Walosi/0.jpg"
+dest_files=[ "res://.import/0.jpg-943e946398873dbc72c1a214962745be.stex" ]
 
 [params]
 

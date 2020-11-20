@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-c4ef12a71fed5440176334cadd81dc99.stex"
+path="res://.import/1.jpg-0dfa6dce1356b38d8ebb3207d86051f2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Garde-triadique/1.jpg"
-dest_files=[ "res://.import/1.jpg-c4ef12a71fed5440176334cadd81dc99.stex" ]
+source_file="res://Sprites/Profils/Garde-Triadique/1.jpg"
+dest_files=[ "res://.import/1.jpg-0dfa6dce1356b38d8ebb3207d86051f2.stex" ]
 
 [params]
 

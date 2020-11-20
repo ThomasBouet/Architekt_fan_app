@@ -1,10 +1,7 @@
-extends Node2D
+extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 const Competence = preload("res://Scenes/Competence.tscn")
+const Formule = preload("res://Scenes/Formule.tscn")
 var MenuOpen = false
 var comps_data = []
 

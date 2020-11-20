@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
 [ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scenes/Cards_display.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Formule_Dialog.tscn" type="PackedScene" id=5]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -64,10 +67,10 @@ __meta__ = {
 [node name="Infos" type="Control" parent="."]
 anchor_left = 0.111
 anchor_right = 0.778
-margin_left = 0.0639954
-margin_top = 34.0
+margin_left = 0.0639992
+margin_top = 34.268
 margin_right = -0.128021
-margin_bottom = 57.0
+margin_bottom = 57.268
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -184,14 +187,16 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false
 margin_top = 64.0
-margin_right = 40.0
-margin_bottom = 104.0
+margin_right = 576.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Cara" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 40.0
+margin_right = 576.0
 margin_bottom = 192.0
 rect_min_size = Vector2( 0, 192 )
 __meta__ = {
@@ -260,9 +265,9 @@ margin_bottom = 192.0
 rect_min_size = Vector2( 0, 100 )
 
 [node name="PVS" type="Label" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = 148.0
+margin_left = 125.0
 margin_top = 8.0
-margin_right = 188.0
+margin_right = 165.0
 margin_bottom = 24.0
 text = "PVS"
 __meta__ = {
@@ -270,9 +275,9 @@ __meta__ = {
 }
 
 [node name="MVT" type="Label" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = 148.0
+margin_left = 125.0
 margin_top = 48.0
-margin_right = 188.0
+margin_right = 165.0
 margin_bottom = 64.0
 text = "MVT"
 __meta__ = {
@@ -280,24 +285,22 @@ __meta__ = {
 }
 
 [node name="ATK" type="Label" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = 148.0
-margin_top = 104.0
-margin_right = 188.0
-margin_bottom = 120.0
+margin_left = 125.0
+margin_top = 128.0
+margin_right = 165.0
+margin_bottom = 144.0
 text = "ATK"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TIR" type="Label" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = 148.0
-margin_top = 144.0
-margin_right = 188.0
-margin_bottom = 160.0
+[node name="TIR" type="RichTextLabel" parent="VBoxContainer/Cara/PVSATK"]
+margin_left = 125.0
+margin_top = 168.0
+margin_right = 276.0
+margin_bottom = 184.0
 text = "TIR"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+fit_content_height = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Cara"]
 margin_left = 8.0
@@ -311,14 +314,14 @@ margin_left = 280.0
 margin_top = 8.0
 margin_right = 320.0
 margin_bottom = 24.0
-text = "COMP"
+text = "Compétences :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/COMP"]
-margin_left = 328.0
-margin_top = 8.0
+[node name="Competence" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/COMP"]
+margin_left = 280.0
+margin_top = 24.0
 margin_right = 559.0
 margin_bottom = 96.0
 bbcode_enabled = true
@@ -336,14 +339,14 @@ margin_left = 280.0
 margin_top = 100.0
 margin_right = 320.0
 margin_bottom = 116.0
-text = "SORT"
+text = "Formules :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/SORT"]
-margin_left = 328.0
-margin_top = 92.0
+[node name="Formule" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/SORT"]
+margin_left = 280.0
+margin_top = 116.0
 margin_right = 552.0
 margin_bottom = 188.0
 bbcode_enabled = true
@@ -354,10 +357,20 @@ __meta__ = {
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 margin_top = 196.0
-margin_right = 40.0
+margin_right = 576.0
 margin_bottom = 216.0
 size_flags_horizontal = 3
 text = "Voir la carte"
-clip_text = true
 expand_icon = true
+
+[node name="Cards_Display" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="Comp_Display" parent="." instance=ExtResource( 4 )]
+
+[node name="Form_Display" parent="." instance=ExtResource( 5 )]
+visible = false
 [connection signal="pressed" from="Nom" to="." method="_on_Nom_pressed"]
+[connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/COMP/Competence" to="." method="_on_Competence_meta_clicked"]
+[connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/SORT/Formule" to="." method="_on_Formule_meta_clicked"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]

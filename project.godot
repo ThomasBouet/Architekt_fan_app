@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Json="*res://Scripts/json.gd"
+Json_reader="*res://Scripts/json.gd"
 
 [display]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-cde35166f03ce695aa524bf45da33e0c.stex"
+path="res://.import/0.jpg-f3c9a2eb6d73b78daab0a6b82b5d2be8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Naa-sabreur/0.jpg"
-dest_files=[ "res://.import/0.jpg-cde35166f03ce695aa524bf45da33e0c.stex" ]
+source_file="res://Sprites/Profils/Naa-Sabreur/0.jpg"
+dest_files=[ "res://.import/0.jpg-f3c9a2eb6d73b78daab0a6b82b5d2be8.stex" ]
 
 [params]
 

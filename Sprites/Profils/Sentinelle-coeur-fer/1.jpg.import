@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-6a7e7eac31ba279ed760c51127dff40f.stex"
+path="res://.import/1.jpg-fb187e7297d091c0abc8fa361e7d7588.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Sentinelle-coeur-fer/1.jpg"
-dest_files=[ "res://.import/1.jpg-6a7e7eac31ba279ed760c51127dff40f.stex" ]
+source_file="res://Sprites/Profils/Sentinelle-Coeur-Fer/1.jpg"
+dest_files=[ "res://.import/1.jpg-fb187e7297d091c0abc8fa361e7d7588.stex" ]
 
 [params]
 

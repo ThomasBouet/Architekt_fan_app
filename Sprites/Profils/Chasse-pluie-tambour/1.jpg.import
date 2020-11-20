@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-589bb54874fabd66df0808387de26d77.stex"
+path="res://.import/1.jpg-7b1140ed4f0f10701c1739ee214e287b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Chasse-pluie-tambour/1.jpg"
-dest_files=[ "res://.import/1.jpg-589bb54874fabd66df0808387de26d77.stex" ]
+source_file="res://Sprites/Profils/Chasse-Pluie-Tambour/1.jpg"
+dest_files=[ "res://.import/1.jpg-7b1140ed4f0f10701c1739ee214e287b.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-b6ab83d9888ee60319f7b99eb4b68cff.stex"
+path="res://.import/1.jpg-57025550267fcb836af9dc2ac17e4060.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Chasse-pluie-cor/1.jpg"
-dest_files=[ "res://.import/1.jpg-b6ab83d9888ee60319f7b99eb4b68cff.stex" ]
+source_file="res://Sprites/Profils/Chasse-Pluie-Cor/1.jpg"
+dest_files=[ "res://.import/1.jpg-57025550267fcb836af9dc2ac17e4060.stex" ]
 
 [params]
 

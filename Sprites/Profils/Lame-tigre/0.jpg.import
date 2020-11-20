@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-d1669b27725d451526b2cfdb4e479dd3.stex"
+path="res://.import/0.jpg-463ce61cb659d5a19d8242d72956a2e2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Lame-tigre/0.jpg"
-dest_files=[ "res://.import/0.jpg-d1669b27725d451526b2cfdb4e479dd3.stex" ]
+source_file="res://Sprites/Profils/Lame-Tigre/0.jpg"
+dest_files=[ "res://.import/0.jpg-463ce61cb659d5a19d8242d72956a2e2.stex" ]
 
 [params]
 

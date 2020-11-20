@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-45a7bbf68fc0ea4cb390b63c9f849cd6.stex"
+path="res://.import/0.jpg-aff17586cee612baa673946a53217bd4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Sentinelle-cornue/0.jpg"
-dest_files=[ "res://.import/0.jpg-45a7bbf68fc0ea4cb390b63c9f849cd6.stex" ]
+source_file="res://Sprites/Profils/Sentinelle-Cornue/0.jpg"
+dest_files=[ "res://.import/0.jpg-aff17586cee612baa673946a53217bd4.stex" ]
 
 [params]
 

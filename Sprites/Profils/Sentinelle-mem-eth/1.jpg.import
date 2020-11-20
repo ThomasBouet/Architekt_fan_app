@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-536dbeafcbfe614f8460ff7a635a60bb.stex"
+path="res://.import/1.jpg-7d2358b4efc48957c243ea77dbb0f070.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Sentinelle-mem-eth/1.jpg"
-dest_files=[ "res://.import/1.jpg-536dbeafcbfe614f8460ff7a635a60bb.stex" ]
+source_file="res://Sprites/Profils/Sentinelle-Mem-Eth/1.jpg"
+dest_files=[ "res://.import/1.jpg-7d2358b4efc48957c243ea77dbb0f070.stex" ]
 
 [params]
 

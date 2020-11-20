@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-c8bd51e94dbf1c0381b0b75c49297a2c.stex"
+path="res://.import/0.jpg-44b5b3c62ff230c4143d398422cf6c8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Chevalier-errant/0.jpg"
-dest_files=[ "res://.import/0.jpg-c8bd51e94dbf1c0381b0b75c49297a2c.stex" ]
+source_file="res://Sprites/Profils/Chevalier-Errant/0.jpg"
+dest_files=[ "res://.import/0.jpg-44b5b3c62ff230c4143d398422cf6c8e.stex" ]
 
 [params]
 

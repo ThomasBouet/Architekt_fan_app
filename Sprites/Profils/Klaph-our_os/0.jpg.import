@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-042929c4fc79e47ebc423c2747642952.stex"
+path="res://.import/0.jpg-8a0715ec8ec4d8c0aff9f3bed5b5b93c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Klaph-our_os/0.jpg"
-dest_files=[ "res://.import/0.jpg-042929c4fc79e47ebc423c2747642952.stex" ]
+source_file="res://Sprites/Profils/Klaph-Our_os/0.jpg"
+dest_files=[ "res://.import/0.jpg-8a0715ec8ec4d8c0aff9f3bed5b5b93c.stex" ]
 
 [params]
 

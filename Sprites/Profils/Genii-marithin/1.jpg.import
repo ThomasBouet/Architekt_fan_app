@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-3c26e9b22ea8b948a9872552b4c8e63d.stex"
+path="res://.import/1.jpg-4344d08eee59eade3c9529be15b9e0cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Genii-marithin/1.jpg"
-dest_files=[ "res://.import/1.jpg-3c26e9b22ea8b948a9872552b4c8e63d.stex" ]
+source_file="res://Sprites/Profils/Genii-Marithin/1.jpg"
+dest_files=[ "res://.import/1.jpg-4344d08eee59eade3c9529be15b9e0cf.stex" ]
 
 [params]
 

@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Formule_Dialog.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=2]
+
+[node name="Formule_Dialog" type="AcceptDialog"]
+margin_right = 574.0
+margin_bottom = 312.0
+popup_exclusive = true
+window_title = "Alerte !"
+resizable = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 566.0
+margin_bottom = 276.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 558.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+
+[node name="Cout" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 183.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Cout:"
+align = 1
+valign = 1
+
+[node name="Portee" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 187.0
+margin_right = 370.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Portée:"
+align = 1
+valign = 1
+
+[node name="Cible" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 374.0
+margin_right = 558.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Cible:"
+align = 1
+valign = 1
+
+[node name="titre_desc" type="Label" parent="VBoxContainer"]
+margin_top = 18.0
+margin_right = 558.0
+margin_bottom = 32.0
+text = "Description :"
+
+[node name="Description" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 36.0
+margin_right = 558.0
+margin_bottom = 51.0
+bbcode_enabled = true
+fit_content_height = true
+
+[node name="amelio_desc" type="Label" parent="VBoxContainer"]
+margin_top = 55.0
+margin_right = 558.0
+margin_bottom = 69.0
+text = "Amélioration :"
+
+[node name="Amélioration" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 73.0
+margin_right = 558.0
+margin_bottom = 88.0
+fit_content_height = true
+
+[node name="Competence" parent="." instance=ExtResource( 2 )]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 566.0
+margin_bottom = 276.0
+[connection signal="meta_clicked" from="VBoxContainer/Description" to="." method="_on_Description_meta_clicked"]

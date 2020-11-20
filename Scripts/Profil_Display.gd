@@ -18,16 +18,13 @@ func _ready():
 	get_node("Content Holder/Panel").visible = false
 	get_node("Content Holder/ProgressBar").visible = false
 	
-	refresh_profils_list(Json.load_all_factions(), true)
+	refresh_profils_list(Json_reader.load_all_factions(), true)
 	
 	get_node("SaveDialog").add_cancel("Annuler")
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
 	
-	if Json.has_team_saved():
-		get_node("Menu/VBoxContainer/Mes listes").visible = true
-	
 func add_to_team(p, node):
-	print("adding " + node.profil["Nom"])
+#	print("adding " + node.profil["Nom"])
 	if node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste":
 		if hashero:
 #			TODO: Mettre un popup
@@ -47,9 +44,9 @@ func add_to_team(p, node):
 		node.manage_recruitement(node.get_recuitement() + 1)
 		
 #		--- Gestion des mofications de recutement ---
-		if Json.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
-			var node_to_modify = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
-			var qty = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
+		if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
+			var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
+			var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
 			var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
 			if node_modified != null:
 				var new_max = qty + node_modified.get_max()
@@ -60,7 +57,7 @@ func add_to_team(p, node):
 		show_message("Ajout impossible", "L'ajout de ce profil n'est pas possible.\n La limite de point serait dépassée.")
 	
 func remove_from_team(p, node):
-	print("removing " + node.profil["Nom"])
+#	print("removing " + node.profil["Nom"])
 	if (node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste") and hashero:
 		hashero = false
 		get_node("Save").visible = false
@@ -74,9 +71,9 @@ func remove_from_team(p, node):
 	node.manage_recruitement(node.get_recuitement() - 1)
 	
 #		--- Gestion des mofications de recutement ---
-	if Json.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
-		var node_to_modify = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
-		var qty = Json.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
+	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
+		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
+		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
 		var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
 		if node_modified != null:
 			var new_max = node_modified.get_max() - qty 
@@ -92,9 +89,9 @@ func remove_from_team(p, node):
 	
 # --- Gestion des boutons du menu --
 func move_menu():
-	var init_pos = get_node("Menu").position
+	var init_pos = get_node("Factions").position
 	var target = Vector2(init_pos.x + (319 if !MenuOpen else -319), init_pos.y)
-	get_node("Menu").move(target)
+	get_node("Factions").move(target)
 	MenuOpen = !MenuOpen
 	
 func _on_MenuBtn_pressed():
@@ -106,7 +103,7 @@ func _on_Tous_pressed():
 	get_node("Faction").text = "Profils"
 	get_node("Content Holder/Panel").visible = false
 	get_node("Content Holder/ProgressBar").visible = false
-	refresh_profils_list(Json.load_all_factions(), true)
+	refresh_profils_list(Json_reader.load_all_factions(), true)
 	move_menu()
 	
 # --- Gestion de l'affichage des profils ---
@@ -116,7 +113,7 @@ func _change_faction(faction):
 	get_node("Faction").text = faction
 	get_node("Content Holder/Panel").visible = true
 	get_node("Content Holder/ProgressBar").visible = true
-	refresh_profils_list(Json.profils_data[faction])
+	refresh_profils_list(Json_reader.profils_data[faction])
 	move_menu()
 	
 func refresh_profils_list(list, hide=false):
@@ -127,29 +124,10 @@ func refresh_profils_list(list, hide=false):
 		n.queue_free()
 #	--- Ajoute tous les noeuds de la faction correspondante ---	
 	for p in list:
-		var profil = Profil.instance().init(p)
+		var profil = Profil.instance().init(p, hide)
 		profil.name = p["Imgs"]
-		profil.get_child(6).get_child(1).connect("pressed", $"ShowCard", "display_cards", [p])
 		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
 		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
-		profil.get_child(5).visible = false
-		
-		if p["Type"] == "Troupe":
-			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
-			profil.get_child(0).color = "#7d653d"
-		elif p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
-			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
-			profil.get_child(0).color = "#551a1a"
-		elif p["Type"] == "Alchimiste":
-			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
-			profil.get_child(0).color = "#26621a"
-		elif p["Type"] == "Special" or p["Type"] == "Spécial":
-			profil.get_child(1).texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
-			profil.get_child(0).color = "#3d777d"
-			
-		profil.get_child(3).get_child(2).text = "0" 
-		if p["Max"] == "0" or hide:
-			profil.get_child(4).visible = false
 		get_node("Content Holder/Profils/DiplayList").add_child(profil)
 		profil.resize_self(get_node("Content Holder/Profils/DiplayList").rect_size)
 #	--- solution dégueue mais ça marche ---
@@ -173,19 +151,12 @@ func _on_SaveDialog_confirmed():
 		var team_stored = [get_node("Faction").text, Team]
 		file.store_string(to_json(team_stored))
 		file.close()
-		get_node("Menu/VBoxContainer/Mes listes").visible = true
 		get_node("SaveDialog/LineEdit").text = ""
 	
 func show_message(title, msg):
 	get_node("OverWriteDialog").window_title = title
 	get_node("OverWriteDialog").dialog_text = msg
 	get_node("OverWriteDialog").popup_centered()
-	
-func _on_Accueil_pressed():
-	get_tree().change_scene("res://Scenes/Accueil.tscn")
-	
-func _on_Mes_listes_pressed():
-	get_tree().change_scene("res://Scenes/Liste.tscn")
 	
 func _on_LineEdit_text_changed(search_clue):
 	var nodes_profil = get_node("Content Holder/Profils/DiplayList").get_children()

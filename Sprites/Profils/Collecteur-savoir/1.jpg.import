@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-c5965e0ca08a2d5530182b3bf2138652.stex"
+path="res://.import/1.jpg-df50b7f3b34d9ed885ca5d2029373908.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Collecteur-savoir/1.jpg"
-dest_files=[ "res://.import/1.jpg-c5965e0ca08a2d5530182b3bf2138652.stex" ]
+source_file="res://Sprites/Profils/Collecteur-Savoir/1.jpg"
+dest_files=[ "res://.import/1.jpg-df50b7f3b34d9ed885ca5d2029373908.stex" ]
 
 [params]
 

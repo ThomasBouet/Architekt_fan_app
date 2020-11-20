@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-7fd3433aa4f481e2b05e961dae1e0a84.stex"
+path="res://.import/1.jpg-0a85ceaee16e5e5011e5603979dfd28a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Sidh-our_os/1.jpg"
-dest_files=[ "res://.import/1.jpg-7fd3433aa4f481e2b05e961dae1e0a84.stex" ]
+source_file="res://Sprites/Profils/Sidh-Our_os/1.jpg"
+dest_files=[ "res://.import/1.jpg-0a85ceaee16e5e5011e5603979dfd28a.stex" ]
 
 [params]
 

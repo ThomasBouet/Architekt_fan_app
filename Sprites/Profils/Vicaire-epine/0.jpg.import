@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-db92ae19ab1c182731bb6fd164e82f25.stex"
+path="res://.import/0.jpg-885de61ab3b17862016c18c13f461132.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Vicaire-epine/0.jpg"
-dest_files=[ "res://.import/0.jpg-db92ae19ab1c182731bb6fd164e82f25.stex" ]
+source_file="res://Sprites/Profils/Vicaire-Epine/0.jpg"
+dest_files=[ "res://.import/0.jpg-885de61ab3b17862016c18c13f461132.stex" ]
 
 [params]
 

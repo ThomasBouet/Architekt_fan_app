@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-9da0b92b489fafd9874104cbf0348be3.stex"
+path="res://.import/0.jpg-86c393e9af33b33f27ef969f99a542bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Auxiliaires-temple/0.jpg"
-dest_files=[ "res://.import/0.jpg-9da0b92b489fafd9874104cbf0348be3.stex" ]
+source_file="res://Sprites/Profils/Auxiliaires-Temple/0.jpg"
+dest_files=[ "res://.import/0.jpg-86c393e9af33b33f27ef969f99a542bd.stex" ]
 
 [params]
 

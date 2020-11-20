@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-77e23fa9c86f031e2ef5eaa4fb3a6d78.stex"
+path="res://.import/1.jpg-590efc4823881ce8a05032e03d727aa4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Maitre-eau-foudre/1.jpg"
-dest_files=[ "res://.import/1.jpg-77e23fa9c86f031e2ef5eaa4fb3a6d78.stex" ]
+source_file="res://Sprites/Profils/Maitre-Eau-Foudre/1.jpg"
+dest_files=[ "res://.import/1.jpg-590efc4823881ce8a05032e03d727aa4.stex" ]
 
 [params]
 

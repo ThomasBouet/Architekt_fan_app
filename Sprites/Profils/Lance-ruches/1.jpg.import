@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-9a915bc2d62bfab133b0e6eb0cc58a93.stex"
+path="res://.import/1.jpg-2a513a0849982c78b6cf0ad76c33b82d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Lance-ruches/1.jpg"
-dest_files=[ "res://.import/1.jpg-9a915bc2d62bfab133b0e6eb0cc58a93.stex" ]
+source_file="res://Sprites/Profils/Lance-Ruches/1.jpg"
+dest_files=[ "res://.import/1.jpg-2a513a0849982c78b6cf0ad76c33b82d.stex" ]
 
 [params]
 

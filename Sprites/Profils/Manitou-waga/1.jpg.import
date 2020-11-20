@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-616cd0f6f122cdfbde3713d6ffa065cb.stex"
+path="res://.import/1.jpg-28077de490c7fd89ced8c8858b1cde8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Manitou-waga/1.jpg"
-dest_files=[ "res://.import/1.jpg-616cd0f6f122cdfbde3713d6ffa065cb.stex" ]
+source_file="res://Sprites/Profils/Manitou-Waga/1.jpg"
+dest_files=[ "res://.import/1.jpg-28077de490c7fd89ced8c8858b1cde8c.stex" ]
 
 [params]
 

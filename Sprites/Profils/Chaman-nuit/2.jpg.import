@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2.jpg-82d7f1fc6a1af007b5d803ababc2ed24.stex"
+path="res://.import/2.jpg-ca30825d03adf75dca1d18f035fba498.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Chaman-nuit/2.jpg"
-dest_files=[ "res://.import/2.jpg-82d7f1fc6a1af007b5d803ababc2ed24.stex" ]
+source_file="res://Sprites/Profils/Chaman-Nuit/2.jpg"
+dest_files=[ "res://.import/2.jpg-ca30825d03adf75dca1d18f035fba498.stex" ]
 
 [params]
 

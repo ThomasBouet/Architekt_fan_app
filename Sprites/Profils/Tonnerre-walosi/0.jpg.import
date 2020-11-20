@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-5e563aab07d6a03c0e2f0e4a318b4a46.stex"
+path="res://.import/0.jpg-49463043303439eb5bc5305f2fa59ef1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Tonnerre-walosi/0.jpg"
-dest_files=[ "res://.import/0.jpg-5e563aab07d6a03c0e2f0e4a318b4a46.stex" ]
+source_file="res://Sprites/Profils/Tonnerre-Walosi/0.jpg"
+dest_files=[ "res://.import/0.jpg-49463043303439eb5bc5305f2fa59ef1.stex" ]
 
 [params]
 

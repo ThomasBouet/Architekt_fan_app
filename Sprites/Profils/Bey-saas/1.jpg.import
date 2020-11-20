@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-26465bf8015969a628d318f291993e72.stex"
+path="res://.import/1.jpg-d48ece104bb52a6b1ead23b5697a1937.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Bey-saas/1.jpg"
-dest_files=[ "res://.import/1.jpg-26465bf8015969a628d318f291993e72.stex" ]
+source_file="res://Sprites/Profils/Bey-Saas/1.jpg"
+dest_files=[ "res://.import/1.jpg-d48ece104bb52a6b1ead23b5697a1937.stex" ]
 
 [params]
 
