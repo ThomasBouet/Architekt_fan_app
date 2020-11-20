@@ -69,7 +69,7 @@ func import_list(str_list):
 		ids.append((str_list[i].to_ascii()[0] - Shift)*100 + (str_list[i+1].to_ascii()[0] - Shift)*10 + (str_list[i+2].to_ascii()[0] - Shift))
 		i += 3
 		
-	var profils = Json.profils_data[faction]
+	var profils = Json_reader.profils_data[faction]
 	var team = []
 	for id in ids:
 		for p in profils:

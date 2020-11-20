@@ -2,13 +2,8 @@ extends AcceptDialog
 
 
 func display_form(form):
-	var json_file = File.new()
-	json_file.open("res://formules.json", File.READ)
-	var form_data = JSON.parse(json_file.get_as_text()).result
-	json_file.close()
-	
 	get_node(".").window_title = form
-	var formule = form_data[form]
+	var formule = Json_reader.forms_data[form]
 	get_node("VBoxContainer/HBoxContainer/Cout").text = "Cout : " + formule[0]
 	get_node("VBoxContainer/HBoxContainer/Cible").text = "Portée : " + formule[1]
 	get_node("VBoxContainer/HBoxContainer/Portee").text = "Cible : " + formule[2]

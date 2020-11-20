@@ -53,10 +53,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Comp" type="ScrollContainer" parent="Content Holder"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Content Holder"]
 margin_top = 28.0
 margin_right = 528.0
-margin_bottom = 798.0
+margin_bottom = 52.0
+
+[node name="Compe_check" type="CheckBox" parent="Content Holder/HBoxContainer"]
+margin_right = 262.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+pressed = true
+text = "Compétences"
+
+[node name="Formu_check" type="CheckBox" parent="Content Holder/HBoxContainer"]
+margin_left = 266.0
+margin_right = 528.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+pressed = true
+text = "Formules"
+
+[node name="Comp" type="ScrollContainer" parent="Content Holder"]
+margin_top = 56.0
+margin_right = 528.0
+margin_bottom = 826.0
 rect_min_size = Vector2( 528, 770 )
 mouse_filter = 1
 follow_focus = true

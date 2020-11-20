@@ -369,7 +369,6 @@ visible = false
 [node name="Comp_Display" parent="." instance=ExtResource( 4 )]
 
 [node name="Form_Display" parent="." instance=ExtResource( 5 )]
-visible = false
 [connection signal="pressed" from="Nom" to="." method="_on_Nom_pressed"]
 [connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/COMP/Competence" to="." method="_on_Competence_meta_clicked"]
 [connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/SORT/Formule" to="." method="_on_Formule_meta_clicked"]

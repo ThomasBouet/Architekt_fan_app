@@ -5,12 +5,15 @@ const Formule = preload("res://Scenes/Formule.tscn")
 var MenuOpen = false
 var comps_data = []
 var form_data = []
+var list_comp = []
+var list_form = []
 
 func _ready():
 	comps_data = Json_reader.comps_data
 	form_data = Json_reader.forms_data
 	
-	
+	get_node("Content Holder/HBoxContainer/Compe_check").connect("toggled", self, "display_list", [list_comp])
+	get_node("Content Holder/HBoxContainer/Formu_check").connect("toggled", self, "display_list", [list_form])
 	refresh_comps_list([comps_data, form_data])
 	
 func refresh_comps_list(list):
@@ -29,6 +32,7 @@ func refresh_comps_list(list):
 		comp.name = p
 		get_node("Content Holder/Comp/DiplayList").add_child(comp)
 		comp.resize_self()
+		list_comp.append(comp)
 		
 	var formule_label = Label.new()
 	formule_label.text = "Formules"
@@ -38,6 +42,7 @@ func refresh_comps_list(list):
 		form.name = p
 		get_node("Content Holder/Comp/DiplayList").add_child(form)
 		form.resize_self()
+		list_form.append(form)
 	
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
@@ -51,4 +56,7 @@ func _on_LineEdit_text_changed(search_clue):
 	for n in nodes_profil:
 		var name = n.get_child(1).get_child(0).text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
-	
+		
+func display_list(boolean, list):
+	for i in list:
+		i.visible = boolean

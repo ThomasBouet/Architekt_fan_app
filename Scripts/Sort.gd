@@ -13,7 +13,6 @@ func _ready():
 func init(formule):
 	get_node("TextureButton/Nom").text = formule
 	var form_split = Json_reader.forms_data[formule][3].split("Améliorations : ")
-	print(form_split)
 	get_node("VBoxContainer/Description").bbcode_text = form_split[0]
 	get_node("VBoxContainer/HBoxContainer/Cout").text = "Cout : " + Json_reader.forms_data[formule][0]
 	get_node("VBoxContainer/HBoxContainer/Portee").text = "Portée : " + Json_reader.forms_data[formule][1]
