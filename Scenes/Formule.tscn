@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Sort.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -96.0
 margin_bottom = -524.0
 rect_min_size = Vector2( 0, 500 )
 mouse_filter = 1
@@ -17,7 +17,7 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 480.0
+anchor_right = 1.0
 margin_bottom = 64.0
 mouse_filter = 2
 color = Color( 0.282353, 0.266667, 0.282353, 1 )
@@ -37,8 +37,9 @@ __meta__ = {
 }
 
 [node name="Nom" type="Label" parent="TextureButton"]
-anchor_right = 1.0
+anchor_right = 1.207
 anchor_bottom = 1.0
+margin_right = -0.0480347
 text = "Nom"
 align = 1
 valign = 1
@@ -48,25 +49,48 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false
+anchor_right = 1.0
 margin_top = 64.0
-margin_right = 480.0
 margin_bottom = 304.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cara" type="Label" parent="VBoxContainer"]
-margin_right = 480.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 576.0
 margin_bottom = 14.0
-text = "Concentration : , Composants : , Portée : , Cible : "
-__meta__ = {
-"_edit_use_anchors_": false
-}
+alignment = 1
+
+[node name="Cout" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 189.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Cout : "
+align = 1
+valign = 1
+
+[node name="Portee" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 193.0
+margin_right = 382.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Portee : "
+align = 1
+valign = 1
+
+[node name="Cible" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 386.0
+margin_right = 576.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Cible : "
+align = 1
+valign = 1
 
 [node name="Desc" type="Label" parent="VBoxContainer"]
 margin_top = 18.0
-margin_right = 480.0
+margin_right = 576.0
 margin_bottom = 32.0
 text = "Description :"
 __meta__ = {
@@ -75,7 +99,7 @@ __meta__ = {
 
 [node name="Description" type="RichTextLabel" parent="VBoxContainer"]
 margin_top = 36.0
-margin_right = 480.0
+margin_right = 576.0
 margin_bottom = 127.0
 mouse_filter = 1
 size_flags_vertical = 3
@@ -87,7 +111,7 @@ __meta__ = {
 
 [node name="Amélio" type="Label" parent="VBoxContainer"]
 margin_top = 131.0
-margin_right = 480.0
+margin_right = 576.0
 margin_bottom = 145.0
 text = "Améliorations :"
 __meta__ = {
@@ -96,7 +120,7 @@ __meta__ = {
 
 [node name="Amélioration" type="RichTextLabel" parent="VBoxContainer"]
 margin_top = 149.0
-margin_right = 480.0
+margin_right = 576.0
 margin_bottom = 240.0
 mouse_filter = 2
 size_flags_vertical = 3
@@ -105,4 +129,7 @@ fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Competence_Dialog" parent="." instance=ExtResource( 2 )]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="meta_clicked" from="VBoxContainer/Description" to="." method="_on_Description_meta_clicked"]

@@ -4,57 +4,45 @@ const Competence = preload("res://Scenes/Competence.tscn")
 const Formule = preload("res://Scenes/Formule.tscn")
 var MenuOpen = false
 var comps_data = []
+var form_data = []
 
 func _ready():
-	var json_file = File.new()
-	json_file.open("res://competences.json", File.READ)
-	comps_data = JSON.parse(json_file.get_as_text()).result
-	json_file.close()
-	refresh_comps_list(comps_data)
+	comps_data = Json_reader.comps_data
+	form_data = Json_reader.forms_data
 	
-func refresh_comps_list(list, hide=false):
+	
+	refresh_comps_list([comps_data, form_data])
+	
+func refresh_comps_list(list):
 	var node = get_node("Content Holder/Comp/DiplayList")
 #	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
+	
+	var competence_label = Label.new()
+	competence_label.text = "Compétences"
+	get_node("Content Holder/Comp/DiplayList").add_child(competence_label)
 #	--- Ajoute tous les noeuds de la faction correspondante ---	
-	for p in list:
-		var comp = Competence.instance().init(list[p])
+	for p in list[0]:
+		var comp = Competence.instance().init(p)
 		comp.name = p
 		get_node("Content Holder/Comp/DiplayList").add_child(comp)
 		comp.resize_self()
-		comp.get_child(2).connect("meta_clicked", self, "display_comp")
+		
+	var formule_label = Label.new()
+	formule_label.text = "Formules"
+	get_node("Content Holder/Comp/DiplayList").add_child(formule_label)
+	for p in list[1]:
+		var form = Formule.instance().init(p)
+		form.name = p
+		get_node("Content Holder/Comp/DiplayList").add_child(form)
+		form.resize_self()
 	
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
 	get_node("Content Holder/Comp/DiplayList").add_child(c)
-	
-func display_comp(meta):
-	var reg = RegEx.new()
-	reg.compile("='(.*?)'}")
-	var res = reg.search(meta)
-	if res:
-		res = res.get_string()
-		res = res.substr(2, len(res)-4)
-		get_node("CompDescription").window_title = res
-		get_node("CompDescription/CompDescriptionPopUp").bbcode_text = comps_data[res]["Description"]
-		get_node("CompDescription").rect_min_size = Vector2(get_node("CompDescription/CompDescriptionPopUp").rect_size.x + 10, get_node("CompDescription/CompDescriptionPopUp").rect_size.y + 50)
-		get_node("CompDescription").popup_centered()
-		
-# --- Gestion des boutons du menu --
-func move_menu():
-	var init_pos = get_node("Menu").position
-	var target = Vector2(init_pos.x + (319 if !MenuOpen else -319), init_pos.y)
-	get_node("Menu").move(target)
-	MenuOpen = !MenuOpen
-	
-func _on_MenuBtn_pressed():
-	move_menu()
-	
-func _on_Accueil_pressed():
-	get_tree().change_scene("res://Scenes/Accueil.tscn")
 	
 func _on_LineEdit_text_changed(search_clue):
 	var nodes_profil = get_node("Content Holder/Comp/DiplayList").get_children()

@@ -10,11 +10,15 @@ var Description_visible = false
 func _ready():
 	pass # Replace with function body.
 
-func init(sort):
-	get_node("TextureButton/Nom").text = sort["Nom"]
-	get_node("VBoxContainer/Description").bbcode_text = sort["Description"]
-	get_node("VBoxContainer/Cara").text = "Concentration : "+ sort["Concentration"] +", Composants : "+ sort["Cout"] +", Portée : "+ sort["Portée"] +", Cible : " + sort["Cible"]
-	get_node("VBoxContainer/Amélioration").bbcode_text = sort["Améliorations"]
+func init(formule):
+	get_node("TextureButton/Nom").text = formule
+	var form_split = Json_reader.forms_data[formule][3].split("Améliorations : ")
+	print(form_split)
+	get_node("VBoxContainer/Description").bbcode_text = form_split[0]
+	get_node("VBoxContainer/HBoxContainer/Cout").text = "Cout : " + Json_reader.forms_data[formule][0]
+	get_node("VBoxContainer/HBoxContainer/Portee").text = "Portée : " + Json_reader.forms_data[formule][1]
+	get_node("VBoxContainer/HBoxContainer/Cible").text = "Cible : " + Json_reader.forms_data[formule][2]
+	get_node("VBoxContainer/Amélioration").text = form_split[1] if form_split.size() > 1 else ""
 	return self
 	
 func resize_self():
@@ -30,3 +34,5 @@ func _on_TextureButton_pressed():
 	get_node("VBoxContainer").visible = Description_visible
 	resize_self()
 
+func _on_Description_meta_clicked(meta):
+	get_node("Competence_Dialog").display_comp(meta)

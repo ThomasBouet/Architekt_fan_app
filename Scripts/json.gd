@@ -6,6 +6,8 @@ extends Node
 # var b = "text"
 
 var profils_data
+var comps_data
+var forms_data
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var json_file = File.new()
@@ -13,6 +15,15 @@ func _ready():
 	profils_data = JSON.parse(json_file.get_as_text()).result
 	json_file.close()
 	
+	json_file = File.new()
+	json_file.open("res://competences.json", File.READ)
+	comps_data = JSON.parse(json_file.get_as_text()).result
+	json_file.close()
+	
+	json_file = File.new()
+	json_file.open("res://formules.json", File.READ)
+	forms_data = JSON.parse(json_file.get_as_text()).result
+	json_file.close()
 	
 func load_all_factions():
 	var all_list = []

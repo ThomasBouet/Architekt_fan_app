@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Competence.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=2]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -96.0
 margin_bottom = -524.0
 rect_min_size = Vector2( 0, 500 )
 mouse_filter = 1
@@ -17,7 +17,7 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 480.0
+anchor_right = 1.0
 margin_bottom = 64.0
 mouse_filter = 2
 color = Color( 0.282353, 0.266667, 0.282353, 1 )
@@ -37,8 +37,9 @@ __meta__ = {
 }
 
 [node name="Nom" type="Label" parent="TextureButton"]
-anchor_right = 1.0
+anchor_right = 1.203
 anchor_bottom = 1.0
+margin_right = -0.192017
 text = "Nom"
 align = 1
 valign = 1
@@ -47,9 +48,8 @@ __meta__ = {
 }
 
 [node name="Description" type="RichTextLabel" parent="."]
-visible = false
+anchor_right = 1.0
 margin_top = 64.0
-margin_right = 480.0
 margin_bottom = 79.0
 mouse_filter = 1
 size_flags_vertical = 3
@@ -58,4 +58,7 @@ fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Competence_Dialog" parent="." instance=ExtResource( 2 )]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="meta_clicked" from="Description" to="." method="_on_Description_meta_clicked"]

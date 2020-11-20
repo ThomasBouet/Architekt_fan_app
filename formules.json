@@ -9,37 +9,37 @@
         "2 Terre",
         "6",
         "Auto",
-        "La formule cible un Avalonien non-héros ami ou le Frère-Collecteur lui-même. Pour son prochain jet de COM, la cible acquiert la compétence Expert (Brutale). Si elle possédait déjà cette compétence, elle acquiert la compétence Expert (Normale) à la place.\r\nAméliorations\r\n- 2 pour 1 cible supplémentaire à portée.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où la cible joue une CC autre que inactif."
+        "La formule cible un Avalonien non-héros ami ou le Frère-Collecteur lui-même. Pour son prochain jet de COM, la cible acquiert la compétence Expert (Brutale). Si elle possédait déjà cette compétence, elle acquiert la compétence Expert (Normale) à la place.\r\nAméliorations : \r\n- 2 pour 1 cible supplémentaire à portée.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où la cible joue une CC autre que inactif."
     ],
     "Apathie (1)": [
         "1 Eau",
         "10",
         "Cible",
-        "La formule cible une figurine ennemie à portée. L'alchimiste choisit une CC d'attaque ou une Botte. La cible ne peut plus choisir cette CC. La formule prend fin lorsque la cible joue une CC d'attaque.\r\nAméliorations\r\n- 2 pour une cible supplémentaire à portée.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où la cible joue une CC d'attaque."
+        "La formule cible une figurine ennemie à portée. L'alchimiste choisit une CC d'attaque ou une Botte. La cible ne peut plus choisir cette CC. La formule prend fin lorsque la cible joue une CC d'attaque.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire à portée.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où la cible joue une CC d'attaque."
     ],
     "Baiser de Walosi (0)": [
         "3 Terre",
         "8",
         "Auto",
-        "La formule cible un Aurlok ami à portée ou le ­chaman lui-même. La cible est ­soignée d’un point de vie.\r\nAméliorations\r\n- 2 pour une cible supplémentaire à portée\r\n- 2 pour un point de vie soigné supplémentaire"
+        "La formule cible un Aurlok ami à portée ou le ­chaman lui-même. La cible est ­soignée d’un point de vie.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire à portée\r\n- 2 pour un point de vie soigné supplémentaire"
     ],
     "Bienveillance du Beathacrann (2)": [
         "1 Terre",
         "8",
         "Auto",
-        "La Formule cible un Avalonien ami à Portée ou le Frère-Collecteur lui-même. Jusqu'à la fin du tour, pour tous ses jets, la cible peut choisir de gagner un dé bonus. Si un jet de dé qui a bénéficié de cet effet est un échec au final, la DEF de la cible devient 2 jusqu'à la fin du tour.\r\nAméliorations\r\n- 2 pour 1 cible supplémentaire à portée."
+        "La Formule cible un Avalonien ami à Portée ou le Frère-Collecteur lui-même. Jusqu'à la fin du tour, pour tous ses jets, la cible peut choisir de gagner un dé bonus. Si un jet de dé qui a bénéficié de cet effet est un échec au final, la DEF de la cible devient 2 jusqu'à la fin du tour.\r\nAméliorations : \r\n- 2 pour 1 cible supplémentaire à portée."
     ],
     "Bourrasque Violente (2)": [
         "2 Air",
         "8",
         "Cible",
-        "La formule cible une figurine ennemie à portée qui est considérée comme mise à terre. Tant que la cible ne dépense pas 1 PA lors de son activation pour se relever, sa DEF est égale à 8, elle ne peut agir, ne peut bénéficier de la règle aux aguets, ni bénéficier d'une attaque contre un adversaire se désengageant d'un combat dans lequel elle se trouve.\r\nAméliorations\r\n- 2 pierres pour une cible supplémentaire à portée."
+        "La formule cible une figurine ennemie à portée qui est considérée comme mise à terre. Tant que la cible ne dépense pas 1 PA lors de son activation pour se relever, sa DEF est égale à 8, elle ne peut agir, ne peut bénéficier de la règle aux aguets, ni bénéficier d'une attaque contre un adversaire se désengageant d'un combat dans lequel elle se trouve.\r\nAméliorations : \r\n- 2 pierres pour une cible supplémentaire à portée."
     ],
     "Bénédiction Mortelle (3)": [
         "3 Terre",
         "6",
         "Auto",
-        "La formule cible une figurine amie à portée ou Caelina elle-même. La formule prend effet lorsqu'une CC Attaque est résolue contre la cible. L'adversaire de la cible subit un nombre de DOM égal à la compétence Coriace de la cible.\r\nAméliorations\r\n- 1 pour 1 cible supplémentaire.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où une CC est résolue contre la cible."
+        "La formule cible une figurine amie à portée ou Caelina elle-même. La formule prend effet lorsqu'une CC Attaque est résolue contre la cible. L'adversaire de la cible subit un nombre de DOM égal à la compétence Coriace de la cible.\r\nAméliorations : \r\n- 1 pour 1 cible supplémentaire.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où une CC est résolue contre la cible."
     ],
     "Cimeterre Alchimique (3)": [
         "3 Eau",
@@ -51,7 +51,7 @@
         "2 airs",
         "8",
         "Auto",
-        "La formule cible une figurine amie à portée ou Xian Ling lui même. La cible obtient la compétence acrobate en utilisant une REF4. La formule dure jusqu'à ce que la cible utilise cette compétence.\r\nAméliorations\r\n1 pour une cible supplémentaire à portée\r\n2 pour que la formule dure jusqu'à la fin du tour ou la cible utilise cette compétence\r\n2 pour utiliser +1 REF"
+        "La formule cible une figurine amie à portée ou Xian Ling lui même. La cible obtient la compétence acrobate en utilisant une REF4. La formule dure jusqu'à ce que la cible utilise cette compétence.\r\nAméliorations : \r\n1 pour une cible supplémentaire à portée\r\n2 pour que la formule dure jusqu'à la fin du tour ou la cible utilise cette compétence\r\n2 pour utiliser +1 REF"
     ],
     "Convocation des Anciens (3)": [
         "6 Terre",
@@ -63,7 +63,7 @@
         "2 Feu",
         "0",
         "Auto",
-        "L'alchimiste place un gabarit rectangulaire d'1 pouce de largeur sur 4 pouces de longueur, au contact de son socle pour représenter l'aire d'effet de la formule. Le gabarit est un rectangle d'1 pouce de largeur sur 4 pouces de longueur. Toute figurine qui se trouve ou qui entre en contact avec l'aire d'effet subit 1 DOM. La formule dure jusqu'à la fin du tour.\r\nAméliorations:\r\n2 pierres pour 2 pouces supplémentaires de longueur\r\n2 pierres pour un gabarit supplémentaire pour représenter l'aire d'effet\r\n2 pierres pour 1 DOM supplémentaire"
+        "L'alchimiste place un gabarit rectangulaire d'1 pouce de largeur sur 4 pouces de longueur, au contact de son socle pour représenter l'aire d'effet de la formule. Le gabarit est un rectangle d'1 pouce de largeur sur 4 pouces de longueur. Toute figurine qui se trouve ou qui entre en contact avec l'aire d'effet subit 1 DOM. La formule dure jusqu'à la fin du tour.\r\nAméliorations : \r\n2 pierres pour 2 pouces supplémentaires de longueur\r\n2 pierres pour un gabarit supplémentaire pour représenter l'aire d'effet\r\n2 pierres pour 1 DOM supplémentaire"
     ],
     "Diffraction énergétique (1)": [
         "3 Feu",
@@ -81,7 +81,7 @@
         "2 Air",
         "4",
         "Auto",
-        "La formule cible deux figurines amies à portée (une cible peut être Xiang Ling). Les deux figurines échangent leur position. Aucun jet de désengagement n'est nécessaire si les figurines sont en combat avec une figurine ennemie.\r\nAméliorations\r\n- 2 pour 1 p supplémentaire de portée."
+        "La formule cible deux figurines amies à portée (une cible peut être Xiang Ling). Les deux figurines échangent leur position. Aucun jet de désengagement n'est nécessaire si les figurines sont en combat avec une figurine ennemie.\r\nAméliorations : \r\n- 2 pour 1 p supplémentaire de portée."
     ],
     "Etincelles de protection (0)": [
         "3 Feux",
@@ -93,55 +93,55 @@
         "3 Terre",
         "8",
         "Auto",
-        "Chaque figurine hémotoxique à portée inflige 1 DOM à toutes les figurines situées jusqu'à 1 pouce d'elle. Les figurines hémotoxiques sont immunisés à ces DOM.\r\nAméliorations\r\n- 3 pierres pour qu'une figurine amie à portée devienne hémotoxique jusqu'à la fin du tour\r\n- 3 pierres pour 1 pouce supplémentaire de portée autour des figurines hémotoxiques"
+        "Chaque figurine hémotoxique à portée inflige 1 DOM à toutes les figurines situées jusqu'à 1 pouce d'elle. Les figurines hémotoxiques sont immunisés à ces DOM.\r\nAméliorations : \r\n- 3 pierres pour qu'une figurine amie à portée devienne hémotoxique jusqu'à la fin du tour\r\n- 3 pierres pour 1 pouce supplémentaire de portée autour des figurines hémotoxiques"
     ],
     "Facéties du Destin (0)": [
         "2 Eau",
         "8",
         "Cible",
-        "Jusqu'à la fin du tour, lorsque la cible de cette formule est en combat, elle doit choisir une CC parmi Rapide, Brutale, et Normale aléatoirement.\r\nAméliorations\r\n- 1 pour une cible supplémentaire à portée.\r\n- 3 pour que le joueur Khaliman choisisse la CC jouée par la cible (parmi rapide, normale et brutale)"
+        "Jusqu'à la fin du tour, lorsque la cible de cette formule est en combat, elle doit choisir une CC parmi Rapide, Brutale, et Normale aléatoirement.\r\nAméliorations : \r\n- 1 pour une cible supplémentaire à portée.\r\n- 3 pour que le joueur Khaliman choisisse la CC jouée par la cible (parmi rapide, normale et brutale)"
     ],
     "Feu de Thébus (2)": [
         "3 Feu",
         "4",
         "Auto",
-        "La portée désigne une aire d’effet autour de l’alchimiste. A chaque fois qu’une figurine alliée située dans l’aire d’effet inflige des DOM à une figurine adverse socle à socle, cette dernière obtient un pion Combustion. A la fin de sa prochaine activation, chaque figurine possédant des pions Combustions subit autant de DOM que de pions Combustions qu’elle possède puis défausse 1 pion Combustion. Durant son activation, la figurine peut dépenser 1 PA pour défausser 2 pions Combustions. Une figurine ne peut jamais subir plus de 3 DOM chaque tour à cause des pions Combustions. La formule prend fin à la fin du tour où l’alchimiste est blessé.\r\n\r\nAméliorations: \r\n1 pierre pour 1 pouce supplémentaire de portée\r\n3 pierres pour un 1 pion Combustion supplémentaire"
+        "La portée désigne une aire d’effet autour de l’alchimiste. A chaque fois qu’une figurine alliée située dans l’aire d’effet inflige des DOM à une figurine adverse socle à socle, cette dernière obtient un pion Combustion. A la fin de sa prochaine activation, chaque figurine possédant des pions Combustions subit autant de DOM que de pions Combustions qu’elle possède puis défausse 1 pion Combustion. Durant son activation, la figurine peut dépenser 1 PA pour défausser 2 pions Combustions. Une figurine ne peut jamais subir plus de 3 DOM chaque tour à cause des pions Combustions. La formule prend fin à la fin du tour où l’alchimiste est blessé.\r\n\r\nAméliorations :  \r\n1 pierre pour 1 pouce supplémentaire de portée\r\n3 pierres pour un 1 pion Combustion supplémentaire"
     ],
     "Flaque magmatique (0)": [
         "2 Feu",
         "6",
         "Auto",
-        "L'alchimiste place une flaque magmatique jusqu'à une distance de 6 pouces de lui. Il doit avoir une ligne de vue sur la flaque et elle ne peut pas être placée en-dessous d'une figurine autre que l'alchimiste. Une flaque magmatique est représentée par un marqueur de 2 pouces de diamètre. Toute figurine qui passe sur une flaque subit 1 DOM. La formule dure jusqu'à la fin du tour.\r\nAméliorations\r\n- 2 pierres pour une flaque supplémentaire\r\n- 2 pierres pour 1 DOM supplémentaire"
+        "L'alchimiste place une flaque magmatique jusqu'à une distance de 6 pouces de lui. Il doit avoir une ligne de vue sur la flaque et elle ne peut pas être placée en-dessous d'une figurine autre que l'alchimiste. Une flaque magmatique est représentée par un marqueur de 2 pouces de diamètre. Toute figurine qui passe sur une flaque subit 1 DOM. La formule dure jusqu'à la fin du tour.\r\nAméliorations : \r\n- 2 pierres pour une flaque supplémentaire\r\n- 2 pierres pour 1 DOM supplémentaire"
     ],
     "Fluidence (2)": [
         "2 Eau",
         "8",
         "Cible",
-        "La formule cible une figurine ennemie à portée. La DEF de la cible devient 9 et son COM devient 2. De plus, la figurine effectue ses jets de couvert avec un dé malus et ne peut bénéficier de la compétence furtif lorsqu'elle est la cible d'une charge. La formule prend fin lorsque la cible est blessée ou qu'elle vient d'effectuer un jet pour toucher en combat.\r\nAméliorations\r\n2 pour une cible supplémentaire à portée.\r\n3 pour que l'effet dure jusqu'à la fin du tour où la cible est blessée ou qu'elle a effectué un jet pour toucher en combat."
+        "La formule cible une figurine ennemie à portée. La DEF de la cible devient 9 et son COM devient 2. De plus, la figurine effectue ses jets de couvert avec un dé malus et ne peut bénéficier de la compétence furtif lorsqu'elle est la cible d'une charge. La formule prend fin lorsque la cible est blessée ou qu'elle vient d'effectuer un jet pour toucher en combat.\r\nAméliorations : \r\n2 pour une cible supplémentaire à portée.\r\n3 pour que l'effet dure jusqu'à la fin du tour où la cible est blessée ou qu'elle a effectué un jet pour toucher en combat."
     ],
     "Fureur Animale (2)": [
         "2 Terre",
         "8",
         "Cible",
-        "La formule cible une figurine ennemie à portée. La cible subit un nombre de DOM égal au nombre de points de vies jaunes cochés du Chaman.\r\nAméliorations\r\n- 2 pour une cible supplémentaire à portée."
+        "La formule cible une figurine ennemie à portée. La cible subit un nombre de DOM égal au nombre de points de vies jaunes cochés du Chaman.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire à portée."
     ],
     "Fusion thermique (0)": [
         "2 Feu",
         "6",
         "Cible",
-        "La formule cible une figurine ennemie et une figurine amie à portée (ou l'alchimiste lui-même). Si la figurine ennemie est dotée d'une compétence de la liste ci-dessous, la formule permet de la copier et de la transmettre à la figurine amie jusqu'à la fin du tour.\r\nAllonge, Bond, Botte (X), Chef, Coriace (X), Effrayant (X), Enchaînement, Expert (X), Feinte, Furtivité, Garde, Maître (Combat), Maître (Tir), Perce-armure (Combat), Perce-armure (Tir), Pisteur, Sans faille, Sans peur, Tireur émérite (X)\r\nAméliorations\r\n- 2 pierres pour une cible amie supplémentaire à portée\r\n- 2 pierres pour une compétence supplémentaire de la figurine ennemie"
+        "La formule cible une figurine ennemie et une figurine amie à portée (ou l'alchimiste lui-même). Si la figurine ennemie est dotée d'une compétence de la liste ci-dessous, la formule permet de la copier et de la transmettre à la figurine amie jusqu'à la fin du tour.\r\nAllonge, Bond, Botte (X), Chef, Coriace (X), Effrayant (X), Enchaînement, Expert (X), Feinte, Furtivité, Garde, Maître (Combat), Maître (Tir), Perce-armure (Combat), Perce-armure (Tir), Pisteur, Sans faille, Sans peur, Tireur émérite (X)\r\nAméliorations : \r\n- 2 pierres pour une cible amie supplémentaire à portée\r\n- 2 pierres pour une compétence supplémentaire de la figurine ennemie"
     ],
     "Garde Ondin (0)": [
         "5 Eau",
         "5",
         "Auto",
-        "La formule cible l'Evocatrice elle-même. La portée indique le rayon d'une aire d'effet.\r\nL'Evocatrice gagne un nombre de marqueurs \"Onde\" égal à sa concentration actuelle.\r\nL'Evocatrice ou toute figurine amie se trouvant à portée peut utiliser :\r\n1 marqueur pour que le prochain DOM subi soit lu deux colonnes à gauche.\r\n2 marqueurs pour que le prochain DOM subi soit lu trois colonnes à gauche.\r\nAméliorations\r\n- 2 pour 1 marqueur \"Onde\" supplémentaire."
+        "La formule cible l'Evocatrice elle-même. La portée indique le rayon d'une aire d'effet.\r\nL'Evocatrice gagne un nombre de marqueurs \"Onde\" égal à sa concentration actuelle.\r\nL'Evocatrice ou toute figurine amie se trouvant à portée peut utiliser :\r\n1 marqueur pour que le prochain DOM subi soit lu deux colonnes à gauche.\r\n2 marqueurs pour que le prochain DOM subi soit lu trois colonnes à gauche.\r\nAméliorations : \r\n- 2 pour 1 marqueur \"Onde\" supplémentaire."
     ],
     "Harpon alchimique (0)": [
         "3 Eau",
         "8",
         "Auto",
-        "La formule cible une figurine alliée ou l'alchimiste lui-même. La formule dure jusqu'à la fin du tour. La cible obtient la compétence perce-armure (tir et combat) ainsi que la compétence arme de tir suivante : Harpon alchimique (3/8), et utilise la table de DOM suivante lorsqu'elle effectue une action de tir avec le Harpon Alchimique :\r\n1 2 3 3 4 4\r\nAméliorations\r\n- 3 pour que le harpon devienne (4/10)\r\n- 3 pour une cible supplémentaire à portée"
+        "La formule cible une figurine alliée ou l'alchimiste lui-même. La formule dure jusqu'à la fin du tour. La cible obtient la compétence perce-armure (tir et combat) ainsi que la compétence arme de tir suivante : Harpon alchimique (3/8), et utilise la table de DOM suivante lorsqu'elle effectue une action de tir avec le Harpon Alchimique :\r\n1 2 3 3 4 4\r\nAméliorations : \r\n- 3 pour que le harpon devienne (4/10)\r\n- 3 pour une cible supplémentaire à portée"
     ],
     "Huile Corrosive (0)": [
         "2 Terre",
@@ -153,67 +153,67 @@
         "2 Terre",
         "6",
         "Auto",
-        "La formule cible le Chaman-Nuit lui-même. Le Chaman-Nuit acquiert la compétence Effrayant (12) jusqu'à la fin du tour. La portée indique une aire d'effet autour de lui. Toutes les figurines ennemies à portée doivent réussir un jet d'ESP ou subir les effets de la compétence jusqu'à la fin du tour.\r\nAméliorations\r\n- 1 pour 1p de portée supplémentaire.\r\n- 1 pour augmenter le niveau de la compétence effrayant de 1."
+        "La formule cible le Chaman-Nuit lui-même. Le Chaman-Nuit acquiert la compétence Effrayant (12) jusqu'à la fin du tour. La portée indique une aire d'effet autour de lui. Toutes les figurines ennemies à portée doivent réussir un jet d'ESP ou subir les effets de la compétence jusqu'à la fin du tour.\r\nAméliorations : \r\n- 1 pour 1p de portée supplémentaire.\r\n- 1 pour augmenter le niveau de la compétence effrayant de 1."
     ],
     "Influence du vent (0)": [
         "1 Air",
         "8",
         "Cible",
-        "La formule cible une figurine ennemie à portée. La cible subit 1 dé malus à ses jets de REF et lit les DOM une colonne à gauche lors de ses jets de COM. La formule dure jusqu'à la fin du tour.\r\nAméliorations\r\n- 2 pierres pour une cible supplémentaire à portée."
+        "La formule cible une figurine ennemie à portée. La cible subit 1 dé malus à ses jets de REF et lit les DOM une colonne à gauche lors de ses jets de COM. La formule dure jusqu'à la fin du tour.\r\nAméliorations : \r\n- 2 pierres pour une cible supplémentaire à portée."
     ],
     "Invocation d'ondin (2)": [
         "2 Eaux",
         "2",
         "Auto",
-        "Déployez un ondin dans la portée. Il ne peut pas y avoir plus de trois ondins en jeu en même temps. Tous les ondins s’activent avec la même carte de profil (si la carte a déjà été activée lorsque la formule est lancée, elle ne pourra pas être réactivé).\r\n\r\nAméliorations\r\n3 pierres pour 1 ondin supplémentaire"
+        "Déployez un ondin dans la portée. Il ne peut pas y avoir plus de trois ondins en jeu en même temps. Tous les ondins s’activent avec la même carte de profil (si la carte a déjà été activée lorsque la formule est lancée, elle ne pourra pas être réactivé).\r\n\r\nAméliorations : \r\n3 pierres pour 1 ondin supplémentaire"
     ],
     "Lance Tellurique (3)": [
         "3 Terre",
         "10",
         "Auto",
-        "La formule cible un Aurlok ami non-héros à portée. La cible acquiert les compétences Allonge, Expert (Brutale) et Perce-Armure (Combat) jusqu'à la fin du tour.\r\nAméliorations\r\n- 2 pour 1 cible supplémentaire à portée."
+        "La formule cible un Aurlok ami non-héros à portée. La cible acquiert les compétences Allonge, Expert (Brutale) et Perce-Armure (Combat) jusqu'à la fin du tour.\r\nAméliorations : \r\n- 2 pour 1 cible supplémentaire à portée."
     ],
     "Liaison Corruptive (3)": [
         "3 Terre",
         "8",
         "Auto",
-        "La formule cible une figurine amie et ennemie à portée. La figurine amie subit un nombre de DOM égal au restant de ses points de vie. Le joueur Avalonien détermine ensuite ses améliorations. Puis il répartit autant de DOM entre les cibles ennemies que les points de vie jaune et rouge cochés de la figurine amie.\r\nAméliorations\r\n- 2 pour une cible ennemie supplémentaire à portée ou\r\n- 3 pour deux cibles ennemies supplémentaires à portée ou\r\n- 4 pour trois cibles ennemies supplémentaires à portée."
+        "La formule cible une figurine amie et ennemie à portée. La figurine amie subit un nombre de DOM égal au restant de ses points de vie. Le joueur Avalonien détermine ensuite ses améliorations. Puis il répartit autant de DOM entre les cibles ennemies que les points de vie jaune et rouge cochés de la figurine amie.\r\nAméliorations : \r\n- 2 pour une cible ennemie supplémentaire à portée ou\r\n- 3 pour deux cibles ennemies supplémentaires à portée ou\r\n- 4 pour trois cibles ennemies supplémentaires à portée."
     ],
     "Litanie des Ronces (2)": [
         "3 Terre",
         "8",
         "Auto",
-        "La formule cible un Avalonien ami à portée ou le Prêtre lui-même. Chaque fois que la cible subit des DOM par une attaque d'une figurine en contact, cette dernière subit 1 DOM en retour. La formule dure jusqu'à la fin d'un tour où la cible est blessée.\r\nAméliorations\r\n- 1 pour 1 cible supplémentaire à portée.\r\n- 2 pour 1 DOM supplémentaire infligé."
+        "La formule cible un Avalonien ami à portée ou le Prêtre lui-même. Chaque fois que la cible subit des DOM par une attaque d'une figurine en contact, cette dernière subit 1 DOM en retour. La formule dure jusqu'à la fin d'un tour où la cible est blessée.\r\nAméliorations : \r\n- 1 pour 1 cible supplémentaire à portée.\r\n- 2 pour 1 DOM supplémentaire infligé."
     ],
     "Légèreté du Vent (0)": [
         "2 Air",
         "8",
         "Auto",
-        "La formule cible une figurine amie non héros (ou le disciple lui-même) de taille 2 ou 1 à portée. La cible obtient Pisteur jusqu'à la fin du tour. Ou, la cible peut se désengager sans effectuer de jet de REF en opposition jusqu'à la fin du tour.\r\nAméliorations\r\n- 2 pour une cible supplémentaire à portée.\r\n- 1 pour cumuler les deux effets."
+        "La formule cible une figurine amie non héros (ou le disciple lui-même) de taille 2 ou 1 à portée. La cible obtient Pisteur jusqu'à la fin du tour. Ou, la cible peut se désengager sans effectuer de jet de REF en opposition jusqu'à la fin du tour.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire à portée.\r\n- 1 pour cumuler les deux effets."
     ],
     "Montée de Sève (0)": [
         "2 Terre",
         "2",
         "Auto",
-        "La formule cible l'alchimiste lui-même ou une figurine amie non héros à portée. La cible gagne Effrayant (13) ou Effrayant (+1) si elle est déjà Effrayant (X), et COM +1. La formule dure jusqu'à la fin du tour.\r\n\r\nAméliorations\r\n2 pierres pour 2 pouces de portée supplémentaire\r\n2 pierres pour une cible supplémentaire à portée"
+        "La formule cible l'alchimiste lui-même ou une figurine amie non héros à portée. La cible gagne Effrayant (13) ou Effrayant (+1) si elle est déjà Effrayant (X), et COM +1. La formule dure jusqu'à la fin du tour.\r\n\r\nAméliorations : \r\n2 pierres pour 2 pouces de portée supplémentaire\r\n2 pierres pour une cible supplémentaire à portée"
     ],
     "Névoa (0)": [
         "2 Eau",
         "6",
         "Auto",
-        "A l'aide de 4 petits pions, délimitez une zone \"Brouillard\" de la taille d'une carte de profil sur le terrain. Au moins une partie de la zone doit se situer à moins de 6 pouces de l'alchimiste. Cette zone ne bloque pas les mouvements. La zone bloque entièrement les lignes de vues pour les figurines qui sont à l'extérieur. Les figurines au moins partiellement à l'intérieur de la zone conservent leur ligne de vue habituelle mais considèrent toutes leurs cibles comme furtives. La zone disparaît à la fin du tour.\r\nAméliorations\r\n- 2 pour que le brouillard reste en jeu un tour supplémentaire."
+        "A l'aide de 4 petits pions, délimitez une zone \"Brouillard\" de la taille d'une carte de profil sur le terrain. Au moins une partie de la zone doit se situer à moins de 6 pouces de l'alchimiste. Cette zone ne bloque pas les mouvements. La zone bloque entièrement les lignes de vues pour les figurines qui sont à l'extérieur. Les figurines au moins partiellement à l'intérieur de la zone conservent leur ligne de vue habituelle mais considèrent toutes leurs cibles comme furtives. La zone disparaît à la fin du tour.\r\nAméliorations : \r\n- 2 pour que le brouillard reste en jeu un tour supplémentaire."
     ],
     "Onde rugissante (0)": [
         "3 Eaux",
         "4",
         "Auto",
-        "Toute figurine amie à portée possédant la compétence \"déclin alchimique\" peut effectuer gratuitement une \"onde rugissante\" même si elle ne possède pas la compétence.\r\n\r\nAméliorations\r\n- 1 pour 1 p supplémentaire de portée."
+        "Toute figurine amie à portée possédant la compétence \"déclin alchimique\" peut effectuer gratuitement une \"onde rugissante\" même si elle ne possède pas la compétence.\r\n\r\nAméliorations : \r\n- 1 pour 1 p supplémentaire de portée."
     ],
     "Oraison de la Roche (0)": [
         "2 Terre",
         "3",
         "Auto",
-        "La formule cible Caelina elle-même. La portée indique une aire d'effet autour d'elle. Elle et toutes les figurines amies dans l'aire d'effet acquièrent les compétences Coriace/1 (ou Coriace +1 si elle possède déjà la compétence) et Botte (Robuste). La formule prend fin à la fin du tour lorsque Caelina est blessée.\r\nAméliorations\r\n- 1 pour 1 p supplémentaire de portée.\r\n- 3 pour +1 à la valeur de coriace."
+        "La formule cible Caelina elle-même. La portée indique une aire d'effet autour d'elle. Elle et toutes les figurines amies dans l'aire d'effet acquièrent les compétences Coriace/1 (ou Coriace +1 si elle possède déjà la compétence) et Botte (Robuste). La formule prend fin à la fin du tour lorsque Caelina est blessée.\r\nAméliorations : \r\n- 1 pour 1 p supplémentaire de portée.\r\n- 3 pour +1 à la valeur de coriace."
     ],
     "Pousse du Béathacrann (2)": [
         "3 terres",
@@ -225,25 +225,25 @@
         "3 Terre",
         "2",
         "Auto",
-        "La formule cible le Prêtre lui-même. La portée indique une aire d'effet autour du Prêtre. Lui et tous les Avaloniens amis dans l'aire d'effet bénéficient de la compétence Coriace/1. Si la figurine possède déjà la compétence, la valeur du Coriace est augmentée de 1. La formule prend fin dès que le Prêtre est blessé.\r\nAméliorations\r\n- 1 pour 1 p supplémentaire de portée."
+        "La formule cible le Prêtre lui-même. La portée indique une aire d'effet autour du Prêtre. Lui et tous les Avaloniens amis dans l'aire d'effet bénéficient de la compétence Coriace/1. Si la figurine possède déjà la compétence, la valeur du Coriace est augmentée de 1. La formule prend fin dès que le Prêtre est blessé.\r\nAméliorations : \r\n- 1 pour 1 p supplémentaire de portée."
     ],
     "Protection des ombres (0)": [
         "2 Air",
         "2",
         "Auto",
-        "La formule cible l'alchimiste et la portée est une aire d'effet autour de lui. La formule dure jusqu'à ce que l'alchimiste soit blessé.\r\nL'alchimiste choisit l'un des effets suivant:\r\n- la DEF de l'alchimiste et des figurines amies à portée est augmenté de 1.\r\n- l'alchimiste et les figurines furtives amies à portée ne peuvent être chargées ou engagées par une figurine adverse se trouvant à plus de 2 p. Pour le reste, la règle furtif reste inchangée.\r\nAméliorations\r\n- 1 pour 1 pouce de portée supplémentaire."
+        "La formule cible l'alchimiste et la portée est une aire d'effet autour de lui. La formule dure jusqu'à ce que l'alchimiste soit blessé.\r\nL'alchimiste choisit l'un des effets suivant:\r\n- la DEF de l'alchimiste et des figurines amies à portée est augmenté de 1.\r\n- l'alchimiste et les figurines furtives amies à portée ne peuvent être chargées ou engagées par une figurine adverse se trouvant à plus de 2 p. Pour le reste, la règle furtif reste inchangée.\r\nAméliorations : \r\n- 1 pour 1 pouce de portée supplémentaire."
     ],
     "Précepteur Ondin (0)": [
         "3 Eau",
         "5",
         "Auto",
-        "La formule cible l'Evocatrice elle-même. La portée indique le rayon d'une aire d'effet. L'Evocatrice gagne un nombre de marqueurs \"Onde\" égal à sa concentration actuelle.  L'Evocatrice ou toute figurine amie se trouvant à portée peut utiliser des dés blancs pour n'importe lequel de ses jets. Chaque fois qu'une figurine utilise cet effet, l'Evocatrice retire un marqueur \"Onde\" de sa réserve.\r\nAméliorations\r\n- 3 pour doubler la portée des formules de l'Evocatrice (cette amélioration ne peut être jouée qu'une seule fois)"
+        "La formule cible l'Evocatrice elle-même. La portée indique le rayon d'une aire d'effet. L'Evocatrice gagne un nombre de marqueurs \"Onde\" égal à sa concentration actuelle.  L'Evocatrice ou toute figurine amie se trouvant à portée peut utiliser des dés blancs pour n'importe lequel de ses jets. Chaque fois qu'une figurine utilise cet effet, l'Evocatrice retire un marqueur \"Onde\" de sa réserve.\r\nAméliorations : \r\n- 3 pour doubler la portée des formules de l'Evocatrice (cette amélioration ne peut être jouée qu'une seule fois)"
     ],
     "Prémonition (2)": [
         "3 Eau",
         "4",
         "Auto",
-        "La formule cible l'Oracle elle-même et la portée indique une aire d'effet autour d'elle. La formule prend fin dès que le niveau de concentration de l'oracle est égal à 0. L'Oracle et tout khaliman ami et inactif dans l'aire d'effet peut effectuer une réaction comme s'il disposait de PA. Il n'y a pas de limite au nombre de réactions que peut effectuer une même figurine grâce à cette formule. Une réaction peut être un mouvement de réaction, un tir de réaction ou jouer une CC de combat autre qu'Inactif lors d'un combat.\r\nAméliorations\r\n- 1 pierre pour un pouce de portée supplémentaire."
+        "La formule cible l'Oracle elle-même et la portée indique une aire d'effet autour d'elle. La formule prend fin dès que le niveau de concentration de l'oracle est égal à 0. L'Oracle et tout khaliman ami et inactif dans l'aire d'effet peut effectuer une réaction comme s'il disposait de PA. Il n'y a pas de limite au nombre de réactions que peut effectuer une même figurine grâce à cette formule. Une réaction peut être un mouvement de réaction, un tir de réaction ou jouer une CC de combat autre qu'Inactif lors d'un combat.\r\nAméliorations : \r\n- 1 pierre pour un pouce de portée supplémentaire."
     ],
     "Psaumes de croissance (0)": [
         "3 Terres",
@@ -255,37 +255,37 @@
         "3 Air",
         "8",
         "Cible",
-        "La formule cible une figurine ennemie aux aguets à portée. La cible subit un malus de -1 en COM jusqu'à la fin du tour. A la fin de son activation, si elle n'a pas jouée de CC autre que Inactif, elle subit 3 DOM.\r\nAméliorations\r\n- 1 pour une cible supplémentaire à portée.\r\n- 2 pour un DOM supplémentaire."
+        "La formule cible une figurine ennemie aux aguets à portée. La cible subit un malus de -1 en COM jusqu'à la fin du tour. A la fin de son activation, si elle n'a pas jouée de CC autre que Inactif, elle subit 3 DOM.\r\nAméliorations : \r\n- 1 pour une cible supplémentaire à portée.\r\n- 2 pour un DOM supplémentaire."
     ],
     "Rapidité de Koga (0)": [
         "2 Terre",
         "6",
         "Auto",
-        "La formule cible un Aurlok ami non-héros à portée. La cible augmente ses valeurs de mouvement de 1/1/2 jusqu'à la fin du tour. Un tireur ne peut pas avoir de bonus de visée lorsqu'il tire sur la cible de la formule.\r\nAméliorations\r\n- 2 pour 1 cible supplémentaire à portée."
+        "La formule cible un Aurlok ami non-héros à portée. La cible augmente ses valeurs de mouvement de 1/1/2 jusqu'à la fin du tour. Un tireur ne peut pas avoir de bonus de visée lorsqu'il tire sur la cible de la formule.\r\nAméliorations : \r\n- 2 pour 1 cible supplémentaire à portée."
     ],
     "Reflet irisé (0)": [
         "1 Feu",
         "0",
         "Auto",
-        "La formule cible l'alchimiste lui-même. Il reçoit deux marqueurs reflet. Lorsqu'il est pris pour cible par un ou plusieurs tirs simultanés, il peut dépenser un marqueur reflet pour annuler les bonus de visée éventuels des tireurs et faire 1 jet de REF pour chaque tir. Si le jet est égal ou supérieur au jet de tir, le tir ne fait pas de DOM.\r\nAméliorations\r\n- 2 pierres pour 1 marqueur reflet supplémentaire"
+        "La formule cible l'alchimiste lui-même. Il reçoit deux marqueurs reflet. Lorsqu'il est pris pour cible par un ou plusieurs tirs simultanés, il peut dépenser un marqueur reflet pour annuler les bonus de visée éventuels des tireurs et faire 1 jet de REF pour chaque tir. Si le jet est égal ou supérieur au jet de tir, le tir ne fait pas de DOM.\r\nAméliorations : \r\n- 2 pierres pour 1 marqueur reflet supplémentaire"
     ],
     "Reflets de la Réalité (x)": [
         "X Eau",
         "X",
         "X",
-        "Abdelan choisit une formule dans la liste d'un alchimiste à moins de 8 pouces et sur lequel il a une ligne de vue. Le coût en eau pour Abdelan est égal au coût en composants de la formule choisie. Le niveau de concentration requit, la portée et la difficulté sont ceux de la formule choisie. Abdelan peut tenter de lancer la formule choisie. Il considère toutes les indications de peuple comme étant khaliman et il peut dépenser des pierres alchimiques comme indiqué sur la formule.\r\nAméliorations\r\n- Selon la formule choisie"
+        "Abdelan choisit une formule dans la liste d'un alchimiste à moins de 8 pouces et sur lequel il a une ligne de vue. Le coût en eau pour Abdelan est égal au coût en composants de la formule choisie. Le niveau de concentration requit, la portée et la difficulté sont ceux de la formule choisie. Abdelan peut tenter de lancer la formule choisie. Il considère toutes les indications de peuple comme étant khaliman et il peut dépenser des pierres alchimiques comme indiqué sur la formule.\r\nAméliorations : \r\n- Selon la formule choisie"
     ],
     "Ruse de Walosi (0)": [
         "2 Terre",
         "8",
         "Auto",
-        "La formule cible une figurine amie ou Pitekica lui-même. La cible acquiert la Botte (Ruse de Walosi) et la compétence Bond. Si elle possédait déjà la compétence Bond, la botte ne coûte pas de PA pour être utilisée. L’effet prend fin lorsque la cible utilise la botte.\r\nAméliorations\r\n- 2 pour une cible supplémentaire.\r\n\r\nRuse de Walosi\r\nCC Attaque Rapide\r\nRéflexe : 2D Bonus\r\nSpécial\r\nLa figurine n’effectue pas de jet de COM. Elle effectue immédiatement une marche, même si elle a chargé ou couru lors de ce tour. Elle bénéficie d’1 dé bonus pour son jet de REF lors du désengagement. Les règles de désengagement sont appliquées normalement. Cette Botte peut être jouée si l’adversaire n’est pas à portée de combat."
+        "La formule cible une figurine amie ou Pitekica lui-même. La cible acquiert la Botte (Ruse de Walosi) et la compétence Bond. Si elle possédait déjà la compétence Bond, la botte ne coûte pas de PA pour être utilisée. L’effet prend fin lorsque la cible utilise la botte.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire.\r\n\r\nRuse de Walosi\r\nCC Attaque Rapide\r\nRéflexe : 2D Bonus\r\nSpécial\r\nLa figurine n’effectue pas de jet de COM. Elle effectue immédiatement une marche, même si elle a chargé ou couru lors de ce tour. Elle bénéficie d’1 dé bonus pour son jet de REF lors du désengagement. Les règles de désengagement sont appliquées normalement. Cette Botte peut être jouée si l’adversaire n’est pas à portée de combat."
     ],
     "Sacrifice Sauvage (0)": [
         "2 Feux",
         "8",
         "Auto",
-        "La formule cible une figurine alliée à portée. Si la cible est un Martyr, ce dernier perd la compétence Esclave du Culte. Si la cible n’est pas un Martyr, alors elle pourra répartir les DOM qu’elle subit entre plusieurs Martyrs lors de l’utilisation de la compétence Fustigation. La formule dure jusqu’à la fin du tour.\r\n\r\nAméliorations: \r\n2 pierres pour une cible supplémentaire à portée\r\n\r\n3 pierres pour que l’effet dure un tour de plus"
+        "La formule cible une figurine alliée à portée. Si la cible est un Martyr, ce dernier perd la compétence Esclave du Culte. Si la cible n’est pas un Martyr, alors elle pourra répartir les DOM qu’elle subit entre plusieurs Martyrs lors de l’utilisation de la compétence Fustigation. La formule dure jusqu’à la fin du tour.\r\n\r\nAméliorations :  \r\n2 pierres pour une cible supplémentaire à portée\r\n\r\n3 pierres pour que l’effet dure un tour de plus"
     ],
     "Sangs sacrificiels (3)": [
         "3 Feux",
@@ -303,30 +303,30 @@
         "2 Eau",
         "5",
         "Auto",
-        "La formule cible une figurine à portée. Chaque figurine ennemie ciblée peut effectuer un jet d'Esprit en opposition avec Abdelan. En cas de succès, elle ne subit pas les effets de la formule. Sinon, tous les effets en cours des formules dont elle a été auparavant la cible sont immédiatement annulés sur la figurine ciblée. Les dommages et déplacements déjà résolus ne sont pas annulés.\r\nAméliorations\r\n- 1 pour 1 cible supplémentaire."
+        "La formule cible une figurine à portée. Chaque figurine ennemie ciblée peut effectuer un jet d'Esprit en opposition avec Abdelan. En cas de succès, elle ne subit pas les effets de la formule. Sinon, tous les effets en cours des formules dont elle a été auparavant la cible sont immédiatement annulés sur la figurine ciblée. Les dommages et déplacements déjà résolus ne sont pas annulés.\r\nAméliorations : \r\n- 1 pour 1 cible supplémentaire."
     ],
     "Tornade Acérée (2)": [
         "6 Air",
         "6",
         "Auto",
-        "La formule cible Feng Sao lui-même. La portée indique une aire d'effet autour de lui. Feng Sao effectue un jet d'Alchimie sans difficulté. Toute figurine se trouvant dans l'aire d'effet (les figurines entièrement cachées par des décors ne sont pas affectées) doit effectuer un jet de REF supérieur ou égal au résultat du jet d'Alchimie de Feng Sao. Toute figurine qui rate ce jet est automatiquement déplacée dans la direction opposée à Feng Sao et d'une distance en pouces égale à son niveau de concentration. Chaque figurine ainsi déplacée subit 1 DOM par pouce parcouru même si elle est stoppée avant par un obstacle. Si cet obstacle est une figurine adverse, elle est placée au plus proche sans être en contact. Les figurines qui étaient en combat n'effectuent pas de jet de désengagement. La formule prend fin une fois les effets résolus.\r\nAméliorations\r\n- 2 pour repousser d' 1 pouce supplémentaire.\r\n- 1 pour ajouter 1 au jet final d'alchimie."
+        "La formule cible Feng Sao lui-même. La portée indique une aire d'effet autour de lui. Feng Sao effectue un jet d'Alchimie sans difficulté. Toute figurine se trouvant dans l'aire d'effet (les figurines entièrement cachées par des décors ne sont pas affectées) doit effectuer un jet de REF supérieur ou égal au résultat du jet d'Alchimie de Feng Sao. Toute figurine qui rate ce jet est automatiquement déplacée dans la direction opposée à Feng Sao et d'une distance en pouces égale à son niveau de concentration. Chaque figurine ainsi déplacée subit 1 DOM par pouce parcouru même si elle est stoppée avant par un obstacle. Si cet obstacle est une figurine adverse, elle est placée au plus proche sans être en contact. Les figurines qui étaient en combat n'effectuent pas de jet de désengagement. La formule prend fin une fois les effets résolus.\r\nAméliorations : \r\n- 2 pour repousser d' 1 pouce supplémentaire.\r\n- 1 pour ajouter 1 au jet final d'alchimie."
     ],
     "Tourbillon aveuglant (0)": [
         "1 Air",
         "4",
         "Auto",
-        "La formule cible l'Alchimiste lui-même. La portée indique une aire d'effet autour de lui. Toutes les figurines amies à portée gagnent la compétence Furtivité. De plus, toute figurine qui tente d'effectuer un tir sur une figurine avec la compétence Furtivité dans l'aire d'effet aura un dé malus à son jet. La formule dure jusqu'à la fin du tour.\r\nAméliorations\r\n- 2 pour 1 p de portée supplémentaire."
+        "La formule cible l'Alchimiste lui-même. La portée indique une aire d'effet autour de lui. Toutes les figurines amies à portée gagnent la compétence Furtivité. De plus, toute figurine qui tente d'effectuer un tir sur une figurine avec la compétence Furtivité dans l'aire d'effet aura un dé malus à son jet. La formule dure jusqu'à la fin du tour.\r\nAméliorations : \r\n- 2 pour 1 p de portée supplémentaire."
     ],
     "Uchronie (0)": [
         "2 Eau",
         "10",
         "Auto",
-        "La formule cible un khaliman ami à portée ou l'Oracle elle-même. Celui-ci pourra relancer l'un de ses dés au choix pour n'importe quel jet. La formule prend fin lorsque la cible utilise son effet.\r\nAméliorations\r\n- 1 pierre pour une cible supplémentaire à portée.\r\n- 3 pierres pour que la formule soit effective pour tous les jets du tour durant lequel l'effet est utilisé."
+        "La formule cible un khaliman ami à portée ou l'Oracle elle-même. Celui-ci pourra relancer l'un de ses dés au choix pour n'importe quel jet. La formule prend fin lorsque la cible utilise son effet.\r\nAméliorations : \r\n- 1 pierre pour une cible supplémentaire à portée.\r\n- 3 pierres pour que la formule soit effective pour tous les jets du tour durant lequel l'effet est utilisé."
     ],
     "Vague déferlante (2)": [
         "2 Eau",
         "0",
         "Cible",
-        "A l'aide de 4 petits pions, placez sur le terrain une zone \"Vague\" rectangulaire de 7 pouces x 2,5 pouces (deux cartes de profil). La vague doit recouvrir entièrement le socle de la cible, et au moins partiellement le socle de L'alchimiste. Toutes les figurines sur lesquelles l'alchimiste possède une ligne de vue et qui sont dans la zone, même partiellement, sont reculées de X pouces à l'opposé de l'alchimiste et subissent 2 DOM. X est égal à la concentration de l'alchimiste. Si une figurine quitte un combat, elle n'effectue pas de jet de désengagement. Si la figurine entre en contact avec un obstacle elle s'arrête. Si cet obstacle est une figurine adverse, elle est placée au plus proche sans être au contact.\r\nAméliorations\r\n- 2 pour 1 pouce supplémentaire de recul\r\n- 4 pour 1 DOM supplémentaire"
+        "A l'aide de 4 petits pions, placez sur le terrain une zone \"Vague\" rectangulaire de 7 pouces x 2,5 pouces (deux cartes de profil). La vague doit recouvrir entièrement le socle de la cible, et au moins partiellement le socle de L'alchimiste. Toutes les figurines sur lesquelles l'alchimiste possède une ligne de vue et qui sont dans la zone, même partiellement, sont reculées de X pouces à l'opposé de l'alchimiste et subissent 2 DOM. X est égal à la concentration de l'alchimiste. Si une figurine quitte un combat, elle n'effectue pas de jet de désengagement. Si la figurine entre en contact avec un obstacle elle s'arrête. Si cet obstacle est une figurine adverse, elle est placée au plus proche sans être au contact.\r\nAméliorations : \r\n- 2 pour 1 pouce supplémentaire de recul\r\n- 4 pour 1 DOM supplémentaire"
     ]
 }
