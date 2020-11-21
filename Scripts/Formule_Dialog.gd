@@ -10,7 +10,7 @@ func display_form(form):
 	
 	var form_split = formule[3].split("Améliorations\r\n")
 	get_node("VBoxContainer/Description").bbcode_text = form_split[0]
-	get_node("VBoxContainer/Amélioration").text = form_split[1]
+	get_node("VBoxContainer/Amélioration").text = form_split[1] if form_split.size() > 1 else ""
 	
 	get_node(".").popup_centered()
 	

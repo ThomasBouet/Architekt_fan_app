@@ -5,9 +5,9 @@ extends Node
 # var a = 2
 # var b = "text"
 
-var profils_data
-var comps_data
-var forms_data
+var profils_data = []
+var comps_data = []
+var forms_data = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var json_file = File.new()
@@ -31,12 +31,27 @@ func load_all_factions():
 	for l in profils_data.values():
 		for i in l:
 #			print(i["Nom"])
-			if !all_name.has(i["Nom"]):
+			if !all_name.has(i["ID"]):
 				all_list.append(i)
-				all_name.append(i["Nom"])
+				all_name.append(i["ID"])
 				
 #	print(all_name)
 	return all_list
+	
+func get_list_for_each_type(list):
+	var heros = []
+	var alchis = []
+	var troupes = []
+	
+	for i in list:
+		if i["Type"] == "Troupe" or i["Type"] == "Spécial":
+			troupes.append(i)
+		if i["Type"] == "Alchimiste" or i["Type"] == "Héro/Alchimiste":
+			alchis.append(i)
+		elif i["Type"] == "Héro" or i["Type"] == "Héro/Alchimiste":
+			heros.append(i)
+			
+	return [heros, alchis, troupes]
 	
 func has_team_saved():
 	var nb = 0

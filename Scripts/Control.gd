@@ -44,7 +44,7 @@ func init(p, hide):
 	elif profil["Type"] == "Alchimiste":
 		get_node("TextureRect").texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
 		get_node("ColorRect").color = "#26621a"
-	elif profil["Type"] == "Special" or profil["Type"] == "Spécial":
+	elif profil["Type"] == "Spécial":
 		get_node("TextureRect").texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
 		get_node("ColorRect").color = "#3d777d"
 		

@@ -10,6 +10,9 @@ var hashero = false
 var maxPts = 180
 var currentPTS = 0
 var Team = []
+var list_hero = []
+var list_alchi = []
+var list_tpe = []
 
 func _ready():
 	get_node("Faction").text = "Profils"
@@ -22,6 +25,10 @@ func _ready():
 	
 	get_node("SaveDialog").add_cancel("Annuler")
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
+	
+	get_node("Content Holder/HBoxContainer/heros").connect("toggled", self, "display_list", [list_hero])
+	get_node("Content Holder/HBoxContainer/alchis").connect("toggled", self, "display_list", [list_alchi])
+	get_node("Content Holder/HBoxContainer/troupes").connect("toggled", self, "display_list", [list_tpe])
 	
 func add_to_team(p, node):
 #	print("adding " + node.profil["Nom"])
@@ -117,23 +124,59 @@ func _change_faction(faction):
 	move_menu()
 	
 func refresh_profils_list(list, hide=false):
+	var lists = Json_reader.get_list_for_each_type(list)
 	var node = get_node("Content Holder/Profils/DiplayList")
 #	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
-#	--- Ajoute tous les noeuds de la faction correspondante ---	
-	for p in list:
+		
+	var hero_label = Label.new()
+	hero_label.text = "Héros"
+	node.add_child(hero_label)
+#	--- Ajoute tout les héros de la faction correspondante ---	
+	for p in lists[0]:
 		var profil = Profil.instance().init(p, hide)
 		profil.name = p["Imgs"]
 		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
 		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
-		get_node("Content Holder/Profils/DiplayList").add_child(profil)
-		profil.resize_self(get_node("Content Holder/Profils/DiplayList").rect_size)
+		node.add_child(profil)
+		profil.resize_self(node.rect_size)
+		list_hero.append(profil)
+		
+	var alchi_label = Label.new()
+	alchi_label.text = "Alchimistes"
+	node.add_child(alchi_label)
+#	--- Ajoute tout les alchimistes et héros de la faction correspondante ---	
+	for p in lists[1]:
+		var profil = Profil.instance().init(p, hide)
+		profil.name = p["Imgs"]
+		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
+		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
+		node.add_child(profil)
+		profil.resize_self(node.rect_size)
+		list_alchi.append(profil)
+		
+	var troupe_label = Label.new()
+	troupe_label.text = "Troupes"
+	node.add_child(troupe_label)
+#	--- Ajoute toutes les troupes de la faction correspondante ---	
+	for p in lists[2]:
+		var profil = Profil.instance().init(p, hide)
+		profil.name = p["Imgs"]
+		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
+		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
+		node.add_child(profil)
+		profil.resize_self(node.rect_size)
+		list_tpe.append(profil)
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
-	get_node("Content Holder/Profils/DiplayList").add_child(c)
+	node.add_child(c)
+	
+func display_list(boolean, list):
+	for i in list:
+		i.visible = boolean
 	
 func _on_ProgressBar_value_changed(value):
 	get_node("Content Holder/ProgressBar/Label").text = str(value) + "/" + str(maxPts)

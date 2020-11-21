@@ -25,29 +25,29 @@ func refresh_comps_list(list):
 	
 	var competence_label = Label.new()
 	competence_label.text = "Compétences"
-	get_node("Content Holder/Comp/DiplayList").add_child(competence_label)
+	node.add_child(competence_label)
 #	--- Ajoute tous les noeuds de la faction correspondante ---	
 	for p in list[0]:
 		var comp = Competence.instance().init(p)
 		comp.name = p
-		get_node("Content Holder/Comp/DiplayList").add_child(comp)
+		node.add_child(comp)
 		comp.resize_self()
 		list_comp.append(comp)
 		
 	var formule_label = Label.new()
 	formule_label.text = "Formules"
-	get_node("Content Holder/Comp/DiplayList").add_child(formule_label)
+	node.add_child(formule_label)
 	for p in list[1]:
 		var form = Formule.instance().init(p)
 		form.name = p
-		get_node("Content Holder/Comp/DiplayList").add_child(form)
+		node.add_child(form)
 		form.resize_self()
 		list_form.append(form)
 	
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
-	get_node("Content Holder/Comp/DiplayList").add_child(c)
+	node.add_child(c)
 	
 func _on_LineEdit_text_changed(search_clue):
 	var nodes_profil = get_node("Content Holder/Comp/DiplayList").get_children()

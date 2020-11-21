@@ -197,7 +197,7 @@
             "Formules": "-",
             "Taille": "2",
             "Tir": "-",
-            "Type": "Special",
+            "Type": "Spécial",
             "Vie": "3/3/3"
         },
         {
@@ -217,7 +217,7 @@
             "Formules": "-",
             "Taille": "2",
             "Tir": "-",
-            "Type": "Special",
+            "Type": "Spécial",
             "Vie": "3/3/3"
         },
         {
@@ -377,7 +377,7 @@
             "Formules": "-",
             "Taille": "3",
             "Tir": "-",
-            "Type": "Special",
+            "Type": "Spécial",
             "Vie": "4/4/4"
         },
         {
@@ -579,7 +579,7 @@
             "Formules": "-",
             "Taille": "3",
             "Tir": "-",
-            "Type": "Special",
+            "Type": "Spécial",
             "Vie": "4/4/4"
         },
         {
@@ -2315,7 +2315,7 @@
             "Formules": "-",
             "Taille": "1",
             "Tir": "-",
-            "Type": "Special",
+            "Type": "Spécial",
             "Vie": "4/1/1"
         },
         {
