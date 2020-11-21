@@ -88,6 +88,7 @@ __meta__ = {
 margin_top = 184.0
 margin_right = 528.0
 margin_bottom = 208.0
+size_flags_horizontal = 3
 
 [node name="heros" type="CheckBox" parent="Content Holder/HBoxContainer"]
 margin_right = 173.0

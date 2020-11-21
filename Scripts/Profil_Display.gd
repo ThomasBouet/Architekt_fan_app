@@ -26,10 +26,6 @@ func _ready():
 	get_node("SaveDialog").add_cancel("Annuler")
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
 	
-	get_node("Content Holder/HBoxContainer/heros").connect("toggled", self, "display_list", [list_hero])
-	get_node("Content Holder/HBoxContainer/alchis").connect("toggled", self, "display_list", [list_alchi])
-	get_node("Content Holder/HBoxContainer/troupes").connect("toggled", self, "display_list", [list_tpe])
-	
 func add_to_team(p, node):
 #	print("adding " + node.profil["Nom"])
 	if node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste":
@@ -124,6 +120,13 @@ func _change_faction(faction):
 	move_menu()
 	
 func refresh_profils_list(list, hide=false):
+	get_node("Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
+	get_node("Content Holder/HBoxContainer/alchis").disconnect("toggled", self, "display_list")
+	get_node("Content Holder/HBoxContainer/troupes").disconnect("toggled", self, "display_list")
+
+	list_hero = []
+	list_alchi = []
+	list_tpe = []
 	var lists = Json_reader.get_list_for_each_type(list)
 	var node = get_node("Content Holder/Profils/DiplayList")
 #	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
@@ -173,6 +176,10 @@ func refresh_profils_list(list, hide=false):
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
 	node.add_child(c)
+	
+	get_node("Content Holder/HBoxContainer/heros").connect("toggled", self, "display_list", [list_hero])
+	get_node("Content Holder/HBoxContainer/alchis").connect("toggled", self, "display_list", [list_alchi])
+	get_node("Content Holder/HBoxContainer/troupes").connect("toggled", self, "display_list", [list_tpe])
 	
 func display_list(boolean, list):
 	for i in list:
