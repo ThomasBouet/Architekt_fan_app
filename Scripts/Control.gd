@@ -13,11 +13,11 @@ func init(p, hide):
 	get_node("Infos/Cout").text = profil["Cout"]
 	get_node("Infos/Max").text = profil["Max"]
 	
-	get_node("VBoxContainer/Cara/Cara/COM").text = profil["Cbt"]
-	get_node("VBoxContainer/Cara/Cara/DEF").text = profil["Def"]
-	get_node("VBoxContainer/Cara/Cara/ESP").text = profil["Esp"]
-	get_node("VBoxContainer/Cara/Cara/REF").text = profil["Ref"]
-	get_node("VBoxContainer/Cara/Cara/PA").text = profil["PA"]
+	get_node("VBoxContainer/Cara/Cara/COM").text = "COM : " + profil["Cbt"]
+	get_node("VBoxContainer/Cara/Cara/DEF").text = "DEF : " + profil["Def"]
+	get_node("VBoxContainer/Cara/Cara/ESP").text = "ESP : " + profil["Esp"]
+	get_node("VBoxContainer/Cara/Cara/REF").text = "REF : " + profil["Ref"]
+	get_node("VBoxContainer/Cara/Cara/PA").text = "PA : " + profil["PA"]
 	get_node("VBoxContainer/Cara/PVSATK/PVS").text = "Vie : " + profil["Vie"]
 	get_node("VBoxContainer/Cara/PVSATK/MVT").text = "Mvt : " + profil["Mvt"]
 	get_node("VBoxContainer/Cara/PVSATK/ATK").text = "Dégats : " + profil["Dmg"]
@@ -25,12 +25,12 @@ func init(p, hide):
 	
 	var bb_str_comp = ""
 	for i in profil["Compétences"].split(","):
-		bb_str_comp += "[url=" + i + "]" + i + "[/url] "
+		bb_str_comp += "[url=" + i + "]" + i + "[/url] " if i != "-" else ""
 	get_node("VBoxContainer/Cara/VBoxContainer/COMP/Competence").bbcode_text = bb_str_comp
 	
 	var bb_str_form = ""
 	for i in profil["Formules"].split(","):
-		bb_str_form += "[url=" + i + "]" + i + "[/url] "
+		bb_str_form += "[url=" + i + "]" + i + "[/url] " if i != "-" else ""
 	get_node("VBoxContainer/Cara/VBoxContainer/SORT/Formule").bbcode_text = bb_str_form
 	
 	get_node("Remove").visible = false

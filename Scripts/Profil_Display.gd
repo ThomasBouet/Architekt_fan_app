@@ -141,8 +141,8 @@ func refresh_profils_list(list, hide=false):
 	for p in lists[0]:
 		var profil = Profil.instance().init(p, hide)
 		profil.name = p["Imgs"]
-		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
-		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
+		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
+		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
 		node.add_child(profil)
 		profil.resize_self(node.rect_size)
 		list_hero.append(profil)
@@ -154,8 +154,8 @@ func refresh_profils_list(list, hide=false):
 	for p in lists[1]:
 		var profil = Profil.instance().init(p, hide)
 		profil.name = p["Imgs"]
-		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
-		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
+		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
+		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
 		node.add_child(profil)
 		profil.resize_self(node.rect_size)
 		list_alchi.append(profil)
@@ -167,8 +167,8 @@ func refresh_profils_list(list, hide=false):
 	for p in lists[2]:
 		var profil = Profil.instance().init(p, hide)
 		profil.name = p["Imgs"]
-		profil.get_child(4).connect("pressed", self, "add_to_team", [p, profil])
-		profil.get_child(5).connect("pressed", self, "remove_from_team", [p, profil])
+		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
+		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
 		node.add_child(profil)
 		profil.resize_self(node.rect_size)
 		list_tpe.append(profil)
@@ -198,7 +198,7 @@ func _on_SaveDialog_confirmed():
 		show_message("Problème d'enregistrement", "Fichier déjà existant")
 	else:
 		file.open(path, File.WRITE)
-		var team_stored = [get_node("Faction").text, Team]
+		var team_stored = [maxPts, get_node("Faction").text, Team]
 		file.store_string(to_json(team_stored))
 		file.close()
 		get_node("SaveDialog/LineEdit").text = ""
@@ -216,3 +216,7 @@ func _on_LineEdit_text_changed(search_clue):
 		var name = n.get_child(2).get_child(0).text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
 	
+func _on_SpinBox_value_changed(value):
+	maxPts = int(value)
+	_on_ProgressBar_value_changed(get_node("Content Holder/ProgressBar").value)
+	pass # Replace with function body.

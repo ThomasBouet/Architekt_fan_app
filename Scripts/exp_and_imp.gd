@@ -9,7 +9,9 @@ const faction_incode = {"Aurlok": 0,"Avalon": 1,"Cartel":2 ,"Evades": 3,"Garde C
 const faction_decode = {0: "Aurlok",1: "Avalon",2: "Cartel",3: "Evades",4: "Garde Cobra",5: "Khaliman",6: "Loges",7: "Naashti", 8: "Rados",9: "Sanctifiés",10: "Sororité",11: "Temple",12: "Triade de Jade",13: "Utopie",14: "Waga",15: "Walosi"}
 const Shift = 64
 #[
-#	mode: 0 Blitz, 1 Origin
+#	maxpts centaine
+#	maxpts dizaine
+#	maxpts unité
 #	faction voir dictionnaire
 #	nb de profils
 #	id_fig (centaine)
@@ -19,18 +21,19 @@ const Shift = 64
 #]
 #shift de 33
 
-func export_list(mode, list):
+func export_list(list):
 	var stored_info = []
-	match mode:
-		"Origin":
-			stored_info.append(1)
-		"Blitz":
-			stored_info.append(0)
 		
-	stored_info.append(faction_incode[list[0]])
-	stored_info.append(list[1].size())
+	stored_info.append(list[0]/100 % 10)
+#		print(list[0] / 10 % 10) # Dizaine
+	stored_info.append(list[0] / 10 % 10)
+#		print(list[0] % 10) # Unité
+	stored_info.append(list[0] % 10)
 	
-	for p in list[1]:
+	stored_info.append(faction_incode[list[1]])
+	stored_info.append(list[2].size())
+	
+	for p in list[2]:
 		var id = int(p["ID"])
 #		print(id)
 #		print(id/100 % 10) # Centaine
@@ -56,9 +59,7 @@ func import_list(str_list):
 	if not str_list.ends_with("=") or len(str_list) <= 6:
 		return "La liste ne rentrée ne correspond pas au bon format de liste."
 		
-	var mode = str_list[0].to_ascii()[0] - Shift
-	if mode != 0 and mode != 1:
-		return "La liste ne rentrée ne correspond pas au bon format de liste."
+	var maxPts = (str_list[0].to_ascii()[0] - Shift) * 100 + (str_list[1].to_ascii()[0] - Shift) * 10 + str_list[2].to_ascii()[0] - Shift
 		
 	var faction = faction_decode[str_list[1].to_ascii()[0] - Shift]
 	var nb_fig = str_list[2].to_ascii()[0] - Shift
@@ -77,4 +78,4 @@ func import_list(str_list):
 				team.append(p)
 	
 #	print(team)
-	return [faction, team]
+	return [maxPts, faction, team]
