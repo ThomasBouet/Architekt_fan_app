@@ -24,11 +24,11 @@ const Shift = 64
 func export_list(list):
 	var stored_info = []
 		
-	stored_info.append(list[0]/100 % 10)
+	stored_info.append(int(list[0])/100 % 10)
 #		print(list[0] / 10 % 10) # Dizaine
-	stored_info.append(list[0] / 10 % 10)
+	stored_info.append(int(list[0])/ 10 % 10)
 #		print(list[0] % 10) # Unité
-	stored_info.append(list[0] % 10)
+	stored_info.append(int(list[0]) % 10)
 	
 	stored_info.append(faction_incode[list[1]])
 	stored_info.append(list[2].size())

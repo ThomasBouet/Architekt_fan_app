@@ -46,7 +46,9 @@ anchor_bottom = 1.0
 margin_left = 24.0
 margin_top = 64.0
 margin_right = -24.0
-margin_bottom = -88.0001
+margin_bottom = -80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -77,9 +79,13 @@ __meta__ = {
 }
 
 [node name="Content Holder" type="VBoxContainer" parent="Content"]
+visible = false
 margin_top = 53.0
 margin_right = 528.0
-margin_bottom = 733.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 0, 800 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -121,15 +127,16 @@ __meta__ = {
 }
 
 [node name="Panel" parent="Content/Content Holder" instance=ExtResource( 8 )]
-visible = false
-margin_top = 24.0
-margin_right = 528.0
-margin_bottom = 152.0
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Content/Content Holder"]
+anchor_right = 0.0
 margin_top = 52.0
 margin_right = 528.0
-margin_bottom = 76.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 0, 128 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Content/Content Holder"]
+margin_top = 184.0
+margin_right = 528.0
+margin_bottom = 208.0
 
 [node name="heros" type="CheckBox" parent="Content/Content Holder/HBoxContainer"]
 margin_right = 173.0
@@ -155,11 +162,12 @@ pressed = true
 text = "Troupes"
 
 [node name="Profils" type="ScrollContainer" parent="Content/Content Holder"]
-margin_top = 80.0
+margin_top = 212.0
 margin_right = 528.0
-margin_bottom = 680.0
-rect_min_size = Vector2( 528, 600 )
+margin_bottom = 803.0
+rect_min_size = Vector2( 0, 500 )
 mouse_filter = 1
+size_flags_horizontal = 3
 size_flags_vertical = 3
 follow_focus = true
 __meta__ = {
@@ -167,9 +175,9 @@ __meta__ = {
 }
 
 [node name="DiplayList" type="VBoxContainer" parent="Content/Content Holder/Profils"]
-margin_right = 516.0
-margin_bottom = 770.0
-rect_min_size = Vector2( 0, 770 )
+margin_right = 528.0
+margin_bottom = 591.0
+rect_min_size = Vector2( 0, 500 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -177,16 +185,16 @@ __meta__ = {
 }
 
 [node name="ExportButton" type="Button" parent="Content/Content Holder"]
-visible = false
-margin_top = 774.0
+margin_top = 807.0
 margin_right = 528.0
-margin_bottom = 794.0
+margin_bottom = 827.0
 text = "Export"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Save" type="Control" parent="."]
+visible = false
 anchor_left = 0.861
 anchor_right = 1.0
 margin_left = 16.064
@@ -213,6 +221,7 @@ __meta__ = {
 }
 
 [node name="Delete" type="Control" parent="."]
+visible = false
 anchor_left = 0.861
 anchor_right = 1.0
 margin_left = 16.064

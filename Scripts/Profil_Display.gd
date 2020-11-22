@@ -115,6 +115,7 @@ func _change_faction(faction):
 	hashero = false
 	get_node("Faction").text = faction
 	get_node("Content Holder/Panel").visible = true
+	get_node("Content Holder/Panel").resize_self()
 	get_node("Content Holder/ProgressBar").visible = true
 	refresh_profils_list(Json_reader.profils_data[faction])
 	move_menu()

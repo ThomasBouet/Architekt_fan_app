@@ -90,6 +90,7 @@ __meta__ = {
 }
 
 [node name="Panel" parent="Content Holder" instance=ExtResource( 1 )]
+anchor_right = 0.0
 margin_top = 52.0
 margin_right = 528.0
 margin_bottom = 180.0
@@ -337,6 +338,7 @@ text = "Utopi"
 [node name="TweenMenu" type="Tween" parent="Factions"]
 
 [node name="Save" type="Control" parent="."]
+visible = false
 anchor_left = 0.736
 anchor_right = 1.0
 margin_left = 8.06396

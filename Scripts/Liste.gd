@@ -62,13 +62,14 @@ func display_team(id):
 #	print(id)
 	cur_team = teams[id]
 	var infos_team = Json_reader.get_team(cur_team)
-	var team_max = infos_team[0]
+#	var team_max = infos_team[0]
 	var team_faction = infos_team[1]
 	var team_members = infos_team[2]
 	
 	get_node("Content/Faction").visible = true
 	get_node("Content/Faction").text = team_faction
 	get_node("Content/Content Holder/Panel").visible = true
+	get_node("Content/Content Holder/Panel").resize_self()
 	get_node("Content/Content Holder/ProgressBar").visible = true
 	get_node("Content/Content Holder").visible = true
 	get_node("Delete").visible = true

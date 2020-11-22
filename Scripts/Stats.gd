@@ -1,26 +1,21 @@
-extends Panel
+extends Control
 
+var panel_visible = false
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func init():
-	$"FigNb".text = "0"
-	$"CombatValue".text = "0"
-	$"EspritValue".text = "0"
-	$"RefValue".text = "0"
-	$"DefenseValue".text = "0"
-	$"PAValue".text = "0"
-	$"DmgValues".text = "-/-/-/-/-/-"
-	$"TirValues".text = "-/-/-/-/-/-"
-	$"MvtValues".text = "-/-/-"
-	$"PVsValues".text = "-/-/-"
+	$"Panel/FigNb".text = "0"
+	$"Panel/CombatValue".text = "0"
+	$"Panel/EspritValue".text = "0"
+	$"Panel/RefValue".text = "0"
+	$"Panel/DefenseValue".text = "0"
+	$"Panel/PAValue".text = "0"
+	$"Panel/DmgValues".text = "-/-/-/-/-/-"
+	$"Panel/TirValues".text = "-/-/-/-/-/-"
+	$"Panel/MvtValues".text = "-/-/-"
+	$"Panel/PVsValues".text = "-/-/-"
 
 func avg_stats(team):
 	var nb_profils = len(team) if !team.empty() else 1
@@ -103,13 +98,29 @@ func avg_stats(team):
 	
 	nb_profils = len(team) if !team.empty() else 0
 	
-	$"FigNb".text = str(nb_profils)
-	$"CombatValue".text = com
-	$"EspritValue".text = esp
-	$"RefValue".text = ref
-	$"DefenseValue".text = def
-	$"PAValue".text = pa
-	$"DmgValues".text = dmg
-	$"TirValues".text = tir
-	$"MvtValues".text = mvt
-	$"PVsValues".text = vie
+	$"Panel/FigNb".text = str(nb_profils)
+	$"Panel/CombatValue".text = com
+	$"Panel/EspritValue".text = esp
+	$"Panel/RefValue".text = ref
+	$"Panel/DefenseValue".text = def
+	$"Panel/PAValue".text = pa
+	$"Panel/DmgValues".text = dmg
+	$"Panel/TirValues".text = tir
+	$"Panel/MvtValues".text = mvt
+	$"Panel/PVsValues".text = vie
+	
+func _on_Button_pressed():
+	panel_visible = !panel_visible
+	$"Panel".visible = panel_visible
+	$"Button".text = "Cacher les statistiques" if panel_visible else "Afficher les statistiques"
+	resize_self()
+	
+func resize_self():
+	var x = $"Button".rect_size.x
+	var y = $"Button".rect_size.y + $"Panel".rect_size.y
+	if panel_visible:
+		get_node(".").rect_min_size = Vector2(x, y)
+	else:
+		get_node(".").rect_min_size =  $"Button".rect_size
+		
+		
