@@ -37,11 +37,11 @@ __meta__ = {
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 anchor_right = 1.0
-anchor_bottom = 0.93
+anchor_bottom = 1.0
 margin_left = 24.0
 margin_top = 116.0
 margin_right = -24.0
-margin_bottom = -8.32007
+margin_bottom = -80.0001
 size_flags_horizontal = 3
 size_flags_vertical = 3
 follow_focus = true
@@ -50,9 +50,9 @@ __meta__ = {
 }
 
 [node name="DisplayList" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 516.0
-margin_bottom = 1510.0
-rect_min_size = Vector2( 0, 1510 )
+margin_right = 528.0
+margin_bottom = 828.0
+rect_min_size = Vector2( 0, 650 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -71,7 +71,7 @@ anchor_left = 0.681
 anchor_right = 1.0
 margin_left = 15.744
 margin_top = 16.0
-margin_right = -16.0
+margin_right = -15.9999
 margin_bottom = 88.0
 text = "Scénarios"
 __meta__ = {

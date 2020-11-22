@@ -36,12 +36,12 @@ __meta__ = {
 }
 
 [node name="Content Holder" type="VBoxContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 0.922
+anchor_right = 0.997
+anchor_bottom = 0.996
 margin_left = 24.0
 margin_top = 64.0
-margin_right = -24.0
-margin_bottom = -0.128052
+margin_right = -22.272
+margin_bottom = -75.9041
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -99,8 +99,8 @@ __meta__ = {
 }
 
 [node name="Menu_Commun" parent="." instance=ExtResource( 4 )]
-anchor_top = 0.922
+anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = 7.87195
+margin_top = -72.0001
 margin_bottom = 0.0
 [connection signal="text_changed" from="Content Holder/LineEdit" to="." method="_on_LineEdit_text_changed"]

@@ -34,10 +34,8 @@ __meta__ = {
 }
 
 [node name="Faction" type="Label" parent="."]
-margin_left = 128.0
-margin_top = 55.0
-margin_right = 448.0
-margin_bottom = 143.0
+anchor_right = 1.0
+margin_bottom = 88.0
 custom_fonts/font = ExtResource( 1 )
 text = "Architekt"
 align = 1
@@ -48,26 +46,26 @@ __meta__ = {
 }
 
 [node name="Auteur" type="Label" parent="."]
-anchor_top = 0.937
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 176.0
-margin_top = 24.512
-margin_right = -184.0
-margin_bottom = -21.0
+margin_top = -32.0
 custom_fonts/font = ExtResource( 2 )
 text = "Made by Thomas BOUET"
+align = 1
+valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_bottom = 0.937
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = 128.0
 margin_top = 160.0
-margin_right = 448.0
-margin_bottom = -15.488
+margin_right = -128.0
+margin_bottom = -80.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -112,7 +110,7 @@ margin_right = 320.0
 margin_bottom = 784.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
-text = "Règles"
+text = "Règles et Scénarios"
 __meta__ = {
 "_edit_use_anchors_": false
 }

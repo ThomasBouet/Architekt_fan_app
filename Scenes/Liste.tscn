@@ -42,11 +42,11 @@ __meta__ = {
 
 [node name="Content" type="VBoxContainer" parent="."]
 anchor_right = 1.0
-anchor_bottom = 0.93
+anchor_bottom = 1.0
 margin_left = 24.0
 margin_top = 64.0
 margin_right = -24.0
-margin_bottom = -16.3201
+margin_bottom = -88.0001
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -187,33 +187,38 @@ __meta__ = {
 }
 
 [node name="Save" type="Control" parent="."]
-visible = false
-margin_left = 512.0
-margin_top = 11.0
-margin_right = 552.0
-margin_bottom = 51.0
+anchor_left = 0.861
+anchor_right = 1.0
+margin_left = 16.064
+margin_top = 8.0
+margin_right = -16.0
+margin_bottom = 56.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="Save"]
 show_behind_parent = true
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
 [node name="SaveButton" type="TextureButton" parent="Save"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 texture_normal = ExtResource( 10 )
 expand = true
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Delete" type="Control" parent="."]
-visible = false
-margin_left = 512.0
+anchor_left = 0.861
+anchor_right = 1.0
+margin_left = 16.064
 margin_top = 64.0
-margin_right = 563.0
-margin_bottom = 115.0
+margin_right = -16.0
+margin_bottom = 112.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -223,19 +228,22 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="Delete"]
 show_behind_parent = true
 light_mask = -2147483647
-margin_right = 51.0
-margin_bottom = 51.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 color = Color( 0.847059, 0.054902, 0.054902, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DeleteButton" type="TextureButton" parent="Delete"]
-margin_right = 512.0
-margin_bottom = 512.0
+anchor_right = 1.0
+anchor_bottom = 1.021
+margin_right = 432.0
+margin_bottom = 435.356
 rect_scale = Vector2( 0.1, 0.1 )
 action_mode = 0
 texture_normal = ExtResource( 9 )
+expand = true
 stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
@@ -346,8 +354,10 @@ __meta__ = {
 script = ExtResource( 11 )
 
 [node name="Menu_Commun" parent="." instance=ExtResource( 3 )]
-margin_top = 952.0
-margin_bottom = 1024.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -72.0
+margin_bottom = 0.0
 [connection signal="pressed" from="Content/ImportButton" to="." method="_on_ImportButton_pressed"]
 [connection signal="value_changed" from="Content/Content Holder/HBoxContainer2/SpinBox" to="." method="_on_SpinBox_value_changed"]
 [connection signal="value_changed" from="Content/Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
