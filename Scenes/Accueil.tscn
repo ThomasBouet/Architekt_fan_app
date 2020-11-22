@@ -76,7 +76,7 @@ __meta__ = {
 
 [node name="Profils" type="Button" parent="VBoxContainer"]
 margin_right = 320.0
-margin_bottom = 127.0
+margin_bottom = 193.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Profils"
@@ -85,9 +85,9 @@ __meta__ = {
 }
 
 [node name="Mes listes" type="Button" parent="VBoxContainer"]
-margin_top = 131.0
+margin_top = 197.0
 margin_right = 320.0
-margin_bottom = 258.0
+margin_bottom = 390.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
 text = "Mes listes"
@@ -96,40 +96,18 @@ __meta__ = {
 }
 
 [node name="Compétences" type="Button" parent="VBoxContainer"]
-margin_top = 262.0
-margin_right = 320.0
-margin_bottom = 390.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
-text = "Compétences"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sorts" type="Button" parent="VBoxContainer"]
 margin_top = 394.0
 margin_right = 320.0
-margin_bottom = 521.0
+margin_bottom = 587.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
-text = "Sorts"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Scénarios" type="Button" parent="VBoxContainer"]
-margin_top = 525.0
-margin_right = 320.0
-margin_bottom = 652.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 2 )
-text = "Scénarios"
+text = "Compétences et Formules"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Règles" type="Button" parent="VBoxContainer"]
-margin_top = 656.0
+margin_top = 591.0
 margin_right = 320.0
 margin_bottom = 784.0
 size_flags_vertical = 3
@@ -141,6 +119,4 @@ __meta__ = {
 [connection signal="pressed" from="VBoxContainer/Profils" to="." method="_on_Profils_pressed"]
 [connection signal="pressed" from="VBoxContainer/Mes listes" to="." method="_on_Mes_listes_pressed"]
 [connection signal="pressed" from="VBoxContainer/Compétences" to="." method="_on_Comptences_pressed"]
-[connection signal="pressed" from="VBoxContainer/Sorts" to="." method="_on_Sorts_pressed"]
-[connection signal="pressed" from="VBoxContainer/Scénarios" to="." method="_on_Scnarios_pressed"]
 [connection signal="pressed" from="VBoxContainer/Règles" to="." method="_on_Rgles_pressed"]

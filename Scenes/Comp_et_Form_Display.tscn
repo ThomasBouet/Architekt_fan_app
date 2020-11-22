@@ -79,7 +79,7 @@ text = "Formules"
 [node name="Comp" type="ScrollContainer" parent="Content Holder"]
 margin_top = 56.0
 margin_right = 528.0
-margin_bottom = 880.0
+margin_bottom = 879.0
 rect_min_size = Vector2( 528, 770 )
 mouse_filter = 1
 size_flags_vertical = 3
@@ -90,7 +90,7 @@ __meta__ = {
 
 [node name="DiplayList" type="VBoxContainer" parent="Content Holder/Comp"]
 margin_right = 528.0
-margin_bottom = 824.0
+margin_bottom = 823.0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3

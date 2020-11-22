@@ -5,19 +5,25 @@ func _ready():
 	pass
 	
 func _on_Profils_pressed():
-	get_tree().change_scene("res://Scenes/Profils_Display.tscn")
+	if get_tree().change_scene("res://Scenes/Profils_Display.tscn") != OK:
+		print("Une erreur innatendue est arrivée")
 	
 func _on_Mes_listes_pressed():
-	get_tree().change_scene("res://Scenes/Liste.tscn")
+	if get_tree().change_scene("res://Scenes/Liste.tscn") != OK:
+		print("Une erreur innatendue est arrivée")
 	
 func _on_Comptences_pressed():
-	get_tree().change_scene("res://Scenes/Comp_et_Form_Display.tscn")
+	if get_tree().change_scene("res://Scenes/Comp_et_Form_Display.tscn") != OK:
+		print("Une erreur innatendue est arrivée")
 	
 func _on_Sorts_pressed():
-	get_tree().change_scene("res://Scenes/Sort_display.tscn")
+	if get_tree().change_scene("res://Scenes/Sort_display.tscn") != OK:
+		print("Une erreur innatendue est arrivée")
 	
 func _on_Rgles_pressed():
-	get_tree().change_scene("res://Scenes/regles.tscn")
+	if get_tree().change_scene("res://Scenes/regles.tscn") != OK:
+		print("Une erreur innatendue est arrivée")
 	
 func _on_Scnarios_pressed():
-	get_tree().change_scene("res://Scenes/scenar_disp.tscn")
+	if get_tree().change_scene("res://Scenes/scenar_disp.tscn") != OK:
+		print("Une erreur innatendue est arrivée")

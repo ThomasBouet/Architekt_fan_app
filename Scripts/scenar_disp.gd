@@ -33,19 +33,6 @@ func refresh_scenarios_list(list):
 	c.rect_min_size = Vector2(0,0)
 	get_node("Content Holder/Scenars/DisplayList").add_child(c)
 	
-# --- Gestion des boutons du menu --
-func move_menu():
-	var init_pos = get_node("Menu").position
-	var target = Vector2(init_pos.x + (319 if !MenuOpen else -319), init_pos.y)
-	get_node("Menu").move(target)
-	MenuOpen = !MenuOpen
-	
-func _on_MenuBtn_pressed():
-	move_menu()	
-	
-func _on_Accueil_pressed():
-	get_tree().change_scene("res://Scenes/Accueil.tscn")
-	
 func _on_LineEdit_text_changed(search_clue):
 	var nodes_profil = get_node("Content Holder/Scenars/DisplayList").get_children()
 	nodes_profil.pop_back()
@@ -54,3 +41,6 @@ func _on_LineEdit_text_changed(search_clue):
 		var name = n.get_child(1).get_child(0).text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
 	
+func _on_Button_pressed():
+	if get_tree().change_scene("res://Scenes/regles.tscn") != OK:
+		print("Une erreur innatendue est arrivée")

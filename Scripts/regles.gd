@@ -1,12 +1,5 @@
-extends Node2D
+extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var files = []
 	var dir = Directory.new()
@@ -18,22 +11,20 @@ func _ready():
 			break
 		elif not file.begins_with(".") and file.ends_with(".import"):
 			files.append(file)
-	
+
 	dir.list_dir_end()
-	
+
 	for f in files:
 		print(f)
 		var text_rect = TextureRect.new()
 		text_rect.name = f
 		text_rect.texture = ResourceLoader.load("res://Sprites/livre-de-regles/" + f.split('.import')[0])
 		text_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		text_rect.rect_min_size = Vector2(0,700)
 		get_node("ScrollContainer/DisplayList").add_child(text_rect)
 	dir.list_dir_end()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
-
-func _on_MenuBtn_pressed():
-	pass # Replace with function body.
+func _on_Button_pressed():
+	if get_tree().change_scene("res://Scenes/regles.tscn") != OK:
+		print("Une erreur innatendue est arrivée")

@@ -1,27 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/regles.gd" type="Script" id=1]
-[ext_resource path="res://Scripts/Menu_commun.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Menu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Spartan.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Spartan_Bold.tres" type="DynamicFont" id=5]
-[ext_resource path="res://Sprites/UI/menu_white.png" type="Texture" id=6]
 
-
-[node name="Root" type="Node2D"]
-script = ExtResource( 1 )
-
-[node name="Background" type="Control" parent="."]
+[node name="Root" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-size_flags_vertical = 3
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="Background"]
-margin_top = 1.0
-margin_right = 576.0
-margin_bottom = 1025.0
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color( 0.109804, 0.105882, 0.101961, 1 )
@@ -30,9 +23,8 @@ __meta__ = {
 }
 
 [node name="Titre" type="Label" parent="."]
-margin_left = 92.0
+anchor_right = 1.0
 margin_top = 3.0
-margin_right = 475.0
 margin_bottom = 107.0
 custom_fonts/font = ExtResource( 4 )
 text = "Règles"
@@ -44,10 +36,12 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.93
 margin_left = 24.0
 margin_top = 116.0
-margin_right = 552.0
-margin_bottom = 992.0
+margin_right = -24.0
+margin_bottom = -8.32007
 size_flags_horizontal = 3
 size_flags_vertical = 3
 follow_focus = true
@@ -56,8 +50,9 @@ __meta__ = {
 }
 
 [node name="DisplayList" type="VBoxContainer" parent="ScrollContainer"]
-margin_right = 528.0
-margin_bottom = 876.0
+margin_right = 516.0
+margin_bottom = 1510.0
+rect_min_size = Vector2( 0, 1510 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
@@ -65,89 +60,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Menu" type="Node2D" parent="."]
-script = ExtResource( 2 )
+[node name="Menu_Commun" parent="." instance=ExtResource( 2 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -72.0
+margin_bottom = 0.0
 
-[node name="ColorRect2" type="ColorRect" parent="Menu"]
-margin_left = -2.0
-margin_right = 94.0
-margin_bottom = 80.0
-color = Color( 0, 0, 0, 1 )
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.681
+anchor_right = 1.0
+margin_left = 15.744
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = 88.0
+text = "Scénarios"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="MenuBtn" type="TextureButton" parent="Menu"]
-margin_left = 8.0
-margin_right = 520.0
-margin_bottom = 512.0
-rect_scale = Vector2( 0.15, 0.15 )
-size_flags_horizontal = 0
-size_flags_vertical = 0
-texture_normal = ExtResource( 6 )
-stretch_mode = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="Menu"]
-margin_left = -320.0
-margin_right = -1.0
-margin_bottom = 1024.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
-margin_left = -312.0
-margin_top = 8.0
-margin_right = -8.0
-margin_bottom = 1016.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Accueil" type="Button" parent="Menu/VBoxContainer"]
-margin_right = 304.0
-margin_bottom = 198.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Accueil"
-
-[node name="Mes listes" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 202.0
-margin_right = 304.0
-margin_bottom = 400.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Mes listes"
-
-[node name="Tous" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 404.0
-margin_right = 304.0
-margin_bottom = 603.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Tous les profils"
-
-[node name="Scénarios" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 607.0
-margin_right = 304.0
-margin_bottom = 805.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Tous les profils"
-
-[node name="Règles" type="Button" parent="Menu/VBoxContainer"]
-margin_top = 809.0
-margin_right = 304.0
-margin_bottom = 1008.0
-size_flags_vertical = 3
-custom_fonts/font = ExtResource( 5 )
-text = "Tous les profils"
-
-[node name="TweenMenu" type="Tween" parent="Menu"]
-[connection signal="pressed" from="Menu/MenuBtn" to="." method="_on_MenuBtn_pressed"]
-[connection signal="pressed" from="Menu/VBoxContainer/Accueil" to="." method="_on_Accueil_pressed"]
-[connection signal="pressed" from="Menu/VBoxContainer/Mes listes" to="." method="_on_Mes_listes_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

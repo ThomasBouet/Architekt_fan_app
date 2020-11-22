@@ -20,6 +20,7 @@ func display_cards(p):
 	
 	for i in range(files.size()):
 #		print("ScrollContainer/VBoxContainer/Carte" + str(i))
-		get_node("ScrollContainer/VBoxContainer/Carte" + str(i)).texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".jpg")
-		
+		var node = get_node("ScrollContainer/VBoxContainer/Carte" + str(i))
+		node.texture = ResourceLoader.load("res://Sprites/Profils/" + p["Imgs"] + "/" + str(i) + ".jpg")
+		node.rect_min_size = Vector2(0,700)
 	get_node(".").popup_centered()
