@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Sort.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -47,6 +49,7 @@ margin_left = 9.486
 margin_top = 8.016
 margin_right = -6.04401
 margin_bottom = -8.016
+custom_fonts/font = ExtResource( 3 )
 text = "Nom"
 align = 1
 valign = 1
@@ -59,7 +62,6 @@ visible = false
 anchor_right = 1.0
 margin_top = 64.0
 margin_bottom = 304.0
-mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -73,6 +75,7 @@ alignment = 1
 margin_right = 189.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 text = "Cout : "
 align = 1
 valign = 1
@@ -82,6 +85,7 @@ margin_left = 193.0
 margin_right = 382.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 text = "Portee : "
 align = 1
 valign = 1
@@ -91,6 +95,7 @@ margin_left = 386.0
 margin_right = 576.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 text = "Cible : "
 align = 1
 valign = 1
@@ -99,6 +104,7 @@ valign = 1
 margin_top = 18.0
 margin_right = 576.0
 margin_bottom = 32.0
+custom_fonts/font = ExtResource( 3 )
 text = "Description :"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -110,6 +116,7 @@ margin_right = 576.0
 margin_bottom = 127.0
 mouse_filter = 1
 size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
 fit_content_height = true
 __meta__ = {
@@ -120,6 +127,7 @@ __meta__ = {
 margin_top = 131.0
 margin_right = 576.0
 margin_bottom = 145.0
+custom_fonts/font = ExtResource( 3 )
 text = "Améliorations :"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -131,6 +139,7 @@ margin_right = 576.0
 margin_bottom = 240.0
 mouse_filter = 2
 size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
 fit_content_height = true
 __meta__ = {

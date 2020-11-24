@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Comptence_dialog.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=3]
 
 [node name="Competence_Dialog" type="AcceptDialog"]
 margin_right = 574.0
@@ -20,14 +22,16 @@ __meta__ = {
 }
 
 [node name="desc_titre" type="Label" parent="VBoxContainer"]
-margin_right = 572.0
-margin_bottom = 14.0
+margin_right = 558.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 2 )
 text = "Description :"
 
 [node name="Description" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 572.0
-margin_bottom = 33.0
+margin_top = 41.0
+margin_right = 558.0
+margin_bottom = 56.0
+custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
 fit_content_height = true
 [connection signal="meta_clicked" from="VBoxContainer/Description" to="." method="_on_Description_meta_clicked"]

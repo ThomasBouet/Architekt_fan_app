@@ -1,9 +1,6 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 const Profil = preload("res://Scenes/Profil.tscn")
 var MenuOpen = false
 var hashero = false
@@ -106,6 +103,7 @@ func _on_Tous_pressed():
 	get_node("Faction").text = "Profils"
 	get_node("Content Holder/Panel").visible = false
 	get_node("Content Holder/ProgressBar").visible = false
+	get_node("Content Holder/HBoxContainer2").visible = false
 	refresh_profils_list(Json_reader.load_all_factions(), true)
 	move_menu()
 	
@@ -117,6 +115,7 @@ func _change_faction(faction):
 	get_node("Content Holder/Panel").visible = true
 	get_node("Content Holder/Panel").resize_self()
 	get_node("Content Holder/ProgressBar").visible = true
+	get_node("Content Holder/HBoxContainer2").visible = true
 	refresh_profils_list(Json_reader.profils_data[faction])
 	move_menu()
 	
@@ -137,6 +136,7 @@ func refresh_profils_list(list, hide=false):
 		
 	var hero_label = Label.new()
 	hero_label.text = "Héros"
+	hero_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(hero_label)
 #	--- Ajoute tout les héros de la faction correspondante ---	
 	for p in lists[0]:
@@ -150,6 +150,7 @@ func refresh_profils_list(list, hide=false):
 		
 	var alchi_label = Label.new()
 	alchi_label.text = "Alchimistes"
+	alchi_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(alchi_label)
 #	--- Ajoute tout les alchimistes et héros de la faction correspondante ---	
 	for p in lists[1]:
@@ -163,6 +164,7 @@ func refresh_profils_list(list, hide=false):
 		
 	var troupe_label = Label.new()
 	troupe_label.text = "Troupes"
+	troupe_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(troupe_label)
 #	--- Ajoute toutes les troupes de la faction correspondante ---	
 	for p in lists[2]:
@@ -210,11 +212,10 @@ func show_message(title, msg):
 	get_node("OverWriteDialog").popup_centered()
 	
 func _on_LineEdit_text_changed(search_clue):
-	var nodes_profil = get_node("Content Holder/Profils/DiplayList").get_children()
-	nodes_profil.pop_back()
-	
+	var nodes_profil = list_hero + list_alchi + list_tpe
+		
 	for n in nodes_profil:
-		var name = n.get_child(2).get_child(0).text
+		var name = n.get_node("Nom/Label").text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
 	
 func _on_SpinBox_value_changed(value):

@@ -11,7 +11,6 @@ func _ready():
 	pass # Replace with function body.
 
 func init(scenario):
-	print(scenario.keys())
 	get_node("LinkButton/Nom").text = scenario["Nom"]
 	get_node("VBoxContainer/Mise en place").text = scenario["Mise en place"]
 	get_node("VBoxContainer/Deploiment").text = scenario["Déploiement"]

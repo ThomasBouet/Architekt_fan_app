@@ -41,7 +41,7 @@ func avg_stats(team):
 		mvt.append(p["Mvt"].split("/"))
 		dmg.append(p["Dmg"].split("/"))
 		if p["Tir"] != "-":
-			tir.append(p["Tir"].split(" ")[1].split("/"))
+			tir.append(p["Tir"].split(" ")[2].split("/"))
 			
 #	--- Gestion vie ---
 	var vies = [0,0,0]
@@ -79,12 +79,12 @@ func avg_stats(team):
 #	--- Gestion tir ---
 	var tirs = [0,0,0,0,0,0]
 	for t in tir:
-		tirs[0] += int(t[0])
-		tirs[1] += int(t[1])
-		tirs[2] += int(t[2])
-		tirs[3] += int(t[3])
-		tirs[4] += int(t[4])
-		tirs[5] += int(t[5])
+		tirs[0] += int(t[0][0])
+		tirs[1] += int(t[1][0])
+		tirs[2] += int(t[2][0])
+		tirs[3] += int(t[3][0])
+		tirs[4] += int(t[4][0])
+		tirs[5] += int(t[5][0])
 	for i in range(0,6):
 		tirs[i] = tirs[i]/nb_profils
 	tir = str(tirs[0]) + "/" + str(tirs[1]) + "/" + str(tirs[2]) + "/" + str(tirs[3]) + "/" + str(tirs[4]) + "/" + str(tirs[5])

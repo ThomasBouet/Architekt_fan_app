@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Competence.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -44,6 +46,7 @@ anchor_bottom = 1.167
 margin_top = 8.016
 margin_right = 0.23999
 margin_bottom = -8.016
+custom_fonts/font = ExtResource( 3 )
 text = "Nom"
 align = 1
 valign = 1
@@ -58,6 +61,7 @@ margin_top = 64.0
 margin_bottom = 79.0
 mouse_filter = 1
 size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
 fit_content_height = true
 __meta__ = {

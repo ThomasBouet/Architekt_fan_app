@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Formule_Dialog.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=4]
 
 [node name="Formule_Dialog" type="AcceptDialog"]
 margin_right = 574.0
@@ -27,13 +29,14 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 558.0
-margin_bottom = 14.0
+margin_bottom = 37.0
 size_flags_horizontal = 3
 
 [node name="Cout" type="Label" parent="VBoxContainer/HBoxContainer"]
 margin_right = 183.0
-margin_bottom = 14.0
+margin_bottom = 37.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 text = "Cout:"
 align = 1
 valign = 1
@@ -41,8 +44,9 @@ valign = 1
 [node name="Portee" type="Label" parent="VBoxContainer/HBoxContainer"]
 margin_left = 187.0
 margin_right = 370.0
-margin_bottom = 14.0
+margin_bottom = 37.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 text = "Portée:"
 align = 1
 valign = 1
@@ -50,38 +54,44 @@ valign = 1
 [node name="Cible" type="Label" parent="VBoxContainer/HBoxContainer"]
 margin_left = 374.0
 margin_right = 558.0
-margin_bottom = 14.0
+margin_bottom = 37.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 3 )
 text = "Cible:"
 align = 1
 valign = 1
 
 [node name="titre_desc" type="Label" parent="VBoxContainer"]
-margin_top = 18.0
+margin_top = 41.0
 margin_right = 558.0
-margin_bottom = 32.0
+margin_bottom = 78.0
+custom_fonts/font = ExtResource( 3 )
 text = "Description :"
 
 [node name="Description" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 36.0
+margin_top = 82.0
 margin_right = 558.0
-margin_bottom = 51.0
+margin_bottom = 97.0
+custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
 fit_content_height = true
 
 [node name="amelio_desc" type="Label" parent="VBoxContainer"]
-margin_top = 55.0
+margin_top = 101.0
 margin_right = 558.0
-margin_bottom = 69.0
+margin_bottom = 138.0
+custom_fonts/font = ExtResource( 3 )
 text = "Amélioration :"
 
 [node name="Amélioration" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 73.0
+margin_top = 142.0
 margin_right = 558.0
-margin_bottom = 88.0
+margin_bottom = 157.0
+custom_fonts/normal_font = ExtResource( 4 )
 fit_content_height = true
 
 [node name="Competence" parent="." instance=ExtResource( 2 )]
+visible = false
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 566.0

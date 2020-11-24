@@ -11,11 +11,9 @@ func _ready():
 			break
 		elif not file.begins_with(".") and file.ends_with(".import"):
 			files.append(file)
-
 	dir.list_dir_end()
 
 	for f in files:
-		print(f)
 		var text_rect = TextureRect.new()
 		text_rect.name = f
 		text_rect.texture = ResourceLoader.load("res://Sprites/livre-de-regles/" + f.split('.import')[0])
@@ -26,5 +24,5 @@ func _ready():
 
 
 func _on_Button_pressed():
-	if get_tree().change_scene("res://Scenes/regles.tscn") != OK:
+	if get_tree().change_scene("res://Scenes/scenar_disp.tscn") != OK:
 		print("Une erreur innatendue est arrivée")

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1.jpg-8184314909c2775d0cf5598d63896c70.stex"
+path="res://.import/import.svg-3c8aacb5fb0d87535d0460ee711b7e8a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Tah_pioca/1.jpg"
-dest_files=[ "res://.import/1.jpg-8184314909c2775d0cf5598d63896c70.stex" ]
+source_file="res://Sprites/UI/import.svg"
+dest_files=[ "res://.import/import.svg-3c8aacb5fb0d87535d0460ee711b7e8a.stex" ]
 
 [params]
 

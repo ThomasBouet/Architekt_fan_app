@@ -25,6 +25,7 @@ func refresh_comps_list(list):
 	
 	var competence_label = Label.new()
 	competence_label.text = "Compétences"
+	competence_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(competence_label)
 #	--- Ajoute tous les noeuds de la faction correspondante ---	
 	for p in list[0]:
@@ -36,6 +37,7 @@ func refresh_comps_list(list):
 		
 	var formule_label = Label.new()
 	formule_label.text = "Formules"
+	formule_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(formule_label)
 	for p in list[1]:
 		var form = Formule.instance().init(p)

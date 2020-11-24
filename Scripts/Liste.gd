@@ -1,9 +1,5 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 const Profil = preload("res://Scenes/Profil.tscn")
 var MenuOpen = false
 var hashero = false
@@ -84,7 +80,7 @@ func display_team(id):
 	
 	get_node("Content/Content Holder/ExportButton").visible = true
 	get_node("Content/Content Holder/ExportButton").disconnect("pressed", self, "export_test")
-	get_node("Content/Content Holder/ExportButton").connect("pressed", self, "export_list", [id, Json_reader.get_team(cur_team)])
+	get_node("Content/Content Holder/ExportButton").connect("pressed", self, "export_list", [id])
 	
 func refresh_profils_list(list, hide=false):
 	get_node("Content/Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
@@ -103,6 +99,7 @@ func refresh_profils_list(list, hide=false):
 		
 	var hero_label = Label.new()
 	hero_label.text = "Héros"
+	hero_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(hero_label)
 #	--- Ajoute tout les héros de la faction correspondante ---	
 	for p in lists[0]:
@@ -116,6 +113,7 @@ func refresh_profils_list(list, hide=false):
 		
 	var alchi_label = Label.new()
 	alchi_label.text = "Alchimistes"
+	alchi_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(alchi_label)
 #	--- Ajoute tout les alchimistes et héros de la faction correspondante ---	
 	for p in lists[1]:
@@ -129,6 +127,7 @@ func refresh_profils_list(list, hide=false):
 		
 	var troupe_label = Label.new()
 	troupe_label.text = "Troupes"
+	troupe_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(troupe_label)
 #	--- Ajoute toutes les troupes de la faction correspondante ---	
 	for p in lists[2]:
@@ -259,9 +258,9 @@ func save_changes(id):
 	else:
 		show_message("Problème d'enregistrement", "La liste n'existe pas o_O ?")
 		
-func export_list(id, list):
+func export_list(id):
 	save_changes(id)
-	var list_to_str = get_node("ExportImport").export_list(list)
+	var list_to_str = get_node("ExportImport").export_list(Json_reader.get_team(cur_team))
 	get_node("ExportDialog").popup_centered()
 	get_node("ExportDialog").dialog_text = list_to_str
 	get_node("ExportDialog").connect("confirmed", self, "export_confirmed", [list_to_str])
@@ -275,11 +274,13 @@ func export_confirmed(list_str):
 func _on_ImportButton_pressed():
 	get_node("ImportDialog").popup_centered()
 	get_node("ImportDialog").add_cancel("Annuler")
-	get_node("ImportDialog").connect("confirmed", self, "import_confirmed", [get_node("ImportDialog").find_node("Liste").text, get_node("ImportDialog").find_node("ListName").text])
-
-func import_confirmed(nom, list):
-	var res = get_node("ExportImport").import_list(list)
+	get_node("ImportDialog").connect("confirmed", self, "import_confirmed")
 	
+func import_confirmed():
+	var nom = get_node("ImportDialog/VBoxContainer/ListName").text
+	var list = get_node("ImportDialog/VBoxContainer/Liste").text
+	var res = get_node("ExportImport").import_list(list)
+	print(res)
 	if typeof(res) == TYPE_STRING:
 		get_node("OverWriteDialog").popup_centered()
 		get_node("OverWriteDialog").dialog_text = res
@@ -291,7 +292,7 @@ func import_confirmed(nom, list):
 		show_message("Problème d'enregistrement", "Fichier déjà existant")
 	else:
 		file.open(path, File.WRITE)
-		file.store_string(to_json(list))
+		file.store_string(to_json(res))
 		file.close()
 	
 func _on_SpinBox_value_changed(value):

@@ -16,7 +16,7 @@
             "Ref": "5",
             "Formules": "Rapidité de Koga (0),Lance Tellurique (3)",
             "Taille": "2",
-            "Tir": "Corbeau(3/15) 2/2/3/3/3/4",
+            "Tir": "Corbeau (3/15) 2/2/3/3/3/4",
             "Type": "Héro/Alchimiste",
             "Vie": "3/4/3"
         },
@@ -236,7 +236,7 @@
             "Ref": "4",
             "Formules": "-",
             "Taille": "2",
-            "Tir": "Javelot (3 /10) 1/2/2/3/3/3",
+            "Tir": "Javelot (3/10) 1/2/2/3/3/3",
             "Type": "Troupe",
             "Vie": "3/3/2"
         },
@@ -441,7 +441,7 @@
             "Vie": "3/3/3"
         }
     ],
-    "Aurlok-Waga": [
+    "Waga": [
         {
             "Cbt": "5",
             "Compétences": "Coriace/1,Emblème totémique",
@@ -603,7 +603,7 @@
             "Vie": "3/3/2"
         }
     ],
-    "Aurlok-Walosi": [
+    "Walosi": [
         {
             "Cbt": "5",
             "Compétences": "Chef,Hémotoxique",
@@ -1127,7 +1127,7 @@
             "Vie": "4/4/3"
         }
     ],
-    "Avalon-Sanctifiés": [
+    "Sanctifiés": [
         {
             "Cbt": "5",
             "Compétences": "Coriace/2,Effrayant (15),Enchevêtrement,Allonge",
@@ -1269,7 +1269,7 @@
             "Vie": "3/2/3"
         }
     ],
-    "Avalon-Temple": [
+    "Temple": [
         {
             "Cbt": "5",
             "Compétences": "Expert Brutale,Sans Peur,Connétable-Templier",
@@ -1588,7 +1588,7 @@
             "Ref": "4",
             "Formules": "-",
             "Taille": "2",
-            "Tir": "Javelot (3 /10) 1/2/2/3/3/3",
+            "Tir": "Javelot (3/10) 1/2/2/3/3/3",
             "Type": "Troupe",
             "Vie": "3/3/2"
         },
@@ -2277,7 +2277,7 @@
             "Vie": "5/3/3"
         }
     ],
-    "Khaliman-Sororité": [
+    "Sororité": [
         {
             "Cbt": "2",
             "Compétences": "Alchimiste du Cercle Extérieur (Eau),Ondin",
@@ -3100,7 +3100,7 @@
             "Ref": "2",
             "Formules": "-",
             "Taille": "2",
-            "Tir": "Encensoir ignée (3/10) 1/2/2/2/2/3",
+            "Tir": "Encensoir_ignée (3/10) 1/2/2/2/2/3",
             "Type": "Troupe",
             "Vie": "3/3/3"
         },
@@ -3422,7 +3422,7 @@
             "Ref": "4",
             "Formules": "-",
             "Taille": "2",
-            "Tir": "Vs_Alchimiste 4/4/5/5/6/7",
+            "Tir": "Vs Alchimiste 4/4/5/5/6/7",
             "Type": "Troupe",
             "Vie": "3/3/3"
         },
@@ -3487,7 +3487,7 @@
             "Vie": "3/2/2"
         }
     ],
-    "Triade-Garde Cobra": [
+    "Garde Cobra": [
         {
             "Cbt": "7",
             "Compétences": "Bond,Furtivité,Perce-Armure (combat),Opportuniste",
@@ -3846,7 +3846,7 @@
             "Ref": "6",
             "Formules": "-",
             "Taille": "2",
-            "Tir": "Poison 1*/1*/2/2*/3/3",
+            "Tir": "Poison () 1*/1*/2/2*/3/3",
             "Type": "Troupe",
             "Vie": "3/3/3"
         },

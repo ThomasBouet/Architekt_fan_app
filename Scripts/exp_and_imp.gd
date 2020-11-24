@@ -22,6 +22,7 @@ const Shift = 64
 #shift de 33
 
 func export_list(list):
+	print(list)
 	var stored_info = []
 		
 	stored_info.append(int(list[0])/100 % 10)
@@ -56,16 +57,17 @@ func export_list(list):
 	return list_str
 	
 func import_list(str_list):
-	if not str_list.ends_with("=") or len(str_list) <= 6:
+	print(str_list, str_list.ends_with("="), str_list.length())
+	if not str_list.ends_with("=") or str_list.length() < 8:
 		return "La liste ne rentrée ne correspond pas au bon format de liste."
 		
 	var maxPts = (str_list[0].to_ascii()[0] - Shift) * 100 + (str_list[1].to_ascii()[0] - Shift) * 10 + str_list[2].to_ascii()[0] - Shift
 		
-	var faction = faction_decode[str_list[1].to_ascii()[0] - Shift]
-	var nb_fig = str_list[2].to_ascii()[0] - Shift
+	var faction = faction_decode[str_list[3].to_ascii()[0] - Shift]
+	var nb_fig = str_list[4].to_ascii()[0] - Shift
 	
 	var ids = []
-	var i = 3
+	var i = 5
 	for _j in range(nb_fig):
 		ids.append((str_list[i].to_ascii()[0] - Shift)*100 + (str_list[i+1].to_ascii()[0] - Shift)*10 + (str_list[i+2].to_ascii()[0] - Shift))
 		i += 3

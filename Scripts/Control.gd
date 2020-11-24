@@ -52,6 +52,8 @@ func init(p, hide):
 	
 	if profil["Max"] == "0" or hide:
 			get_node("Add").visible = false
+			get_node("Infos/Max").visible = false
+			get_node("Infos/_max2").visible = false
 			
 	return self
 	
