@@ -23,52 +23,18 @@ func _ready():
 	get_node("SaveDialog").add_cancel("Annuler")
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
 	
-func add_to_team(p, node):
+func add_to_team(node):
 #	print("adding " + node.profil["Nom"])
-	if node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste":
-		if hashero:
-#			TODO: Mettre un popup
-			show_message("Ajout impossible", "Un héros se trouve déjà dans votre liste.\nVous ne pouvez avoir qu'un seul héro par liste.")
-			return
-		else:
-			hashero = true
-			get_node("Save").visible = true
-#	--- On autorise l'ajout que s'il l'on peut encore ajouter sans dépasser le seuil ---
-	if currentPTS + int(node.profil["Cout"]) <= maxPts:
-		Team.append(p)
-		currentPTS += int(node.profil["Cout"])
-		get_node("Content Holder/ProgressBar").value = currentPTS
-		get_node("Content Holder/Panel").avg_stats(Team)
+	var res = Team_handler.add_to_team(maxPts, currentPTS, get_node("Faction").text, Team, node)
+	if typeof(res) == TYPE_STRING:
+		show_message("Ajout impossible", res)
+		return
 		
-#		--- Gestion de l'atteinte du max de recrutement ---
-		node.manage_recruitement(node.get_recuitement() + 1)
-		
-#		--- Gestion des mofications de recutement ---
-		if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
-			var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
-			var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
-			var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
-			if node_modified != null:
-				var new_max = qty + node_modified.get_max()
-				node_modified.set_max(new_max)
-				node_modified.manage_recruitement(node_modified.get_recuitement())
-	else:
-#		TODO: Mettre un popup
-		show_message("Ajout impossible", "L'ajout de ce profil n'est pas possible.\n La limite de point serait dépassée.")
-	
-func remove_from_team(p, node):
-#	print("removing " + node.profil["Nom"])
-	if (node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste") and hashero:
-		hashero = false
-		get_node("Save").visible = false
-		
-	Team.remove(Team.find(p))
-	currentPTS -= int(node.profil["Cout"])
+	Team = res[0]
+	currentPTS = res[1]
 	get_node("Content Holder/ProgressBar").value = currentPTS
 	get_node("Content Holder/Panel").avg_stats(Team)
-	
-#	--- Gestion de l'atteinte du min de recrutement ---
-	node.manage_recruitement(node.get_recuitement() - 1)
+	get_node("Content Holder/SaveButton").visible = Team_handler.get_nb_heros(Team) != 0
 	
 #		--- Gestion des mofications de recutement ---
 	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
@@ -76,12 +42,33 @@ func remove_from_team(p, node):
 		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
 		var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
 		if node_modified != null:
-			var new_max = node_modified.get_max() - qty 
-			var nb_recuited = node_modified.get_recuitement()
+			var new_max = qty + node_modified.get_max()
 			node_modified.set_max(new_max)
-			node_modified.manage_recruitement(new_max)
-			if nb_recuited > new_max:
-				for _i in range(nb_recuited - new_max):
+			node_modified.manage_recruitement(node_modified.get_recuitement())
+
+func remove_from_team(node):
+#	print("removing " + node.profil["Nom"])
+	var res = Team_handler.remove_from_team(currentPTS, Team, node)
+	Team = res[0]
+	currentPTS = res[1]
+	get_node("Content Holder/ProgressBar").value = currentPTS
+	get_node("Content Holder/Panel").avg_stats(Team)
+	get_node("Content Holder/SaveButton").visible = (Team_handler.get_nb_heros(Team) != 0) if currentPTS < maxPts else false
+	
+	
+#		--- Gestion des mofications de recutement ---
+	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
+		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
+		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
+		var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
+		if node_modified != null:
+			print(node_modified.get_max())
+			var new_max = node_modified.get_max() - qty 
+			var nb_recruited = node_modified.get_recuitement()
+			node_modified.set_max(new_max)
+			node_modified.manage_recruitement(nb_recruited)
+			if nb_recruited > new_max:
+				for _i in range(nb_recruited - new_max):
 					Team.remove(Team.find(node_modified.profil))
 					currentPTS -= int(node_modified.profil["Cout"])
 					get_node("Content Holder/ProgressBar").value = currentPTS
@@ -119,6 +106,23 @@ func _change_faction(faction):
 	refresh_profils_list(Json_reader.profils_data[faction])
 	move_menu()
 	
+func display_list_type_profil(categorie, list, cat_list, hide):
+	var node = get_node("Content Holder/Profils/DiplayList")
+	var label = Label.new()
+	label.text = categorie
+	label.add_font_override("font", load("res://Fonts/Text_font.tres"))
+	node.add_child(label)
+#	--- Ajoute tout les héros de la faction correspondante ---	
+	for p in list:
+		var profil = Profil.instance().init(p, hide)
+		profil.name = p["Imgs"]
+		profil.find_node("Add").connect("pressed", self, "add_to_team", [profil])
+		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [profil])
+		node.add_child(profil)
+		profil.resize_self(node.rect_size)
+		cat_list.append(profil)
+		
+	
 func refresh_profils_list(list, hide=false):
 	get_node("Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
 	get_node("Content Holder/HBoxContainer/alchis").disconnect("toggled", self, "display_list")
@@ -129,52 +133,16 @@ func refresh_profils_list(list, hide=false):
 	list_tpe = []
 	var lists = Json_reader.get_list_for_each_type(list)
 	var node = get_node("Content Holder/Profils/DiplayList")
+	
 #	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
 		
-	var hero_label = Label.new()
-	hero_label.text = "Héros"
-	hero_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
-	node.add_child(hero_label)
-#	--- Ajoute tout les héros de la faction correspondante ---	
-	for p in lists[0]:
-		var profil = Profil.instance().init(p, hide)
-		profil.name = p["Imgs"]
-		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
-		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
-		node.add_child(profil)
-		profil.resize_self(node.rect_size)
-		list_hero.append(profil)
-		
-	var alchi_label = Label.new()
-	alchi_label.text = "Alchimistes"
-	alchi_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
-	node.add_child(alchi_label)
-#	--- Ajoute tout les alchimistes et héros de la faction correspondante ---	
-	for p in lists[1]:
-		var profil = Profil.instance().init(p, hide)
-		profil.name = p["Imgs"]
-		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
-		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
-		node.add_child(profil)
-		profil.resize_self(node.rect_size)
-		list_alchi.append(profil)
-		
-	var troupe_label = Label.new()
-	troupe_label.text = "Troupes"
-	troupe_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
-	node.add_child(troupe_label)
-#	--- Ajoute toutes les troupes de la faction correspondante ---	
-	for p in lists[2]:
-		var profil = Profil.instance().init(p, hide)
-		profil.name = p["Imgs"]
-		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
-		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
-		node.add_child(profil)
-		profil.resize_self(node.rect_size)
-		list_tpe.append(profil)
+	display_list_type_profil("Héros", lists[0], list_hero, hide)
+	display_list_type_profil("Alchimistes", lists[1], list_alchi, hide)
+	display_list_type_profil("Troupes", lists[2], list_tpe, hide)
+#	
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
@@ -191,7 +159,7 @@ func display_list(boolean, list):
 func _on_ProgressBar_value_changed(value):
 	get_node("Content Holder/ProgressBar/Label").text = str(value) + "/" + str(maxPts)
 	
-func _on_TextureButton_pressed():
+func _on_SaveButton_pressed():
 	get_node("SaveDialog").popup_centered()
 	
 func _on_SaveDialog_confirmed():

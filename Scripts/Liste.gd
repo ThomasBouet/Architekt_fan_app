@@ -280,7 +280,7 @@ func import_confirmed():
 	var nom = get_node("ImportDialog/VBoxContainer/ListName").text
 	var list = get_node("ImportDialog/VBoxContainer/Liste").text
 	var res = get_node("ExportImport").import_list(list)
-	print(res)
+#	print(res)
 	if typeof(res) == TYPE_STRING:
 		get_node("OverWriteDialog").popup_centered()
 		get_node("OverWriteDialog").dialog_text = res

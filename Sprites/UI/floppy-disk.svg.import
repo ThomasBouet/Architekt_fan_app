@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/save.png-c6ff6eda2ae517ba28d05af0b4097b69.stex"
+path="res://.import/floppy-disk.svg-93d0316bee18174f15d977e4111e703e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI/save.png"
-dest_files=[ "res://.import/save.png-c6ff6eda2ae517ba28d05af0b4097b69.stex" ]
+source_file="res://Sprites/UI/floppy-disk.svg"
+dest_files=[ "res://.import/floppy-disk.svg-93d0316bee18174f15d977e4111e703e.stex" ]
 
 [params]
 

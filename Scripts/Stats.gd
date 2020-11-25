@@ -66,12 +66,12 @@ func avg_stats(team):
 	# --- Gestion dmg ---
 	var dmgs = [0,0,0,0,0,0]
 	for d in dmg:
-		dmgs[0] += int(d[0])
-		dmgs[1] += int(d[1])
-		dmgs[2] += int(d[2])
-		dmgs[3] += int(d[3])
-		dmgs[4] += int(d[4])
-		dmgs[5] += int(d[5])
+		dmgs[0] += int(d[0][0])
+		dmgs[1] += int(d[1][0])
+		dmgs[2] += int(d[2][0])
+		dmgs[3] += int(d[3][0])
+		dmgs[4] += int(d[4][0])
+		dmgs[5] += int(d[5][0])
 	for i in range(0,6):
 		dmgs[i] = dmgs[i]/nb_profils
 	dmg = str(dmgs[0]) + "/" + str(dmgs[1]) + "/" + str(dmgs[2]) + "/" + str(dmgs[3]) + "/" + str(dmgs[4]) + "/" + str(dmgs[5])

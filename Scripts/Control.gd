@@ -69,11 +69,10 @@ func manage_recruitement(r):
 		get_node("Infos/_max2").visible = false
 		get_node("Add").visible = true
 		get_node("Remove").visible = true
-	if r == 0:
+	if r <= 0:
 		get_node("Infos/Max").visible = false
 		get_node("Remove").visible = false
 		get_node("Add").visible = true
-	pass
 	
 func get_recuitement():
 	return int(get_node("Infos/Max").text)
@@ -82,8 +81,9 @@ func get_max():
 	return int(profil["Max"])
 	
 func set_max(i):
+	i = 0 if i < 0 else i
 	profil["Max"] = str(i)
-
+	
 func resize_self(display_list_size):
 	var x = display_list_size.x
 	var y = 64 + 216
@@ -91,18 +91,17 @@ func resize_self(display_list_size):
 		get_node(".").rect_min_size = Vector2(x, y)
 	else:
 		get_node(".").rect_min_size = Vector2(x, get_node("ColorRect").rect_min_size.y)
-
+	
 func _on_Nom_pressed():
 	cara_displayed = !cara_displayed
 	get_node("VBoxContainer").visible = cara_displayed
 	resize_self(get_node(".").rect_size)
-
+	
 func _on_Button_pressed():
 	get_node("Cards_Display").display_cards(profil)
-
-
+	
 func _on_Competence_meta_clicked(meta):
 	get_node("Comp_Display").display_comp(meta)
-
+	
 func _on_Formule_meta_clicked(meta):
 	get_node("Form_Display").display_form(meta)

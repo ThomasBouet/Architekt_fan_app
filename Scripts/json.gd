@@ -88,21 +88,6 @@ func get_team(nom):
 	json_file.close()
 	return team_data
 	
-func compare_list(list1, list2):
-	if list1.size() != list2.size():
-		return false
-	var ids1 = []
-	var ids2 = []
-	for i in list1.size():
-		ids1.append(list1[i]["ID"])
-		ids2.append(list2[i]["ID"])
-	ids1.sort()
-	ids2.sort()
-	print(ids1, ids2) 
-	return ids1 == ids2
-
-		
-	
 const CHANGE_RECRUTEMENT = {
 #	"nom de la fig qui change les règles": ["fig changée": bonus de recrutement]
 	"Lotharius": ["Templier", 1],

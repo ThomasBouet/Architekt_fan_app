@@ -57,7 +57,7 @@ func export_list(list):
 	return list_str
 	
 func import_list(str_list):
-	print(str_list, str_list.ends_with("="), str_list.length())
+#	print(str_list, str_list.ends_with("="), str_list.length())
 	if not str_list.ends_with("=") or str_list.length() < 8:
 		return "La liste ne rentrée ne correspond pas au bon format de liste."
 		
