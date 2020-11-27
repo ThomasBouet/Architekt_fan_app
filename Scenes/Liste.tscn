@@ -63,7 +63,17 @@ size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 4 )
 text = "Importer"
 icon = ExtResource( 10 )
+flat = true
 expand_icon = true
+
+[node name="ColorRect" type="ColorRect" parent="Content/ImportButton"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.572549, 0.380392, 0.380392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MenuButton" type="MenuButton" parent="Content"]
 margin_top = 47.0
@@ -71,6 +81,7 @@ margin_right = 528.0
 margin_bottom = 90.0
 custom_fonts/font = ExtResource( 4 )
 text = "Sélectionner la liste à afficher"
+flat = false
 
 [node name="Faction" type="Label" parent="Content"]
 visible = false
