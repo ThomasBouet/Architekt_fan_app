@@ -36,6 +36,11 @@ func add_to_team(node):
 	get_node("Content Holder/Panel").avg_stats(Team)
 	get_node("Content Holder/SaveButton").visible = Team_handler.get_nb_heros(Team) != 0
 	
+	if get_node("Faction").text == "Triade de Jade":
+		Team_handler.unlock_sarge(Team, get_node("Content Holder/Profils/DiplayList/Sergent"))
+	
+	if get_node("Faction").text == "Cartel" or get_node("Faction").text == "Khaliman":
+		var res2 = Team_handler.unlock_animals(Team, list_hero + list_alchi + list_tpe)
 #		--- Gestion des mofications de recutement ---
 	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
 		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
@@ -45,7 +50,7 @@ func add_to_team(node):
 			var new_max = qty + node_modified.get_max()
 			node_modified.set_max(new_max)
 			node_modified.manage_recruitement(node_modified.get_recuitement())
-
+	
 func remove_from_team(node):
 #	print("removing " + node.profil["Nom"])
 	var res = Team_handler.remove_from_team(currentPTS, Team, node)
@@ -55,6 +60,19 @@ func remove_from_team(node):
 	get_node("Content Holder/Panel").avg_stats(Team)
 	get_node("Content Holder/SaveButton").visible = (Team_handler.get_nb_heros(Team) != 0) if currentPTS < maxPts else false
 	
+	if get_node("Faction").text == "Triade de Jade":
+		var res2 = Team_handler.lock_sarge(Team, get_node("Content Holder/Profils/DiplayList/Sergent"), currentPTS)
+		Team = res2[0] 
+		currentPTS = res2[1]
+		get_node("Content Holder/ProgressBar").value = currentPTS
+		get_node("Content Holder/Panel").avg_stats(Team)
+		
+	if get_node("Faction").text == "Cartel" or get_node("Faction").text == "Khaliman":
+		var res2 = Team_handler.lock_animals(Team, list_hero + list_alchi + list_tpe, currentPTS) 
+		Team = res2[0]
+		currentPTS = res2[1]
+		get_node("Content Holder/ProgressBar").value = currentPTS
+		get_node("Content Holder/Panel").avg_stats(Team)
 	
 #		--- Gestion des mofications de recutement ---
 	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
@@ -62,7 +80,7 @@ func remove_from_team(node):
 		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
 		var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
 		if node_modified != null:
-			print(node_modified.get_max())
+#			print(node_modified.get_max())
 			var new_max = node_modified.get_max() - qty 
 			var nb_recruited = node_modified.get_recuitement()
 			node_modified.set_max(new_max)
@@ -74,14 +92,12 @@ func remove_from_team(node):
 					get_node("Content Holder/ProgressBar").value = currentPTS
 					get_node("Content Holder/Panel").avg_stats(Team)
 	
-# --- Gestion des boutons du menu --
 func move_menu():
-	var init_pos = get_node("Factions").position
-	var target = Vector2(init_pos.x + (319 if !MenuOpen else -319), init_pos.y)
-	get_node("Factions").move(target)
 	MenuOpen = !MenuOpen
+	get_node("Factions/ColorRect").visible = MenuOpen
+	get_node("Factions/HBoxContainer/VBoxContainer").visible = MenuOpen
 	
-func _on_MenuBtn_pressed():
+func _on_MenuButton_pressed():
 	move_menu()
 	
 func _on_Tous_pressed():
@@ -97,11 +113,13 @@ func _on_Tous_pressed():
 # --- Gestion de l'affichage des profils ---
 func _change_faction(faction):
 	Team = []
+	currentPTS = 0
 	hashero = false
 	get_node("Faction").text = faction
 	get_node("Content Holder/Panel").visible = true
 	get_node("Content Holder/Panel").resize_self()
 	get_node("Content Holder/ProgressBar").visible = true
+	get_node("Content Holder/ProgressBar").value = currentPTS
 	get_node("Content Holder/HBoxContainer2").visible = true
 	refresh_profils_list(Json_reader.profils_data[faction])
 	move_menu()
@@ -121,7 +139,6 @@ func display_list_type_profil(categorie, list, cat_list, hide):
 		node.add_child(profil)
 		profil.resize_self(node.rect_size)
 		cat_list.append(profil)
-		
 	
 func refresh_profils_list(list, hide=false):
 	get_node("Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
@@ -189,4 +206,7 @@ func _on_LineEdit_text_changed(search_clue):
 func _on_SpinBox_value_changed(value):
 	maxPts = int(value)
 	_on_ProgressBar_value_changed(get_node("Content Holder/ProgressBar").value)
-	pass # Replace with function body.
+	
+
+
+

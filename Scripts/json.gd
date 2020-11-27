@@ -1,10 +1,6 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 var profils_data = []
 var comps_data = []
 var forms_data = []

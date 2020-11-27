@@ -68,19 +68,20 @@ func display_team(id):
 	get_node("Content/Content Holder/Panel").resize_self()
 	get_node("Content/Content Holder/ProgressBar").visible = true
 	get_node("Content/Content Holder").visible = true
-	get_node("Delete").visible = true
-	get_node("Delete/DeleteButton").disconnect("pressed", self, "_on_Delete_pressed")
-	get_node("Delete/DeleteButton").connect("pressed", self, "_on_Delete_pressed", [id])
+	get_node("Content/HBoxContainer").visible = true
+	get_node("Content/HBoxContainer/DeleteButton").visible = true
+	get_node("Content/HBoxContainer/DeleteButton").disconnect("pressed", self, "_on_Delete_pressed")
+	get_node("Content/HBoxContainer/DeleteButton").connect("pressed", self, "_on_Delete_pressed", [id])
 	
 	refresh_profils_list(Json_reader.profils_data[team_faction])
 	recreate_list(team_members)
 	
-	get_node("Save/SaveButton").disconnect("pressed", self, "save")
-	get_node("Save/SaveButton").connect("pressed", self, "save", [id])
+	get_node("Content/HBoxContainer/SaveButton").disconnect("pressed", self, "save")
+	get_node("Content/HBoxContainer/SaveButton").connect("pressed", self, "save", [id])
 	
-	get_node("Content/Content Holder/ExportButton").visible = true
-	get_node("Content/Content Holder/ExportButton").disconnect("pressed", self, "export_test")
-	get_node("Content/Content Holder/ExportButton").connect("pressed", self, "export_list", [id])
+	get_node("Content/HBoxContainer/ExportButton").visible = true
+	get_node("Content/HBoxContainer/ExportButton").disconnect("pressed", self, "export_test")
+	get_node("Content/HBoxContainer/ExportButton").connect("pressed", self, "export_list", [id])
 	
 func refresh_profils_list(list, hide=false):
 	get_node("Content/Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
@@ -166,52 +167,56 @@ func _on_ProgressBar_value_changed(value):
 	must_save()
 	
 func add_to_team(p, node):
-#	print("adding " + node.profil["Nom"])
-	if node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste":
-		if hashero:
-#			TODO: Mettre un popup
-			show_message("Ajout impossible", "Un héros se trouve déjà dans votre liste.\nVous ne pouvez avoir qu'un seul héro par liste.")
-			return
-		else:
-			hashero = true
-#			get_node("Save").visible = true
-#	--- On autorise l'ajout que s'il l'on peut encore ajouter sans dépasser le seuil ---
-	if currentPTS + int(node.profil["Cout"]) <= maxPts:
-		Team.append(p)
-		currentPTS += int(node.profil["Cout"])
-		get_node("Content/Content Holder/ProgressBar").value = currentPTS
-		get_node("Content/Content Holder/Panel").avg_stats(Team)
+	var res = Team_handler.add_to_team(maxPts, currentPTS, get_node("Content/Faction").text, Team, node)
+	if typeof(res) == TYPE_STRING:
+		show_message("Ajout impossible", res)
+		return
 		
-#		--- Gestion de l'atteinte du max de recrutement ---
-		node.manage_recruitement(node.get_recuitement() + 1)
-		
-#		--- Gestion des mofications de recutement ---
-		if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
-			var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
-			var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
-			var node_modified = get_node("Content/Content Holder/Profils/DiplayList/"+node_to_modify)
-			if node_modified != null:
-				var new_max = qty + node_modified.get_max()
-				node_modified.set_max(new_max)
-				node_modified.manage_recruitement(node_modified.get_recuitement())
-	else:
-		show_message("Ajout impossible", "L'ajout de ce profil n'est pas possible.\n La limite de point serait dépassée.")
+	Team = res[0]
+	currentPTS = res[1]
+	get_node("Content/Content Holder/ProgressBar").value = currentPTS
+	get_node("Content/Content Holder/Panel").avg_stats(Team)
+	get_node("Content/HBoxContainer/SaveButton").visible = Team_handler.get_nb_heros(Team) != 0
 	
+	if get_node("Content/Faction").text == "Triade de Jade":
+		Team_handler.unlock_sarge(Team, get_node("Content/Content Holder/Profils/DiplayList/Sergent"))
+	
+	if get_node("Content/Faction").text == "Cartel" or get_node("Content/Faction").text == "Khaliman":
+		var res2 = Team_handler.unlock_animals(Team, list_hero + list_alchi + list_tpe)
+#		--- Gestion des mofications de recutement ---
+	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
+		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
+		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
+		var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
+		if node_modified != null:
+			var new_max = qty + node_modified.get_max()
+			node_modified.set_max(new_max)
+			node_modified.manage_recruitement(node_modified.get_recuitement())
+
 	must_save()
 	
 func remove_from_team(p, node):
 #	print("removing " + node.profil["Nom"])
-	if (node.profil["Type"] == "Héro" or node.profil["Type"] == "Héro/Alchimiste") and hashero:
-		hashero = false
-		get_node("Save").visible = false
-		
-	Team.erase(p)
-	currentPTS -= int(node.profil["Cout"])
+	var res = Team_handler.remove_from_team(currentPTS, Team, node)
+	Team = res[0]
+	currentPTS = res[1]
 	get_node("Content/Content Holder/ProgressBar").value = currentPTS
 	get_node("Content/Content Holder/Panel").avg_stats(Team)
+	get_node("Content/HBoxContainer/SaveButton").visible = (Team_handler.get_nb_heros(Team) != 0) if currentPTS < maxPts else false
 	
-#	--- Gestion de l'atteinte du min de recrutement ---
-	node.manage_recruitement(node.get_recuitement() - 1)
+	if get_node("Content/Faction").text == "Triade de Jade":
+		var res2 = Team_handler.lock_sarge(Team, get_node("Content/Content Holder/Profils/DiplayList/Sergent"), currentPTS)
+		Team = res2[0] 
+		currentPTS = res2[1]
+		get_node("Content/Content Holder/ProgressBar").value = currentPTS
+		get_node("Content/Content Holder/Panel").avg_stats(Team)
+		
+	if get_node("Content/Faction").text == "Cartel" or get_node("Content/Faction").text == "Khaliman":
+		var res2 = Team_handler.lock_animals(Team, list_hero + list_alchi + list_tpe, currentPTS) 
+		Team = res2[0]
+		currentPTS = res2[1]
+		get_node("Content/Content Holder/ProgressBar").value = currentPTS
+		get_node("Content/Content Holder/Panel").avg_stats(Team)
 	
 #		--- Gestion des mofications de recutement ---
 	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
@@ -219,12 +224,13 @@ func remove_from_team(p, node):
 		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
 		var node_modified = get_node("Content/Content Holder/Profils/DiplayList/"+node_to_modify)
 		if node_modified != null:
+#			print(node_modified.get_max())
 			var new_max = node_modified.get_max() - qty 
-			var nb_recuited = node_modified.get_recuitement()
+			var nb_recruited = node_modified.get_recuitement()
 			node_modified.set_max(new_max)
-			node_modified.manage_recruitement(new_max)
-			if nb_recuited > new_max:
-				for _i in range(nb_recuited - new_max):
+			node_modified.manage_recruitement(nb_recruited)
+			if nb_recruited > new_max:
+				for _i in range(nb_recruited - new_max):
 					Team.remove(Team.find(node_modified.profil))
 					currentPTS -= int(node_modified.profil["Cout"])
 					get_node("Content/Content Holder/ProgressBar").value = currentPTS
@@ -239,7 +245,7 @@ func show_message(title, msg):
 	
 func must_save():
 	var infos_list = Json_reader.get_team(cur_team)
-	get_node("Save").visible = !Json_reader.compare_list(Team, infos_list[2]) or infos_list[0] != maxPts
+	get_node("Content/HBoxContainer/SaveButton").visible = !Team_handler.compare_list(Team, infos_list[2]) or infos_list[0] != maxPts
 	
 func save(id):
 	get_node("SaveDialoge").add_cancel("Annuler")

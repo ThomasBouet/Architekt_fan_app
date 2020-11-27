@@ -3,9 +3,6 @@ extends Control
 
 var Description_visible = false
 
-func _ready():
-	pass # Replace with function body.
-
 func init(comp):
 	get_node("TextureButton/Nom").text = comp
 	get_node("Description").bbcode_text = Json_reader.comps_data[comp]

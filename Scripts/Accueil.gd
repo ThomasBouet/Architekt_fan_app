@@ -1,9 +1,6 @@
 extends Control
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-	
+
 func _on_Profils_pressed():
 	if get_tree().change_scene("res://Scenes/Profils_Display.tscn") != OK:
 		print("Une erreur innatendue est arrivée")

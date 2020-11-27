@@ -1,9 +1,6 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 const Scenar = preload("res://Scenes/scenar.tscn")
 var MenuOpen = false
 var scenarios = []

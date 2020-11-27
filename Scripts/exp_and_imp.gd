@@ -1,10 +1,6 @@
 extends Node
 
 
-func _ready():
-	pass # Replace with function body.
-	
-
 const faction_incode = {"Aurlok": 0,"Avalon": 1,"Cartel":2 ,"Evades": 3,"Garde Cobra": 4,"Khaliman": 5,"Loges": 6,"Naashti": 7, "Rados": 8,"Sanctifiés": 9,"Sororité": 10,"Temple": 11,"Triade de Jade": 12,"Utopie": 13,"Waga": 14,"Walosi": 15}
 const faction_decode = {0: "Aurlok",1: "Avalon",2: "Cartel",3: "Evades",4: "Garde Cobra",5: "Khaliman",6: "Loges",7: "Naashti", 8: "Rados",9: "Sanctifiés",10: "Sororité",11: "Temple",12: "Triade de Jade",13: "Utopie",14: "Waga",15: "Walosi"}
 const Shift = 64
@@ -22,7 +18,7 @@ const Shift = 64
 #shift de 33
 
 func export_list(list):
-	print(list)
+#	print(list)
 	var stored_info = []
 		
 	stored_info.append(int(list[0])/100 % 10)

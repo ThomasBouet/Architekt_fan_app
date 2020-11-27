@@ -1,9 +1,8 @@
 extends Node
 
+
 var heros_limit = 1
-#	1,2 ou Loge
-func _ready():
-	pass # Replace with function body.
+#	1,2 ou Loge.
 	
 func add_to_team(maxPts, curPts, faction, Team, node):
 	#	print("adding " + node.profil["Nom"])
@@ -85,22 +84,27 @@ func unlock_sarge(team, sarge):
 		if p["ID"] == id_gt:
 			nb_gt += 1
 	
-	if sarge != null and nb_gt == 3:
-		sarge.set_max(sarge.get_max() + 1)
-		sarge.manage_recruitement(sarge.get_recuitement())
+	if sarge != null and nb_gt == 3 :
+		if sarge.get_max() < 1:
+			sarge.set_max(sarge.get_max() + 1)
+			sarge.manage_recruitement(sarge.get_recuitement())
 		
 func lock_sarge(team, sarge, curPts):
 	var id_gt = 40
+	var id_sgt = 41
+	var has_sgt = false
 	var nb_gt = 0
 	for p in team:
 		if p["ID"] == id_gt:
 			nb_gt += 1
+		if p["ID"] == id_sgt:
+			has_sgt = true
 	
-	if sarge != null and nb_gt < 3:
+	if sarge != null and nb_gt < 3 and has_sgt:
 		curPts -= int(sarge.profil["Cout"])
 		team.erase(sarge.profil)
 		sarge.set_max(sarge.get_max() - 1)
-		sarge.manage_recruitement(sarge.get_recuitement())
+		sarge.manage_recruitement(sarge.get_recuitement() - 1)
 		
 	return [team, curPts]
 	
@@ -110,16 +114,20 @@ func unlock_animals(team, profils_list):
 		if "Dresseur" in p["Compétences"].split(','):
 			has_dresseur = true
 			break
-	
+			
+	if !has_dresseur:
+			return
+			
 	var animals_nodes = []
 	for p in profils_list:
-		if "Animal sauvage" in p.profil["Compétences"] :
+		if "Animal sauvage" in p.profil["Compétences"].split(',') :
 			animals_nodes.append(p)
 			
 	if animals_nodes != []:
 		for n in animals_nodes:
-			n.set_max(n.get_max() + 3)
-			n.manage_recruitement(n.get_recuitement())
+			if n.get_max() < 3:
+				n.set_max(n.get_max() + 3)
+				n.manage_recruitement(n.get_recuitement())
 
 func lock_animals(team, profils_list, curPts):
 	var has_dresseur = false
@@ -128,23 +136,23 @@ func lock_animals(team, profils_list, curPts):
 			has_dresseur = true
 			break
 			
+	if has_dresseur:
+		return [team, curPts]
+		
 	var animals_nodes = []
 	for p in profils_list:
 		if "Animal sauvage" in p.profil["Compétences"] :
 			animals_nodes.append(p)
-	
-	if has_dresseur:
-		return [team, curPts]
 		
 	for n in animals_nodes:
 		var nb_recruited = n.get_recuitement()
 		var new_max = n.get_max() - 3
-		if nb_recruited > new_max:
+		if nb_recruited > new_max and nb_recruited != 0:
 				for _i in range(nb_recruited - new_max):
 					team.erase(n.profil)
 					curPts -= int(n.profil["Cout"])
 		n.set_max(new_max)
-		n.manage_recruitement(nb_recruited)
+		n.manage_recruitement(0)
 	
 	return [team, curPts]
 	

@@ -3,9 +3,6 @@ extends Control
 var profil
 var cara_displayed = false
 
-func _ready():
-	pass # Replace with function body.
-
 func init(p, hide):
 	profil = p	
 	get_node("Nom/Label").text = profil["Nom"]
@@ -59,20 +56,27 @@ func init(p, hide):
 	
 func manage_recruitement(r):
 	get_node("Infos/Max").text = str(r)
-	if r == int(profil["Max"]):
+	var p_max = int(profil["Max"])
+	if r == p_max:
 		get_node("Infos/_max2").visible = true
 		get_node("Remove").visible = true
 		get_node("Add").visible = false
 		get_node("Infos/Max").visible = true
-	if r < int(profil["Max"]):
+	if r < p_max and r > 0:
 		get_node("Infos/Max").visible = true
 		get_node("Infos/_max2").visible = false
 		get_node("Add").visible = true
 		get_node("Remove").visible = true
-	if r <= 0:
+	if r <= 0 and p_max > 0:
 		get_node("Infos/Max").visible = false
+		get_node("Infos/_max2").visible = false
 		get_node("Remove").visible = false
 		get_node("Add").visible = true
+	if r <= 0 and p_max <= 0:
+		get_node("Infos/Max").visible = false
+		get_node("Infos/_max2").visible = false
+		get_node("Remove").visible = false
+		get_node("Add").visible = false
 	
 func get_recuitement():
 	return int(get_node("Infos/Max").text)

@@ -1,14 +1,7 @@
 extends Control
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 var Description_visible = false
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func init(scenario):
 	get_node("LinkButton/Nom").text = scenario["Nom"]
