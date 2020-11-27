@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Liste.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Titre_font_70px.tres" type="DynamicFont" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Sprites/UI/trash.svg" type="Texture" id=7]
 [ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Sprites/UI/export.svg" type="Texture" id=9]
+[ext_resource path="res://Sprites/UI/import.svg" type="Texture" id=10]
 [ext_resource path="res://Scripts/exp_and_imp.gd" type="Script" id=11]
 
 [node name="Root" type="Control"]
@@ -56,14 +57,17 @@ __meta__ = {
 }
 
 [node name="ImportButton" type="Button" parent="Content"]
-margin_right = 528.0
+margin_right = 641.0
 margin_bottom = 43.0
+size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 4 )
 text = "Importer"
+icon = ExtResource( 10 )
+expand_icon = true
 
 [node name="MenuButton" type="MenuButton" parent="Content"]
 margin_top = 47.0
-margin_right = 528.0
+margin_right = 641.0
 margin_bottom = 90.0
 custom_fonts/font = ExtResource( 4 )
 text = "Sélectionner la liste à afficher"
@@ -192,17 +196,18 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Content"]
 visible = false
-margin_top = 826.0
-margin_right = 528.0
-margin_bottom = 866.0
+margin_top = 94.0
+margin_right = 641.0
+margin_bottom = 134.0
 
-[node name="ExportButton" type="TextureButton" parent="Content/HBoxContainer"]
-margin_right = 262.0
+[node name="ExportButton" type="Button" parent="Content/HBoxContainer"]
+margin_right = 318.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
-texture_normal = ExtResource( 9 )
-expand = true
-stretch_mode = 5
+text = "Exporter"
+icon = ExtResource( 9 )
+flat = true
+expand_icon = true
 
 [node name="ColorRect" type="ColorRect" parent="Content/HBoxContainer/ExportButton"]
 show_behind_parent = true
@@ -214,19 +219,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SaveButton" type="TextureButton" parent="Content/HBoxContainer"]
+[node name="SaveButton" type="Button" parent="Content/HBoxContainer"]
 visible = false
 margin_left = 177.0
 margin_right = 350.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
 size_flags_horizontal = 3
-texture_normal = ExtResource( 6 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "Sauvegarder"
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
 
 [node name="ColorRect" type="ColorRect" parent="Content/HBoxContainer/SaveButton"]
 show_behind_parent = true
@@ -237,19 +241,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DeleteButton" type="TextureButton" parent="Content/HBoxContainer"]
-margin_left = 266.0
-margin_right = 528.0
+[node name="DeleteButton" type="Button" parent="Content/HBoxContainer"]
+margin_left = 322.0
+margin_right = 641.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 40, 40 )
 size_flags_horizontal = 3
 action_mode = 0
-texture_normal = ExtResource( 7 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Supprimer"
+icon = ExtResource( 7 )
+flat = true
+expand_icon = true
 
 [node name="ColorRect" type="ColorRect" parent="Content/HBoxContainer/DeleteButton"]
 show_behind_parent = true

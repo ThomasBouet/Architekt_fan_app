@@ -1,9 +1,7 @@
 extends Control
 
-var panel_visible = false
 
-func _ready():
-	pass
+var panel_visible = false
 
 func init():
 	$"Panel/FigNb".text = "0"
