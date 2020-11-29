@@ -18,7 +18,7 @@ func _ready():
 	get_node("Content Holder/Panel").visible = false
 	get_node("Content Holder/ProgressBar").visible = false
 	
-	refresh_profils_list(Json_reader.load_all_factions(), true)
+	refresh_profils_list(Json_reader.load_all_factions(), true, true)
 	
 	get_node("SaveDialog").add_cancel("Annuler")
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
@@ -40,7 +40,7 @@ func add_to_team(node):
 		Team_handler.unlock_sarge(Team, get_node("Content Holder/Profils/DiplayList/Sergent"))
 	
 	if get_node("Faction").text == "Cartel" or get_node("Faction").text == "Khaliman":
-		var res2 = Team_handler.unlock_animals(Team, list_hero + list_alchi + list_tpe)
+		Team_handler.unlock_animals(Team, list_hero + list_alchi + list_tpe)
 #		--- Gestion des mofications de recutement ---
 	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
 		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
@@ -107,7 +107,7 @@ func _on_Tous_pressed():
 	get_node("Content Holder/Panel").visible = false
 	get_node("Content Holder/ProgressBar").visible = false
 	get_node("Content Holder/HBoxContainer2").visible = false
-	refresh_profils_list(Json_reader.load_all_factions(), true)
+	refresh_profils_list(Json_reader.load_all_factions(), true, true)
 	move_menu()
 	
 # --- Gestion de l'affichage des profils ---
@@ -140,7 +140,7 @@ func display_list_type_profil(categorie, list, cat_list, hide):
 		profil.resize_self(node.rect_size)
 		cat_list.append(profil)
 	
-func refresh_profils_list(list, hide=false):
+func refresh_profils_list(list, hide=false, tous=false):
 	get_node("Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
 	get_node("Content Holder/HBoxContainer/alchis").disconnect("toggled", self, "display_list")
 	get_node("Content Holder/HBoxContainer/troupes").disconnect("toggled", self, "display_list")
@@ -156,9 +156,9 @@ func refresh_profils_list(list, hide=false):
 		node.remove_child(n)
 		n.queue_free()
 		
-	display_list_type_profil("Héros", lists[0], list_hero, hide)
-	display_list_type_profil("Alchimistes", lists[1], list_alchi, hide)
-	display_list_type_profil("Troupes", lists[2], list_tpe, hide)
+	display_list_type_profil("Héros", lists[0] if !tous else Team_handler.sort_profil_list(lists[0]), list_hero, hide)
+	display_list_type_profil("Alchimistes", lists[1] if !tous else Team_handler.sort_profil_list(lists[1]), list_alchi, hide)
+	display_list_type_profil("Troupes", lists[2] if !tous else Team_handler.sort_profil_list(lists[2]), list_tpe, hide)
 #	
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()

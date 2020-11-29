@@ -64,6 +64,10 @@ func get_nb_heros(list):
 			nb += 1
 	return nb
 	
+func sort_profil_list(list):
+	list.sort_custom(CustomSort, "custom_sort_profil")
+	return list
+	
 func compare_list(list1, list2):
 	if list1.size() != list2.size():
 		return false
@@ -156,5 +160,14 @@ func lock_animals(team, profils_list, curPts):
 	
 	return [team, curPts]
 	
-	
+class CustomSort:
+	static func custom_sort_profil(elmnt1, elmnt2):
+		var res = elmnt1["Nom"].casecmp_to(elmnt2["Nom"])
+		match res:
+			-1 :
+				return true
+			1 : 
+				return false
+			0 : 
+				return false
 	
