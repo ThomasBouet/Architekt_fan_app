@@ -6,7 +6,6 @@
 
 [node name="Panel" type="Control"]
 anchor_right = 1.0
-margin_right = -48.0
 margin_bottom = 171.0
 rect_min_size = Vector2( 528, 171 )
 script = ExtResource( 2 )
@@ -33,12 +32,12 @@ __meta__ = {
 }
 
 [node name="CombatValue" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 184.0
+anchor_left = 0.264
+anchor_right = 0.403
+margin_left = 31.936
 margin_top = 67.0
-margin_right = -328.0
-margin_bottom = -37.0
+margin_right = 15.872
+margin_bottom = 91.0
 custom_fonts/font = ExtResource( 3 )
 text = "0"
 autowrap = true
@@ -47,11 +46,12 @@ __meta__ = {
 }
 
 [node name="PAValue" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 264.0
-margin_top = 104.0
-margin_right = -248.0
+anchor_left = 0.403
+anchor_right = 0.472
+margin_left = 15.872
+margin_top = 101.0
+margin_right = 40.128
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 3 )
 text = "0"
 autowrap = true
@@ -60,12 +60,12 @@ __meta__ = {
 }
 
 [node name="FigNb" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 264.0
-margin_top = 32.0
-margin_right = -248.0
-margin_bottom = -67.0
+anchor_left = 0.389
+anchor_right = 0.542
+margin_left = 23.936
+margin_top = 24.0
+margin_right = -0.192017
+margin_bottom = 53.0
 custom_fonts/font = ExtResource( 3 )
 text = "0"
 autowrap = true
@@ -74,12 +74,12 @@ __meta__ = {
 }
 
 [node name="DefenseValue" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 104.0
-margin_top = 86.0
-margin_right = -408.0
-margin_bottom = -18.0
+anchor_left = 0.139
+anchor_right = 0.271
+margin_left = 23.936
+margin_top = 85.0
+margin_right = 11.904
+margin_bottom = 109.0
 custom_fonts/font = ExtResource( 3 )
 text = "0"
 autowrap = true
@@ -88,12 +88,12 @@ __meta__ = {
 }
 
 [node name="EspritValue" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 104.0
+anchor_left = 0.153
+anchor_right = 0.243
+margin_left = 15.872
 margin_top = 32.0
-margin_right = -408.0
-margin_bottom = -72.0
+margin_right = 28.032
+margin_bottom = 56.0
 custom_fonts/font = ExtResource( 3 )
 text = "0"
 autowrap = true
@@ -102,12 +102,12 @@ __meta__ = {
 }
 
 [node name="RefValue" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 32.0
+anchor_left = 0.014
+anchor_right = 0.132
+margin_left = 23.936
 margin_top = 67.0
-margin_right = -480.0
-margin_bottom = -37.0
+margin_right = 19.968
+margin_bottom = 91.0
 custom_fonts/font = ExtResource( 3 )
 text = "0"
 autowrap = true
@@ -116,42 +116,45 @@ __meta__ = {
 }
 
 [node name="DmgValues" type="Label" parent="Panel"]
+anchor_left = 0.557
+anchor_top = -0.009
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 321.0
-margin_top = 27.0
-margin_right = -71.0
-margin_bottom = -77.0
+margin_left = 0.167938
+margin_top = 22.152
+margin_right = 1.99994
+margin_bottom = 45.0
 rect_rotation = -0.205741
 custom_fonts/font = ExtResource( 3 )
-text = "-/-/-/-/-/-"
+text = "Max : 9 Moy : 9 Min : 9"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TirValues" type="Label" parent="Panel"]
+anchor_left = 0.556
+anchor_top = -0.023
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 321.0
-margin_top = 67.0
-margin_right = -71.0
-margin_bottom = -37.0
+margin_left = 0.743958
+margin_top = 74.944
+margin_right = -7.0
+margin_bottom = 96.0
 custom_fonts/font = ExtResource( 3 )
-text = "-/-/-/-/-/-"
+text = "Max : 9 Moy : 9 Min : 9"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MvtValues" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 352.0
+anchor_left = 0.514
+anchor_right = 0.733
+margin_left = 39.936
 margin_top = 104.0
-margin_right = -104.0
+margin_right = -0.208008
+margin_bottom = 128.0
 custom_fonts/font = ExtResource( 3 )
-text = "-/-/-"
+text = "99/99/99"
 align = 1
 valign = 1
 autowrap = true
@@ -160,12 +163,12 @@ __meta__ = {
 }
 
 [node name="Combat" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 152.0
+anchor_left = 0.264
+anchor_right = 0.403
+margin_left = -0.0639954
 margin_top = 48.0
-margin_right = -304.0
-margin_bottom = -56.0
+margin_right = -0.128021
+margin_bottom = 72.0
 custom_fonts/font = ExtResource( 3 )
 text = "Combat"
 __meta__ = {
@@ -173,12 +176,11 @@ __meta__ = {
 }
 
 [node name="Figs" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 232.0
-margin_top = 8.0
-margin_right = -264.0
-margin_bottom = -101.0
+anchor_left = 0.389
+anchor_right = 0.542
+margin_left = -0.0640106
+margin_right = -0.192017
+margin_bottom = 24.0
 custom_fonts/font = ExtResource( 3 )
 text = "Figurines"
 __meta__ = {
@@ -186,12 +188,11 @@ __meta__ = {
 }
 
 [node name="Dmg" type="Label" parent="Panel"]
+anchor_left = 0.557
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 321.0
-margin_top = 8.0
-margin_right = -190.0
-margin_bottom = -96.0
+margin_left = 0.167969
+margin_right = -142.0
+margin_bottom = 24.0
 custom_fonts/font = ExtResource( 3 )
 text = "Dégats"
 __meta__ = {
@@ -199,12 +200,12 @@ __meta__ = {
 }
 
 [node name="Tir" type="Label" parent="Panel"]
+anchor_left = 0.557
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 321.0
-margin_top = 48.0
-margin_right = -231.0
-margin_bottom = -56.0
+margin_left = -0.832031
+margin_top = 53.0
+margin_right = -186.0
+margin_bottom = 77.0
 custom_fonts/font = ExtResource( 3 )
 text = "Tir"
 __meta__ = {
@@ -212,12 +213,12 @@ __meta__ = {
 }
 
 [node name="Défense" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 80.0
+anchor_left = 0.139
+anchor_right = 0.271
+margin_left = -0.0640106
 margin_top = 104.0
-margin_right = -427.0
-margin_bottom = -5.0
+margin_right = -0.0960083
+margin_bottom = 128.0
 custom_fonts/font = ExtResource( 3 )
 text = "Défense"
 __meta__ = {
@@ -225,12 +226,12 @@ __meta__ = {
 }
 
 [node name="Esprit" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 88.0
-margin_top = 8.0
-margin_right = -437.0
-margin_bottom = -101.0
+anchor_left = 0.153
+anchor_right = 0.243
+margin_left = -0.128006
+margin_top = 5.0
+margin_right = 0.0319977
+margin_bottom = 29.0
 custom_fonts/font = ExtResource( 3 )
 text = "Esprit"
 __meta__ = {
@@ -238,12 +239,12 @@ __meta__ = {
 }
 
 [node name="Ref" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 8.0
+anchor_left = 0.014
+anchor_right = 0.132
+margin_left = -0.0640001
 margin_top = 48.0
-margin_right = -504.0
-margin_bottom = -61.0
+margin_right = -4.032
+margin_bottom = 67.0
 custom_fonts/font = ExtResource( 3 )
 text = "Réflexe"
 __meta__ = {
@@ -251,12 +252,12 @@ __meta__ = {
 }
 
 [node name="PAs" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 256.0
-margin_top = 80.0
-margin_right = -288.0
-margin_bottom = -29.0
+anchor_left = 0.403
+anchor_right = 0.472
+margin_left = -0.128021
+margin_top = 72.0
+margin_right = 0.127991
+margin_bottom = 96.0
 custom_fonts/font = ExtResource( 3 )
 text = "PAs"
 __meta__ = {
@@ -264,11 +265,12 @@ __meta__ = {
 }
 
 [node name="Mvt" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 321.0
+anchor_left = 0.514
+anchor_right = 0.733
+margin_left = -0.0639954
 margin_top = 104.0
-margin_right = -215.0
+margin_right = -92.208
+margin_bottom = 128.0
 custom_fonts/font = ExtResource( 3 )
 text = "Mvt"
 __meta__ = {
@@ -276,11 +278,12 @@ __meta__ = {
 }
 
 [node name="PVs" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 424.0
+anchor_left = 0.753
+anchor_right = 0.977
+margin_left = 0.271973
 margin_top = 104.0
-margin_right = -68.0
+margin_right = -92.752
+margin_bottom = 128.0
 custom_fonts/font = ExtResource( 3 )
 text = "PVs"
 __meta__ = {
@@ -288,13 +291,14 @@ __meta__ = {
 }
 
 [node name="PVsValues" type="Label" parent="Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 457.0
+anchor_left = 0.753
+anchor_right = 0.977
+margin_left = 38.272
 margin_top = 104.0
-margin_right = -4.0
+margin_right = 0.247986
+margin_bottom = 128.0
 custom_fonts/font = ExtResource( 3 )
-text = "-/-/-"
+text = "99/99/99"
 align = 1
 valign = 1
 autowrap = true

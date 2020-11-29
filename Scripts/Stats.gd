@@ -16,6 +16,7 @@ func init():
 	$"Panel/PVsValues".text = "-/-/-"
 
 func avg_stats(team):
+	var nb_tireurs = 0
 	var nb_profils = len(team) if !team.empty() else 1
 #	if team.empty():
 #		nb_profils = 1
@@ -40,6 +41,7 @@ func avg_stats(team):
 		dmg.append(p["Dmg"].split("/"))
 		if p["Tir"] != "-":
 			tir.append(p["Tir"].split(" ")[2].split("/"))
+			nb_tireurs += 1
 			
 #	--- Gestion vie ---
 	var vies = [0,0,0]
@@ -63,29 +65,47 @@ func avg_stats(team):
 	
 	# --- Gestion dmg ---
 	var dmgs = [0,0,0,0,0,0]
+	var dmg_max = 0
+	var dmg_min = 99
+	var dmg_avg = 0
+	
 	for d in dmg:
-		dmgs[0] += int(d[0][0])
-		dmgs[1] += int(d[1][0])
-		dmgs[2] += int(d[2][0])
-		dmgs[3] += int(d[3][0])
-		dmgs[4] += int(d[4][0])
-		dmgs[5] += int(d[5][0])
-	for i in range(0,6):
-		dmgs[i] = dmgs[i]/nb_profils
-	dmg = str(dmgs[0]) + "/" + str(dmgs[1]) + "/" + str(dmgs[2]) + "/" + str(dmgs[3]) + "/" + str(dmgs[4]) + "/" + str(dmgs[5])
+		dmgs[0] = int(d[0][0])
+		dmgs[1] = int(d[1][0])
+		dmgs[2] = int(d[2][0])
+		dmgs[3] = int(d[3][0])
+		dmgs[4] = int(d[4][0])
+		dmgs[5] = int(d[5][0])
+		
+		dmg_max = dmgs.max() if dmgs.max() > dmg_max else dmg_max
+		dmg_min = dmgs.min() if dmgs.min() < dmg_min else dmg_min
+		
+		dmg_avg += (dmgs[0] + dmgs[1] + dmgs[2] + dmgs[3] + dmgs[4] + dmgs[5])/ 6
+	dmg_avg = dmg_avg/nb_profils
+	dmg_min = dmg_min if dmg_min != 99 else 0
+	dmg = "Max : " + str(dmg_max) + " Moy : " + str(dmg_avg) + " Min : " + str(dmg_min)
 	
 #	--- Gestion tir ---
 	var tirs = [0,0,0,0,0,0]
+	var tir_max = 0
+	var tir_min = 99
+	var tir_avg = 0
+	
 	for t in tir:
-		tirs[0] += int(t[0][0])
-		tirs[1] += int(t[1][0])
-		tirs[2] += int(t[2][0])
-		tirs[3] += int(t[3][0])
-		tirs[4] += int(t[4][0])
-		tirs[5] += int(t[5][0])
-	for i in range(0,6):
-		tirs[i] = tirs[i]/nb_profils
-	tir = str(tirs[0]) + "/" + str(tirs[1]) + "/" + str(tirs[2]) + "/" + str(tirs[3]) + "/" + str(tirs[4]) + "/" + str(tirs[5])
+		tirs[0] = int(t[0][0])
+		tirs[1] = int(t[1][0])
+		tirs[2] = int(t[2][0])
+		tirs[3] = int(t[3][0])
+		tirs[4] = int(t[4][0])
+		tirs[5] = int(t[5][0])
+		
+		tir_max = tirs.max() if tirs.max() > tir_max else tir_max
+		tir_min = tirs.min() if tirs.min() < tir_min else tir_min
+		
+		tir_avg += (tirs[0] + tirs[1] + tirs[2] + tirs[3] + tirs[4] + tirs[5])/ 6
+	tir_avg = tir_avg/nb_tireurs if nb_tireurs != 0 else tir_avg
+	tir_min = tir_min if tir_min != 99 else 0
+	tir = "Max : " + str(tir_max) + " Moy : " + str(tir_avg) + " Min : " + str(tir_min)
 	
 #	--- Gestion stats ---
 	esp = str(esp/nb_profils)

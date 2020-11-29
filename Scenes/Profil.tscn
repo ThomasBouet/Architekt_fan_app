@@ -40,33 +40,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nom" type="TextureButton" parent="."]
-anchor_right = 0.778
-margin_right = -0.128021
-margin_bottom = 64.0
-mouse_filter = 1
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Nom"]
-anchor_left = 0.142714
-anchor_right = 1.0
-anchor_bottom = 1.067
-margin_left = 0.0639954
-margin_top = 8.0
-margin_right = -10.0639
-margin_bottom = -34.02
-size_flags_horizontal = 3
-size_flags_vertical = 1
-custom_fonts/font = ExtResource( 6 )
-text = "Connétable Lotharius du Temple des Vêpres"
-clip_text = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Infos" type="Control" parent="."]
 anchor_left = 0.111
 anchor_right = 0.778
@@ -154,6 +127,34 @@ custom_fonts/font = ExtResource( 2 )
 text = "Pts :"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nom" type="TextureButton" parent="."]
+anchor_right = 0.778
+margin_right = -0.128052
+margin_bottom = 64.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Nom"]
+anchor_left = 0.142714
+anchor_right = 1.0
+anchor_bottom = 1.067
+margin_left = 0.0639954
+margin_top = 8.0
+margin_right = -10.0639
+margin_bottom = -34.02
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 6 )
+text = "Connétable Lotharius du Temple des Vêpres"
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -392,10 +393,25 @@ text = "Voir la carte"
 expand_icon = true
 
 [node name="Cards_Display" parent="." instance=ExtResource( 3 )]
+visible = true
+margin_left = -592.0
+margin_top = 86.0
+margin_right = -638.0
+margin_bottom = -65.9999
 
 [node name="Comp_Display" parent="." instance=ExtResource( 4 )]
+visible = true
+margin_left = -632.0
+margin_top = -368.0
+margin_right = -58.0
+margin_bottom = 3.0
 
 [node name="Form_Display" parent="." instance=ExtResource( 5 )]
+visible = true
+margin_left = -632.0
+margin_top = 268.0
+margin_right = -58.0
+margin_bottom = 580.0
 [connection signal="pressed" from="Nom" to="." method="_on_Nom_pressed"]
 [connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/COMP/Competence" to="." method="_on_Competence_meta_clicked"]
 [connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/SORT/Formule" to="." method="_on_Formule_meta_clicked"]

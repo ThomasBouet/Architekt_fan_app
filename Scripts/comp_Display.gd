@@ -52,11 +52,8 @@ func refresh_comps_list(list):
 	node.add_child(c)
 	
 func _on_LineEdit_text_changed(search_clue):
-	var nodes_profil = get_node("Content Holder/Comp/DiplayList").get_children()
-	nodes_profil.pop_back()
-	
-	for n in nodes_profil:
-		var name = n.get_child(1).get_child(0).text
+	for n in list_comp + list_form:
+		var name = n.get_node("TextureButton/Nom").text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
 		
 func display_list(boolean, list):

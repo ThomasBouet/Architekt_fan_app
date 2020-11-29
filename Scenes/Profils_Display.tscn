@@ -189,7 +189,7 @@ anchor_right = 0.488
 anchor_bottom = 0.93
 margin_right = -1.08801
 margin_bottom = 71.6799
-mouse_filter = 1
+mouse_filter = 2
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -200,7 +200,7 @@ visible = false
 anchor_bottom = 1.0
 margin_right = 216.0
 margin_bottom = 2.0
-mouse_filter = 2
+mouse_filter = 1
 size_flags_vertical = 3
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -210,6 +210,7 @@ __meta__ = {
 [node name="HBoxContainer" type="HBoxContainer" parent="Factions"]
 margin_right = 264.0
 margin_bottom = 952.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }

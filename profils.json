@@ -1918,7 +1918,7 @@
     "Khaliman": [
         {
             "Cbt": "3",
-            "Compétences": "Chef,Tireur Emerite 2,Immunité Diplomatique",
+            "Compétences": "Chef,Tireur Émérite 2,Immunité Diplomatique",
             "Cout": "45",
             "Def": "12",
             "Dmg": "1/1/2/2/3/3",
@@ -3448,7 +3448,7 @@
         },
         {
             "Cbt": "3",
-            "Compétences": "Furtivité,Tireur émérite 1,Armes empoisonnées",
+            "Compétences": "Furtivité,Tireur Émérite 1,Armes empoisonnées",
             "Cout": "28",
             "Def": "11",
             "Dmg": "1/1/2/2/3/3",
@@ -3550,7 +3550,7 @@
         },
         {
             "Cbt": "3",
-            "Compétences": "Furtivité,Tireur émérite 1,Armes empoisonnées",
+            "Compétences": "Furtivité,Tireur Émérite 1,Armes empoisonnées",
             "Cout": "28",
             "Def": "11",
             "Dmg": "1/1/2/2/3/3",
@@ -3892,7 +3892,7 @@
         },
         {
             "Cbt": "3",
-            "Compétences": "Surchauffe,Kunturi,Tireur Emérite 1",
+            "Compétences": "Surchauffe,Kunturi,Tireur Émérite 1",
             "Cout": "28",
             "Def": "10",
             "Dmg": "1/2/2/3/3/3",
