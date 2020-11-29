@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-a256bec3113bf541689fd65c8cd116f2.stex"
+path="res://.import/0.jpg-a8d3170084e25f3ca5fb9af44e733773.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Tonerre-Waya/0.jpg"
-dest_files=[ "res://.import/0.jpg-a256bec3113bf541689fd65c8cd116f2.stex" ]
+source_file="res://Sprites/Profils/Tonnere-Waya/0.jpg"
+dest_files=[ "res://.import/0.jpg-a8d3170084e25f3ca5fb9af44e733773.stex" ]
 
 [params]
 
