@@ -10,8 +10,8 @@ func init():
 	$"Panel/RefValue".text = "0"
 	$"Panel/DefenseValue".text = "0"
 	$"Panel/PAValue".text = "0"
-	$"Panel/DmgValues".text = "-/-/-/-/-/-"
-	$"Panel/TirValues".text = "-/-/-/-/-/-"
+	$"Panel/DmgValues".text = "Max : 0 Moy : 0 Min : 0"
+	$"Panel/TirValues".text = "Max : 0 Moy : 0 Min : 0"
 	$"Panel/MvtValues".text = "-/-/-"
 	$"Panel/PVsValues".text = "-/-/-"
 

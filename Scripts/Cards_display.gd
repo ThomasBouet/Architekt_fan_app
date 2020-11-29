@@ -1,6 +1,9 @@
 extends AcceptDialog
 	
 	
+func _ready():
+	get_ok().add_font_override("font", load("res://Fonts/Text_font.tres"))
+	
 func display_cards(p):	
 	get_node(".").window_title = p["Nom"]
 	

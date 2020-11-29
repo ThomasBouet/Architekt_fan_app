@@ -233,53 +233,53 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Avalon" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
+[node name="Aurlok" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 56.0
 margin_right = 217.0
 margin_bottom = 108.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
-text = "Avalon"
+text = "Aurlok"
 
-[node name="Sanctifiés" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
+[node name="Waga" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 112.0
 margin_right = 217.0
 margin_bottom = 164.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
-text = "Sanctifiés"
+text = "Waga"
 
-[node name="Temple" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
+[node name="Walosi" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 168.0
 margin_right = 217.0
 margin_bottom = 220.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
-text = "Temple"
+text = "Walosi"
 
-[node name="Aurlok" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
+[node name="Avalon" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 224.0
 margin_right = 217.0
 margin_bottom = 277.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
-text = "Aurlok"
+text = "Avalon"
 
-[node name="Waga" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
+[node name="Sanctifiés" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 281.0
 margin_right = 217.0
 margin_bottom = 333.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
-text = "Waga"
+text = "Sanctifiés"
 
-[node name="Walosi" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
+[node name="Temple" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 337.0
 margin_right = 217.0
 margin_bottom = 389.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
-text = "Walosi"
+text = "Temple"
 
 [node name="Cartel" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 393.0
@@ -428,12 +428,12 @@ margin_bottom = 0.0
 [connection signal="text_changed" from="Content Holder/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="pressed" from="Content Holder/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Tous" to="." method="_on_Tous_pressed"]
-[connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Avalon" to="." method="_change_faction" binds= [ "Avalon" ]]
-[connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Sanctifiés" to="." method="_change_faction" binds= [ "Sanctifiés" ]]
-[connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Temple" to="." method="_change_faction" binds= [ "Temple" ]]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Aurlok" to="." method="_change_faction" binds= [ "Aurlok" ]]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Waga" to="." method="_change_faction" binds= [ "Waga" ]]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Walosi" to="." method="_change_faction" binds= [ "Walosi" ]]
+[connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Avalon" to="." method="_change_faction" binds= [ "Avalon" ]]
+[connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Sanctifiés" to="." method="_change_faction" binds= [ "Sanctifiés" ]]
+[connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Temple" to="." method="_change_faction" binds= [ "Temple" ]]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Cartel" to="." method="_change_faction" binds= [ "Cartel" ]]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Khaliman" to="." method="_change_faction" binds= [ "Khaliman" ]]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Evadés" to="." method="_change_faction" binds= [ "Evades" ]]

@@ -1,7 +1,11 @@
 extends AcceptDialog
 
+func _ready():
+	get_ok().add_font_override("font", load("res://Fonts/Text_font.tres"))
+	get_label().add_font_override("font", load("res://Fonts/Text_font.tres"))
 
 func display_form(form):
+	get_ok().add_font_override("font", load("res://Fonts/Text_font.tres"))
 	get_node(".").window_title = form
 	var formule = Json_reader.forms_data[form]
 	get_node("VBoxContainer/HBoxContainer/Cout").text = "Cout : " + formule[0]

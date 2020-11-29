@@ -83,6 +83,22 @@ func display_team(id):
 	get_node("Content/HBoxContainer/ExportButton").disconnect("pressed", self, "export_test")
 	get_node("Content/HBoxContainer/ExportButton").connect("pressed", self, "export_list", [id])
 	
+func display_list_type_profil(categorie, list, cat_list, hide):
+	var node = get_node("Content/Content Holder/Profils/DiplayList")
+	var label = Label.new()
+	label.text = categorie
+	label.add_font_override("font", load("res://Fonts/Text_font.tres"))
+	node.add_child(label)
+#	--- Ajoute tout les héros de la faction correspondante ---	
+	for p in list:
+		var profil = Profil.instance().init(p, hide)
+		profil.name = p["Imgs"]
+		profil.find_node("Add").connect("pressed", self, "add_to_team", [profil])
+		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [profil])
+		node.add_child(profil)
+		profil.resize_self(node.rect_size)
+		cat_list.append(profil)
+	
 func refresh_profils_list(list, hide=false):
 	get_node("Content/Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
 	get_node("Content/Content Holder/HBoxContainer/alchis").disconnect("toggled", self, "display_list")
@@ -98,47 +114,10 @@ func refresh_profils_list(list, hide=false):
 		node.remove_child(n)
 		n.queue_free()
 		
-	var hero_label = Label.new()
-	hero_label.text = "Héros"
-	hero_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
-	node.add_child(hero_label)
-#	--- Ajoute tout les héros de la faction correspondante ---	
-	for p in lists[0]:
-		var profil = Profil.instance().init(p, hide)
-		profil.name = p["Imgs"]
-		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
-		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
-		node.add_child(profil)
-		profil.resize_self(node.rect_size)
-		list_hero.append(profil)
-		
-	var alchi_label = Label.new()
-	alchi_label.text = "Alchimistes"
-	alchi_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
-	node.add_child(alchi_label)
-#	--- Ajoute tout les alchimistes et héros de la faction correspondante ---	
-	for p in lists[1]:
-		var profil = Profil.instance().init(p, hide)
-		profil.name = p["Imgs"]
-		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
-		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
-		node.add_child(profil)
-		profil.resize_self(node.rect_size)
-		list_alchi.append(profil)
-		
-	var troupe_label = Label.new()
-	troupe_label.text = "Troupes"
-	troupe_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
-	node.add_child(troupe_label)
-#	--- Ajoute toutes les troupes de la faction correspondante ---	
-	for p in lists[2]:
-		var profil = Profil.instance().init(p, hide)
-		profil.name = p["Imgs"]
-		profil.find_node("Add").connect("pressed", self, "add_to_team", [p, profil])
-		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [p, profil])
-		node.add_child(profil)
-		profil.resize_self(node.rect_size)
-		list_tpe.append(profil)
+	display_list_type_profil("Héros", lists[0], list_hero, hide)
+	display_list_type_profil("Alchimistes", lists[1], list_alchi, hide)
+	display_list_type_profil("Troupes", lists[2], list_tpe, hide)
+	
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
@@ -166,7 +145,7 @@ func _on_ProgressBar_value_changed(value):
 	get_node("Content/Content Holder/ProgressBar/Label").text = str(value) + "/" + str(maxPts)
 	must_save()
 	
-func add_to_team(p, node):
+func add_to_team(node):
 	var res = Team_handler.add_to_team(maxPts, currentPTS, get_node("Content/Faction").text, Team, node)
 	if typeof(res) == TYPE_STRING:
 		show_message("Ajout impossible", res)
@@ -192,10 +171,9 @@ func add_to_team(p, node):
 			var new_max = qty + node_modified.get_max()
 			node_modified.set_max(new_max)
 			node_modified.manage_recruitement(node_modified.get_recuitement())
-
 	must_save()
 	
-func remove_from_team(p, node):
+func remove_from_team(node):
 #	print("removing " + node.profil["Nom"])
 	var res = Team_handler.remove_from_team(currentPTS, Team, node)
 	Team = res[0]
@@ -288,8 +266,7 @@ func import_confirmed():
 	var res = get_node("ExportImport").import_list(list)
 #	print(res)
 	if typeof(res) == TYPE_STRING:
-		get_node("OverWriteDialog").popup_centered()
-		get_node("OverWriteDialog").dialog_text = res
+		show_message("Erreur lors d'imortation", res)
 		return
 		
 	var path = "user://" + nom + ".json"

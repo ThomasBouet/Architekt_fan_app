@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Liste.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Titre_font_70px.tres" type="DynamicFont" id=2]
@@ -11,6 +11,11 @@
 [ext_resource path="res://Sprites/UI/export.svg" type="Texture" id=9]
 [ext_resource path="res://Sprites/UI/import.svg" type="Texture" id=10]
 [ext_resource path="res://Scripts/exp_and_imp.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/ImportDialog.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/SaveDialoge.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/AccepSuppressiontDialog.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/ExportDialog.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/OverWriteDialog.gd" type="Script" id=16]
 
 [node name="Root" type="Control"]
 anchor_right = 1.0
@@ -282,7 +287,9 @@ margin_left = 104.0
 margin_top = -72.0
 margin_right = 199.0
 margin_bottom = -14.0
+popup_exclusive = true
 window_title = "Alerte !"
+script = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -295,6 +302,7 @@ margin_right = 199.0
 margin_bottom = -102.0
 popup_exclusive = true
 window_title = "Export"
+script = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -307,6 +315,7 @@ margin_right = 560.0
 margin_bottom = -104.0
 popup_exclusive = true
 window_title = "Import"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -365,6 +374,7 @@ margin_right = 358.0
 margin_bottom = -14.0
 popup_exclusive = true
 window_title = "Suppression"
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -377,6 +387,7 @@ margin_right = 511.0
 margin_bottom = -14.0
 popup_exclusive = true
 window_title = "Enregistrement"
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
