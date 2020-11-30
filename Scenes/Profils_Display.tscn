@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
@@ -10,6 +10,22 @@
 [ext_resource path="res://Sprites/UI/floppy-disk.svg" type="Texture" id=8]
 [ext_resource path="res://Scripts/Profil_Display.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/Cards_display.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Sprites/UI/factions/loge.svg" type="Texture" id=11]
+[ext_resource path="res://Sprites/UI/factions/sororite.svg" type="Texture" id=12]
+[ext_resource path="res://Sprites/UI/factions/avalon.svg" type="Texture" id=13]
+[ext_resource path="res://Sprites/UI/factions/auroch.svg" type="Texture" id=14]
+[ext_resource path="res://Sprites/UI/factions/naashti.svg" type="Texture" id=15]
+[ext_resource path="res://Sprites/UI/factions/cartel.svg" type="Texture" id=16]
+[ext_resource path="res://Sprites/UI/factions/khaliman.svg" type="Texture" id=17]
+[ext_resource path="res://Sprites/UI/factions/aurlok.svg" type="Texture" id=18]
+[ext_resource path="res://Sprites/UI/factions/utopie.svg" type="Texture" id=19]
+[ext_resource path="res://Sprites/UI/factions/temple.svg" type="Texture" id=20]
+[ext_resource path="res://Sprites/UI/factions/evades.svg" type="Texture" id=21]
+[ext_resource path="res://Sprites/UI/factions/cobra.svg" type="Texture" id=22]
+[ext_resource path="res://Sprites/UI/factions/triade.svg" type="Texture" id=23]
+[ext_resource path="res://Sprites/UI/factions/sanctifies.svg" type="Texture" id=24]
+[ext_resource path="res://Sprites/UI/factions/walosi.svg" type="Texture" id=25]
+[ext_resource path="res://Sprites/UI/factions/rados.svg" type="Texture" id=26]
 
 [node name="Root" type="Control"]
 anchor_right = 1.0
@@ -216,15 +232,14 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Factions/HBoxContainer"]
-visible = false
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 952.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tous" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 52.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
@@ -235,134 +250,311 @@ __meta__ = {
 
 [node name="Aurlok" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 56.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 108.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Aurlok"
+icon = ExtResource( 18 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Aurlok"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.4, 0.2, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Waga" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 112.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 164.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Waga"
+icon = ExtResource( 14 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Waga"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.6, 0.4, 0.2, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Walosi" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 168.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 220.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Walosi"
+icon = ExtResource( 25 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Walosi"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.6, 0.4, 0.2, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Avalon" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 224.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 277.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Avalon"
+icon = ExtResource( 13 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Avalon"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0470588, 0.278431, 0.105882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sanctifiés" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 281.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 333.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Sanctifiés"
+icon = ExtResource( 24 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Sanctifiés"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0196078, 0.384314, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Temple" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 337.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 389.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Temple"
+icon = ExtResource( 20 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Temple"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0196078, 0.384314, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Cartel" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 393.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 445.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Cartel"
+icon = ExtResource( 16 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Cartel"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.572549, 0.129412, 0.0980392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Khaliman" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 449.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 502.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Khaliman"
+icon = ExtResource( 17 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Khaliman"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.760784, 0.403922, 0.027451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Evadés" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 506.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 558.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Evadés"
+icon = ExtResource( 21 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Evadés"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.745098, 0.541176, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sororité" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 562.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 614.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Sororité"
+icon = ExtResource( 12 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Sororité"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.745098, 0.541176, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Loge" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 618.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 670.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Loge"
+icon = ExtResource( 11 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Loge"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Naashti" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 674.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 727.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Naashti"
+icon = ExtResource( 15 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Naashti"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.435294, 0.192157, 0.521569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Rados" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 731.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 783.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Rados"
+icon = ExtResource( 26 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Rados"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.341176, 0.0392157, 0.0392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Triade de jade" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 787.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 839.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Triade de Jade"
+icon = ExtResource( 23 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Triade de jade"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0588235, 0.458824, 0.32549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Garde Cobra" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 843.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 895.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
 text = "Garde Cobra"
+icon = ExtResource( 22 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Garde Cobra"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.301961, 0.588235, 0.494118, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Utopie" type="Button" parent="Factions/HBoxContainer/VBoxContainer"]
 margin_top = 899.0
-margin_right = 217.0
+margin_right = 243.0
 margin_bottom = 952.0
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 7 )
-text = "Utopi"
+text = "Utopie"
+icon = ExtResource( 19 )
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="Factions/HBoxContainer/VBoxContainer/Utopie"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0823529, 0.580392, 0.603922, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="MenuButton" type="TextureButton" parent="Factions/HBoxContainer"]
-margin_right = 40.0
+margin_left = 247.0
+margin_right = 287.0
 margin_bottom = 952.0
 rect_min_size = Vector2( 40, 40 )
 mouse_filter = 1
