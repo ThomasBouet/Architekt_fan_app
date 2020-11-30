@@ -214,8 +214,8 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="Factions"]
 visible = false
 anchor_bottom = 1.0
-margin_right = 216.0
-margin_bottom = 2.0
+margin_right = 247.0
+margin_bottom = 2.00012
 mouse_filter = 1
 size_flags_vertical = 3
 color = Color( 0, 0, 0, 1 )

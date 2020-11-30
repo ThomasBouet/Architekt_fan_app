@@ -207,6 +207,3 @@ func _on_SpinBox_value_changed(value):
 	maxPts = int(value)
 	_on_ProgressBar_value_changed(get_node("Content Holder/ProgressBar").value)
 	
-
-
-
