@@ -54,37 +54,16 @@ anchor_bottom = 1.0
 margin_left = 24.0
 margin_top = 72.0
 margin_right = -24.0
-margin_bottom = -86.0
+margin_bottom = -128.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ImportButton" type="Button" parent="Content"]
-margin_right = 528.0
-margin_bottom = 43.0
-size_flags_horizontal = 3
-custom_fonts/font = ExtResource( 4 )
-text = "Importer"
-icon = ExtResource( 10 )
-flat = true
-expand_icon = true
-
-[node name="ColorRect" type="ColorRect" parent="Content/ImportButton"]
-show_behind_parent = true
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-color = Color( 0.572549, 0.380392, 0.380392, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="MenuButton" type="MenuButton" parent="Content"]
-margin_top = 47.0
 margin_right = 528.0
-margin_bottom = 90.0
+margin_bottom = 38.0
 custom_fonts/font = ExtResource( 4 )
 text = "Sélectionner la liste à afficher"
 flat = false
@@ -281,6 +260,35 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ImportButton" type="Button" parent="."]
+anchor_top = 1.008
+anchor_right = 1.0
+anchor_bottom = 1.008
+margin_left = 24.0
+margin_top = -127.192
+margin_right = -24.0
+margin_bottom = -89.192
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 4 )
+text = "Importer"
+icon = ExtResource( 10 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ImportButton"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+color = Color( 0.572549, 0.380392, 0.380392, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="OverWriteDialog" type="AcceptDialog" parent="."]
 visible = true
 margin_left = 104.0
@@ -331,14 +339,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="ImportDialog/VBoxContainer"]
+[node name="Label2" type="Label" parent="ImportDialog/VBoxContainer"]
 margin_right = 304.0
-margin_bottom = 37.0
+margin_bottom = 32.0
 custom_fonts/font = ExtResource( 4 )
-text = "Liste"
+text = "Nom de la Liste"
 
-[node name="Liste" type="LineEdit" parent="ImportDialog/VBoxContainer"]
-margin_top = 41.0
+[node name="ListName" type="LineEdit" parent="ImportDialog/VBoxContainer"]
+margin_top = 36.0
 margin_right = 304.0
 margin_bottom = 120.0
 size_flags_horizontal = 3
@@ -348,15 +356,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="ImportDialog/VBoxContainer"]
+[node name="Label" type="Label" parent="ImportDialog/VBoxContainer"]
 margin_top = 124.0
 margin_right = 304.0
-margin_bottom = 161.0
+margin_bottom = 156.0
 custom_fonts/font = ExtResource( 4 )
-text = "Nom de la Liste"
+text = "Code de la Liste"
 
-[node name="ListName" type="LineEdit" parent="ImportDialog/VBoxContainer"]
-margin_top = 165.0
+[node name="Liste" type="LineEdit" parent="ImportDialog/VBoxContainer"]
+margin_top = 160.0
 margin_right = 304.0
 margin_bottom = 244.0
 size_flags_horizontal = 3
@@ -400,6 +408,6 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 margin_top = -72.0
 margin_bottom = 0.0
-[connection signal="pressed" from="Content/ImportButton" to="." method="_on_ImportButton_pressed"]
 [connection signal="value_changed" from="Content/Content Holder/HBoxContainer2/SpinBox" to="." method="_on_SpinBox_value_changed"]
 [connection signal="value_changed" from="Content/Content Holder/ProgressBar" to="." method="_on_ProgressBar_value_changed"]
+[connection signal="pressed" from="ImportButton" to="." method="_on_ImportButton_pressed"]

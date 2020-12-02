@@ -107,6 +107,8 @@ func _on_Tous_pressed():
 	get_node("Content Holder/Panel").visible = false
 	get_node("Content Holder/ProgressBar").visible = false
 	get_node("Content Holder/HBoxContainer2").visible = false
+	get_node("Content Holder/HBoxContainer").visible = true
+	get_node("Content Holder/LineEdit").visible = true
 	refresh_profils_list(Json_reader.load_all_factions(), true, true)
 	move_menu()
 	
@@ -121,6 +123,8 @@ func _change_faction(faction):
 	get_node("Content Holder/ProgressBar").visible = true
 	get_node("Content Holder/ProgressBar").value = currentPTS
 	get_node("Content Holder/HBoxContainer2").visible = true
+	get_node("Content Holder/HBoxContainer").visible = false
+	get_node("Content Holder/LineEdit").visible = false
 	refresh_profils_list(Json_reader.profils_data[faction])
 	move_menu()
 	
@@ -204,6 +208,9 @@ func _on_LineEdit_text_changed(search_clue):
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
 	
 func _on_SpinBox_value_changed(value):
+	if Team_handler.get_nb_heros(Team) > 1 and maxPts <= 200:
+		show_message("Problème", "Réduction de la limite de recrutement impossible.\nPour changer la limlite veuillez d'abords retirez un des héros de votre liste.")
+		return
 	maxPts = int(value)
 	_on_ProgressBar_value_changed(get_node("Content Holder/ProgressBar").value)
 	

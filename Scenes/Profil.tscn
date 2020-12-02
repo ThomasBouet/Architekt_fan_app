@@ -1,12 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Text_font_18px.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scenes/Cards_display.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Comptence_dialog.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Formule_Dialog.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Fonts/Rubik/Rubik-VariableFont_wght.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 28
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 8 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -44,23 +56,10 @@ __meta__ = {
 anchor_left = 0.111
 anchor_right = 0.778
 margin_left = 0.0639992
-margin_top = 34.268
+margin_top = 40.268
 margin_right = -0.128021
-margin_bottom = 57.268
+margin_bottom = 63.268
 mouse_filter = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PA" type="Label" parent="Infos"]
-margin_left = 40.0
-margin_top = -2.0
-margin_right = 80.0
-margin_bottom = 22.0
-custom_fonts/font = ExtResource( 2 )
-text = "4"
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -69,8 +68,47 @@ __meta__ = {
 margin_top = -2.0
 margin_right = 40.0
 margin_bottom = 22.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "PA :"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PA" type="Label" parent="Infos"]
+margin_left = 40.0
+margin_top = -2.268
+margin_right = 80.0
+margin_bottom = 21.732
+custom_fonts/font = SubResource( 1 )
+text = "4"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_pts" type="Label" parent="Infos"]
+margin_left = 80.0
+margin_top = -2.0
+margin_right = 120.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 1 )
+text = "Pts :"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cout" type="Label" parent="Infos"]
+margin_left = 120.0
+margin_top = -2.0
+margin_right = 160.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 1 )
+text = "40"
 align = 1
 valign = 1
 __meta__ = {
@@ -83,7 +121,7 @@ margin_left = 208.0
 margin_top = -2.0
 margin_right = 248.0
 margin_bottom = 22.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 1
 valign = 1
@@ -97,34 +135,8 @@ margin_left = 160.0
 margin_top = -2.0
 margin_right = 209.0
 margin_bottom = 22.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Max :"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Cout" type="Label" parent="Infos"]
-margin_left = 120.0
-margin_top = -2.0
-margin_right = 160.0
-margin_bottom = 22.0
-custom_fonts/font = ExtResource( 2 )
-text = "40"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="_pts" type="Label" parent="Infos"]
-margin_left = 80.0
-margin_top = -2.0
-margin_right = 120.0
-margin_bottom = 22.0
-custom_fonts/font = ExtResource( 2 )
-text = "Pts :"
 align = 1
 valign = 1
 __meta__ = {
@@ -144,15 +156,15 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Nom"]
 anchor_left = 0.142714
-anchor_right = 1.0
+anchor_right = 0.804
 anchor_bottom = 1.067
-margin_left = 0.0639954
+margin_left = 0.0641403
 margin_top = 8.0
-margin_right = -10.0639
-margin_bottom = -34.02
+margin_right = -0.191956
+margin_bottom = -31.288
 size_flags_horizontal = 3
 size_flags_vertical = 1
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = SubResource( 3 )
 text = "Connétable Lotharius du Temple des Vêpres"
 clip_text = true
 __meta__ = {
@@ -188,163 +200,139 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false
 anchor_right = 1.0
+margin_left = 16.0
 margin_top = 64.0
+margin_right = -16.0
 margin_bottom = 290.0
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Cara" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 576.0
-margin_bottom = 192.0
-rect_min_size = Vector2( 0, 192 )
+margin_right = 544.0
+margin_bottom = 29.0
+
+[node name="PA" type="Label" parent="VBoxContainer/Cara"]
+margin_right = 105.0
+margin_bottom = 29.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "PA : 9"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cara" type="Control" parent="VBoxContainer/Cara"]
-margin_right = 189.0
-margin_bottom = 192.0
-rect_min_size = Vector2( 0, 80 )
-mouse_filter = 2
+[node name="ESP" type="Label" parent="VBoxContainer/Cara"]
+margin_left = 109.0
+margin_right = 215.0
+margin_bottom = 29.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ESP" type="Label" parent="VBoxContainer/Cara/Cara"]
-margin_left = 48.0
-margin_top = 6.0
-margin_right = 88.0
-margin_bottom = 24.0
 custom_fonts/font = ExtResource( 2 )
-text = "ESP"
+text = "ESP : 8"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="COM" type="Label" parent="VBoxContainer/Cara/Cara"]
-margin_left = 88.0
-margin_top = 64.0
-margin_right = 128.0
-margin_bottom = 80.0
-custom_fonts/font = ExtResource( 2 )
-text = "COM"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="DEF" type="Label" parent="VBoxContainer/Cara/Cara"]
-margin_left = 48.0
-margin_top = 118.0
-margin_right = 88.0
-margin_bottom = 136.0
-custom_fonts/font = ExtResource( 2 )
-text = "DEF"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="REF" type="Label" parent="VBoxContainer/Cara/Cara"]
-margin_left = 8.0
-margin_top = 64.0
-margin_right = 48.0
-margin_bottom = 80.0
-custom_fonts/font = ExtResource( 2 )
-text = "REF"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PA" type="Label" parent="VBoxContainer/Cara/Cara"]
-margin_left = 48.0
-margin_top = 168.0
-margin_right = 88.0
-margin_bottom = 184.0
-custom_fonts/font = ExtResource( 2 )
-text = "PA"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PVSATK" type="Control" parent="VBoxContainer/Cara"]
-margin_left = 193.0
-margin_right = 382.0
-margin_bottom = 192.0
-rect_min_size = Vector2( 0, 100 )
-mouse_filter = 2
+[node name="COM" type="Label" parent="VBoxContainer/Cara"]
+margin_left = 219.0
+margin_right = 324.0
+margin_bottom = 29.0
 size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "COM : 8"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="PVS" type="Label" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = -56.0
-margin_top = 8.0
-margin_right = -16.0
-margin_bottom = 24.0
+[node name="DEF" type="Label" parent="VBoxContainer/Cara"]
+margin_left = 328.0
+margin_right = 434.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "DEF : 8"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="REF" type="Label" parent="VBoxContainer/Cara"]
+margin_left = 438.0
+margin_right = 544.0
+margin_bottom = 29.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "REF : 8"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PVSATK" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 33.0
+margin_right = 544.0
+margin_bottom = 161.0
+
+[node name="PVS" type="Label" parent="VBoxContainer/PVSATK"]
+margin_right = 544.0
+margin_bottom = 29.0
 custom_fonts/font = ExtResource( 2 )
 text = "PVS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MVT" type="Label" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = -56.0
-margin_top = 48.0
-margin_right = -16.0
-margin_bottom = 64.0
+[node name="MVT" type="Label" parent="VBoxContainer/PVSATK"]
+margin_top = 33.0
+margin_right = 544.0
+margin_bottom = 62.0
 custom_fonts/font = ExtResource( 2 )
 text = "MVT"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ATK" type="Label" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = -56.0
-margin_top = 128.0
-margin_right = -16.0
-margin_bottom = 144.0
+[node name="ATK" type="Label" parent="VBoxContainer/PVSATK"]
+margin_top = 66.0
+margin_right = 544.0
+margin_bottom = 95.0
 custom_fonts/font = ExtResource( 2 )
 text = "ATK"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TIR" type="RichTextLabel" parent="VBoxContainer/Cara/PVSATK"]
-margin_left = -56.0
-margin_top = 168.0
-margin_right = 95.0
-margin_bottom = 184.0
-mouse_filter = 2
-custom_fonts/normal_font = ExtResource( 2 )
+[node name="TIR" type="Label" parent="VBoxContainer/PVSATK"]
+margin_top = 99.0
+margin_right = 544.0
+margin_bottom = 128.0
+custom_fonts/font = ExtResource( 2 )
 text = "TIR"
-fit_content_height = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Cara"]
-margin_left = 386.0
-margin_right = 576.0
-margin_bottom = 192.0
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 165.0
+margin_right = 544.0
+margin_bottom = 295.0
 size_flags_horizontal = 3
 
-[node name="COMP" type="Control" parent="VBoxContainer/Cara/VBoxContainer"]
-margin_right = 190.0
-mouse_filter = 1
-
-[node name="COMP" type="Label" parent="VBoxContainer/Cara/VBoxContainer/COMP"]
-margin_left = -82.0
-margin_top = 8.0
-margin_right = 14.0
-margin_bottom = 24.0
+[node name="COMP" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_right = 544.0
+margin_bottom = 29.0
 custom_fonts/font = ExtResource( 2 )
 text = "Compétences :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Competence" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/COMP"]
-margin_left = -82.0
-margin_top = 24.0
-margin_right = 191.0
-margin_bottom = 96.0
+[node name="Competence" type="RichTextLabel" parent="VBoxContainer/VBoxContainer"]
+margin_top = 33.0
+margin_right = 544.0
+margin_bottom = 63.0
 mouse_filter = 1
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
@@ -353,28 +341,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SORT" type="Control" parent="VBoxContainer/Cara/VBoxContainer"]
-margin_top = 4.0
-margin_right = 190.0
-margin_bottom = 4.0
-mouse_filter = 1
-
-[node name="SORT" type="Label" parent="VBoxContainer/Cara/VBoxContainer/SORT"]
-margin_left = -82.0
-margin_top = 100.0
-margin_right = -14.0
-margin_bottom = 116.0
+[node name="FORM" type="Label" parent="VBoxContainer/VBoxContainer"]
+margin_top = 67.0
+margin_right = 544.0
+margin_bottom = 96.0
 custom_fonts/font = ExtResource( 2 )
 text = "Formules :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Formule" type="RichTextLabel" parent="VBoxContainer/Cara/VBoxContainer/SORT"]
-margin_left = -82.0
-margin_top = 116.0
-margin_right = 190.0
-margin_bottom = 188.0
+[node name="Formule" type="RichTextLabel" parent="VBoxContainer/VBoxContainer"]
+margin_top = 100.0
+margin_right = 544.0
+margin_bottom = 130.0
 mouse_filter = 1
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
@@ -383,15 +363,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 196.0
-margin_right = 576.0
-margin_bottom = 226.0
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.653
+anchor_right = 0.764
+margin_left = -0.128021
+margin_top = 8.0
+margin_right = -0.0640259
+margin_bottom = 56.0
 mouse_filter = 1
 size_flags_horizontal = 3
-custom_fonts/font = ExtResource( 6 )
-text = "Voir la carte"
+custom_fonts/font = SubResource( 2 )
+text = "Carte"
+clip_text = true
 expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Cards_Display" parent="." instance=ExtResource( 3 )]
 visible = true
@@ -414,6 +401,6 @@ margin_top = 268.0
 margin_right = -58.0
 margin_bottom = 580.0
 [connection signal="pressed" from="Nom" to="." method="_on_Nom_pressed"]
-[connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/COMP/Competence" to="." method="_on_Competence_meta_clicked"]
-[connection signal="meta_clicked" from="VBoxContainer/Cara/VBoxContainer/SORT/Formule" to="." method="_on_Formule_meta_clicked"]
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="meta_clicked" from="VBoxContainer/VBoxContainer/Competence" to="." method="_on_Competence_meta_clicked"]
+[connection signal="meta_clicked" from="VBoxContainer/VBoxContainer/Formule" to="." method="_on_Formule_meta_clicked"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

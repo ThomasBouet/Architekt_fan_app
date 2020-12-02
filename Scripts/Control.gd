@@ -10,25 +10,31 @@ func init(p, hide):
 	get_node("Infos/Cout").text = profil["Cout"]
 	get_node("Infos/Max").text = profil["Max"]
 	
-	get_node("VBoxContainer/Cara/Cara/COM").text = "COM : " + profil["Cbt"]
-	get_node("VBoxContainer/Cara/Cara/DEF").text = "DEF : " + profil["Def"]
-	get_node("VBoxContainer/Cara/Cara/ESP").text = "ESP : " + profil["Esp"]
-	get_node("VBoxContainer/Cara/Cara/REF").text = "REF : " + profil["Ref"]
-	get_node("VBoxContainer/Cara/Cara/PA").text = "PA : " + profil["PA"]
-	get_node("VBoxContainer/Cara/PVSATK/PVS").text = "Vie : " + profil["Vie"]
-	get_node("VBoxContainer/Cara/PVSATK/MVT").text = "Mvt : " + profil["Mvt"]
-	get_node("VBoxContainer/Cara/PVSATK/ATK").text = "Dégats : " + profil["Dmg"]
-	get_node("VBoxContainer/Cara/PVSATK/TIR").text = "Tir : " + profil["Tir"]
+	get_node("VBoxContainer/Cara/COM").text = "COM : " + profil["Cbt"]
+	get_node("VBoxContainer/Cara/DEF").text = "DEF : " + profil["Def"]
+	get_node("VBoxContainer/Cara/ESP").text = "ESP : " + profil["Esp"]
+	get_node("VBoxContainer/Cara/REF").text = "REF : " + profil["Ref"]
+	get_node("VBoxContainer/Cara/PA").text = "PA : " + profil["PA"]
+	get_node("VBoxContainer/PVSATK/PVS").text = "Vie : " + profil["Vie"]
+	get_node("VBoxContainer/PVSATK/MVT").text = "Mvt : " + profil["Mvt"]
+	get_node("VBoxContainer/PVSATK/ATK").text = "Dégats : " + profil["Dmg"]
+	
+	get_node("VBoxContainer/PVSATK/TIR").visible = !(profil["Tir"] == "-")
+	get_node("VBoxContainer/PVSATK/TIR").text = "Tir : " + profil["Tir"]
 	
 	var bb_str_comp = ""
 	for i in profil["Compétences"].split(","):
 		bb_str_comp += "[url=" + i + "]" + i + "[/url] " if i != "-" else ""
-	get_node("VBoxContainer/Cara/VBoxContainer/COMP/Competence").bbcode_text = bb_str_comp
+		if i == "-":
+			get_node("VBoxContainer/VBoxContainer/COMP").visible = false
+	get_node("VBoxContainer/VBoxContainer/Competence").bbcode_text = bb_str_comp
 	
 	var bb_str_form = ""
 	for i in profil["Formules"].split(","):
 		bb_str_form += "[url=" + i + "]" + i + "[/url] " if i != "-" else ""
-	get_node("VBoxContainer/Cara/VBoxContainer/SORT/Formule").bbcode_text = bb_str_form
+		if i == "-":
+			get_node("VBoxContainer/VBoxContainer/FORM").visible = false
+	get_node("VBoxContainer/VBoxContainer/Formule").bbcode_text = bb_str_form
 	
 	get_node("Remove").visible = false
 	
@@ -90,7 +96,7 @@ func set_max(i):
 	
 func resize_self(display_list_size):
 	var x = display_list_size.x
-	var y = 64 + 216
+	var y = get_node("ColorRect").rect_size.y + get_node("VBoxContainer").rect_size.y
 	if cara_displayed:
 		get_node(".").rect_min_size = Vector2(x, y)
 	else:

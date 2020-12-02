@@ -11,6 +11,7 @@ func init(formule):
 	get_node("VBoxContainer/HBoxContainer/Portee").text = "Portée : " + Json_reader.forms_data[formule][1]
 	get_node("VBoxContainer/HBoxContainer/Cible").text = "Cible : " + Json_reader.forms_data[formule][2]
 	get_node("VBoxContainer/Amélioration").text = form_split[1] if form_split.size() > 1 else ""
+	get_node("VBoxContainer/Amélio").visible = form_split.size() > 1
 	return self
 	
 func resize_self():

@@ -6,7 +6,6 @@
 [ext_resource path="res://Scripts/scenar_disp.gd" type="Script" id=4]
 [ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=5]
 
-
 [node name="Root" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -53,13 +52,14 @@ __meta__ = {
 
 [node name="LineEdit" type="LineEdit" parent="Content Holder"]
 margin_right = 528.0
-margin_bottom = 34.0
+margin_bottom = 39.0
 custom_fonts/font = ExtResource( 5 )
+placeholder_text = "Rechercher ..."
 caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="Scenars" type="ScrollContainer" parent="Content Holder"]
-margin_top = 38.0
+margin_top = 43.0
 margin_right = 528.0
 margin_bottom = 820.0
 mouse_filter = 1
@@ -71,7 +71,7 @@ __meta__ = {
 
 [node name="DisplayList" type="VBoxContainer" parent="Content Holder/Scenars"]
 margin_right = 528.0
-margin_bottom = 782.0
+margin_bottom = 777.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 

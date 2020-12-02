@@ -2,7 +2,6 @@ extends Control
 
 const Profil = preload("res://Scenes/Profil.tscn")
 var MenuOpen = false
-var hashero = false
 var maxPts = 180
 var currentPTS = 0
 var teams = Json_reader.get_team_saved()
@@ -22,6 +21,7 @@ func _ready():
 	fill_list_menu()
 	
 func fill_list_menu():
+	teams = Json_reader.get_team_saved()
 	for t in teams:
 		var nom = t.split(".json")[0]
 		get_node("Content/MenuButton").get_popup().add_item(nom)
@@ -57,16 +57,21 @@ func _on_AcceptSuppressionDialog_confirmed(id):
 func display_team(id):
 #	print(id)
 	cur_team = teams[id]
+	Team = []
+	currentPTS = 0
 	var infos_team = Json_reader.get_team(cur_team)
-#	var team_max = infos_team[0]
+	var team_max = infos_team[0]
 	var team_faction = infos_team[1]
 	var team_members = infos_team[2]
 	
+	maxPts = team_max
 	get_node("Content/Faction").visible = true
 	get_node("Content/Faction").text = team_faction
 	get_node("Content/Content Holder/Panel").visible = true
 	get_node("Content/Content Holder/Panel").resize_self()
 	get_node("Content/Content Holder/ProgressBar").visible = true
+	get_node("Content/Content Holder/ProgressBar").max_value = team_max
+	get_node("Content/Content Holder/HBoxContainer2/SpinBox").value = team_max
 	get_node("Content/Content Holder").visible = true
 	get_node("Content/HBoxContainer").visible = true
 	get_node("Content/HBoxContainer/DeleteButton").visible = true
@@ -131,9 +136,9 @@ func recreate_list(list):
 	var hero = null
 	for p in list:
 		if p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
-			hero = p
-	get_node("Content/Content Holder/Profils/DiplayList/" + hero["Imgs"]).find_node("Add").emit_signal("pressed")
-	list.erase(hero)
+			get_node("Content/Content Holder/Profils/DiplayList/" + p["Imgs"]).find_node("Add").emit_signal("pressed")
+			list.erase(p)
+#	print(list)
 	for p in list:
 		get_node("Content/Content Holder/Profils/DiplayList/" + p["Imgs"]).find_node("Add").emit_signal("pressed")
 	
@@ -239,6 +244,7 @@ func save_changes(id):
 		var team_stored = [maxPts, get_node("Content/Faction").text, Team]
 		file.store_string(to_json(team_stored))
 		file.close()
+		must_save()
 	else:
 		show_message("Problème d'enregistrement", "La liste n'existe pas o_O ?")
 		
@@ -277,6 +283,8 @@ func import_confirmed():
 		file.open(path, File.WRITE)
 		file.store_string(to_json(res))
 		file.close()
+		get_node("Content/MenuButton").get_popup().clear()
+		fill_list_menu()
 	
 func _on_SpinBox_value_changed(value):
 	maxPts = int(value)

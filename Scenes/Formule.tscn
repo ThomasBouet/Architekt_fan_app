@@ -60,30 +60,32 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false
 anchor_right = 1.0
+margin_left = 16.0
 margin_top = 64.0
+margin_right = -16.0
 margin_bottom = 304.0
+size_flags_horizontal = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 576.0
-margin_bottom = 14.0
+margin_right = 544.0
+margin_bottom = 32.0
 alignment = 1
 
 [node name="Cout" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_right = 189.0
-margin_bottom = 14.0
+margin_right = 178.0
+margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
 text = "Cout : "
-align = 1
 valign = 1
 
 [node name="Portee" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 193.0
-margin_right = 382.0
-margin_bottom = 14.0
+margin_left = 182.0
+margin_right = 361.0
+margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
 text = "Portee : "
@@ -91,9 +93,9 @@ align = 1
 valign = 1
 
 [node name="Cible" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 386.0
-margin_right = 576.0
-margin_bottom = 14.0
+margin_left = 365.0
+margin_right = 544.0
+margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
 text = "Cible : "
@@ -101,9 +103,9 @@ align = 1
 valign = 1
 
 [node name="Desc" type="Label" parent="VBoxContainer"]
-margin_top = 18.0
-margin_right = 576.0
-margin_bottom = 32.0
+margin_top = 36.0
+margin_right = 544.0
+margin_bottom = 68.0
 custom_fonts/font = ExtResource( 3 )
 text = "Description :"
 __meta__ = {
@@ -111,9 +113,9 @@ __meta__ = {
 }
 
 [node name="Description" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 36.0
-margin_right = 576.0
-margin_bottom = 127.0
+margin_top = 72.0
+margin_right = 544.0
+margin_bottom = 136.0
 mouse_filter = 1
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 4 )
@@ -124,9 +126,9 @@ __meta__ = {
 }
 
 [node name="Amélio" type="Label" parent="VBoxContainer"]
-margin_top = 131.0
-margin_right = 576.0
-margin_bottom = 145.0
+margin_top = 140.0
+margin_right = 544.0
+margin_bottom = 172.0
 custom_fonts/font = ExtResource( 3 )
 text = "Améliorations :"
 __meta__ = {
@@ -134,8 +136,8 @@ __meta__ = {
 }
 
 [node name="Amélioration" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 149.0
-margin_right = 576.0
+margin_top = 176.0
+margin_right = 544.0
 margin_bottom = 240.0
 mouse_filter = 2
 size_flags_vertical = 3

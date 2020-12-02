@@ -57,7 +57,9 @@ __meta__ = {
 [node name="Description" type="RichTextLabel" parent="."]
 visible = false
 anchor_right = 1.0
+margin_left = 16.0
 margin_top = 64.0
+margin_right = -16.0
 margin_bottom = 79.0
 mouse_filter = 1
 size_flags_vertical = 3
@@ -69,5 +71,10 @@ __meta__ = {
 }
 
 [node name="Competence_Dialog" parent="." instance=ExtResource( 2 )]
+visible = true
+margin_left = -192.0
+margin_top = -384.0
+margin_right = 382.0
+margin_bottom = -13.0
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="meta_clicked" from="Description" to="." method="_on_Description_meta_clicked"]
