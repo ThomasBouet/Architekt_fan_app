@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Json_reader="*res://Scripts/json.gd"
 Team_handler="*res://Scripts/Team_handler.gd"
+ResourceQueue="*res://Scripts/resource_queue.gd"
 
 [display]
 

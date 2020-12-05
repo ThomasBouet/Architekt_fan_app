@@ -5,10 +5,10 @@ var cara_displayed = false
 
 func init(p, hide):
 	profil = p	
-	get_node("Nom/Label").text = profil["Nom"]
-	get_node("Infos/PA").text = profil["PA"]
-	get_node("Infos/Cout").text = profil["Cout"]
-	get_node("Infos/Max").text = profil["Max"]
+	get_node("HBoxContainer/Nom/Label").text = profil["Nom"]
+	get_node("HBoxContainer/Nom/Infos/PA").text = profil["PA"]
+	get_node("HBoxContainer/Nom/Infos/Cout").text = profil["Cout"]
+	get_node("HBoxContainer/Nom/Infos/Max").text = profil["Max"]
 	
 	get_node("VBoxContainer/Cara/COM").text = "COM : " + profil["Cbt"]
 	get_node("VBoxContainer/Cara/DEF").text = "DEF : " + profil["Def"]
@@ -36,56 +36,56 @@ func init(p, hide):
 			get_node("VBoxContainer/VBoxContainer/FORM").visible = false
 	get_node("VBoxContainer/VBoxContainer/Formule").bbcode_text = bb_str_form
 	
-	get_node("Remove").visible = false
+	get_node("HBoxContainer/Remove").visible = false
 	
 	if profil["Type"] == "Troupe":
-		get_node("TextureRect").texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
+		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
 		get_node("ColorRect").color = "#7d653d"
 	elif profil["Type"] == "Héro" or profil["Type"] == "Héro/Alchimiste":
-		get_node("TextureRect").texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
+		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
 		get_node("ColorRect").color = "#551a1a"
 	elif profil["Type"] == "Alchimiste":
-		get_node("TextureRect").texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
+		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
 		get_node("ColorRect").color = "#26621a"
 	elif profil["Type"] == "Spécial":
-		get_node("TextureRect").texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
+		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
 		get_node("ColorRect").color = "#3d777d"
 		
-	get_node("Infos/Max").text = "0" 
+	get_node("HBoxContainer/Nom/Infos/Max").text = "0" 
 	
 	if profil["Max"] == "0" or hide:
-			get_node("Add").visible = false
-			get_node("Infos/Max").visible = false
-			get_node("Infos/_max2").visible = false
+			get_node("HBoxContainer/Add").visible = false
+			get_node("HBoxContainer/Nom/Infos/Max").visible = false
+			get_node("HBoxContainer/Nom/Infos/_max2").visible = false
 			
 	return self
 	
 func manage_recruitement(r):
-	get_node("Infos/Max").text = str(r)
+	get_node("HBoxContainer/Nom/Infos/Max").text = str(r)
 	var p_max = int(profil["Max"])
 	if r == p_max:
-		get_node("Infos/_max2").visible = true
-		get_node("Remove").visible = true
-		get_node("Add").visible = false
-		get_node("Infos/Max").visible = true
+		get_node("HBoxContainer/Nom/Infos/_max2").visible = true
+		get_node("HBoxContainer/Remove").visible = true
+		get_node("HBoxContainer/Add").visible = false
+		get_node("HBoxContainer/Nom/Infos/Max").visible = true
 	if r < p_max and r > 0:
-		get_node("Infos/Max").visible = true
-		get_node("Infos/_max2").visible = false
-		get_node("Add").visible = true
-		get_node("Remove").visible = true
+		get_node("HBoxContainer/Nom/Infos/Max").visible = true
+		get_node("HBoxContainer/Nom/Infos/_max2").visible = false
+		get_node("HBoxContainer/Add").visible = true
+		get_node("HBoxContainer/Remove").visible = true
 	if r <= 0 and p_max > 0:
-		get_node("Infos/Max").visible = false
-		get_node("Infos/_max2").visible = false
-		get_node("Remove").visible = false
-		get_node("Add").visible = true
+		get_node("HBoxContainer/Nom/Infos/Max").visible = false
+		get_node("HBoxContainer/Nom/Infos/_max2").visible = false
+		get_node("HBoxContainer/Remove").visible = false
+		get_node("HBoxContainer/Add").visible = true
 	if r <= 0 and p_max <= 0:
-		get_node("Infos/Max").visible = false
-		get_node("Infos/_max2").visible = false
-		get_node("Remove").visible = false
-		get_node("Add").visible = false
+		get_node("HBoxContainer/Nom/Infos/Max").visible = false
+		get_node("HBoxContainer/Nom/Infos/_max2").visible = false
+		get_node("HBoxContainer/Remove").visible = false
+		get_node("HBoxContainer/Add").visible = false
 	
 func get_recuitement():
-	return int(get_node("Infos/Max").text)
+	return int(get_node("HBoxContainer/Nom/Infos/Max").text)
 	
 func get_max():
 	return int(profil["Max"])

@@ -42,7 +42,8 @@ anchor_bottom = 0.996
 margin_left = 24.0
 margin_top = 118.0
 margin_right = -22.272
-margin_bottom = -77.904
+margin_bottom = -75.904
+custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -59,9 +60,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Content Holder"]
-margin_top = 43.0
+margin_top = 49.0
 margin_right = 528.0
-margin_bottom = 80.0
+margin_bottom = 86.0
 
 [node name="Compe_check" type="CheckBox" parent="Content Holder/HBoxContainer"]
 margin_right = 262.0
@@ -81,10 +82,10 @@ pressed = true
 text = "Formules"
 
 [node name="Comp" type="ScrollContainer" parent="Content Holder"]
-margin_top = 84.0
+margin_top = 96.0
 margin_right = 528.0
-margin_bottom = 834.0
-rect_min_size = Vector2( 528, 750 )
+margin_bottom = 826.0
+rect_min_size = Vector2( 528, 730 )
 mouse_filter = 1
 size_flags_vertical = 3
 follow_focus = true
@@ -94,7 +95,7 @@ __meta__ = {
 
 [node name="DiplayList" type="VBoxContainer" parent="Content Holder/Comp"]
 margin_right = 528.0
-margin_bottom = 750.0
+margin_bottom = 730.0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -103,8 +104,5 @@ __meta__ = {
 }
 
 [node name="Menu_Commun" parent="." instance=ExtResource( 4 )]
-anchor_top = 1.0
-anchor_bottom = 1.0
 margin_top = -72.0001
-margin_bottom = 0.0
 [connection signal="text_changed" from="Content Holder/LineEdit" to="." method="_on_LineEdit_text_changed"]

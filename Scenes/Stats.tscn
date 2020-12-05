@@ -8,6 +8,7 @@
 anchor_right = 1.0
 margin_bottom = 192.0
 rect_min_size = Vector2( 528, 171 )
+size_flags_vertical = 0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -193,12 +194,12 @@ __meta__ = {
 [node name="Dmg" type="Label" parent="Panel"]
 anchor_left = 0.028
 anchor_right = 0.167
-margin_left = -0.128
+margin_left = 0.348
 margin_top = 85.0
-margin_right = -0.192009
+margin_right = 0.283989
 margin_bottom = 114.0
 custom_fonts/font = ExtResource( 3 )
-text = "Dégats"
+text = "Dégats :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -211,7 +212,7 @@ margin_top = 85.0
 margin_right = -12.936
 margin_bottom = 114.0
 custom_fonts/font = ExtResource( 3 )
-text = "Tir"
+text = "Tir :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -267,12 +268,12 @@ __meta__ = {
 [node name="Mvt" type="Label" parent="Panel"]
 anchor_left = 0.028
 anchor_right = 0.099
-margin_left = -0.128
+margin_left = 0.348
 margin_top = 45.0
-margin_right = -0.0240021
+margin_right = 8.659
 margin_bottom = 74.0
 custom_fonts/font = ExtResource( 3 )
-text = "Mvt"
+text = "Mvt :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -280,12 +281,12 @@ __meta__ = {
 [node name="PVs" type="Label" parent="Panel"]
 anchor_left = 0.556
 anchor_right = 0.628
-margin_left = -13.256
+margin_left = -12.804
 margin_top = 45.0
-margin_right = -11.504
+margin_right = -7.052
 margin_bottom = 74.0
 custom_fonts/font = ExtResource( 3 )
-text = "PVs"
+text = "PVs :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
