@@ -2,22 +2,13 @@ extends Control
 
 const Profil = preload("res://Scenes/Profil.tscn")
 var MenuOpen = false
-var maxPts = 180
-var currentPTS = 0
 var teams = Json_reader.get_team_saved()
 var cur_team = []
-var Team = []
-var list_hero = []
-var list_alchi = []
-var list_tpe = []
+
 
 func _ready():
 	get_node("MesListes").text = "Mes Listes"
-	get_node("Content/Content Holder/Panel").init()
-	get_node("Content/Content Holder/Panel").visible = false
-	get_node("Content/Content Holder/ProgressBar").visible = false
-	
-	get_node("AccepSuppressiontDialog").add_cancel("Annuler")
+	get_node("Content/Profils_list_display").connect("save", self, "_on_save")
 	fill_list_menu()
 	
 func fill_list_menu():
@@ -28,19 +19,16 @@ func fill_list_menu():
 	get_node("Content/MenuButton").get_popup().connect("id_pressed", self, "display_team")
 	
 func _on_Delete_pressed(id):
-	get_node("AccepSuppressiontDialog").dialog_text = "Etes vous sur de vouloir supprimer l'équipe " + teams[id].split(".json")[0] + "?"
-	get_node("AccepSuppressiontDialog").popup_centered()
-	get_node("AccepSuppressiontDialog").connect("confirmed", self, "_on_AcceptSuppressionDialog_confirmed", [id])
+	var node = get_node("ConfirmDialog")
+	node.show_dialog("Suppression", "Etes vous sur de vouloir supprimer l'équipe " + teams[id].split(".json")[0] + "?")
+	node.connect("confirmed", self, "_on_AcceptSuppressionDialog_confirmed", [id], CONNECT_ONESHOT)
 	
 func clean_list_diplay():
-	var node = get_node("Content/Content Holder/Profils/DiplayList")
+	var node = get_node("Content/Profils_list_display/Profils/DiplayList")
 #	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
 	for n in node.get_children():
 		node.remove_child(n)
 		n.queue_free()
-		
-	get_node("Content/Content Holder/Panel").visible = false
-	get_node("Content/Content Holder/ProgressBar").visible = false
 	
 func _on_AcceptSuppressionDialog_confirmed(id):
 	var nom = teams[id]
@@ -49,36 +37,37 @@ func _on_AcceptSuppressionDialog_confirmed(id):
 	clean_list_diplay()
 	var dir = Directory.new()
 	dir.remove("user://" + nom)
-	
+
 	fill_list_menu()
 	get_node("Content/Faction").text = ""
-	get_node("Delete").visible = false
+	get_node("Content/HBoxContainer").visible = false
+	get_node("Content/Profils_list_display/").reset_para()
 	
 func display_team(id):
+	get_node("Loading_animation").loading()
 #	print(id)
+	var node = get_node("Content/Profils_list_display")
+	node.reset_para()
+	
 	cur_team = teams[id]
-	Team = []
-	currentPTS = 0
 	var infos_team = Json_reader.get_team(cur_team)
 	var team_max = infos_team[0]
 	var team_faction = infos_team[1]
 	var team_members = infos_team[2]
 	
-	maxPts = team_max
+	node.set_maxPts(team_max)
+	
 	get_node("Content/Faction").visible = true
 	get_node("Content/Faction").text = team_faction
-	get_node("Content/Content Holder/Panel").visible = true
-	get_node("Content/Content Holder/Panel").resize_self()
-	get_node("Content/Content Holder/ProgressBar").visible = true
-	get_node("Content/Content Holder/ProgressBar").max_value = team_max
-	get_node("Content/Content Holder/HBoxContainer2/SpinBox").value = team_max
-	get_node("Content/Content Holder").visible = true
+	get_node("Content/Profils_list_display/ProgressBar").max_value = team_max
+	get_node("Content/Profils_list_display/HBoxContainer2/SpinBox").value = team_max
+	node.visible = true
 	get_node("Content/HBoxContainer").visible = true
 	get_node("Content/HBoxContainer/DeleteButton").visible = true
 	get_node("Content/HBoxContainer/DeleteButton").disconnect("pressed", self, "_on_Delete_pressed")
 	get_node("Content/HBoxContainer/DeleteButton").connect("pressed", self, "_on_Delete_pressed", [id])
 	
-	refresh_profils_list(Json_reader.profils_data[team_faction])
+	node.change_faction(team_faction)
 	recreate_list(team_members)
 	
 	get_node("Content/HBoxContainer/SaveButton").disconnect("pressed", self, "save")
@@ -87,179 +76,67 @@ func display_team(id):
 	get_node("Content/HBoxContainer/ExportButton").visible = true
 	get_node("Content/HBoxContainer/ExportButton").disconnect("pressed", self, "export_test")
 	get_node("Content/HBoxContainer/ExportButton").connect("pressed", self, "export_list", [id])
-	
-func display_list_type_profil(categorie, list, cat_list, hide):
-	var node = get_node("Content/Content Holder/Profils/DiplayList")
-	var label = Label.new()
-	label.text = categorie
-	label.add_font_override("font", load("res://Fonts/Text_font.tres"))
-	node.add_child(label)
-#	--- Ajoute tout les héros de la faction correspondante ---	
-	for p in list:
-		var profil = Profil.instance().init(p, hide)
-		profil.name = p["Imgs"]
-		profil.find_node("Add").connect("pressed", self, "add_to_team", [profil])
-		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [profil])
-		node.add_child(profil)
-		profil.resize_self(node.rect_size)
-		cat_list.append(profil)
-	
-func refresh_profils_list(list, hide=false):
-	get_node("Content/Content Holder/HBoxContainer/heros").disconnect("toggled", self, "display_list")
-	get_node("Content/Content Holder/HBoxContainer/alchis").disconnect("toggled", self, "display_list")
-	get_node("Content/Content Holder/HBoxContainer/troupes").disconnect("toggled", self, "display_list")
 
-	list_hero = []
-	list_alchi = []
-	list_tpe = []
-	var lists = Json_reader.get_list_for_each_type(list)
-	var node = get_node("Content/Content Holder/Profils/DiplayList")
-#	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
-	for n in node.get_children():
-		node.remove_child(n)
-		n.queue_free()
-		
-	display_list_type_profil("Héros", lists[0], list_hero, hide)
-	display_list_type_profil("Alchimistes", lists[1], list_alchi, hide)
-	display_list_type_profil("Troupes", lists[2], list_tpe, hide)
-	
-#	--- solution dégueue mais ça marche ---
-	var c = Control.new()
-	c.rect_min_size = Vector2(0,0)
-	node.add_child(c)
-	
-	get_node("Content/Content Holder/HBoxContainer/heros").connect("toggled", self, "display_list", [list_hero])
-	get_node("Content/Content Holder/HBoxContainer/alchis").connect("toggled", self, "display_list", [list_alchi])
-	get_node("Content/Content Holder/HBoxContainer/troupes").connect("toggled", self, "display_list", [list_tpe])
+	get_node("Loading_animation").hide_loading()
 	
 func recreate_list(list):
-	var hero = null
 	for p in list:
 		if p["Type"] == "Héro" or p["Type"] == "Héro/Alchimiste":
-			get_node("Content/Content Holder/Profils/DiplayList/" + p["Imgs"]).find_node("Add").emit_signal("pressed")
+			get_node("Content/Profils_list_display/Profils/DiplayList/" + p["Imgs"]).find_node("Add").emit_signal("pressed")
 			list.erase(p)
 #	print(list)
 	for p in list:
-		get_node("Content/Content Holder/Profils/DiplayList/" + p["Imgs"]).find_node("Add").emit_signal("pressed")
+		get_node("Content/Profils_list_display/Profils/DiplayList/" + p["Imgs"]).find_node("Add").emit_signal("pressed")
 	
 func display_list(boolean, list):
 	for i in list:
 		i.visible = boolean
 	
-func _on_ProgressBar_value_changed(value):
-	get_node("Content/Content Holder/ProgressBar/Label").text = str(value) + "/" + str(maxPts)
+func _on_save(_value):
 	must_save()
-	
-func add_to_team(node):
-	var res = Team_handler.add_to_team(maxPts, currentPTS, get_node("Content/Faction").text, Team, node)
-	if typeof(res) == TYPE_STRING:
-		show_message("Ajout impossible", res)
-		return
-		
-	Team = res[0]
-	currentPTS = res[1]
-	get_node("Content/Content Holder/ProgressBar").value = currentPTS
-	get_node("Content/Content Holder/Panel").avg_stats(Team)
-	get_node("Content/HBoxContainer/SaveButton").visible = Team_handler.get_nb_heros(Team) != 0
-	
-	if get_node("Content/Faction").text == "Triade de Jade":
-		Team_handler.unlock_sarge(Team, get_node("Content/Content Holder/Profils/DiplayList/Sergent"))
-	
-	if get_node("Content/Faction").text == "Cartel" or get_node("Content/Faction").text == "Khaliman":
-		var res2 = Team_handler.unlock_animals(Team, list_hero + list_alchi + list_tpe)
-#		--- Gestion des mofications de recutement ---
-	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
-		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
-		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
-		var node_modified = get_node("Content Holder/Profils/DiplayList/"+node_to_modify)
-		if node_modified != null:
-			var new_max = qty + node_modified.get_max()
-			node_modified.set_max(new_max)
-			node_modified.manage_recruitement(node_modified.get_recuitement())
-	must_save()
-	
-func remove_from_team(node):
-#	print("removing " + node.profil["Nom"])
-	var res = Team_handler.remove_from_team(currentPTS, Team, node)
-	Team = res[0]
-	currentPTS = res[1]
-	get_node("Content/Content Holder/ProgressBar").value = currentPTS
-	get_node("Content/Content Holder/Panel").avg_stats(Team)
-	get_node("Content/HBoxContainer/SaveButton").visible = (Team_handler.get_nb_heros(Team) != 0) if currentPTS < maxPts else false
-	
-	if get_node("Content/Faction").text == "Triade de Jade":
-		var res2 = Team_handler.lock_sarge(Team, get_node("Content/Content Holder/Profils/DiplayList/Sergent"), currentPTS)
-		Team = res2[0] 
-		currentPTS = res2[1]
-		get_node("Content/Content Holder/ProgressBar").value = currentPTS
-		get_node("Content/Content Holder/Panel").avg_stats(Team)
-		
-	if get_node("Content/Faction").text == "Cartel" or get_node("Content/Faction").text == "Khaliman":
-		var res2 = Team_handler.lock_animals(Team, list_hero + list_alchi + list_tpe, currentPTS) 
-		Team = res2[0]
-		currentPTS = res2[1]
-		get_node("Content/Content Holder/ProgressBar").value = currentPTS
-		get_node("Content/Content Holder/Panel").avg_stats(Team)
-	
-#		--- Gestion des mofications de recutement ---
-	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
-		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
-		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
-		var node_modified = get_node("Content/Content Holder/Profils/DiplayList/"+node_to_modify)
-		if node_modified != null:
-#			print(node_modified.get_max())
-			var new_max = node_modified.get_max() - qty 
-			var nb_recruited = node_modified.get_recuitement()
-			node_modified.set_max(new_max)
-			node_modified.manage_recruitement(nb_recruited)
-			if nb_recruited > new_max:
-				for _i in range(nb_recruited - new_max):
-					Team.remove(Team.find(node_modified.profil))
-					currentPTS -= int(node_modified.profil["Cout"])
-					get_node("Content/Content Holder/ProgressBar").value = currentPTS
-					get_node("Content/Content Holder/Panel").avg_stats(Team)
-					
-	must_save()
+#	vérifier plutôt à l'ajout et au retrait d'un profil
 	
 func show_message(title, msg):
-	get_node("OverWriteDialog").window_title = title
-	get_node("OverWriteDialog").dialog_text = msg
-	get_node("OverWriteDialog").popup_centered()
+	var node = get_node("DisplayDialog")
+	node.show_dialog(title, msg)
 	
 func must_save():
 	var infos_list = Json_reader.get_team(cur_team)
+	var Team = get_node("Content/Profils_list_display").get_Team()
+	var maxPts = get_node("Content/Profils_list_display").get_maxPts()
 	get_node("Content/HBoxContainer/SaveButton").visible = !Team_handler.compare_list(Team, infos_list[2]) or infos_list[0] != maxPts
 	
 func save(id):
-	get_node("SaveDialoge").add_cancel("Annuler")
-	get_node("SaveDialoge").dialog_text = "Voulez-vous enregistrer les modifications faites à la liste " + teams[id].split(".json")[0] + " ?"
-	get_node("SaveDialoge").connect("confirmed", self, "save_changes", [id])
-	get_node("SaveDialoge").popup_centered()
+	var node = get_node("ConfirmDialog")
+	node.show_dialog("Sauvegarde", "Voulez-vous enregistrer les modifications faites à la liste " + teams[id].split(".json")[0] + " ?")
+	node.connect("confirmed", self, "save_changes", [id], CONNECT_ONESHOT)
 	
 func save_changes(id):
 	var path = "user://" + teams[id]
 	var file = File.new()
 	if file.file_exists(path):
 		file.open(path, File.WRITE)
+		var Team = get_node("Content/Profils_list_display").get_Team()
+		var maxPts = get_node("Content/Profils_list_display").get_maxPts()
 		var team_stored = [maxPts, get_node("Content/Faction").text, Team]
 		file.store_string(to_json(team_stored))
 		file.close()
 		must_save()
+		show_message("Sauvegarde", "La sauvegarde a été un succès" if !get_node("Content/HBoxContainer/SaveButton").visible else "Un problème est survenue lors de la sauvegarde.")
 	else:
 		show_message("Problème d'enregistrement", "La liste n'existe pas o_O ?")
 		
 func export_list(id):
 	save_changes(id)
 	var list_to_str = get_node("ExportImport").export_list(Json_reader.get_team(cur_team))
-	get_node("ExportDialog").popup_centered()
-	get_node("ExportDialog").dialog_text = list_to_str
-	get_node("ExportDialog").connect("confirmed", self, "export_confirmed", [list_to_str])
-	get_node("ExportDialog").get_ok().text = "Copier dans le presse-papier"
+	show_message("Exportation", list_to_str)
+	get_node("DisplayDialog").connect("confirmed", self, "export_confirmed", [list_to_str], CONNECT_ONESHOT)
+	get_node("DisplayDialog").get_ok().text = "Copier dans le presse-papier"
 	
 func export_confirmed(list_str):
 	OS.set_clipboard(list_str)
-	get_node("OverWriteDialog").popup_centered()
-	get_node("OverWriteDialog").dialog_text = "La liste à été copiée dans le presse-papier"
+	print(OS.get_clipboard())
+	show_message("Exportation", "La liste a été copiée dans le presse-papier" if OS.get_clipboard() == list_str else "La liste n'a pas été copiée dans le presse-papier")
 	
 func _on_ImportButton_pressed():
 	get_node("ImportDialog").popup_centered()
@@ -286,7 +163,3 @@ func import_confirmed():
 		get_node("Content/MenuButton").get_popup().clear()
 		fill_list_menu()
 	
-func _on_SpinBox_value_changed(value):
-	maxPts = int(value)
-	_on_ProgressBar_value_changed(get_node("Content/Content Holder/ProgressBar").value)
-	pass # Replace with function body.

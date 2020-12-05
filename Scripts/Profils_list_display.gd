@@ -3,7 +3,7 @@ extends VBoxContainer
 
 const Profil = preload("res://Scenes/Profil.tscn")
 var maxPts = 180 setget set_maxPts, get_maxPts
-var currentPTS = 0
+var currentPTS = 0 setget set_curPts, get_curPts
 var Team = [] setget set_Team, get_Team 
 var list_hero = []
 var list_alchi = []
@@ -11,12 +11,17 @@ var list_tpe = []
 var faction = "Profils"
 signal begin_loading
 signal end_loading
-signal can_save
-signal cannot_save
-
+signal save
+	
+func set_curPts(v):
+	currentPTS = v
+	
+func get_curPts():
+	return currentPTS
+	
 func set_maxPts(v):
 	maxPts = v
-
+	
 func get_maxPts():
 	return maxPts
 	
@@ -25,7 +30,7 @@ func set_Team(v):
 	
 func get_Team():
 	return Team
-
+	
 func _ready():
 	get_node("Panel").init()
 	
@@ -44,7 +49,7 @@ func add_to_team(node):
 	currentPTS = res[1]
 	get_node("ProgressBar").value = currentPTS
 	get_node("Panel").avg_stats(Team)
-#	get_node("SaveButton").visible = Team_handler.get_nb_heros(Team) != 0
+	emit_signal("save", Team_handler.get_nb_heros(Team) != 0)
 	
 	if faction == "Triade de Jade":
 		Team_handler.unlock_sarge(Team, get_node("Profils/DiplayList/Sergent"))
@@ -68,7 +73,7 @@ func remove_from_team(node):
 	currentPTS = res[1]
 	get_node("ProgressBar").value = currentPTS
 	get_node("Panel").avg_stats(Team)
-#	get_node("SaveButton").visible = (Team_handler.get_nb_heros(Team) != 0) if currentPTS < maxPts else false
+	emit_signal("save", (Team_handler.get_nb_heros(Team) != 0) if currentPTS < maxPts else false)
 	
 	if faction == "Triade de Jade":
 		var res2 = Team_handler.lock_sarge(Team, get_node("Profils/DiplayList/Sergent"), currentPTS)
@@ -199,3 +204,19 @@ func change_faction(f):
 	get_node("LineEdit").visible = false
 	refresh_profils_list(Json_reader.profils_data[f])
 	emit_signal("end_loading")
+	
+func reset_para():
+	Team = []
+	maxPts = 180
+	currentPTS = 0
+	list_hero = []
+	list_alchi = []
+	list_tpe = []
+	get_node("Panel").avg_stats(Team)
+	get_node("ProgressBar").max_value = maxPts
+	get_node("ProgressBar").value = currentPTS
+	get_node("HBoxContainer2/SpinBox").value = maxPts
+	get_node("ProgressBar").visible = false
+	get_node("Panel").visible = false
+	get_node("HBoxContainer2").visible = false
+	

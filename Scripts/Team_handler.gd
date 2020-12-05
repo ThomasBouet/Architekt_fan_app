@@ -13,10 +13,10 @@ func add_to_team(maxPts, curPts, faction, Team, node):
 	var nb_heros = get_nb_heros(Team)
 	match heros_limit:
 		1:
-			if nb_heros <= heros_limit:
+			if nb_heros < heros_limit:
 				 can_add_heros = true
 		2:
-			if nb_heros <= heros_limit:
+			if nb_heros < heros_limit:
 				 can_add_heros = true
 		"Loges":
 			can_add_heros = true

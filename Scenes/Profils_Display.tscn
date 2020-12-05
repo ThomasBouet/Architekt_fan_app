@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=2]
 
-[ext_resource path="res://Profils_list_display.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Profils_list_display.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Menu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Fonts/Titre_font_70px.tres" type="DynamicFont" id=4]
@@ -63,14 +63,17 @@ margin_left = 24.0
 margin_top = 88.0
 margin_right = -24.0
 margin_bottom = -94.048
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Profils_list_display" parent="Content Holder" instance=ExtResource( 1 )]
-margin_bottom = 800.0
+margin_bottom = 844.0
 
 [node name="SaveButton" type="Button" parent="Content Holder"]
+visible = false
 margin_top = 804.0
 margin_right = 528.0
 margin_bottom = 844.0

@@ -6,12 +6,15 @@ var MenuOpen = true
 func _ready():
 	get_node("Content Holder/Profils_list_display").connect("begin_loading", get_node("Loading_animation"), "loading")
 	get_node("Content Holder/Profils_list_display").connect("end_loading", get_node("Loading_animation"), "hide_loading")
+	get_node("Content Holder/Profils_list_display").connect("save", self, "show_savebutton")
+	get_node("Loading_animation").loading()
 	_on_Tous_pressed()
 	
 	get_node("Faction").text = "Profils"
 	
 	get_node("SaveDialog").add_cancel("Annuler")
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
+	get_node("Loading_animation").hide_loading()
 	
 func move_menu():
 	MenuOpen = !MenuOpen
@@ -31,9 +34,11 @@ func _on_Tous_pressed():
 	
 # --- Gestion de l'affichage des profils ---
 func _change_faction(faction):
+	get_node("Loading_animation").loading()
+	move_menu()
 	get_node("Faction").text = faction
 	get_node("Content Holder/Profils_list_display").change_faction(faction)
-	move_menu()
+	get_node("Loading_animation").hide_loading()
 	
 func _on_SaveButton_pressed():
 	get_node("SaveDialog").popup_centered()
@@ -51,9 +56,14 @@ func _on_SaveDialog_confirmed():
 		file.store_string(to_json(team_stored))
 		file.close()
 		get_node("SaveDialog/LineEdit").text = ""
+		show_message("Sauvegarde", "La sauvegarde a été un succès")
 	
 func show_message(title, msg):
 	get_node("OverWriteDialog").window_title = title
 	get_node("OverWriteDialog").dialog_text = msg
 	get_node("OverWriteDialog").popup_centered()
+	
+func show_savebutton(state):
+	get_node("Content Holder/SaveButton").visible = state
+	
 

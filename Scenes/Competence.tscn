@@ -6,9 +6,10 @@
 [ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=4]
 
 [node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -524.0
+anchor_right = 1.014
+anchor_bottom = 0.488
+margin_right = -8.06403
+margin_bottom = 10.0
 rect_min_size = Vector2( 0, 500 )
 mouse_filter = 1
 size_flags_horizontal = 3
