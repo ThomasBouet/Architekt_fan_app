@@ -160,9 +160,7 @@ func _on_ProgressBar_value_changed(value):
 	get_node("ProgressBar/Label").text = str(value) + "/" + str(maxPts)
 	
 func show_message(title, msg):
-	get_node("OverWriteDialog").window_title = title
-	get_node("OverWriteDialog").dialog_text = msg
-	get_node("OverWriteDialog").popup_centered()
+	get_node("DisplayDialog").show_dialog(title, msg)
 	
 func _on_LineEdit_text_changed(search_clue):
 	var nodes_profil = list_hero + list_alchi + list_tpe

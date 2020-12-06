@@ -2,7 +2,7 @@ extends Control
 
 const Profil = preload("res://Scenes/Profil.tscn")
 var MenuOpen = false
-var teams = Json_reader.get_team_saved()
+var teams
 var cur_team = []
 
 
@@ -12,16 +12,27 @@ func _ready():
 	fill_list_menu()
 	
 func fill_list_menu():
+	var node = get_node("ListeSelecteur/ScrollContainer/VBoxContainer")
+	for n in node.get_children():
+		node.remove_child(n)
+		n.queue_free()
+		
 	teams = Json_reader.get_team_saved()
 	for t in teams:
+		var button = Button.new()
 		var nom = t.split(".json")[0]
-		get_node("Content/MenuButton").get_popup().add_item(nom)
-	get_node("Content/MenuButton").get_popup().connect("id_pressed", self, "display_team")
+		button.text = nom
+		node.add_child(button)
+		button.connect("pressed", self, "display_team", [nom])
+		button.add_font_override("font", load("res://Fonts/Text_font.tres"))
+
+func _on_MenuButton_pressed():
+	get_node("ListeSelecteur").popup_centered()
 	
-func _on_Delete_pressed(id):
+func _on_Delete_pressed(team_name):
 	var node = get_node("ConfirmDialog")
-	node.show_dialog("Suppression", "Etes vous sur de vouloir supprimer l'équipe " + teams[id].split(".json")[0] + "?")
-	node.connect("confirmed", self, "_on_AcceptSuppressionDialog_confirmed", [id], CONNECT_ONESHOT)
+	node.show_dialog("Suppression", "Etes vous sur de vouloir supprimer l'équipe " + team_name + "?")
+	node.connect("confirmed", self, "_on_AcceptSuppressionDialog_confirmed", [team_name], CONNECT_ONESHOT)
 	
 func clean_list_diplay():
 	var node = get_node("Content/Profils_list_display/Profils/DiplayList")
@@ -30,26 +41,27 @@ func clean_list_diplay():
 		node.remove_child(n)
 		n.queue_free()
 	
-func _on_AcceptSuppressionDialog_confirmed(id):
-	var nom = teams[id]
-	teams.remove(nom)
-	get_node("Content/MenuButton").get_popup().clear()
+func _on_AcceptSuppressionDialog_confirmed(team_name):
+	teams.remove(team_name)
 	clean_list_diplay()
 	var dir = Directory.new()
-	dir.remove("user://" + nom)
+	dir.remove("user://" + team_name + ".json")
 
 	fill_list_menu()
 	get_node("Content/Faction").text = ""
 	get_node("Content/HBoxContainer").visible = false
 	get_node("Content/Profils_list_display/").reset_para()
 	
-func display_team(id):
+func display_team(team_name):
+	if get_node("ListeSelecteur").is_visible_in_tree():
+		get_node("ListeSelecteur").hide()
+	
 	get_node("Loading_animation").loading()
 #	print(id)
 	var node = get_node("Content/Profils_list_display")
 	node.reset_para()
 	
-	cur_team = teams[id]
+	cur_team = team_name + ".json"
 	var infos_team = Json_reader.get_team(cur_team)
 	var team_max = infos_team[0]
 	var team_faction = infos_team[1]
@@ -65,17 +77,17 @@ func display_team(id):
 	get_node("Content/HBoxContainer").visible = true
 	get_node("Content/HBoxContainer/DeleteButton").visible = true
 	get_node("Content/HBoxContainer/DeleteButton").disconnect("pressed", self, "_on_Delete_pressed")
-	get_node("Content/HBoxContainer/DeleteButton").connect("pressed", self, "_on_Delete_pressed", [id])
+	get_node("Content/HBoxContainer/DeleteButton").connect("pressed", self, "_on_Delete_pressed", [team_name])
 	
 	node.change_faction(team_faction)
 	recreate_list(team_members)
 	
 	get_node("Content/HBoxContainer/SaveButton").disconnect("pressed", self, "save")
-	get_node("Content/HBoxContainer/SaveButton").connect("pressed", self, "save", [id])
+	get_node("Content/HBoxContainer/SaveButton").connect("pressed", self, "save", [team_name])
 	
 	get_node("Content/HBoxContainer/ExportButton").visible = true
 	get_node("Content/HBoxContainer/ExportButton").disconnect("pressed", self, "export_test")
-	get_node("Content/HBoxContainer/ExportButton").connect("pressed", self, "export_list", [id])
+	get_node("Content/HBoxContainer/ExportButton").connect("pressed", self, "export_list", [team_name])
 
 	get_node("Loading_animation").hide_loading()
 	
@@ -106,13 +118,13 @@ func must_save():
 	var maxPts = get_node("Content/Profils_list_display").get_maxPts()
 	get_node("Content/HBoxContainer/SaveButton").visible = !Team_handler.compare_list(Team, infos_list[2]) or infos_list[0] != maxPts
 	
-func save(id):
+func save(team_name):
 	var node = get_node("ConfirmDialog")
-	node.show_dialog("Sauvegarde", "Voulez-vous enregistrer les modifications faites à la liste " + teams[id].split(".json")[0] + " ?")
-	node.connect("confirmed", self, "save_changes", [id], CONNECT_ONESHOT)
+	node.show_dialog("Sauvegarde", "Voulez-vous enregistrer les modifications faites à la liste " + team_name + " ?")
+	node.connect("confirmed", self, "save_changes", [team_name], CONNECT_ONESHOT)
 	
-func save_changes(id):
-	var path = "user://" + teams[id]
+func save_changes(team_name):
+	var path = "user://" + team_name + ".json"
 	var file = File.new()
 	if file.file_exists(path):
 		file.open(path, File.WRITE)
@@ -126,8 +138,8 @@ func save_changes(id):
 	else:
 		show_message("Problème d'enregistrement", "La liste n'existe pas o_O ?")
 		
-func export_list(id):
-	save_changes(id)
+func export_list(team_name):
+	save_changes(team_name)
 	var list_to_str = get_node("ExportImport").export_list(Json_reader.get_team(cur_team))
 	show_message("Exportation", list_to_str)
 	get_node("DisplayDialog").connect("confirmed", self, "export_confirmed", [list_to_str], CONNECT_ONESHOT)
@@ -162,4 +174,3 @@ func import_confirmed():
 		file.close()
 		get_node("Content/MenuButton").get_popup().clear()
 		fill_list_menu()
-	

@@ -12,7 +12,6 @@ func _ready():
 	
 	get_node("Faction").text = "Profils"
 	
-	get_node("SaveDialog").add_cancel("Annuler")
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
 	get_node("Loading_animation").hide_loading()
 	
@@ -56,12 +55,10 @@ func _on_SaveDialog_confirmed():
 		file.store_string(to_json(team_stored))
 		file.close()
 		get_node("SaveDialog/LineEdit").text = ""
-		show_message("Sauvegarde", "La sauvegarde a été un succès")
+		show_message("Sauvegarde", "La sauvegarde a été un succès" if file.file_exists(path) else "La sauvegarde a échoué suite à un problème inconnu.")
 	
 func show_message(title, msg):
-	get_node("OverWriteDialog").window_title = title
-	get_node("OverWriteDialog").dialog_text = msg
-	get_node("OverWriteDialog").popup_centered()
+	get_node("DisplayDialog").show_dialog(title, msg)
 	
 func show_savebutton(state):
 	get_node("Content Holder/SaveButton").visible = state

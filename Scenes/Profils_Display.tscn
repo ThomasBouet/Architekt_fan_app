@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/Profils_list_display.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=2]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Sprites/UI/floppy-disk.svg" type="Texture" id=8]
 [ext_resource path="res://Scripts/Profil_Display.gd" type="Script" id=9]
-[ext_resource path="res://Scenes/Cards_display.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/DisplayDialog.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Sprites/UI/factions/loge.svg" type="Texture" id=11]
 [ext_resource path="res://Sprites/UI/factions/sororite.svg" type="Texture" id=12]
 [ext_resource path="res://Sprites/UI/factions/avalon.svg" type="Texture" id=13]
@@ -26,6 +26,8 @@
 [ext_resource path="res://Sprites/UI/factions/sanctifies.svg" type="Texture" id=24]
 [ext_resource path="res://Sprites/UI/factions/walosi.svg" type="Texture" id=25]
 [ext_resource path="res://Sprites/UI/factions/rados.svg" type="Texture" id=26]
+[ext_resource path="res://Scenes/SaveDialog.gd" type="Script" id=27]
+[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=28]
 
 [node name="Root" type="Control"]
 anchor_right = 1.0
@@ -486,7 +488,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SaveDialog" type="AcceptDialog" parent="."]
+[node name="SaveDialog" type="ConfirmationDialog" parent="."]
 margin_left = -72.7778
 margin_top = -169.714
 margin_right = 232.222
@@ -494,33 +496,19 @@ margin_bottom = -40.7145
 popup_exclusive = true
 window_title = "Enregistrement"
 dialog_text = "Choisissez un nom pour votre équipe :"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+script = ExtResource( 27 )
 
 [node name="LineEdit" type="LineEdit" parent="SaveDialog"]
 margin_left = 8.0
 margin_top = 22.0
 margin_right = 297.0
 margin_bottom = 92.9995
+custom_fonts/font = ExtResource( 28 )
 caret_blink = true
 caret_blink_speed = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="OverWriteDialog" type="AcceptDialog" parent="."]
-margin_left = 356.736
-margin_top = -128.901
-margin_right = 451.736
-margin_bottom = -70.901
-popup_exclusive = true
-window_title = "Alerte !"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ShowCard" parent="." instance=ExtResource( 10 )]
 
 [node name="Menu_Commun" parent="." instance=ExtResource( 3 )]
 margin_bottom = -8.0
@@ -528,6 +516,8 @@ margin_bottom = -8.0
 [node name="Loading_animation" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 288, 512 )
+
+[node name="DisplayDialog" parent="." instance=ExtResource( 10 )]
 [connection signal="pressed" from="Content Holder/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Tous" to="." method="_on_Tous_pressed"]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Aurlok" to="." method="_change_faction" binds= [ "Aurlok" ]]

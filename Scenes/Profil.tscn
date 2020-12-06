@@ -8,11 +8,11 @@
 [ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Fonts/Rubik/Rubik-VariableFont_wght.ttf" type="DynamicFontData" id=8]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 28
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 20
 font_data = ExtResource( 8 )
 
@@ -78,7 +78,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 text = "Connétable Lotharius du Temple des Vêpres"
 clip_text = true
 __meta__ = {
@@ -98,7 +98,7 @@ margin_left = 60.0
 margin_top = 36.0
 margin_right = 100.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "PA :"
 align = 1
 valign = 1
@@ -111,7 +111,7 @@ margin_left = 100.0
 margin_top = 36.0
 margin_right = 140.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "4"
 align = 1
 valign = 1
@@ -124,7 +124,7 @@ margin_left = 140.0
 margin_top = 36.0
 margin_right = 180.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Pts :"
 align = 1
 valign = 1
@@ -137,7 +137,7 @@ margin_left = 180.0
 margin_top = 36.0
 margin_right = 220.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "40"
 align = 1
 valign = 1
@@ -151,7 +151,7 @@ margin_left = 268.0
 margin_top = 36.0
 margin_right = 308.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "0"
 align = 1
 valign = 1
@@ -165,7 +165,7 @@ margin_left = 220.0
 margin_top = 36.0
 margin_right = 269.0
 margin_bottom = 60.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Max :"
 align = 1
 valign = 1
