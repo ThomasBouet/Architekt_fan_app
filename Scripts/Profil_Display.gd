@@ -25,6 +25,7 @@ func _on_MenuButton_pressed():
 	
 func _on_Tous_pressed():
 	move_menu()
+	get_node("Content Holder/SaveButton").visible = false
 	get_node("Loading_animation").loading()
 	get_node("Faction").text = "Profils"
 	get_node("Content Holder/Profils_list_display").change_tous()

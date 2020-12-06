@@ -190,7 +190,7 @@ __meta__ = {
 [node name="DisplayDialog" parent="." instance=ExtResource( 14 )]
 visible = true
 
-[node name="ImportDialog" type="AcceptDialog" parent="."]
+[node name="ImportDialog" type="ConfirmationDialog" parent="."]
 visible = true
 margin_left = 256.0
 margin_top = -448.0

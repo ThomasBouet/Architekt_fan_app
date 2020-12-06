@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/DisplayDialog.gd" type="Script" id=1]
-
+[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=2]
 
 [node name="DisplayDialog" type="AcceptDialog"]
 margin_left = -128.0
@@ -19,5 +19,6 @@ __meta__ = {
 margin_left = 8.0
 margin_top = 8.0
 margin_right = 312.0
-margin_bottom = 24.0
+margin_bottom = 23.0
+custom_fonts/normal_font = ExtResource( 2 )
 fit_content_height = true

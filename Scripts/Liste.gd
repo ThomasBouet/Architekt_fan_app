@@ -152,7 +152,6 @@ func export_confirmed(list_str):
 	
 func _on_ImportButton_pressed():
 	get_node("ImportDialog").popup_centered()
-	get_node("ImportDialog").add_cancel("Annuler")
 	get_node("ImportDialog").connect("confirmed", self, "import_confirmed")
 	
 func import_confirmed():
@@ -172,5 +171,4 @@ func import_confirmed():
 		file.open(path, File.WRITE)
 		file.store_string(to_json(res))
 		file.close()
-		get_node("Content/MenuButton").get_popup().clear()
 		fill_list_menu()

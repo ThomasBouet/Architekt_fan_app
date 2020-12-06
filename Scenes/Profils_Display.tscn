@@ -26,7 +26,7 @@
 [ext_resource path="res://Sprites/UI/factions/sanctifies.svg" type="Texture" id=24]
 [ext_resource path="res://Sprites/UI/factions/walosi.svg" type="Texture" id=25]
 [ext_resource path="res://Sprites/UI/factions/rados.svg" type="Texture" id=26]
-[ext_resource path="res://Scenes/SaveDialog.gd" type="Script" id=27]
+[ext_resource path="res://Scripts/SaveDialog.gd" type="Script" id=27]
 [ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=28]
 
 [node name="Root" type="Control"]

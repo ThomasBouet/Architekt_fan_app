@@ -1,10 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/ConfirmDialog.gd" type="Script" id=1]
-
+[ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=2]
 
 [node name="ConfirmDialog" type="ConfirmationDialog"]
-visible = true
 margin_left = -128.0
 margin_top = -368.0
 margin_right = 192.0
@@ -14,8 +13,9 @@ window_title = "Veuillez confirmer…"
 script = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 16.0
+margin_left = 8.0
 margin_top = 8.0
 margin_right = 312.0
-margin_bottom = 32.0
+margin_bottom = 34.0
+custom_fonts/normal_font = ExtResource( 2 )
 fit_content_height = true
