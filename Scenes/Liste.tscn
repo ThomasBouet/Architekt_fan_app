@@ -291,9 +291,10 @@ rect_min_size = Vector2( 304, 0 )
 
 [node name="loading_anim" parent="." instance=ExtResource( 17 )]
 visible = false
+anchor_right = 1.0
 margin_left = 288.0
 margin_top = 512.0
-margin_right = 288.0
+margin_right = -288.0
 margin_bottom = 512.0
 [connection signal="pressed" from="Content/MenuButton" to="." method="_on_MenuButton_pressed"]
 [connection signal="pressed" from="ImportButton" to="." method="_on_ImportButton_pressed"]

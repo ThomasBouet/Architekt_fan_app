@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0.jpg-dbffe779091ace1e7ab9db4e5bdc30e1.stex"
+path="res://.import/1.jpg-20cf92488192f9ca979852ecadeeb1b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Profils/Tonerre-Waga/0.jpg"
-dest_files=[ "res://.import/0.jpg-dbffe779091ace1e7ab9db4e5bdc30e1.stex" ]
+source_file="res://Sprites/Profils/Forcene/1.jpg"
+dest_files=[ "res://.import/1.jpg-20cf92488192f9ca979852ecadeeb1b8.stex" ]
 
 [params]
 

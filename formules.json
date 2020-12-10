@@ -1,5 +1,5 @@
 {
-    "Agonie salvatrice (2)": [
+    "Agonie Salvatrice (2)": [
         "3 Terres",
         "8",
         "Auto",
@@ -11,7 +11,7 @@
         "Auto",
         "La formule cible un Avalonien non-héros ami ou le Frère-Collecteur lui-même. Pour son prochain jet de COM, la cible acquiert la compétence [url=Expert Brutale]Expert Brutale[/url]. Si elle possédait déjà cette compétence, elle acquiert la compétence [url=Expert Normale]Expert Normale[/url] à la place.\r\nAméliorations : \r\n- 2 pour 1 cible supplémentaire à portée.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où la cible joue une CC autre que inactif."
     ],
-    "Apathie (1)": [
+    "Apathie (0)": [
         "1 Eau",
         "10",
         "Cible",
@@ -59,7 +59,7 @@
         "Auto",
         "La formule permet au Chaman-Nuit d'invoquer un Esprit-Ancêtre ou un Esprit-Héros à portée, pas en combat. Celui-ci pourra être activé normalement durant le tour où il est invoqué. Un seul Esprit peut être invoqué à la fois et chaque type d'Esprit ne peut être invoqué qu'une fois par partie. Si le Chaman-Nuit meurt ou perd son dernier niveau de concentration, l'Esprit disparaît. Un Esprit ne peut pas être recruté dans une troupe, il doit être invoqué."
     ],
-    "Coulée de lave(2)": [
+    "Coulée de Lave(2)": [
         "2 Feu",
         "0",
         "Auto",
@@ -87,7 +87,7 @@
         "3 Feux",
         "8",
         "Auto",
-        "La formule cible une figurine alliée non alchimiste et non héros à portée. Lorsque la cible joue une CC contre une figurine adverse jouant la CC Inactif, elle gagne 1 dé bonus au jet de COM. La cible gagne également l’accès à la Botte (Contre-Attaque). La formule prend fin lorsque la cible utilise la Botte (Contre-Attaque) ou gagne un dé bonus grâce à cette formule.\r\n\r\nBotte (Contre-Attaque) : (CC Parade)\r\nCombat : 1 dé bonus.\r\nSpécial : La figurine obtient le dé bonus habituel de la CC Parade et également +1 en COM sur les jets de Parade et d’attaque gratuite. Si le jet de Parade est réussi de 3 ou 4 points, le défenseur gagne une attaque Rapide gratuite. Si le jet de Parade est réussi et supérieur de 5 points ou plus au jet d’attaque, le défenseur gagne une attaque Brutale gratuite à la place d’une attaque Rapide. \r\n\r\nAméliorations : \r\n1 pierre pour 1 cible supplémentaire à portée\r\n2 pierres pour que la formule dure jusqu’à la fin du tour où la cible utilise les effets de la formule.\r\n"
+        "La formule cible une figurine alliée non alchimiste et non héros à portée. Lorsque la cible joue une CC contre une figurine adverse jouant la CC Inactif, elle gagne 1 dé bonus au jet de COM. La cible gagne également l’accès à la [url=Botte (Contre-Attaque)]Botte (Contre-Attaque)[/url]. La formule prend fin lorsque la cible utilise la [url=Botte (Contre-Attaque)]Botte (Contre-Attaque)[/url] ou gagne un dé bonus grâce à cette formule.\r\nAméliorations : \r\n1 pierre pour 1 cible supplémentaire à portée\r\n2 pierres pour que la formule dure jusqu’à la fin du tour où la cible utilise les effets de la formule.\r\n"
     ],
     "Explosion de Walosi (3)": [
         "3 Terre",
@@ -107,7 +107,7 @@
         "Auto",
         "La portée désigne une aire d’effet autour de l’alchimiste. A chaque fois qu’une figurine alliée située dans l’aire d’effet inflige des DOM à une figurine adverse socle à socle, cette dernière obtient un pion Combustion. A la fin de sa prochaine activation, chaque figurine possédant des pions Combustions subit autant de DOM que de pions Combustions qu’elle possède puis défausse 1 pion Combustion. Durant son activation, la figurine peut dépenser 1 PA pour défausser 2 pions Combustions. Une figurine ne peut jamais subir plus de 3 DOM chaque tour à cause des pions Combustions. La formule prend fin à la fin du tour où l’alchimiste est blessé.\r\n\r\nAméliorations :  \r\n1 pierre pour 1 pouce supplémentaire de portée\r\n3 pierres pour un 1 pion Combustion supplémentaire"
     ],
-    "Flaque magmatique (0)": [
+    "Flaque Magmatique (0)": [
         "2 Feu",
         "6",
         "Auto",
@@ -125,7 +125,7 @@
         "Cible",
         "La formule cible une figurine ennemie à portée. La cible subit un nombre de DOM égal au nombre de points de vies jaunes cochés du Chaman.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire à portée."
     ],
-    "Fusion thermique (0)": [
+    "Fusion Thermique (0)": [
         "2 Feu",
         "6",
         "Cible",
@@ -137,7 +137,7 @@
         "Auto",
         "La formule cible l'Evocatrice elle-même. La portée indique le rayon d'une aire d'effet.\r\nL'Evocatrice gagne un nombre de marqueurs \"Onde\" égal à sa concentration actuelle.\r\nL'Evocatrice ou toute figurine amie se trouvant à portée peut utiliser :\r\n1 marqueur pour que le prochain DOM subi soit lu deux colonnes à gauche.\r\n2 marqueurs pour que le prochain DOM subi soit lu trois colonnes à gauche.\r\nAméliorations : \r\n- 2 pour 1 marqueur \"Onde\" supplémentaire."
     ],
-    "Harpon alchimique (0)": [
+    "Harpon Alchimique (0)": [
         "3 Eau",
         "8",
         "Auto",
@@ -147,7 +147,7 @@
         "2 Terre",
         "2",
         "Auto",
-        "La formule cible un Avalonien ami à portée ou le Diacre lui-même. Pour son prochain jet de COM, la cible augmente le nombre de DOM qu'elle inflige en combat de 1.\r\nAméliorations :\r\n- 1 pour 1 cible supplémentaire.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où la cible a infligé des DOM."
+        "La formule cible un Avalonien ami à portée ou le Diacre lui-même. Pour son prochain jet de COM, la cible augmente le nombre de DOM qu'elle inflige en combat de 1.\r\nAméliorations : \r\n- 1 pour 1 cible supplémentaire.\r\n- 2 pour que l'effet dure jusqu'à la fin du tour où la cible a infligé des DOM."
     ],
     "Hurlement Funeste (0)": [
         "2 Terre",
@@ -203,7 +203,7 @@
         "Auto",
         "A l'aide de 4 petits pions, délimitez une zone \"Brouillard\" de la taille d'une carte de profil sur le terrain. Au moins une partie de la zone doit se situer à moins de 6 pouces de l'alchimiste. Cette zone ne bloque pas les mouvements. La zone bloque entièrement les lignes de vues pour les figurines qui sont à l'extérieur. Les figurines au moins partiellement à l'intérieur de la zone conservent leur ligne de vue habituelle mais considèrent toutes leurs cibles comme furtives. La zone disparaît à la fin du tour.\r\nAméliorations : \r\n- 2 pour que le brouillard reste en jeu un tour supplémentaire."
     ],
-    "Onde rugissante (0)": [
+    "Onde Rugissante (0)": [
         "3 Eaux",
         "4",
         "Auto",
@@ -213,7 +213,7 @@
         "2 Terre",
         "3",
         "Auto",
-        "La formule cible Caelina elle-même. La portée indique une aire d'effet autour d'elle. Elle et toutes les figurines amies dans l'aire d'effet acquièrent les compétences [url=Coriace/1]Coriace/1[/url] (ou [url=Coriace/1]Coriace +1[/url] si elle possède déjà la compétence) et Botte (Robuste). La formule prend fin à la fin du tour lorsque Caelina est blessée.\r\nAméliorations : \r\n- 1 pour 1 p supplémentaire de portée.\r\n- 3 pour +1 à la valeur de [url=Coriace/1]Coriace[/url]."
+        "La formule cible Caelina elle-même. La portée indique une aire d'effet autour d'elle. Elle et toutes les figurines amies dans l'aire d'effet acquièrent les compétences [url=Coriace/1]Coriace/1[/url] (ou [url=Coriace/1]Coriace +1[/url] si elle possède déjà la compétence) et [url=Botte (Robuste)]Botte (Robuste)[/url]. La formule prend fin à la fin du tour lorsque Caelina est blessée.\r\nAméliorations : \r\n- 1 pour 1 p supplémentaire de portée.\r\n- 3 pour +1 à la valeur de [url=Coriace/1]Coriace[/url]."
     ],
     "Pousse du Béathacrann (2)": [
         "3 terres",
@@ -245,11 +245,11 @@
         "Auto",
         "La formule cible l'Oracle elle-même et la portée indique une aire d'effet autour d'elle. La formule prend fin dès que le niveau de concentration de l'oracle est égal à 0. L'Oracle et tout khaliman ami et inactif dans l'aire d'effet peut effectuer une réaction comme s'il disposait de PA. Il n'y a pas de limite au nombre de réactions que peut effectuer une même figurine grâce à cette formule. Une réaction peut être un mouvement de réaction, un tir de réaction ou jouer une CC de combat autre qu'Inactif lors d'un combat.\r\nAméliorations : \r\n- 1 pierre pour un pouce de portée supplémentaire."
     ],
-    "Psaumes de croissance (0)": [
+    "Psaume de Croissance (0)": [
         "3 Terres",
         "2",
         "Auto",
-        "La formule désigne une aire d'effet autour de l’alchimiste et affecte les figurines alliées non alchimistes et non héros à portée. Tant qu’elles sont dans l’aire d'effet, les figurines ont +1 en COM. Elles disposent également de +1 à leur caractéristique de REF ou DEF, au choix du joueur. La formule prend fin dès que Gallia est blessée.\r\n\r\nAméliorations :\r\n1 pierre pour 1 pouce de portée supplémentaire\r\n2 pierres pour augmenter le COM de +1"
+        "La formule désigne une aire d'effet autour de l’alchimiste et affecte les figurines alliées non alchimistes et non héros à portée. Tant qu’elles sont dans l’aire d'effet, les figurines ont +1 en COM. Elles disposent également de +1 à leur caractéristique de REF ou DEF, au choix du joueur. La formule prend fin dès que Gallia est blessée.\r\n\r\nAméliorations : \r\n1 pierre pour 1 pouce de portée supplémentaire\r\n2 pierres pour augmenter le COM de +1"
     ],
     "Railleries Mortelles (3)": [
         "3 Air",
@@ -263,13 +263,13 @@
         "Auto",
         "La formule cible un Aurlok ami non-héros à portée. La cible augmente ses valeurs de mouvement de 1/1/2 jusqu'à la fin du tour. Un tireur ne peut pas avoir de bonus de visée lorsqu'il tire sur la cible de la formule.\r\nAméliorations : \r\n- 2 pour 1 cible supplémentaire à portée."
     ],
-    "Reflet irisé (0)": [
+    "Reflet Irisé (0)": [
         "1 Feu",
         "0",
         "Auto",
         "La formule cible l'alchimiste lui-même. Il reçoit deux marqueurs reflet. Lorsqu'il est pris pour cible par un ou plusieurs tirs simultanés, il peut dépenser un marqueur reflet pour annuler les bonus de visée éventuels des tireurs et faire 1 jet de REF pour chaque tir. Si le jet est égal ou supérieur au jet de tir, le tir ne fait pas de DOM.\r\nAméliorations : \r\n- 2 pierres pour 1 marqueur reflet supplémentaire"
     ],
-    "Reflets de la Réalité (x)": [
+    "Reflets de la Réalité (2)": [
         "X Eau",
         "X",
         "X",
@@ -279,7 +279,7 @@
         "2 Terre",
         "8",
         "Auto",
-        "La formule cible une figurine amie ou Pitekica lui-même. La cible acquiert la [url=Botte (Ruse de Walosi)]Botte (Ruse de Walosi)[/url] et la compétence [url=Bond]Bond[/url]. Si elle possédait déjà la compétence [url=Bond]Bond[/url], la botte ne coûte pas de PA pour être utilisée. L’effet prend fin lorsque la cible utilise la botte.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire.\r\n\r\nRuse de Walosi\r\nCC Attaque Rapide\r\nRéflexe : 2D Bonus\r\nSpécial\r\nLa figurine n’effectue pas de jet de COM. Elle effectue immédiatement une marche, même si elle a chargé ou couru lors de ce tour. Elle bénéficie d’1 dé bonus pour son jet de REF lors du désengagement. Les règles de désengagement sont appliquées normalement. Cette Botte peut être jouée si l’adversaire n’est pas à portée de combat."
+        "La formule cible une figurine amie ou Pitekica lui-même. La cible acquiert la [url=Botte (Ruse de Walosi)]Botte (Ruse de Walosi)[/url] et la compétence [url=Bond]Bond[/url]. Si elle possédait déjà la compétence [url=Bond]Bond[/url], la botte ne coûte pas de PA pour être utilisée. L’effet prend fin lorsque la cible utilise la botte.\r\nAméliorations : \r\n- 2 pour une cible supplémentaire.\r\n"
     ],
     "Sacrifice Sauvage (0)": [
         "2 Feux",
@@ -287,11 +287,11 @@
         "Auto",
         "La formule cible une figurine alliée à portée. Si la cible est un Martyr, ce dernier perd la compétence Esclave du Culte. Si la cible n’est pas un Martyr, alors elle pourra répartir les DOM qu’elle subit entre plusieurs Martyrs lors de l’utilisation de la compétence [url=Fustigation]Fustigation[/url]. La formule dure jusqu’à la fin du tour.\r\n\r\nAméliorations :  \r\n2 pierres pour une cible supplémentaire à portée\r\n\r\n3 pierres pour que l’effet dure un tour de plus"
     ],
-    "Sangs sacrificiels (3)": [
+    "Sangs Sacrificiels (3)": [
         "3 Feux",
         "8",
         "Auto",
-        "La formule cible Rigosane elle-même ou un Martyr à portée. La cible inflige à toutes les figurines à 1 pouce ou moins autant de DOM que de points de vie cochés sur sa carte, jusqu’à un maximum de 4. Une figurine ne peut subir des DOM que d’une seule des cibles.\r\n\r\nAméliorations :\r\n2 pierres pour 1 cible supplémentaire à portée\r\n2 pierres pour 1 pouce supplémentaire de portée\r\n"
+        "La formule cible Rigosane elle-même ou un Martyr à portée. La cible inflige à toutes les figurines à 1 pouce ou moins autant de DOM que de points de vie cochés sur sa carte, jusqu’à un maximum de 4. Une figurine ne peut subir des DOM que d’une seule des cibles.\r\n\r\nAméliorations : \r\n2 pierres pour 1 cible supplémentaire à portée\r\n2 pierres pour 1 pouce supplémentaire de portée\r\n"
     ],
     "Souffle Vengeur (2)": [
         "2 Air",
@@ -323,7 +323,7 @@
         "Auto",
         "La formule cible un khaliman ami à portée ou l'Oracle elle-même. Celui-ci pourra relancer l'un de ses dés au choix pour n'importe quel jet. La formule prend fin lorsque la cible utilise son effet.\r\nAméliorations : \r\n- 1 pierre pour une cible supplémentaire à portée.\r\n- 3 pierres pour que la formule soit effective pour tous les jets du tour durant lequel l'effet est utilisé."
     ],
-    "Vague déferlante (2)": [
+    "Vague Déferlante (2)": [
         "2 Eau",
         "0",
         "Cible",

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/Text_font_18px.tres" type="DynamicFont" id=2]
@@ -18,6 +18,10 @@ font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 18
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
 font_data = ExtResource( 8 )
 
 [node name="Control" type="Control"]
@@ -354,7 +358,7 @@ margin_top = 33.0
 margin_right = 544.0
 margin_bottom = 63.0
 mouse_filter = 1
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 fit_content_height = true
 __meta__ = {

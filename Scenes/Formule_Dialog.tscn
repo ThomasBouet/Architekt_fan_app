@@ -88,6 +88,7 @@ margin_top = 142.0
 margin_right = 558.0
 margin_bottom = 157.0
 custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
 fit_content_height = true
 
 [node name="Competence" parent="." instance=ExtResource( 2 )]
@@ -96,3 +97,4 @@ margin_top = 8.0
 margin_right = 566.0
 margin_bottom = 276.0
 [connection signal="meta_clicked" from="VBoxContainer/Description" to="." method="_on_Description_meta_clicked"]
+[connection signal="meta_clicked" from="VBoxContainer/Amélioration" to="." method="_on_Amlioration_meta_clicked"]

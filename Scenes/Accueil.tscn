@@ -99,7 +99,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Compétences" type="Button" parent="VBoxContainer"]
+[node name="CaF_Btn" type="Button" parent="VBoxContainer"]
 margin_top = 394.0
 margin_right = 369.0
 margin_bottom = 587.0
@@ -135,12 +135,13 @@ __meta__ = {
 
 [node name="icon" parent="." instance=ExtResource( 4 )]
 visible = false
+anchor_right = 1.0
 margin_left = 288.0
 margin_top = 512.0
-margin_right = 288.0
+margin_right = -288.0
 margin_bottom = 512.0
 [connection signal="pressed" from="VBoxContainer/Profil_Btn" to="." method="_on_Profil_Btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/Liste_Btn" to="." method="_on_Liste_Btn_pressed"]
-[connection signal="pressed" from="VBoxContainer/Compétences" to="." method="_on_Comptences_pressed"]
+[connection signal="pressed" from="VBoxContainer/CaF_Btn" to="." method="_on_CaF_Btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/Regle_Btn" to="." method="_on_Regle_Btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/Accueil_Btn" to="." method="_on_Accueil_Btn_pressed"]
