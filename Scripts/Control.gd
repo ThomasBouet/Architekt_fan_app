@@ -2,9 +2,10 @@ extends Control
 
 var profil
 var cara_displayed = false
+const bottom = 30
 
 func init(p, hide):
-	profil = p	
+	profil = p
 	get_node("HBoxContainer/Nom/Label").text = profil["Nom"]
 	get_node("HBoxContainer/Nom/Infos/PA").text = profil["PA"]
 	get_node("HBoxContainer/Nom/Infos/Cout").text = profil["Cout"]
@@ -96,7 +97,7 @@ func set_max(i):
 	
 func resize_self(display_list_size):
 	var x = display_list_size.x
-	var y = get_node("ColorRect").rect_size.y + get_node("VBoxContainer").rect_size.y
+	var y = bottom + get_node("ColorRect").rect_size.y + get_node("VBoxContainer").rect_size.y
 	if cara_displayed:
 		get_node(".").rect_min_size = Vector2(x, y)
 	else:

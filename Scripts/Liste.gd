@@ -4,6 +4,7 @@ const Profil = preload("res://Scenes/Profil.tscn")
 var MenuOpen = false
 var teams
 var cur_team = []
+const load_timer = 0.2
 
 
 func _ready():
@@ -56,8 +57,9 @@ func display_team(team_name):
 	if get_node("ListeSelecteur").is_visible_in_tree():
 		get_node("ListeSelecteur").hide()
 	
-	get_node("Loading_animation").loading()
-#	print(id)
+	get_node("loading_anim").loading()
+	yield(get_tree().create_timer(load_timer), "timeout")
+	
 	var node = get_node("Content/Profils_list_display")
 	node.reset_para()
 	
@@ -76,20 +78,24 @@ func display_team(team_name):
 	node.visible = true
 	get_node("Content/HBoxContainer").visible = true
 	get_node("Content/HBoxContainer/DeleteButton").visible = true
-	get_node("Content/HBoxContainer/DeleteButton").disconnect("pressed", self, "_on_Delete_pressed")
+	if get_node("Content/HBoxContainer/DeleteButton").is_connected("pressed", self, "_on_Delete_pressed"):
+		get_node("Content/HBoxContainer/DeleteButton").disconnect("pressed", self, "_on_Delete_pressed")
 	get_node("Content/HBoxContainer/DeleteButton").connect("pressed", self, "_on_Delete_pressed", [team_name])
 	
 	node.change_faction(team_faction)
 	recreate_list(team_members)
 	
-	get_node("Content/HBoxContainer/SaveButton").disconnect("pressed", self, "save")
+	if get_node("Content/HBoxContainer/SaveButton").is_connected("pressed", self, "save"):
+		get_node("Content/HBoxContainer/SaveButton").disconnect("pressed", self, "save")
 	get_node("Content/HBoxContainer/SaveButton").connect("pressed", self, "save", [team_name])
 	
 	get_node("Content/HBoxContainer/ExportButton").visible = true
-	get_node("Content/HBoxContainer/ExportButton").disconnect("pressed", self, "export_test")
+	if get_node("Content/HBoxContainer/ExportButton").is_connected("pressed", self, "export_test"):
+		get_node("Content/HBoxContainer/ExportButton").disconnect("pressed", self, "export_test")
 	get_node("Content/HBoxContainer/ExportButton").connect("pressed", self, "export_list", [team_name])
 
-	get_node("Loading_animation").hide_loading()
+	yield(get_tree().create_timer(load_timer), "timeout")
+	get_node("loading_anim").hide_loading()
 	
 func recreate_list(list):
 	for p in list:
@@ -99,10 +105,6 @@ func recreate_list(list):
 #	print(list)
 	for p in list:
 		get_node("Content/Profils_list_display/Profils/DiplayList/" + p["Imgs"]).find_node("Add").emit_signal("pressed")
-	
-func display_list(boolean, list):
-	for i in list:
-		i.visible = boolean
 	
 func _on_save(_value):
 	must_save()
@@ -153,6 +155,7 @@ func export_confirmed(list_str):
 func _on_ImportButton_pressed():
 	get_node("ImportDialog").popup_centered()
 	get_node("ImportDialog").connect("confirmed", self, "import_confirmed")
+	get_node("ImportDialog").rect_position = Vector2(get_node("ImportDialog").rect_position.x, get_node("ImportDialog").rect_position.y-84*2)
 	
 func import_confirmed():
 	var nom = get_node("ImportDialog/VBoxContainer/ListName").text

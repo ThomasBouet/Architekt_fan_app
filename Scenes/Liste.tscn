@@ -161,9 +161,9 @@ anchor_top = 1.008
 anchor_right = 1.0
 anchor_bottom = 1.008
 margin_left = 24.0
-margin_top = -127.192
+margin_top = -130.192
 margin_right = -24.0
-margin_bottom = -89.192
+margin_bottom = -92.192
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 4 )
 text = "Importer"
@@ -178,6 +178,8 @@ __meta__ = {
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
 mouse_filter = 2
 size_flags_horizontal = 3
 color = Color( 0.572549, 0.380392, 0.380392, 1 )
@@ -253,11 +255,9 @@ __meta__ = {
 script = ExtResource( 11 )
 
 [node name="Menu_Commun" parent="." instance=ExtResource( 3 )]
-margin_top = -72.0
 
 [node name="Loading_animation" parent="." instance=ExtResource( 17 )]
 visible = false
-position = Vector2( 288, 512 )
 
 [node name="ListeSelecteur" type="WindowDialog" parent="."]
 visible = true
@@ -288,5 +288,12 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="ListeSelecteur/ScrollContainer"]
 margin_right = 304.0
 rect_min_size = Vector2( 304, 0 )
+
+[node name="loading_anim" parent="." instance=ExtResource( 17 )]
+visible = false
+margin_left = 288.0
+margin_top = 512.0
+margin_right = 288.0
+margin_bottom = 512.0
 [connection signal="pressed" from="Content/MenuButton" to="." method="_on_MenuButton_pressed"]
 [connection signal="pressed" from="ImportButton" to="." method="_on_ImportButton_pressed"]

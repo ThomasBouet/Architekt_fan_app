@@ -37,7 +37,3 @@ func _on_LineEdit_text_changed(search_clue):
 	for n in nodes_profil:
 		var name = n.get_child(1).get_child(0).text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
-	
-func _on_Button_pressed():
-	if get_tree().change_scene("res://Scenes/regles.tscn") != OK:
-		print("Une erreur innatendue est arrivée")

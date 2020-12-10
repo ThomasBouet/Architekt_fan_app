@@ -189,7 +189,10 @@ __meta__ = {
 
 [node name="icon" parent="." instance=ExtResource( 8 )]
 visible = false
-position = Vector2( 288, -512 )
+margin_left = 288.0
+margin_top = -512.0
+margin_right = 288.0
+margin_bottom = -512.0
 [connection signal="pressed" from="HBoxContainer/Accueil/Accueil_Btn" to="." method="_on_Accueil_Btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/Comp et Form/CaF_Btn" to="." method="_on_CaF_Btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/Profils/Profil_Btn" to="." method="_on_Profil_Btn_pressed"]

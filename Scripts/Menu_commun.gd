@@ -20,7 +20,10 @@ func _on_Regle_Btn_pressed():
 	
 func _on_CaF_Btn_pressed():
 	load_scene("res://Scenes/Comp_et_Form_Display.tscn")
-
+	
+func _on_Scenars_Btn_pressed():
+	load_scene("res://Scenes/scenar_disp.tscn")
+	
 func loading():
 	loading_playing = true
 	get_node("icon").loading()

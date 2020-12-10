@@ -42,7 +42,7 @@ anchor_bottom = 0.996
 margin_left = 24.0
 margin_top = 118.0
 margin_right = -22.272
-margin_bottom = -75.904
+margin_bottom = -85.904
 custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
@@ -84,8 +84,8 @@ text = "Formules"
 [node name="Comp" type="ScrollContainer" parent="Content Holder"]
 margin_top = 96.0
 margin_right = 528.0
-margin_bottom = 826.0
-rect_min_size = Vector2( 528, 730 )
+margin_bottom = 816.0
+rect_min_size = Vector2( 528, 720 )
 mouse_filter = 1
 size_flags_vertical = 3
 follow_focus = true
@@ -95,14 +95,16 @@ __meta__ = {
 
 [node name="DiplayList" type="VBoxContainer" parent="Content Holder/Comp"]
 margin_right = 528.0
-margin_bottom = 730.0
+margin_bottom = 720.0
 rect_min_size = Vector2( 0, 100 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Menu_Commun" parent="." instance=ExtResource( 4 )]
-margin_top = -72.0001
+margin_top = -81.0
+margin_bottom = -1.0
 [connection signal="text_changed" from="Content Holder/LineEdit" to="." method="_on_LineEdit_text_changed"]

@@ -22,8 +22,3 @@ func _ready():
 		text_rect.rect_min_size = Vector2(0,700)
 		get_node("ScrollContainer/DisplayList").add_child(text_rect)
 	dir.list_dir_end()
-
-
-func _on_Button_pressed():
-	if get_tree().change_scene("res://Scenes/scenar_disp.tscn") != OK:
-		print("Une erreur innatendue est arrivée")

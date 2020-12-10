@@ -2,6 +2,7 @@ extends Control
 
 
 var Description_visible = false
+const bottom = 30
 
 func init(scenario):
 	get_node("LinkButton/Nom").text = scenario["Nom"]
@@ -14,7 +15,7 @@ func init(scenario):
 	
 func resize_self():
 	var x = get_node("ColorRect").rect_size.x
-	var y = get_node("VBoxContainer").rect_size.y + get_node("ColorRect").rect_size.y
+	var y = bottom + get_node("VBoxContainer").rect_size.y + get_node("ColorRect").rect_size.y
 	if Description_visible:
 		get_node(".").rect_min_size = Vector2(x, y)
 	else:

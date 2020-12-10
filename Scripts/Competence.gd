@@ -2,6 +2,7 @@ extends Control
 
 
 var Description_visible = false
+const bottom = 30
 
 func init(comp):
 	get_node("TextureButton/Nom").text = comp
@@ -10,7 +11,7 @@ func init(comp):
 	
 func resize_self():
 	if Description_visible:
-		get_node(".").rect_min_size = Vector2(get_node("ColorRect").rect_size.x, get_node("ColorRect").rect_size.y + get_node("Description").rect_size.y)
+		get_node(".").rect_min_size = Vector2(get_node("ColorRect").rect_size.x, bottom + get_node("ColorRect").rect_size.y + get_node("Description").rect_size.y)
 	else:
 		get_node(".").rect_min_size = get_node("ColorRect").rect_size
 	

@@ -42,7 +42,7 @@ anchor_bottom = 1.0
 margin_left = 24.0
 margin_top = 116.0
 margin_right = -24.0
-margin_bottom = -80.0001
+margin_bottom = -88.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 follow_focus = true
@@ -52,7 +52,7 @@ __meta__ = {
 
 [node name="DisplayList" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 528.0
-margin_bottom = 828.0
+margin_bottom = 820.0
 rect_min_size = Vector2( 0, 650 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -62,12 +62,8 @@ __meta__ = {
 }
 
 [node name="Menu_Commun" parent="." instance=ExtResource( 2 )]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_top = -72.0
-margin_bottom = 0.0
 
-[node name="Button" type="Button" parent="."]
+[node name="Scenars_Btn" type="Button" parent="."]
 anchor_left = 0.694
 anchor_right = 1.0
 margin_left = 16.256
@@ -79,4 +75,4 @@ text = "Scénarios"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Scenars_Btn" to="Menu_Commun" method="_on_Scenars_Btn_pressed"]

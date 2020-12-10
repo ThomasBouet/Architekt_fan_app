@@ -2,18 +2,14 @@ extends Control
 
 
 var MenuOpen = true
+const load_timer = 0.2
 
 func _ready():
-	get_node("Content Holder/Profils_list_display").connect("begin_loading", get_node("Loading_animation"), "loading")
-	get_node("Content Holder/Profils_list_display").connect("end_loading", get_node("Loading_animation"), "hide_loading")
 	get_node("Content Holder/Profils_list_display").connect("save", self, "show_savebutton")
-	get_node("Loading_animation").loading()
 	_on_Tous_pressed()
 	
 	get_node("Faction").text = "Profils"
-	
 	get_node("SaveDialog").register_text_enter(get_node("SaveDialog/LineEdit"))
-	get_node("Loading_animation").hide_loading()
 	
 func move_menu():
 	MenuOpen = !MenuOpen
@@ -25,20 +21,23 @@ func _on_MenuButton_pressed():
 	
 func _on_Tous_pressed():
 	move_menu()
+	get_node("icon").loading()
+	yield(get_tree().create_timer(load_timer), "timeout")
 	get_node("Content Holder/SaveButton").visible = false
-	get_node("Loading_animation").loading()
 	get_node("Faction").text = "Profils"
-	get_node("Content Holder/Profils_list_display").change_tous()
-	get_node("Loading_animation").hide_loading()
-	
+	get_node("Content Holder/Profils_list_display").call_deferred("change_tous")
+	yield(get_tree().create_timer(load_timer), "timeout")
+	get_node("icon").hide_loading()
 	
 # --- Gestion de l'affichage des profils ---
 func _change_faction(faction):
-	get_node("Loading_animation").loading()
 	move_menu()
+	get_node("icon").loading()
+	yield(get_tree().create_timer(load_timer), "timeout")
 	get_node("Faction").text = faction
-	get_node("Content Holder/Profils_list_display").change_faction(faction)
-	get_node("Loading_animation").hide_loading()
+	get_node("Content Holder/Profils_list_display").call_deferred("change_faction", faction)
+	yield(get_tree().create_timer(load_timer), "timeout")
+	get_node("icon").hide_loading()
 	
 func _on_SaveButton_pressed():
 	get_node("SaveDialog").popup_centered()
@@ -64,4 +63,4 @@ func show_message(title, msg):
 func show_savebutton(state):
 	get_node("Content Holder/SaveButton").visible = state
 	
-
+	

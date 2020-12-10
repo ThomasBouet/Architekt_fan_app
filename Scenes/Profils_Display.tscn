@@ -513,11 +513,14 @@ __meta__ = {
 [node name="Menu_Commun" parent="." instance=ExtResource( 3 )]
 margin_bottom = -8.0
 
-[node name="Loading_animation" parent="." instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 288, 512 )
-
 [node name="DisplayDialog" parent="." instance=ExtResource( 10 )]
+
+[node name="icon" parent="." instance=ExtResource( 5 )]
+visible = false
+margin_left = 288.0
+margin_top = 512.0
+margin_right = 288.0
+margin_bottom = 512.0
 [connection signal="pressed" from="Content Holder/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Tous" to="." method="_on_Tous_pressed"]
 [connection signal="pressed" from="Factions/HBoxContainer/VBoxContainer/Aurlok" to="." method="_change_faction" binds= [ "Aurlok" ]]

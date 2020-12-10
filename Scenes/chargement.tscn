@@ -21,11 +21,18 @@ tracks/0/keys = {
 "values": [ 0.0, 36.0, 72.0, 108.0, 144.0, 180.0, 216.0, 252.0, 288.0, 324.0, 360.0 ]
 }
 
-[node name="icon" type="Sprite"]
-texture = ExtResource( 2 )
+[node name="icon" type="Control"]
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="TextureRect" type="Sprite" parent="."]
+rotation = 4.27544
+scale = Vector2( 0.901416, 0.906671 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
 anims/loading = SubResource( 1 )
 
 [node name="Label" type="Label" parent="."]

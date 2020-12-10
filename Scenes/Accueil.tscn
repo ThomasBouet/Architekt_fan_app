@@ -135,7 +135,10 @@ __meta__ = {
 
 [node name="icon" parent="." instance=ExtResource( 4 )]
 visible = false
-position = Vector2( 288, 512 )
+margin_left = 288.0
+margin_top = 512.0
+margin_right = 288.0
+margin_bottom = 512.0
 [connection signal="pressed" from="VBoxContainer/Profil_Btn" to="." method="_on_Profil_Btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/Liste_Btn" to="." method="_on_Liste_Btn_pressed"]
 [connection signal="pressed" from="VBoxContainer/Compétences" to="." method="_on_Comptences_pressed"]

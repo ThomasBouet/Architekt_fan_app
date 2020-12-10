@@ -5,12 +5,14 @@ const Profil = preload("res://Scenes/Profil.tscn")
 var maxPts = 180 setget set_maxPts, get_maxPts
 var currentPTS = 0 setget set_curPts, get_curPts
 var Team = [] setget set_Team, get_Team 
+	
 var list_hero = []
 var list_alchi = []
 var list_tpe = []
 var faction = "Profils"
-signal begin_loading
-signal end_loading
+	
+const refresh_timer = 0.15
+	
 signal save
 	
 func set_curPts(v):
@@ -33,6 +35,7 @@ func get_Team():
 	
 func _ready():
 	get_node("Panel").init()
+	get_node("HBoxContainer2/SpinBox").add_font_override("font", load("res://Fonts/Text_font.tres"))
 	
 func add_to_team(node):
 #	print("adding " + node.profil["Nom"])
@@ -106,14 +109,14 @@ func remove_from_team(node):
 					currentPTS -= int(node_modified.profil["Cout"])
 					get_node("ProgressBar").value = currentPTS
 					get_node("Panel").avg_stats(Team)
-
+	
 func display_list_type_profil(categorie, list, cat_list, hide):
 	var node = get_node("Profils/DiplayList")
 	var label = Label.new()
 	label.text = categorie
 	label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(label)
-#	--- Ajoute tout les héros de la faction correspondante ---	
+#	--- Ajoute tout les héros de la faction correspondante ---
 	for p in list:
 		var profil = Profil.instance().init(p, hide)
 		profil.name = p["Imgs"]
@@ -124,25 +127,27 @@ func display_list_type_profil(categorie, list, cat_list, hide):
 		cat_list.append(profil)
 	
 func refresh_profils_list(list, hide=false, tous=false):
-	get_node("HBoxContainer/heros").disconnect("toggled", self, "display_list")
-	get_node("HBoxContainer/alchis").disconnect("toggled", self, "display_list")
-	get_node("HBoxContainer/troupes").disconnect("toggled", self, "display_list")
-
+	if get_node("HBoxContainer/heros").is_connected("toggled", self, "display_list"):
+		get_node("HBoxContainer/heros").disconnect("toggled", self, "display_list")
+		get_node("HBoxContainer/alchis").disconnect("toggled", self, "display_list")
+		get_node("HBoxContainer/troupes").disconnect("toggled", self, "display_list")
+	
 	list_hero = []
 	list_alchi = []
 	list_tpe = []
 	var lists = Json_reader.get_list_for_each_type(list)
-	var node = get_node("Profils/DiplayList")
 	
-#	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
-	for n in node.get_children():
-		node.remove_child(n)
-		n.queue_free()
+	if lists[0] != []:
+		display_list_type_profil("Héros", lists[0] if !tous else Team_handler.sort_profil_list(lists[0]), list_hero, hide)
+		yield(get_tree().create_timer(refresh_timer), "timeout")
 		
-	display_list_type_profil("Héros", lists[0] if !tous else Team_handler.sort_profil_list(lists[0]), list_hero, hide)
-	display_list_type_profil("Alchimistes", lists[1] if !tous else Team_handler.sort_profil_list(lists[1]), list_alchi, hide)
-	display_list_type_profil("Troupes", lists[2] if !tous else Team_handler.sort_profil_list(lists[2]), list_tpe, hide)
-#	
+	if lists[1] != []:
+		display_list_type_profil("Alchimistes", lists[1] if !tous else Team_handler.sort_profil_list(lists[1]), list_alchi, hide)
+		yield(get_tree().create_timer(refresh_timer), "timeout")
+		
+	if lists[2] != []:
+		display_list_type_profil("Troupes", lists[2] if !tous else Team_handler.sort_profil_list(lists[2]), list_tpe, hide)
+	var node = get_node("Profils/DiplayList")
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)
@@ -176,7 +181,6 @@ func _on_SpinBox_value_changed(value):
 	_on_ProgressBar_value_changed(get_node("ProgressBar").value)
 	
 func change_tous():
-	emit_signal("begin_loading")
 	Team = []
 	faction = "Profils"
 	get_node("Panel").visible = false
@@ -184,12 +188,18 @@ func change_tous():
 	get_node("HBoxContainer2").visible = false
 	get_node("HBoxContainer").visible = true
 	get_node("LineEdit").visible = true
+	
+	var node = get_node("Profils/DiplayList")
+#	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
+	for n in node.get_children():
+		node.remove_child(n)
+		n.queue_free()
+		
 	refresh_profils_list(Json_reader.load_all_factions(), true, true)
-	emit_signal("end_loading")
-
+#	yield(refresh_profils_list(Json_reader.load_all_factions(), true, true), "completed")
+	
 # --- Gestion de l'affichage des profils ---
 func change_faction(f):
-	emit_signal("begin_loading")
 	faction = f
 	Team = []
 	currentPTS = 0
@@ -200,9 +210,16 @@ func change_faction(f):
 	get_node("HBoxContainer2").visible = true
 	get_node("HBoxContainer").visible = false
 	get_node("LineEdit").visible = false
-	refresh_profils_list(Json_reader.profils_data[f])
-	emit_signal("end_loading")
+	var node = get_node("Profils/DiplayList")
+#	--- Supprime tous les noeuds résiduels lors d'un chargement de factions ---
+	for n in node.get_children():
+		node.remove_child(n)
+		n.queue_free()
+		
+	refresh_profils_list(Json_reader.profils_data[faction])
+#	yield(refresh_profils_list(Json_rkeader.profils_data[faction]), "completed")
 	
+#	
 func reset_para():
 	Team = []
 	maxPts = 180
