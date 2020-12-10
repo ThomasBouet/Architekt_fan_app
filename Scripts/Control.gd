@@ -6,7 +6,7 @@ const bottom = 30
 
 func init(p, hide):
 	profil = p
-	get_node("HBoxContainer/Nom/Label").text = profil["Nom"]
+	get_node("HBoxContainer/Nom/HBoxContainer/Label").text = profil["Nom"]
 	get_node("HBoxContainer/Nom/Infos/PA").text = profil["PA"]
 	get_node("HBoxContainer/Nom/Infos/Cout").text = profil["Cout"]
 	get_node("HBoxContainer/Nom/Infos/Max").text = profil["Max"]
@@ -40,16 +40,16 @@ func init(p, hide):
 	get_node("HBoxContainer/Remove").visible = false
 	
 	if profil["Type"] == "Troupe":
-		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
+		get_node("HBoxContainer/Nom/HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/sword_01c.png")
 		get_node("ColorRect").color = "#7d653d"
 	elif profil["Type"] == "Héro" or profil["Type"] == "Héro/Alchimiste":
-		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
+		get_node("HBoxContainer/Nom/HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/helmet_02d.png")
 		get_node("ColorRect").color = "#551a1a"
 	elif profil["Type"] == "Alchimiste":
-		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
+		get_node("HBoxContainer/Nom/HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/potion_03c.png")
 		get_node("ColorRect").color = "#26621a"
 	elif profil["Type"] == "Spécial":
-		get_node("HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
+		get_node("HBoxContainer/Nom/HBoxContainer/TextureRect").texture = ResourceLoader.load("res://Sprites/UI/cookie_01a.png")
 		get_node("ColorRect").color = "#3d777d"
 		
 	get_node("HBoxContainer/Nom/Infos/Max").text = "0" 
