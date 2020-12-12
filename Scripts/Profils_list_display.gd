@@ -114,6 +114,7 @@ func display_list_type_profil(categorie, list, cat_list, hide):
 	var node = get_node("Profils/DiplayList")
 	var label = Label.new()
 	label.text = categorie
+	label.name = categorie
 	label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(label)
 #	--- Ajoute tout les héros de la faction correspondante ---
@@ -160,6 +161,13 @@ func refresh_profils_list(list, hide=false, tous=false):
 func display_list(boolean, list):
 	for i in list:
 		i.visible = boolean
+	match list:
+		list_hero:
+			get_node("Profils/DiplayList/Héros").visible = boolean
+		list_alchi:
+			get_node("Profils/DiplayList/Alchimistes").visible = boolean
+		list_tpe:
+			get_node("Profils/DiplayList/Troupes").visible = boolean
 	
 func _on_ProgressBar_value_changed(value):
 	get_node("ProgressBar/Label").text = str(value) + "/" + str(maxPts)

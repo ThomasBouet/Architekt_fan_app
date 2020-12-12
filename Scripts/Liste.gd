@@ -82,7 +82,7 @@ func display_team(team_name):
 		get_node("Content/HBoxContainer/DeleteButton").disconnect("pressed", self, "_on_Delete_pressed")
 	get_node("Content/HBoxContainer/DeleteButton").connect("pressed", self, "_on_Delete_pressed", [team_name])
 	
-	node.change_faction(team_faction)
+	yield(load_faction(node, team_faction), "completed")
 	recreate_list(team_members)
 	
 	if get_node("Content/HBoxContainer/SaveButton").is_connected("pressed", self, "save"):
@@ -96,6 +96,10 @@ func display_team(team_name):
 
 	yield(get_tree().create_timer(load_timer), "timeout")
 	get_node("loading_anim").hide_loading()
+	
+func load_faction(node, faction):
+	node.change_faction(faction)
+	yield(get_tree().create_timer(2), "timeout")
 	
 func recreate_list(list):
 	for p in list:
