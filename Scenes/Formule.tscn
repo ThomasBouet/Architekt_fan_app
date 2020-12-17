@@ -5,11 +5,9 @@
 [ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=4]
 
-[node name="Control" type="Control"]
+[node name="Control" type="VBoxContainer"]
 anchor_right = 1.0
-anchor_bottom = 0.297
-margin_bottom = 10.0
-mouse_filter = 1
+margin_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
@@ -17,7 +15,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Front" type="Control" parent="."]
+margin_right = 576.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+
+[node name="ColorRect" type="ColorRect" parent="Front"]
 anchor_right = 1.0
 margin_bottom = 64.0
 mouse_filter = 2
@@ -26,7 +29,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="Front"]
 anchor_right = 1.0
 margin_left = 8.0
 margin_top = 8.0
@@ -39,7 +42,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nom" type="Label" parent="TextureButton"]
+[node name="Nom" type="Label" parent="Front/TextureButton"]
 anchor_left = -0.017
 anchor_top = -0.167
 anchor_right = 1.018
@@ -56,35 +59,66 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Competence_Dialog" parent="." instance=ExtResource( 2 )]
 visible = false
-anchor_right = 1.0
+margin_left = 0.0
+margin_top = -488.0
+margin_right = -32.0
+margin_bottom = -117.0
+
+[node name="Back" type="MarginContainer" parent="."]
+visible = false
+margin_top = 68.0
+margin_right = 576.0
+margin_bottom = 264.0
+custom_constants/margin_right = 16
+custom_constants/margin_left = 16
+
+[node name="ColorRect" type="ColorRect" parent="Back"]
 margin_left = 16.0
-margin_top = 64.0
-margin_right = -16.0
-margin_bottom = 304.0
-size_flags_horizontal = 0
+margin_right = 560.0
+margin_bottom = 216.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Info_Holder" type="MarginContainer" parent="Back"]
+margin_left = 16.0
+margin_right = 560.0
+margin_bottom = 216.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 10
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Infos" type="VBoxContainer" parent="Back/Info_Holder"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 524.0
+margin_bottom = 206.0
+size_flags_horizontal = 3
 custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 544.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Back/Info_Holder/Infos"]
+margin_right = 504.0
 margin_bottom = 32.0
 alignment = 1
 
-[node name="Cout" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_right = 178.0
+[node name="Cout" type="Label" parent="Back/Info_Holder/Infos/HBoxContainer"]
+margin_right = 165.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
 text = "Cout : "
 valign = 1
 
-[node name="Portee" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 182.0
-margin_right = 361.0
+[node name="Portee" type="Label" parent="Back/Info_Holder/Infos/HBoxContainer"]
+margin_left = 169.0
+margin_right = 334.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
@@ -92,9 +126,9 @@ text = "Portee : "
 align = 1
 valign = 1
 
-[node name="Cible" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 365.0
-margin_right = 544.0
+[node name="Cible" type="Label" parent="Back/Info_Holder/Infos/HBoxContainer"]
+margin_left = 338.0
+margin_right = 504.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
@@ -102,9 +136,9 @@ text = "Cible : "
 align = 1
 valign = 1
 
-[node name="Desc" type="Label" parent="VBoxContainer"]
+[node name="Desc" type="Label" parent="Back/Info_Holder/Infos"]
 margin_top = 42.0
-margin_right = 544.0
+margin_right = 504.0
 margin_bottom = 74.0
 custom_fonts/font = ExtResource( 3 )
 text = "Description :"
@@ -112,10 +146,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Description" type="RichTextLabel" parent="VBoxContainer"]
+[node name="Description" type="RichTextLabel" parent="Back/Info_Holder/Infos"]
 margin_top = 84.0
-margin_right = 544.0
-margin_bottom = 136.0
+margin_right = 504.0
+margin_bottom = 114.0
 mouse_filter = 1
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 4 )
@@ -125,20 +159,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Amélio" type="Label" parent="VBoxContainer"]
-margin_top = 146.0
-margin_right = 544.0
-margin_bottom = 178.0
+[node name="Amélio" type="Label" parent="Back/Info_Holder/Infos"]
+margin_top = 124.0
+margin_right = 504.0
+margin_bottom = 156.0
 custom_fonts/font = ExtResource( 3 )
 text = "Améliorations :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Amélioration" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 188.0
-margin_right = 544.0
-margin_bottom = 240.0
+[node name="Amélioration" type="RichTextLabel" parent="Back/Info_Holder/Infos"]
+margin_top = 166.0
+margin_right = 504.0
+margin_bottom = 196.0
 mouse_filter = 2
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 4 )
@@ -147,7 +181,5 @@ fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Competence_Dialog" parent="." instance=ExtResource( 2 )]
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="meta_clicked" from="VBoxContainer/Description" to="." method="_on_Description_meta_clicked"]
+[connection signal="pressed" from="Front/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="meta_clicked" from="Back/Info_Holder/Infos/Description" to="." method="_on_Description_meta_clicked"]

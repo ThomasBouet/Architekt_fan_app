@@ -24,19 +24,39 @@ font_data = ExtResource( 8 )
 size = 24
 font_data = ExtResource( 8 )
 
-[node name="Control" type="Control"]
+[node name="Control" type="VBoxContainer"]
 anchor_right = 1.0
-anchor_bottom = 0.273
-mouse_filter = 1
+margin_bottom = 435.0
 size_flags_horizontal = 3
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.002
-margin_right = -1.15204
+[node name="Cards_Display" parent="." instance=ExtResource( 3 )]
+margin_top = -568.0
+margin_bottom = -719.552
+
+[node name="Comp_Display" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_top = -384.0
+margin_bottom = -13.0
+
+[node name="Form_Display" parent="." instance=ExtResource( 5 )]
+visible = false
+margin_top = -944.0
+margin_bottom = -632.0
+
+[node name="Front" type="Control" parent="."]
+margin_right = 576.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Front"]
+anchor_right = 1.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 0, 64 )
 mouse_filter = 2
@@ -45,7 +65,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="Front"]
 anchor_right = 1.0
 margin_right = -16.0
 margin_bottom = 64.0
@@ -54,7 +74,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nom" type="TextureButton" parent="HBoxContainer"]
+[node name="Nom" type="TextureButton" parent="Front/HBoxContainer"]
 margin_right = 365.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 200, 0 )
@@ -66,14 +86,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Nom"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Front/HBoxContainer/Nom"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Nom/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Front/HBoxContainer/Nom/HBoxContainer"]
 margin_right = 64.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 64, 64 )
@@ -83,7 +103,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="HBoxContainer/Nom/HBoxContainer"]
+[node name="Label" type="Label" parent="Front/HBoxContainer/Nom/HBoxContainer"]
 margin_left = 68.0
 margin_right = 365.0
 margin_bottom = 64.0
@@ -96,7 +116,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Infos" type="Control" parent="HBoxContainer/Nom"]
+[node name="Infos" type="Control" parent="Front/HBoxContainer/Nom"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -104,7 +124,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="_pa" type="Label" parent="HBoxContainer/Nom/Infos"]
+[node name="_pa" type="Label" parent="Front/HBoxContainer/Nom/Infos"]
 margin_left = 64.0
 margin_top = 36.0
 margin_right = 104.0
@@ -117,7 +137,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PA" type="Label" parent="HBoxContainer/Nom/Infos"]
+[node name="PA" type="Label" parent="Front/HBoxContainer/Nom/Infos"]
 margin_left = 100.0
 margin_top = 36.0
 margin_right = 140.0
@@ -130,7 +150,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="_pts" type="Label" parent="HBoxContainer/Nom/Infos"]
+[node name="_pts" type="Label" parent="Front/HBoxContainer/Nom/Infos"]
 margin_left = 140.0
 margin_top = 36.0
 margin_right = 180.0
@@ -143,7 +163,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cout" type="Label" parent="HBoxContainer/Nom/Infos"]
+[node name="Cout" type="Label" parent="Front/HBoxContainer/Nom/Infos"]
 margin_left = 180.0
 margin_top = 36.0
 margin_right = 220.0
@@ -156,35 +176,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Max" type="Label" parent="HBoxContainer/Nom/Infos"]
+[node name="Max" type="Label" parent="Front/HBoxContainer/Nom/Infos"]
 visible = false
 margin_left = 268.0
 margin_top = 36.0
 margin_right = 308.0
 margin_bottom = 60.0
 custom_fonts/font = SubResource( 2 )
-text = "0"
+text = "00/00"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="_max2" type="Label" parent="HBoxContainer/Nom/Infos"]
-visible = false
-margin_left = 220.0
-margin_top = 36.0
-margin_right = 269.0
-margin_bottom = 60.0
-custom_fonts/font = SubResource( 2 )
-text = "Max :"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="HBoxContainer"]
+[node name="Button" type="Button" parent="Front/HBoxContainer"]
 margin_left = 369.0
 margin_right = 430.0
 margin_bottom = 64.0
@@ -198,7 +204,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Add" type="Button" parent="HBoxContainer"]
+[node name="Add" type="Button" parent="Front/HBoxContainer"]
 margin_left = 434.0
 margin_right = 495.0
 margin_bottom = 64.0
@@ -209,7 +215,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Remove" type="Button" parent="HBoxContainer"]
+[node name="Remove" type="Button" parent="Front/HBoxContainer"]
 margin_left = 499.0
 margin_right = 560.0
 margin_bottom = 64.0
@@ -220,26 +226,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Back" type="MarginContainer" parent="."]
 visible = false
-anchor_right = 1.0
+margin_top = 68.0
+margin_right = 576.0
+margin_bottom = 455.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 16
+custom_constants/margin_left = 16
+
+[node name="ColorRect" type="ColorRect" parent="Back"]
 margin_left = 16.0
-margin_top = 64.0
-margin_right = -16.0
-margin_bottom = 290.0
-size_flags_horizontal = 0
+margin_right = 560.0
+margin_bottom = 387.0
+size_flags_horizontal = 3
+color = Color( 0, 0, 0, 1 )
+
+[node name="Stats_Holder" type="MarginContainer" parent="Back"]
+margin_left = 16.0
+margin_right = 560.0
+margin_bottom = 387.0
+custom_constants/margin_right = 20
+custom_constants/margin_left = 20
+
+[node name="Stats" type="VBoxContainer" parent="Back/Stats_Holder"]
+margin_left = 20.0
+margin_right = 524.0
+margin_bottom = 387.0
+size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 10
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cara" type="HBoxContainer" parent="VBoxContainer"]
-margin_right = 544.0
-margin_bottom = 29.0
+[node name="Control" type="Control" parent="Back/Stats_Holder/Stats"]
+margin_right = 504.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 10 )
 
-[node name="PA" type="Label" parent="VBoxContainer/Cara"]
-margin_right = 105.0
+[node name="Cara" type="HBoxContainer" parent="Back/Stats_Holder/Stats"]
+margin_top = 20.0
+margin_right = 504.0
+margin_bottom = 49.0
+
+[node name="PA" type="Label" parent="Back/Stats_Holder/Stats/Cara"]
+margin_right = 97.0
 margin_bottom = 29.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
@@ -249,9 +281,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ESP" type="Label" parent="VBoxContainer/Cara"]
-margin_left = 109.0
-margin_right = 215.0
+[node name="ESP" type="Label" parent="Back/Stats_Holder/Stats/Cara"]
+margin_left = 101.0
+margin_right = 199.0
 margin_bottom = 29.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
@@ -261,9 +293,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="COM" type="Label" parent="VBoxContainer/Cara"]
-margin_left = 219.0
-margin_right = 324.0
+[node name="COM" type="Label" parent="Back/Stats_Holder/Stats/Cara"]
+margin_left = 203.0
+margin_right = 300.0
 margin_bottom = 29.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
@@ -273,9 +305,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DEF" type="Label" parent="VBoxContainer/Cara"]
-margin_left = 328.0
-margin_right = 434.0
+[node name="DEF" type="Label" parent="Back/Stats_Holder/Stats/Cara"]
+margin_left = 304.0
+margin_right = 402.0
 margin_bottom = 29.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
@@ -285,9 +317,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="REF" type="Label" parent="VBoxContainer/Cara"]
-margin_left = 438.0
-margin_right = 544.0
+[node name="REF" type="Label" parent="Back/Stats_Holder/Stats/Cara"]
+margin_left = 406.0
+margin_right = 504.0
 margin_bottom = 29.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 2 )
@@ -297,13 +329,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PVSATK" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 33.0
-margin_right = 544.0
-margin_bottom = 161.0
+[node name="Control2" type="Control" parent="Back/Stats_Holder/Stats"]
+margin_top = 59.0
+margin_right = 504.0
+margin_bottom = 69.0
+rect_min_size = Vector2( 0, 10 )
 
-[node name="PVS" type="Label" parent="VBoxContainer/PVSATK"]
-margin_right = 544.0
+[node name="PVSATK" type="VBoxContainer" parent="Back/Stats_Holder/Stats"]
+margin_top = 79.0
+margin_right = 504.0
+margin_bottom = 207.0
+
+[node name="PVS" type="Label" parent="Back/Stats_Holder/Stats/PVSATK"]
+margin_right = 504.0
 margin_bottom = 29.0
 custom_fonts/font = ExtResource( 2 )
 text = "PVS"
@@ -311,9 +349,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MVT" type="Label" parent="VBoxContainer/PVSATK"]
+[node name="MVT" type="Label" parent="Back/Stats_Holder/Stats/PVSATK"]
 margin_top = 33.0
-margin_right = 544.0
+margin_right = 504.0
 margin_bottom = 62.0
 custom_fonts/font = ExtResource( 2 )
 text = "MVT"
@@ -321,9 +359,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ATK" type="Label" parent="VBoxContainer/PVSATK"]
+[node name="ATK" type="Label" parent="Back/Stats_Holder/Stats/PVSATK"]
 margin_top = 66.0
-margin_right = 544.0
+margin_right = 504.0
 margin_bottom = 95.0
 custom_fonts/font = ExtResource( 2 )
 text = "ATK"
@@ -331,31 +369,37 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TIR" type="Label" parent="VBoxContainer/PVSATK"]
+[node name="TIR" type="Label" parent="Back/Stats_Holder/Stats/PVSATK"]
 margin_top = 99.0
-margin_right = 544.0
+margin_right = 504.0
 margin_bottom = 128.0
 custom_fonts/font = ExtResource( 2 )
 text = "TIR"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 165.0
-margin_right = 544.0
-margin_bottom = 295.0
+[node name="Control3" type="Control" parent="Back/Stats_Holder/Stats"]
+margin_top = 217.0
+margin_right = 504.0
+margin_bottom = 227.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="CompEtForm" type="VBoxContainer" parent="Back/Stats_Holder/Stats"]
+margin_top = 237.0
+margin_right = 504.0
+margin_bottom = 367.0
 size_flags_horizontal = 3
 
-[node name="COMP" type="Label" parent="VBoxContainer/VBoxContainer"]
-margin_right = 544.0
+[node name="COMP" type="Label" parent="Back/Stats_Holder/Stats/CompEtForm"]
+margin_right = 504.0
 margin_bottom = 29.0
 custom_fonts/font = ExtResource( 2 )
-text = "Compétences :"
+text = " Compétences :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Competence" type="RichTextLabel" parent="VBoxContainer/VBoxContainer"]
+[node name="Competence" type="RichTextLabel" parent="Back/Stats_Holder/Stats/CompEtForm"]
 margin_top = 33.0
-margin_right = 544.0
+margin_right = 504.0
 margin_bottom = 63.0
 mouse_filter = 1
 custom_fonts/normal_font = SubResource( 4 )
@@ -365,19 +409,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="FORM" type="Label" parent="VBoxContainer/VBoxContainer"]
+[node name="FORM" type="Label" parent="Back/Stats_Holder/Stats/CompEtForm"]
 margin_top = 67.0
-margin_right = 544.0
+margin_right = 504.0
 margin_bottom = 96.0
 custom_fonts/font = ExtResource( 2 )
-text = "Formules :"
+text = " Formules :"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Formule" type="RichTextLabel" parent="VBoxContainer/VBoxContainer"]
+[node name="Formule" type="RichTextLabel" parent="Back/Stats_Holder/Stats/CompEtForm"]
 margin_top = 100.0
-margin_right = 544.0
+margin_right = 504.0
 margin_bottom = 130.0
 mouse_filter = 1
 custom_fonts/normal_font = ExtResource( 2 )
@@ -387,27 +431,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cards_Display" parent="." instance=ExtResource( 3 )]
-visible = true
-margin_left = -592.0
-margin_top = 86.0
-margin_right = -638.0
-margin_bottom = -65.9999
-
-[node name="Comp_Display" parent="." instance=ExtResource( 4 )]
-visible = true
-margin_left = -632.0
-margin_top = -368.0
-margin_right = -58.0
-margin_bottom = 3.0
-
-[node name="Form_Display" parent="." instance=ExtResource( 5 )]
-visible = true
-margin_left = -632.0
-margin_top = 268.0
-margin_right = -58.0
-margin_bottom = 580.0
-[connection signal="pressed" from="HBoxContainer/Nom" to="." method="_on_Nom_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="meta_clicked" from="VBoxContainer/VBoxContainer/Competence" to="." method="_on_Competence_meta_clicked"]
-[connection signal="meta_clicked" from="VBoxContainer/VBoxContainer/Formule" to="." method="_on_Formule_meta_clicked"]
+[node name="Control4" type="Control" parent="Back/Stats_Holder/Stats"]
+margin_top = 377.0
+margin_right = 504.0
+margin_bottom = 387.0
+rect_min_size = Vector2( 0, 10 )
+[connection signal="pressed" from="Front/HBoxContainer/Nom" to="." method="_on_Nom_pressed"]
+[connection signal="pressed" from="Front/HBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="meta_clicked" from="Back/Stats_Holder/Stats/CompEtForm/Competence" to="." method="_on_Competence_meta_clicked"]
+[connection signal="meta_clicked" from="Back/Stats_Holder/Stats/CompEtForm/Formule" to="." method="_on_Formule_meta_clicked"]

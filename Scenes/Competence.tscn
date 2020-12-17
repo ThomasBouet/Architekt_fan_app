@@ -5,13 +5,9 @@
 [ext_resource path="res://Fonts/Button_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Fonts/Text_font.tres" type="DynamicFont" id=4]
 
-[node name="Control" type="Control"]
-anchor_right = 1.014
-anchor_bottom = 0.488
-margin_right = -8.06403
-margin_bottom = 10.0
-rect_min_size = Vector2( 0, 500 )
-mouse_filter = 1
+[node name="Control" type="VBoxContainer"]
+anchor_right = 1.0
+margin_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 1 )
@@ -19,28 +15,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
+[node name="Front" type="Control" parent="."]
+margin_right = 576.0
 margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+
+[node name="ColorRect" type="ColorRect" parent="Front"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 mouse_filter = 2
 color = Color( 0.282353, 0.266667, 0.282353, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="TextureButton" type="TextureButton" parent="Front"]
 anchor_right = 1.0
-margin_left = 8.0
-margin_top = 8.0
-margin_right = -8.0
-margin_bottom = 56.0
+anchor_bottom = 1.0
 mouse_filter = 1
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nom" type="Label" parent="TextureButton"]
+[node name="Nom" type="Label" parent="Front/TextureButton"]
 anchor_top = -0.167
 anchor_right = 0.996
 anchor_bottom = 1.167
@@ -55,13 +53,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Description" type="RichTextLabel" parent="."]
+[node name="Back" type="MarginContainer" parent="."]
 visible = false
-anchor_right = 1.0
+margin_top = 68.0
+margin_right = 576.0
+margin_bottom = 98.0
+custom_constants/margin_right = 16
+custom_constants/margin_left = 16
+
+[node name="ColorRect" type="ColorRect" parent="Back"]
 margin_left = 16.0
-margin_top = 64.0
-margin_right = -16.0
-margin_bottom = 100.0
+margin_right = 560.0
+margin_bottom = 50.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Info_Holder" type="MarginContainer" parent="Back"]
+margin_left = 16.0
+margin_right = 560.0
+margin_bottom = 50.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 10
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 10
+
+[node name="Description" type="RichTextLabel" parent="Back/Info_Holder"]
+margin_left = 20.0
+margin_top = 10.0
+margin_right = 524.0
+margin_bottom = 40.0
 mouse_filter = 1
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 4 )
@@ -72,10 +91,10 @@ __meta__ = {
 }
 
 [node name="Competence_Dialog" parent="." instance=ExtResource( 2 )]
-visible = true
+visible = false
 margin_left = -192.0
 margin_top = -384.0
 margin_right = 382.0
 margin_bottom = -13.0
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="meta_clicked" from="Description" to="." method="_on_Description_meta_clicked"]
+[connection signal="pressed" from="Front/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="meta_clicked" from="Back/Info_Holder/Description" to="." method="_on_Description_meta_clicked"]

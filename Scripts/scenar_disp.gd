@@ -24,7 +24,6 @@ func refresh_scenarios_list(list):
 		var scenar = Scenar.instance().init(s)
 		scenar.name = s["Nom"]
 		get_node("Content Holder/Scenars/DisplayList").add_child(scenar)
-		scenar.resize_self()
 #	--- solution dégueue mais ça marche ---
 	var c = Control.new()
 	c.rect_min_size = Vector2(0,0)

@@ -40,13 +40,17 @@ func get_list_for_each_type(list):
 	var troupes = []
 	
 	for i in list:
-		if i["Type"] == "Troupe" or i["Type"] == "Spécial":
-			troupes.append(i)
-		if i["Type"] == "Alchimiste" or i["Type"] == "Héro/Alchimiste":
-			alchis.append(i)
-		elif i["Type"] == "Héro" or i["Type"] == "Héro/Alchimiste":
-			heros.append(i)
-			
+		match i["Type"]:
+			"Troupe":
+				troupes.append(i)
+			"Spécial":
+				troupes.append(i)
+			"Alchimiste":
+				alchis.append(i)
+			"Héro":
+				heros.append(i)
+			"Héro/Alchimiste":
+				heros.append(i)
 	return [heros, alchis, troupes]
 	
 func has_team_saved():
@@ -89,7 +93,7 @@ const CHANGE_RECRUTEMENT = {
 	"Lotharius": ["Templier", 1],
 	"Rigosane": ["Martyr", 2],
 	"Dhalia": ["Ghulam", 2],
-	"Deicolius": ["Novice-temple", 3],
-	"Pitekica": ["Chaman-medecine", 1],
+	"Deicolius": ["Novice-Temple", 3],
+	"Pitekica": ["Chaman-Medecine", 1],
 	"Evocatrice-Sornha": ["Djinn", 1]
 }

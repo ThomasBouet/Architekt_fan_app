@@ -13,7 +13,7 @@ func display_form(form):
 	get_node("VBoxContainer/HBoxContainer/Portee").text = "Cible : " + formule[2]
 	
 	var form_split = formule[3].split("Améliorations : \r\n")
-	get_node("VBoxContainer/Description").bbcode_text = form_split[0]
+	get_node("VBoxContainer/Description").bbcode_text = "\r\n" + form_split[0]
 	get_node("VBoxContainer/Amélioration").bbcode_text = form_split[1] if form_split.size() > 1 else ""
 	get_node("VBoxContainer/amelio_desc").visible = form_split.size() > 1
 	get_node("VBoxContainer/Amélioration").visible = form_split.size() > 1

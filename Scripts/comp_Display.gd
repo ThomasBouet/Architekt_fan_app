@@ -25,25 +25,25 @@ func refresh_comps_list(list):
 	
 	var competence_label = Label.new()
 	competence_label.text = "Compétences"
+	competence_label.name = "Compétences"
 	competence_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(competence_label)
-#	--- Ajoute tous les noeuds de la faction correspondante ---	
+#	--- Ajoute tous les noeuds de la faction correspondante ---
 	for p in list[0]:
 		var comp = Competence.instance().init(p)
 		comp.name = p
 		node.add_child(comp)
-		comp.resize_self()
 		list_comp.append(comp)
 		
 	var formule_label = Label.new()
 	formule_label.text = "Formules"
+	formule_label.name = "Formules"
 	formule_label.add_font_override("font", load("res://Fonts/Text_font.tres"))
 	node.add_child(formule_label)
 	for p in list[1]:
 		var form = Formule.instance().init(p)
 		form.name = p
 		node.add_child(form)
-		form.resize_self()
 		list_form.append(form)
 	
 #	--- solution dégueue mais ça marche ---
@@ -59,3 +59,8 @@ func _on_LineEdit_text_changed(search_clue):
 func display_list(boolean, list):
 	for i in list:
 		i.visible = boolean
+	match list:
+		list_comp:
+			get_node("Content Holder/Comp/DiplayList/Compétences").visible = boolean
+		list_form:
+			get_node("Content Holder/Comp/DiplayList/Formules").visible = boolean

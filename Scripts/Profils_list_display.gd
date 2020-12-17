@@ -94,21 +94,25 @@ func remove_from_team(node):
 	
 #		--- Gestion des mofications de recutement ---
 	if Json_reader.CHANGE_RECRUTEMENT.has(node.profil["Imgs"]):
+		
 		var node_to_modify = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][0]
 		var qty = Json_reader.CHANGE_RECRUTEMENT[node.profil["Imgs"]][1]
 		var node_modified = get_node("Profils/DiplayList/"+node_to_modify)
+		
 		if node_modified != null:
-#			print(node_modified.get_max())
 			var new_max = node_modified.get_max() - qty 
 			var nb_recruited = node_modified.get_recuitement()
 			node_modified.set_max(new_max)
 			node_modified.manage_recruitement(nb_recruited)
+				
 			if nb_recruited > new_max:
 				for _i in range(nb_recruited - new_max):
 					Team.remove(Team.find(node_modified.profil))
 					currentPTS -= int(node_modified.profil["Cout"])
 					get_node("ProgressBar").value = currentPTS
 					get_node("Panel").avg_stats(Team)
+			
+				node_modified.manage_recruitement(new_max)
 	
 func display_list_type_profil(categorie, list, cat_list, hide):
 	var node = get_node("Profils/DiplayList")
@@ -124,7 +128,7 @@ func display_list_type_profil(categorie, list, cat_list, hide):
 		profil.find_node("Add").connect("pressed", self, "add_to_team", [profil])
 		profil.find_node("Remove").connect("pressed", self, "remove_from_team", [profil])
 		node.add_child(profil)
-		profil.resize_self(node.rect_size)
+#		profil.resize_self(node.rect_size)
 		cat_list.append(profil)
 	
 func refresh_profils_list(list, hide=false, tous=false):

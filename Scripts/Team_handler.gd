@@ -124,7 +124,7 @@ func unlock_animals(team, profils_list):
 			
 	var animals_nodes = []
 	for p in profils_list:
-		if "Animal sauvage" in p.profil["Compétences"].split(',') :
+		if "Animal Sauvage" in p.profil["Compétences"].split(',') :
 			animals_nodes.append(p)
 			
 	if animals_nodes != []:
@@ -145,7 +145,7 @@ func lock_animals(team, profils_list, curPts):
 		
 	var animals_nodes = []
 	for p in profils_list:
-		if "Animal sauvage" in p.profil["Compétences"] :
+		if "Animal Sauvage" in p.profil["Compétences"] :
 			animals_nodes.append(p)
 		
 	for n in animals_nodes:

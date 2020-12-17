@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/UI/clipboard.svg" type="Texture" id=1]
-[ext_resource path="res://Sprites/UI/home.svg" type="Texture" id=2]
 [ext_resource path="res://Sprites/UI/skills.svg" type="Texture" id=3]
 [ext_resource path="res://Sprites/UI/rules.svg" type="Texture" id=4]
 [ext_resource path="res://Sprites/UI/group.svg" type="Texture" id=5]
@@ -29,44 +28,16 @@ __meta__ = {
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_right = 1.0
+margin_left = 20.0
 margin_top = 6.0
+margin_right = -20.0
 margin_bottom = 80.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Accueil" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 92.0
-margin_bottom = 74.0
-size_flags_horizontal = 3
-size_flags_vertical = 0
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Accueil_Btn" type="TextureButton" parent="HBoxContainer/Accueil"]
-margin_right = 92.0
-margin_bottom = 46.0
-rect_min_size = Vector2( 0, 46 )
-size_flags_vertical = 0
-texture_normal = ExtResource( 2 )
-expand = true
-stretch_mode = 5
-
-[node name="Label" type="Label" parent="HBoxContainer/Accueil"]
-margin_top = 50.0
-margin_right = 92.0
-margin_bottom = 74.0
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Accueil"
-align = 1
-valign = 1
-
 [node name="Comp et Form" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 96.0
-margin_right = 230.0
+margin_right = 134.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -91,8 +62,8 @@ align = 1
 valign = 1
 
 [node name="Profils" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 234.0
-margin_right = 326.0
+margin_left = 138.0
+margin_right = 259.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -102,7 +73,7 @@ __meta__ = {
 }
 
 [node name="Profil_Btn" type="TextureButton" parent="HBoxContainer/Profils"]
-margin_right = 92.0
+margin_right = 121.0
 margin_bottom = 46.0
 rect_min_size = Vector2( 0, 46 )
 size_flags_vertical = 0
@@ -112,7 +83,7 @@ stretch_mode = 5
 
 [node name="Label3" type="Label" parent="HBoxContainer/Profils"]
 margin_top = 50.0
-margin_right = 92.0
+margin_right = 121.0
 margin_bottom = 74.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -121,8 +92,8 @@ align = 1
 valign = 1
 
 [node name="Listes" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 330.0
-margin_right = 425.0
+margin_left = 263.0
+margin_right = 385.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -132,7 +103,7 @@ __meta__ = {
 }
 
 [node name="Liste_Btn" type="TextureButton" parent="HBoxContainer/Listes"]
-margin_right = 95.0
+margin_right = 122.0
 margin_bottom = 46.0
 rect_min_size = Vector2( 0, 46 )
 size_flags_vertical = 0
@@ -142,7 +113,7 @@ stretch_mode = 5
 
 [node name="Label2" type="Label" parent="HBoxContainer/Listes"]
 margin_top = 50.0
-margin_right = 95.0
+margin_right = 122.0
 margin_bottom = 74.0
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -151,8 +122,8 @@ align = 1
 valign = 1
 
 [node name="Regles" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 429.0
-margin_right = 576.0
+margin_left = 389.0
+margin_right = 536.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -194,7 +165,6 @@ margin_left = 288.0
 margin_top = -512.0
 margin_right = -288.0
 margin_bottom = -512.0
-[connection signal="pressed" from="HBoxContainer/Accueil/Accueil_Btn" to="." method="_on_Accueil_Btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/Comp et Form/CaF_Btn" to="." method="_on_CaF_Btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/Profils/Profil_Btn" to="." method="_on_Profil_Btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/Listes/Liste_Btn" to="." method="_on_Liste_Btn_pressed"]
