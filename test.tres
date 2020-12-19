@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=2 format=2]
+
+[ext_resource path="res://Fonts/Titre_font_50px.tres" type="DynamicFont" id=1]
+
+[resource]
+WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
+WindowDialog/constants/close_h_ofs = 18
+WindowDialog/constants/close_v_ofs = 18
+WindowDialog/constants/scaleborder_size = 4
+WindowDialog/constants/title_height = 70
+WindowDialog/fonts/title_font = ExtResource( 1 )
+WindowDialog/icons/close = null
+WindowDialog/icons/close_highlight = null
+WindowDialog/styles/panel = null

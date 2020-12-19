@@ -19,6 +19,7 @@ __meta__ = {
 margin_right = 576.0
 margin_bottom = 64.0
 rect_min_size = Vector2( 0, 64 )
+mouse_filter = 1
 
 [node name="ColorRect" type="ColorRect" parent="Front"]
 anchor_right = 1.0
@@ -71,6 +72,7 @@ visible = false
 margin_top = 68.0
 margin_right = 576.0
 margin_bottom = 264.0
+mouse_filter = 1
 custom_constants/margin_right = 16
 custom_constants/margin_left = 16
 
@@ -78,12 +80,14 @@ custom_constants/margin_left = 16
 margin_left = 16.0
 margin_right = 560.0
 margin_bottom = 216.0
+mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
 
 [node name="Info_Holder" type="MarginContainer" parent="Back"]
 margin_left = 16.0
 margin_right = 560.0
 margin_bottom = 216.0
+mouse_filter = 1
 custom_constants/margin_right = 20
 custom_constants/margin_top = 10
 custom_constants/margin_left = 20

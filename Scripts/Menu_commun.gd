@@ -45,7 +45,8 @@ func load_scene(scene):
 	var lvl = queue.get_resource(scene)
 #	print(lvl)
 #	lvl est de type PackedScene
-	get_tree().change_scene_to(lvl)
+	if get_tree().change_scene_to(lvl) != OK:
+		print("probleme de cahngement de scene")
 
 
 func _on_Comptences_pressed():
