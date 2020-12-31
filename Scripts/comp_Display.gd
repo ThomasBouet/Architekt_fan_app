@@ -53,7 +53,7 @@ func refresh_comps_list(list):
 	
 func _on_LineEdit_text_changed(search_clue):
 	for n in list_comp + list_form:
-		var name = n.get_node("TextureButton/Nom").text
+		var name = n.get_node("Front/TextureButton/Nom").text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
 		
 func display_list(boolean, list):

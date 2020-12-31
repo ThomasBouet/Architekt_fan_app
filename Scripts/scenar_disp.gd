@@ -34,5 +34,5 @@ func _on_LineEdit_text_changed(search_clue):
 	nodes_profil.pop_back()
 	
 	for n in nodes_profil:
-		var name = n.get_child(1).get_child(0).text
+		var name = n.get_node("Front/LinkButton/Nom").text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))

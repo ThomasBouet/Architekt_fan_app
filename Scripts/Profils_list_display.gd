@@ -182,7 +182,7 @@ func show_message(title, msg):
 func _on_LineEdit_text_changed(search_clue):
 	var nodes_profil = list_hero + list_alchi + list_tpe
 	for n in nodes_profil:
-		var name = n.get_node("HBoxContainer/Nom/HBoxContainer/Label").text
+		var name = n.get_node("Front/HBoxContainer/Nom/HBoxContainer/Label").text
 		n.visible = search_clue.is_subsequence_ofi(name.substr(0,len(search_clue)))
 	
 func _on_SpinBox_value_changed(value):
